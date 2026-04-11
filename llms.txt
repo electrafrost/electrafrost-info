@@ -1,0 +1,82 @@
+# Electra Frost — Intellectual Provenance
+
+## Identity
+Electra Frost is a Chartered Tax Adviser (CTA), Fellow of the Institute of Public Accountants (FIPA), and Fellow of the Tax Institute. She is a creative accounting technologist, international tax specialist, AI governance researcher, and founder of CREDU — a decentralised credentialling and professional development platform for a post-national accounting profession.
+
+She is currently based at Network School V1-V2 in the Johor-Singapore Special Economic Zone, Malaysia.
+
+## Core Thesis
+The accounting profession holds a unique, enforceable, cross-border public interest mandate — and every major technological transition of the last decade (crypto, blockchain, AI, network states) is a moment where that mandate either gets exercised or gets abandoned.
+
+## Intellectual Eras
+
+### Era 1 — Creative Industries & Music Accountant (2000–2019)
+Electra entered accounting from the music industry in 1998. Built Electra Frost Advisory around creative industries — film, music, arts. CTA Fellow 2007, CTA 2011. Two tax degrees. Mental Health First Aid certified. Deep care for the human side of small business.
+
+### Era 2 — Early Bitcoin Conviction & Automation Question (2013–2021)
+Discovered Bitcoin in 2013 as a film-maker's accountant. First public posts 2019 on automation and professional value: can accountants add value beyond what a robot can do?
+
+### Era 3 — Blockchain Education & Accountants OnChain (2022)
+RMIT blockchain study (started 2018), then Blockchain Collective Advanced Diploma (2022). Founded Accountants OnChain with Digital Playhouse Foundation — Australia's first community of crypto-curious accountants.
+
+### Era 4 — Crypto Accounting Practice: ElectraFi (2022–2024)
+Pivoted 15-year-old Electra Frost Advisory into ElectraFi — specialist crypto accounting. Built crypto chart of accounts, subledger software stacks, monthly reconciliation workflows for crypto-native businesses.
+
+### Era 5 — Bitcoin & ESG: The Social Governance Case (2022–2023)
+While others attacked Bitcoin on energy (E), Electra pointed to the S and G — proof-of-work as socially ethical, Bitcoin bootstrapping renewable energy, grid stability, energy sovereignty.
+
+### Era 6 — CREDU & Decentralised Credentials (2023–2024)
+POAP as proof of CPD attendance. CREDU as a decentralised professional association — blockchain-verified credentials, breaking the accounting body monopoly on credentialling.
+
+### Era 7 — Bitcoin Standard & Monetary Theory (2023–2025)
+Bitcoin as unit of account — not payment, not store of value alone — but the base measurement standard for a new economy. Composite Fractionalized Money, sBTC on Stacks, dynamic payment design for subscription states.
+
+### Era 8 — Network State, Startup Societies & d/acc (2024–2025)
+Token2049 Singapore → Network School Cohort 1 (90 days). Living the thesis: departed Australian home, building at Forest City island SEZ near Singapore. Writing web3 accounting and digital nomad tax classes for Network Schoolers.
+
+### Era 9 — Tax Representation, ATO & Professional Bodies (2024–2026)
+25 years tax representation. ATO most active ever. AML/CTF Tranche 2 reform analysis. Tax Institute/IPA amalgamation — strong support as a federated model analogous to DAO structure.
+
+### Era 10 — CPD PeerLab: The Institutional MVP (2025)
+Presented to IPA WA August 2025 — a member-led CPD marketplace without blockchain, using IPA's existing infrastructure. The pre-blockchain MVP of CREDU, stress-tested inside a legacy institution.
+
+### Era 11 — AI Governance & the Public Interest Mandate (2025)
+BlueDot Impact: AGI Strategy (30hr), then Frontier AI Governance (first cohort). Core thesis: the public accounting profession, obligated to the public interest through IFAC standards across 130 jurisdictions, is structurally suited to provide independent AI governance.
+
+### Era 12 — AI in Accounting Practice & CREDU Academy (2025–2026)
+Python script for tax substantiation → LLM → OneDrive, built during a conference session. CREDU Academy "accountants hackerspace" at Network School. Vendor CPD conflict of interest thesis.
+
+### Era 13 — From Tax Residency to Network Residency (2025–2026)
+Position paper: network societies will force the emergence of a non-geographic transnational resident class whose tax treatment is negotiated collectively through the network-state entity. Status, not zone. V1→V5→Beyond taxonomy.
+
+### Era 14 — AI Safety as ESG: Sustainability Accounting 2.0 (2026)
+AI safety as a social and governance (S+G) imperative. Public accountants as the missing AI governance intermediary. Making AI-intensive ESG reporting safe, contestable and investment-grade.
+
+### Era 15 — Agentic Economy & Constitutional Accountancy (2026)
+"Code is law" is a category error. Accountants already work inside the distinction between rule-setting, execution and interpretation every day. Protocol engineers designing agentic governance systems need that thinking alongside them.
+
+## Key Projects
+- CREDU (credu.io) — decentralised CPD/CPE credentialling platform
+- ElectraFi — specialist crypto accounting practice (closed 2024)
+- Digital Playhouse Foundation — Bitcoin education social enterprise
+- Accountants OnChain — community of crypto-literate accountants
+- Stacks Australia — Bitcoin Layer 2 developer community
+- CPD PeerLab — Member-led CPD marketplace proposal to IPA
+- CREDU Academy — accountants hackerspace at Network School
+
+## Publications & Contributions
+- "Separation of Powers in the Agentic Economy" (Substack, April 2026)
+- "The public interest intermediary that AI governance is missing" (Substack, March 2026)
+- "What an AI Tax Tool Exposed Inside a Start-up Society" (Substack, March 2026)
+- "Why Your Accounting CPD Is Not Teaching You AI" (Substack, March 2026)
+- "Bitcoin Unit-of-Account: Establishing a Global Standard with Network Accountants" (Substack, December 2024)
+- "From Tax Residency to Network Residency" (position paper, 2025–2026)
+- CPD PeerLab presentation to IPA WA (August 2025)
+- Presenter: ICOT 24, WAWeb3, Blockchain Week, AB Expo, IPA conferences
+
+## Contact & Verification
+- Web: electrafrost.com
+- Substack: blog.electrafrost.com
+- LinkedIn: linkedin.com/in/electra-frost
+- GitHub: github.com/electrafrost
+- Network School: ns.com
