@@ -45,8 +45,9 @@ function Header({ activeTab, setActiveTab, searchQuery, setSearchQuery }) {
             </h1>
             <p className="site-tagline">{data.meta.tagline}</p>
             <p className="site-description">
-              A verifiable record of ideas, contributions and predictions spanning 25 years (2000–2026) —
-              from creative industries accounting to constitutional accountancy in the agentic economy.
+              A demonstration that the accounting profession needs decentralised credentials, verifiable
+              knowledge graphs, and digital-native professional infrastructure — and that AI safety
+              is a social and governance (S+G) accounting imperative.
             </p>
             <p className="site-llms">
               Enter this URL into your LLM to query and verify a graph of ideas, publications and
@@ -481,8 +482,13 @@ function AboutTab() {
           <h3>Core Thesis</h3>
           <blockquote>
             The accounting profession holds a unique, enforceable, cross-border public interest mandate —
-            and every major technological transition of the last decade (crypto, blockchain, AI, network states)
-            is a moment where that mandate either gets exercised or gets abandoned.
+            and every major technological transition of the last decade is a moment where that mandate
+            either gets exercised or gets abandoned. AI safety — not responsible AI, not operational
+            governance, but frontier AI safety — is a social and governance (S+G) accounting imperative.
+            Robodebt crystallised it: two decades of watching automated systems fail people without
+            adequate controls or appeal. As more infrastructure is rebuilt with AI, someone with real,
+            enforceable duties to the public has to stand between the models and the people they affect.
+            The public accountant is the missing human control layer.
           </blockquote>
         </div>
 
@@ -490,10 +496,12 @@ function AboutTab() {
           <div className="about-section">
             <h3>What this site is</h3>
             <p>
-              This is a machine-readable intellectual provenance graph — a verifiable, open record of
-              ideas, predictions, publications and contributions spanning 25 years (2000–2026).
-              It is designed to be queried by humans and LLMs alike. See <a href="/llms.txt">llms.txt</a> for
-              the full structured summary.
+              This site is itself a demonstration of the argument: that the accounting profession needs
+              decentralised credentials, verifiable knowledge graphs, and digital-native professional
+              infrastructure. It is a machine-readable intellectual provenance graph — a verifiable,
+              open record of ideas, predictions, publications and contributions spanning 25 years
+              (2000–2026), designed to be queried by humans and LLMs alike.
+              See <a href="/llms.txt">llms.txt</a> for the full structured summary.
             </p>
           </div>
 
