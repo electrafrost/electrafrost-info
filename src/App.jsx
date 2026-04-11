@@ -198,16 +198,15 @@ function FeaturedCarousel({ nodes, eras, onNodeClick }) {
 
   return (
     <div className="carousel-section">
-      <div className="carousel-label">LATEST THOUGHT LEADERSHIP
-        <div className="carousel-dots">
-          {featured.map((_, i) => (
-            <button
-              key={i}
-              className={`carousel-dot ${i === idx ? "active" : ""}`}
-              onClick={() => setIdx(i)}
-            />
-          ))}
-        </div>
+      <div className="carousel-label">LATEST THOUGHT LEADERSHIP</div>
+      <div className="carousel-dots">
+        {featured.map((_, i) => (
+          <button
+            key={i}
+            className={`carousel-dot ${i === idx ? "active" : ""}`}
+            onClick={() => setIdx(i)}
+          />
+        ))}
       </div>
       <div className="carousel-track">
         <div
@@ -245,7 +244,7 @@ function FeaturedCarousel({ nodes, eras, onNodeClick }) {
                 {e2?.label?.toUpperCase()} · {n2.date?.substring(0, 4)}
               </div>
               <h3 className="carousel-card-title">"{n2.title}"</h3>
-              <p className="carousel-card-body">{N2.body.substring(0, 120)}¦</p>
+              <p className="carousel-card-body">{n2.body.substring(0, 120)}…</p>
             </div>
           );
         })()}
@@ -291,7 +290,6 @@ function GraphTab({ nodes, eras, searchQuery }) {
     <div className="graph-tab">
       <FeaturedCarousel nodes={data.nodes} eras={eras} onNodeClick={setActiveNode} />
       <EraFilter eras={eras} activeEra={activeEra} setActiveEra={setActiveEra} />
-
       <div className="timeline">
         {eraOrder.map((eraId) => {
           const eraNodes = byEra[eraId];
@@ -309,30 +307,18 @@ function GraphTab({ nodes, eras, searchQuery }) {
               <p className="era-description">{era.description}</p>
               <div className="node-grid">
                 {eraNodes.map((node) => (
-                  <NodeCard
-                    key={node.id}
-                    node={node}
-                    era={era}
-                    onClick={setActiveNode}
-                  />
+                  <NodeCard key={node.id} node={node} era={era} onClick={setActiveNode} />
                 ))}
               </div>
             </section>
           );
         })}
         {filtered.length === 0 && (
-          <div className="empty-state">
-            <p>No nodes match your search.</p>
-          </div>
+          <div className="empty-state"><p>No nodes match your search.</p></div>
         )}
       </div>
-
       {activeNode && (
-        <NodeModal
-          node={activeNode}
-          era={eraMap[activeNode.era]}
-          onClose={() => setActiveNode(null)}
-        />
+        <NodeModal node={activeNode} era={eraMap[activeNode.era]} onClose={() => setActiveNode(null)} />
       )}
     </div>
   );
@@ -341,21 +327,14 @@ function GraphTab({ nodes, eras, searchQuery }) {
 function FeedTab({ nodes, eras, searchQuery }) {
   const [activeNode, setActiveNode] = useState(null);
   const eraMap = useMemo(() => Object.fromEntries(eras.map((e) => [e.id, e])), [eras]);
-
   const sorted = useMemo(() => {
     let result = [...nodes].sort((a, b) => (b.date || "").localeCompare(a.date || ""));
     if (searchQuery) {
       const q = searchQuery.toLowerCase();
-      result = result.filter(
-        (n) =>
-          n.title.toLowerCase().includes(q) ||
-          n.subtitle.toLowerCase().includes(q) ||
-          n.tags.some((t) => t.toLowerCase().includes(q))
-      );
+      result = result.filter((n) => n.title.toLowerCase().includes(q) || n.subtitle.toLowerCase().includes(q) || n.tags.some((t) => t.toLowerCase().includes(q)));
     }
     return result;
   }, [nodes, searchQuery]);
-
   return (
     <div className="feed-tab">
       <div className="feed-list">
@@ -363,12 +342,7 @@ function FeedTab({ nodes, eras, searchQuery }) {
           const era = eraMap[node.era];
           const icon = TYPE_ICONS[node.type] || "◆";
           return (
-            <article
-              key={node.id}
-              className="feed-item"
-              onClick={() => setActiveNode(node)}
-              style={{ "--era-color": era?.color || "#e8621a" }}
-            >
+            <article key={node.id} className="feed-item" onClick={() => setActiveNode(node)} style={{ "--era-color": era?.color || "#e8621a" }}>
               <div className="feed-item-left">
                 <div className="feed-icon" style={{ color: era?.color }}>{icon}</div>
                 <div className="feed-timeline-line" />
@@ -381,22 +355,14 @@ function FeedTab({ nodes, eras, searchQuery }) {
                 <h3 className="feed-title">{node.title}</h3>
                 <p className="feed-subtitle">{node.subtitle}</p>
                 <div className="node-tags">
-                  {node.tags.slice(0, 3).map((tag) => (
-                    <span key={tag} className="tag">#{tag}</span>
-                  ))}
+                  {node.tags.slice(0, 3).map((tag) => (<span key={tag} className="tag">#{tag}</span>))}
                 </div>
               </div>
             </article>
           );
         })}
       </div>
-      {activeNode && (
-        <NodeModal
-          node={activeNode}
-          era={eraMap[activeNode.era]}
-          onClose={() => setActiveNode(null)}
-        />
-      )}
+      {activeNode && (<NodeModal node={activeNode} era={eraMap[activeNode.era]} onClose={() => setActiveNode(null)} />)}
     </div>
   );
 }
@@ -407,7 +373,6 @@ function InsightsTab({ nodes, eras }) {
   const insights = nodes.filter((n) => n.type === "insight");
   const projects = nodes.filter((n) => n.type === "project");
   const [activeNode, setActiveNode] = useState(null);
-
   const Section = ({ title, items, icon }) => (
     <div className="insights-section">
       <h2 className="insights-section-title">{icon} {title}</h2>
@@ -415,48 +380,26 @@ function InsightsTab({ nodes, eras }) {
         {items.map((node) => {
           const era = eraMap[node.era];
           return (
-            <article
-              key={node.id}
-              className="insight-card"
-              onClick={() => setActiveNode(node)}
-              style={{ "--era-color": era?.color || "#e8621a" }}
-            >
+            <article key={node.id} className="insight-card" onClick={() => setActiveNode(node)} style={{ "--era-color": era?.color || "#e8621a" }}>
               <div className="insight-card-meta">
                 <span style={{ color: era?.color }}>{era?.label}</span>
                 <time>{formatDate(node.date)}</time>
               </div>
               <h3>{node.title}</h3>
               <p>{node.subtitle}</p>
-              {node.links?.[0] && (
-                <a
-                  href={node.links[0].url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="insight-link"
-                  onClick={(e) => e.stopPropagation()}
-                >
-                  → {node.links[0].label}
-                </a>
-              )}
+              {node.links?.[0] && (<a href={node.links[0].url} target="_blank" rel="noopener noreferrer" className="insight-link" onClick={(e) => e.stopPropagation()}>→ {node.links[0].label}</a>)}
             </article>
           );
         })}
       </div>
     </div>
   );
-
   return (
     <div className="insights-tab">
       <Section title="Publications" items={publications} icon="◉" />
       <Section title="Key Insights" items={insights} icon="◆" />
       <Section title="Projects" items={projects} icon="▣" />
-      {activeNode && (
-        <NodeModal
-          node={activeNode}
-          era={eraMap[activeNode.era]}
-          onClose={() => setActiveNode(null)}
-        />
-      )}
+      {activeNode && (<NodeModal node={activeNode} era={eraMap[activeNode.era]} onClose={() => setActiveNode(null)} />)}
     </div>
   );
 }
@@ -467,102 +410,35 @@ function AboutTab() {
       <div className="about-content">
         <div className="about-intro">
           <h2 className="about-name">Electra Frost</h2>
-          <p className="about-role">
-            Chartered Tax Adviser (CTA) · Fellow of the Institute of Public Accountants (FIPA) ·
-            Fellow of the Tax Institute · Creative Accounting Technologist · International Tax ·
-            AI Governance Researcher · Founder, CREDU
-          </p>
-          <p className="about-location">
-            Currently at Network School V1-V2 · Johor–Singapore Special Economic Zone, Malaysia
-          </p>
+          <p className="about-role">Chartered Tax Adviser (CTA) · Fellow of the Institute of Public Accountants (FIPA) · Fellow of the Tax Institute · Creative Accounting Technologist · International Tax · AI Governance Researcher · Founder, CREDU</p>
+          <p className="about-location">Currently at Network School V1-V2 · Johor–Singapore Special Economic Zone, Malaysia</p>
         </div>
-
         <div className="about-thesis">
           <h3>Core Thesis</h3>
-          <blockquote>
-            The accounting profession holds a unique, enforceable, cross-border public interest mandate —
-            and every major technological transition of the last decade (crypto, blockchain, AI, network states)
-            is a moment where that mandate either gets exercised or gets abandoned.
-          </blockquote>
+          <blockquote>The accounting profession holds a unique, enforceable, cross-border public interest mandate — and every major technological transition of the last decade (crypto, blockchain, AI, network states) is a moment where that mandate either gets exercised or gets abandoned.</blockquote>
         </div>
-
         <div className="about-sections">
-          <div className="about-section">
-            <h3>What this site is</h3>
-            <p>
-              This is a machine-readable intellectual provenance graph — a verifiable, open record of
-              ideas, predictions, publications and contributions spanning 25 years (2000–2026).
-              It is designed to be queried by humans and LLMs alike. See <a href="/llms.txt">llms.txt</a> for
-              the full structured summary.
-            </p>
-          </div>
-
-          <div className="about-section">
-            <h3>Professional credentials</h3>
-            <ul className="about-list">
-              <li>Chartered Tax Adviser (CTA) — Tax Institute Fellow since 2007</li>
-              <li>Fellow of the Institute of Public Accountants (FIPA)</li>
-              <li>Associate, Institute of Certified Management Accountants (ICMA)</li>
-              <li>Advanced Diploma of Applied Blockchain — Blockchain Collective</li>
-              <li>AGI Strategy — BlueDot Impact</li>
-              <li>Frontier AI Governance — BlueDot Impact (Cohort 1)</li>
-              <li>Mental Health First Aid Certificate</li>
-            </ul>
-          </div>
-
-          <div className="about-section">
-            <h3>Key projects</h3>
-            <ul className="about-list">
-              <li><a href="https://credu.io" target="_blank" rel="noopener">CREDU</a> — Decentralised CPD/CPE credentialling platform</li>
-              <li>Digital Playhouse Foundation — Bitcoin education social enterprise</li>
-              <li>Accountants OnChain — Community of crypto-literate accountants</li>
-              <li>Stacks Australia — Bitcoin Layer 2 developer community</li>
-              <li>CPD PeerLab — Member-led CPD marketplace proposal to IPA</li>
-              <li>CREDU Academy — Accountants hackerspace at Network School</li>
-            </ul>
-          </div>
-
-          <div className="about-section">
-            <h3>Contact & verification</h3>
-            <ul className="about-list about-links">
-              <li><a href="https://blog.electrafrost.com" target="_blank" rel="noopener">Substack</a></li>
-              <li><a href="https://linkedin.com/in/electra-frost" target="_blank" rel="noopener">LinkedIn</a></li>
-              <li><a href="https://github.com/electrafrost" target="_blank" rel="noopener">GitHub</a></li>
-              <li><a href="/llms.txt" target="_blank">llms.txt</a></li>
-            </ul>
-          </div>
+          <div className="about-section"><h3>What this site is</h3><p This is a machine-readable intellectual provenance graph — a verifiable, open record of ideas, predictions, publications and contributions spanning 25 years (2000–2026). It is designed to be queried by humans and LLMs alike. See <a href="/llms.txt">llms.txt</a> for the full structured summary.</p></div>
+          <div className="about-section"><h3>Professional credentials</h3><ul className="about-list"><li>Chartered Tax Adviser (CTA) — Tax Institute Fellow since 2007</li><li>Fellow of the Institute of Public Accountants (FIPA)</li><li>Associate, Institute of Certified Management Accountants (ICMA)</li><li>Advanced Diploma of Applied Blockchain — Blockchain Collective</li><li>AGI Strategy — BlueDot Impact</li><li>Frontier AI Governance — BlueDot Impact (Cohort 1)</li><li>Mental Health First Aid Certificate</li></ul></div>
+          <div className="about-section"><h3>Key projects</h3><ul className="about-list"><li><a href="https://credu.io" target="_blank" rel="noopener">CREDU</a> — Decentralised CPD/CPE credentialling platform</li><li>Digital Playhouse Foundation — Bitcoin education social enterprise</li><li>Accountants OnChain — Community of crypto-literate accountants</li><li>Stacks Australia — Bitcoin Layer 2 developer community</li><li>CPD PeerLab — Member-led CPD marketplace proposal to IPA</li><li>CREDU Academy — Accountants hackerspace at Network School</li></ul></div>
+          <div className="about-section"><h3>Contact & verification</h3><ul className="about-list about-links"><li><a href="https://blog.electrafrost.com" target="_blank" rel="noopener">Substack</a></li><li><a href="https://linkedin.com/in/electra-frost" target="_blank" rel="noopener">LinkedIn</a></li><li><a href="https://github.com/electrafrost" target="_blank" rel="noopener">GitHub</a></li><li><a href="/llms.txt" target="_blank">llms.txt</a></li></ul></div>
         </div>
       </div>
     </div>
   );
 }
 
-// ─── ROOT APP ──────────────────────────────────────────────────────────────────
-
 export default function App() {
   const [activeTab, setActiveTab] = useState("GRAPH");
   const [searchQuery, setSearchQuery] = useState("");
-
   const { nodes, eras } = data;
-
   return (
     <div className="app">
-      <Header
-        activeTab={activeTab}
-        setActiveTab={setActiveTab}
-        searchQuery={searchQuery}
-        setSearchQuery={setSearchQuery}
-      />
+      <Header activeTab={activeTab} setActiveTab={setActiveTab} searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       <main className="main-content">
-        {activeTab === "GRAPH" && (
-          <GraphTab nodes={nodes} eras={eras} searchQuery={searchQuery} />
-        )}
-        {activeTab === "FEED" && (
-          <FeedTab nodes={nodes} eras={eras} searchQuery={searchQuery} />
-        )}
-        {activeTab === "INSIGHTS" && (
-          <InsightsTab nodes={nodes} eras={eras} />
-        )}
+        {activeTab === "GRAPH" && (<GraphTab nodes={nodes} eras={eras} searchQuery={searchQuery} />)}
+        {activeTab === "FEED" && (<FeedTab nodes={nodes} eras={eras} searchQuery={searchQuery} />)}
+        {activeTab === "INSIGHTS" && (<InsightsTab nodes={nodes} eras={eras} />)}
         {activeTab === "ABOUT" && <AboutTab />}
       </main>
       <footer className="site-footer">
