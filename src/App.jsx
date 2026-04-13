@@ -1,3 +1,4 @@
+// v0.1.1 — updated description, nodes sorted newest-first
 import { useState, useMemo, useCallback, useRef, useEffect } from "react";
 import data from "./data.json";
 import "./App.css";
