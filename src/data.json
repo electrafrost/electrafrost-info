@@ -109,355 +109,19 @@
   ],
   "nodes": [
     {
-      "id": "cta-fellowship",
-      "era": "creative-industries",
-      "date": "2007-01",
-      "type": "credential",
-      "title": "Fellow of the Tax Institute",
-      "subtitle": "CTA attained 2011 — pinacle of tax profession",
-      "body": "Became a Fellow of the Tax Institute in 2007, later attaining Chartered Tax Adviser designation in 2011. Completed two tax degrees. The CTA is the global mark of expertise in taxation. Combined with FIPA from the Institute of Public Accountants, creates a unique dual professional mandate.",
-      "tags": [
-        "tax",
-        "credentials",
-        "IPA",
-        "CTA"
-      ],
-      "links": []
-    },
-    {
-      "id": "music-industry-origin",
-      "era": "creative-industries",
-      "date": "2000-01",
-      "type": "origin",
-      "title": "Accounting from the Music Industry",
-      "subtitle": "Started in 1998 to help musicians not fear tax",
-      "body": "Came into accounting from the music industry in 1998. A Sydney accountant took my band's enterprise seriously and his impact was so profound I decided to study to be a public accountant. Spent the next two decades as the accountant who made complex systems navigable for creative people — who would otherwise be excluded from professional advice.",
-      "tags": [
-        "creative-industries",
-        "music",
-        "origin",
-        "accounting"
-      ],
-      "links": []
-    },
-    {
-      "id": "electra-frost-advisory",
-      "era": "creative-industries",
-      "date": "2004-01",
-      "type": "project",
-      "title": "Electra Frost Advisory",
-      "subtitle": "15-year accounting practice for creatives and SMEs",
-      "body": "Built Electra Frost Advisory from Sydney, then moved fully online to regional Queensland (Agnes Water). Specialised in creative industries and SMEs. Built a team, moved to cloud accounting before most, navigated clients through the pandemic. Practice became the laboratory for everything that followed: proof that an accountant could build, adapt, and lead rather than just comply.",
-      "tags": [
-        "practice",
-        "creative-industries",
-        "cloud-accounting",
-        "SME"
-      ],
-      "links": []
-    },
-    {
-      "id": "mental-health-fai",
-      "era": "creative-industries",
-      "date": "2020-01",
-      "type": "credential",
-      "title": "Mental Health First Aid Certificate",
-      "subtitle": "Financial distress and mental health are linked",
-      "body": "Obtained MHFA Certificate from Mental Health First Aid International. There is a clear link between financial distress and mental health issues — being a trusted adviser requires mental health literacy as well as accounting skills. Ran MusicKeeper and CrewKeeper crisis relief grants for music industry workers during COVID.",
-      "tags": [
-        "mental-health",
-        "wellbeing",
-        "creative-industries",
-        "community"
-      ],
-      "links": []
-    },
-    {
-      "id": "bitcoin-2013",
-      "era": "bitcoin-conviction",
-      "date": "2013-01",
+      "id": "ai-esg-imperative",
+      "era": "ai-esg",
+      "date": "2026-04",
       "type": "insight",
-      "title": "Bitcoin Discovery",
-      "subtitle": "Found Bitcoin in 2013 as a film-maker's accountant",
-      "body": "Discovered Bitcoin in 2013 as a film-maker's accountant. The conviction formed early: this was not a passing technology. Artists and accountants can lead us to the Bitcoin Standard. The insight that money itself becoming programmable changes the accountant's role — not eliminates it, changes it — would drive the next decade of work.",
+      "title": "AI Safety as S+G Imperative",
+      "subtitle": "Robodebt as the crystallising case",
+      "body": "AI safety reframed as a social and governance (S+G) accounting imperative. Robodebt is the emblematic 'what happens when no one is minding the system' case that crystallised this: two decades of navigating tax, welfare interfaces and cross-border rules, watching automated systems fail people without adequate controls or appeal. As more infrastructure is rebuilt with AI, someone with real, enforceable duties to the public has to stand between the models and the people they affect. The public accountant as the missing human control layer in AI-intensive ESG reporting.",
       "tags": [
-        "bitcoin",
-        "origin",
-        "conviction"
-      ],
-      "links": []
-    },
-    {
-      "id": "automation-question-2019",
-      "era": "bitcoin-conviction",
-      "date": "2019-01",
-      "type": "insight",
-      "title": "The Automation Question",
-      "subtitle": "Can this person add value beyond what a robot can do?",
-      "body": "First public LinkedIn posts in 2019 quoted Thomas Friedman: 'Can this person add value every hour, every day — more than a worker in India, a robot or a computer? Can he or she help my company adapt by not only doing the job today but also reinventing the job for tomorrow?' This frame — the accountant as irreplaceable human intermediary in an automated world — became the root of everything that followed.",
-      "tags": [
-        "automation",
-        "future-of-work",
-        "accountants",
-        "AI"
-      ],
-      "links": []
-    },
-    {
-      "id": "rmit-blockchain",
-      "era": "accountants-onchain",
-      "date": "2018-01",
-      "type": "credential",
-      "title": "RMIT Blockchain Study",
-      "subtitle": "Started blockchain education in 2018",
-      "body": "Started studying blockchain at RMIT in 2018, followed by Blockchain Collective Advanced Diploma in 2022. 'Learning blockchain and trying to explain it to accountants is like being back where I was 20 years ago... studying tax law and trying to explain it to artists.' Through competence we overcome fear — and through shared and relatable knowledge, a positive difference is made to many lives.",
-      "tags": [
-        "blockchain",
-        "education",
-        "credentials",
-        "RMIT"
-      ],
-      "links": []
-    },
-    {
-      "id": "accountants-onchain-group",
-      "era": "accountants-onchain",
-      "date": "2022-06",
-      "type": "project",
-      "title": "Accountants OnChain",
-      "subtitle": "Australia's first crypto-curious accountants community",
-      "body": "Founded Accountants OnChain with Digital Playhouse Foundation — a community of small business accountants learning crypto, blockchain and Web3 together. Group tickets to Australian Crypto Convention paid in crypto, received as NFTs. The conviction: crypto-literate small business accountants are the missing layer in mass adoption. They onboarded Australia to cloud accounting — they can do this too.",
-      "tags": [
-        "community",
-        "crypto",
-        "accountants",
-        "Digital-Playhouse-Foundation"
-      ],
-      "links": [
-        {
-          "label": "accountantsonchain.com",
-          "url": "https://accountantsonchain.com"
-        }
-      ]
-    },
-    {
-      "id": "digital-playhouse-foundation",
-      "era": "accountants-onchain",
-      "date": "2021-01",
-      "type": "project",
-      "title": "Digital Playhouse Foundation",
-      "subtitle": "Public Benevolent Institution for Bitcoin education",
-      "body": "Registered Digital Playhouse Foundation as a Public Benevolent Institution in 2021 with Gordon Christian to 'advance public and social welfare' through Bitcoin-powered digital and financial literacy. Projects include The School of Bitcoin and Stacks Australia. Accepted into El Salvador's My First Bitcoin Node Network in 2024.",
-      "tags": [
-        "bitcoin",
-        "education",
-        "foundation",
-        "social-enterprise"
-      ],
-      "links": [
-        {
-          "label": "digitalplayhouse.org.au",
-          "url": "https://digitalplayhouse.org.au"
-        }
-      ]
-    },
-    {
-      "id": "electrafi-pivot",
-      "era": "electrafi",
-      "date": "2022-09",
-      "type": "project",
-      "title": "ElectraFi",
-      "subtitle": "Specialist crypto accounting practice",
-      "body": "Pivoted 15-year-old Electra Frost Advisory into ElectraFi ℔ specialist crypto accounting for businesses operating in digital assets. Built crypto chart of accounts, subledger software stacks (Cryptoworth, AEM Journaler), monthly reconciliation workflows. Exhibited at AB Expo 2023, spoke at Xerocon. Trained Lisa Wilson as senior crypto accountant. Four day working week with Friday as tech/PD day.",
-      "tags": [
-        "crypto-accounting",
-        "ElectraFi",
-        "practice",
-        "web3"
-      ],
-      "links": []
-    },
-    {
-      "id": "bitcoin-wages",
-      "era": "electrafi",
-      "date": "2022-04",
-      "type": "insight",
-      "title": "Taking Wages in Bitcoin",
-      "subtitle": "Practising what I preach — DCA through payroll",
-      "body": "Started taking wages in Bitcoin. 'I take wages in Bitcoin. So does the Mayor of New York! Easy dollar cost averaging.' This was not theoretical — it required navigating the actual Australian tax and payroll law complexities: PAYG, salary sacrifice agreements, STP reporting, FIFO inventory treatment for Bitcoin coming into and out of the business.",
-      "tags": [
-        "bitcoin",
-        "payroll",
-        "tax",
-        "practice"
-      ],
-      "links": []
-    },
-    {
-      "id": "proof-of-state",
-      "era": "electrafi",
-      "date": "2022-11",
-      "type": "insight",
-      "title": "Proof of State",
-      "subtitle": "Blockchain-verified financial statements",
-      "body": "Seven years after falling down the Ethereum rabbit hole following a regulatory conflict related to an accounting treatment, articulated the concept of Proof of State: the validation of 100% of all accounting information from transactions to financial statements using Merkle trees and a blockchain. This term was derived from the idea of a state machine. Engaged with Auditchain Labs on the protocol.",
-      "tags": [
-        "blockchain",
-        "audit",
-        "Auditchain",
-        "proof-of-state"
-      ],
-      "links": []
-    },
-    {
-      "id": "bitcoin-esg-thesis",
-      "era": "bitcoin-esg",
-      "date": "2022-12",
-      "type": "insight",
-      "title": "Bitcoin is an ESG Asset",
-      "subtitle": "S and G matter as much as E",
-      "body": "While critics focused on Bitcoin's energy use, the social and governance dimensions were being overlooked. Proof-of-work is socially ethical. Bitcoin bootstraps sustainable energy infrastructure in developing countries. It enables energy sovereignty. 'People focusing heavily on the environmental E side of ESG as it relates to Bitcoin often overlook the SG component — at the end of the day, Bitcoin is one of the most ESG assets around.' Planning ESG reporting services for Bitcoin businesses from 2023.",
-      "tags": [
-        "bitcoin",
+        "AI-safety",
         "ESG",
-        "sustainability",
-        "governance"
-      ],
-      "links": [
-        {
-          "label": "Lyn Alden: Bitcoin Energy",
-          "url": "https://www.lynalden.com/bitcoin-energy/"
-        }
-      ]
-    },
-    {
-      "id": "poap-cpd",
-      "era": "credu-credentials",
-      "date": "2023-03",
-      "type": "insight",
-      "title": "POAP as Proof of CPD",
-      "subtitle": "Demoed at AB Expo — blockchain-native credentials",
-      "body": "At Accounting & Business Expo 2023, ran a live demonstration of POAP (Proof of Attendance Protocol) as blockchain-native CPD logging. Onboarded accountants to non-custodial wallets, minted their first NFTs, showed them why CPD logging on blockchain makes sense. 'If only there was an EASIER way to log my CPD in REAL TIME that doesn't cost me, is owned by me, and is transparent and verifies my know-how to anyone who wants to see it, anytime.' This was the seed of CREDU.",
-      "tags": [
-        "POAP",
-        "CPD",
-        "credentials",
-        "blockchain",
-        "CREDU"
-      ],
-      "links": []
-    },
-    {
-      "id": "credu-concept",
-      "era": "credu-credentials",
-      "date": "2023-10",
-      "type": "project",
-      "title": "CREDU",
-      "subtitle": "Global decentralised CPD/CPE marketplace",
-      "body": "CREDU is a global, peer-led CPE/CPD marketplace and public dashboard that uses blockchain to verify expertise. Four user journeys: accountants, CPE trainers, professional bodies, and the public. Members own and monetise their knowledge. IPA hosts and accredits. Strengthens IPA's credibility and member competitiveness. Pitched for Ready Layer 2 Bitcoin Builders competition at WAWeb3 2024.",
-      "tags": [
-        "CREDU",
-        "CPD",
-        "blockchain",
-        "credentials",
-        "professional-association"
-      ],
-      "links": [
-        {
-          "label": "credu.io",
-          "url": "https://credu.io"
-        }
-      ]
-    },
-    {
-      "id": "bitcoin-unit-of-account",
-      "era": "bitcoin-standard",
-      "date": "2024-12",
-      "type": "insight",
-      "title": "Bitcoin as Unit of Account",
-      "subtitle": "Not payment, not store of value — the base measurement standard",
-      "body": "Most see Bitcoin as a Store of Value or Means of Exchange. Its pivotal function as a Unit of Account (UoA) is less explored. A UoA is essential for measuring and comparing economic value — much like the US dollar in pricing and financial reporting. For global 'cloud countries,' adopting Bitcoin as UoA represents a logical shift away from reliance on the USD. Presented research at Network School on Composite Fractionalized Money using sBTC (Stacks) and stablecoins.",
-      "tags": [
-        "bitcoin",
-        "unit-of-account",
-        "monetary-theory",
-        "network-state"
-      ],
-      "links": [
-        {
-          "label": "Substack: Bitcoin Unit-of-Account",
-          "url": "https://blog.electrafrost.com/p/bitcoin-unit-of-account-establishing"
-        }
-      ]
-    },
-    {
-      "id": "stacks-australia",
-      "era": "bitcoin-standard",
-      "date": "2023-04",
-      "type": "project",
-      "title": "Stacks Australia",
-      "subtitle": "Bitcoin Layer 2 developer community",
-      "body": "Co-founded Stacks Australia with Gordon Christian — a special purpose collective to support founders, developers, investors, creators and community managers building on Layer 2 Bitcoin. Ran Nakamoto Launch events across Brisbane, organised workshops, connected the Bitcoin builders movement in Australia. Stacks makes Bitcoin programmable, enabling decentralized apps and smart contracts that inherit Bitcoin's security.",
-      "tags": [
-        "Stacks",
-        "bitcoin",
-        "L2",
-        "community",
-        "Australia"
-      ],
-      "links": []
-    },
-    {
-      "id": "network-school-v1",
-      "era": "network-state",
-      "date": "2024-09",
-      "type": "milestone",
-      "title": "Network School Cohort 1",
-      "subtitle": "90 days building the new accounting profession",
-      "body": "Off to Singapore for The Network State Conference, followed by 90 days with Balaji Srinivasan's first cohort at Network School. Forest City island near Singapore — a Special Economic Zone with zero tax for family offices. Wrote web3 accounting and digital nomad tax classes for Network Schoolers. Met with IPA on the Global Certificate of Public Accounting (GCPA) pathway. 'I'm at the initiation of a pop-up city where society-as-a-service is being developed.'",
-      "tags": [
-        "network-state",
-        "Network-School",
-        "Balaji",
-        "startup-society"
-      ],
-      "links": [
-        {
-          "label": "ns.com",
-          "url": "https://ns.com"
-        }
-      ]
-    },
-    {
-      "id": "govfi",
-      "era": "network-state",
-      "date": "2025-02",
-      "type": "insight",
-      "title": "GovFi",
-      "subtitle": "Decentralised model for government efficiency",
-      "body": "GovFi: crowdsourcing government functions to citizens and rewarding verified contributions, reducing bureaucratic waste, fraud, and inefficiency. Instead of funding bloated public services through excessive taxation and borrowing, incentivising real outcomes through decentralised, transparent processes. 'When working on CREDU I envisioned a Decentralised Professional Association (DPA) of Accountants forming, reinventing regulations, and claiming a social mandate to take over the functions of tax agencies like the IRS, ATO, and HMRC.'",
-      "tags": [
+        "Robodebt",
         "governance",
-        "bitcoin",
-        "decentralisation",
-        "tax-agencies"
-      ],
-      "links": []
-    },
-    {
-      "id": "ato-compliance-surge",
-      "era": "tax-profession",
-      "date": "2026-02",
-      "type": "insight",
-      "title": "ATO Compliance Surge",
-      "subtitle": "25 years — a never seen it this active",
-      "body": "'In 25 years of tax representation, I haven't seen the Australian Tax Office this active. Taking professional advice upfront is now business-critical. Accountants don't have capacity for clean-ups and rescue jobs anymore.' The profession is under pressure from both directions: AI threatening compliance revenue, and regulators increasing enforcement. The accountant's independent public interest role has never been more needed.",
-      "tags": [
-        "ATO",
-        "tax",
-        "compliance",
-        "Australia",
-        "practice"
+        "public-interest"
       ],
       "links": []
     },
@@ -474,23 +138,6 @@
         "Tax-Institute",
         "federation",
         "professional-bodies"
-      ],
-      "links": []
-    },
-    {
-      "id": "cpd-peerlab-proposal",
-      "era": "cpd-peerlab",
-      "date": "2025-08",
-      "type": "project",
-      "title": "CPD PeerLab",
-      "subtitle": "Member-led CPD marketplace — presented to IPA WA",
-      "body": "Presented to IPA WA August 2025: a pilot program allowing IPA members to create and deliver CPD sessions to peers. Member-led sessions hosted on IPA platforms, automatically logged as structured CPD. Presenters earn and spend CPD credits or charge a fair fee — IPA retains facilitation share. Supported by AI tuols. WA + Malaysia cohort. Topics: crypto/DEFi tax, SME compliance, international tax, risk management, neurodiversity. 'In the age of Gen-AI, credible learning is live, peer-led, and demonstrated.'",
-      "tags": [
-        "CPD",
-        "IPA",
-        "PeerLab",
-        "peer-learning",
-        "CREDU"
       ],
       "links": []
     },
@@ -516,28 +163,6 @@
       ]
     },
     {
-      "id": "bluedot-agi-strategy",
-      "era": "ai-governance",
-      "date": "2026-02",
-      "type": "credential",
-      "title": "BlueDot Impact: AGI Strategy + Frontier AI Governance",
-      "subtitle": "30hr intensive — first cohort of Frontier AI Governance",
-      "body": "Completed BlueDot Impact's AGI Strategy certification (30hr), then enrolled in the first cohort of their Frontier AI Governance course. Mapped technical AI trends to future capabilities, developed threat models through kill chain analysis, applied defence-in-depth frameworks to design protective interventions, and created an action plan for contributing to beneficial AI outcomes. 'Since January, studying AI safety perspectives across technical alignment, compute governance, regulatory policy, and geopolitical strategy — conviction has only deepened: the public accounting profession is structurally suited and trusted to provide independent AI governance.'",
-      "tags": [
-        "AI-safety",
-        "BlueDot",
-        "AGI",
-        "governance",
-        "credentials"
-      ],
-      "links": [
-        {
-          "label": "BlueDot Impact",
-          "url": "https://bluedot.org"
-        }
-      ]
-    },
-    {
       "id": "vendor-cpd-conflict",
       "era": "ai-accounting",
       "date": "2026-03",
@@ -556,6 +181,45 @@
         {
           "label": "Read on Substack",
           "url": "https://blog.electrafrost.com/p/why-your-accounting-cpd-is-not-teaching"
+        }
+      ]
+    },
+    {
+      "id": "ato-compliance-surge",
+      "era": "tax-profession",
+      "date": "2026-02",
+      "type": "insight",
+      "title": "ATO Compliance Surge",
+      "subtitle": "25 years — a never seen it this active",
+      "body": "'In 25 years of tax representation, I haven't seen the Australian Tax Office this active. Taking professional advice upfront is now business-critical. Accountants don't have capacity for clean-ups and rescue jobs anymore.' The profession is under pressure from both directions: AI threatening compliance revenue, and regulators increasing enforcement. The accountant's independent public interest role has never been more needed.",
+      "tags": [
+        "ATO",
+        "tax",
+        "compliance",
+        "Australia",
+        "practice"
+      ],
+      "links": []
+    },
+    {
+      "id": "bluedot-agi-strategy",
+      "era": "ai-governance",
+      "date": "2026-02",
+      "type": "credential",
+      "title": "BlueDot Impact: AGI Strategy + Frontier AI Governance",
+      "subtitle": "30hr intensive — first cohort of Frontier AI Governance",
+      "body": "Completed BlueDot Impact's AGI Strategy certification (30hr), then enrolled in the first cohort of their Frontier AI Governance course. Mapped technical AI trends to future capabilities, developed threat models through kill chain analysis, applied defence-in-depth frameworks to design protective interventions, and created an action plan for contributing to beneficial AI outcomes. 'Since January, studying AI safety perspectives across technical alignment, compute governance, regulatory policy, and geopolitical strategy — conviction has only deepened: the public accounting profession is structurally suited and trusted to provide independent AI governance.'",
+      "tags": [
+        "AI-safety",
+        "BlueDot",
+        "AGI",
+        "governance",
+        "credentials"
+      ],
+      "links": [
+        {
+          "label": "BlueDot Impact",
+          "url": "https://bluedot.org"
         }
       ]
     },
@@ -593,19 +257,355 @@
       "links": []
     },
     {
-      "id": "ai-esg-imperative",
-      "era": "ai-esg",
-      "date": "2026-04",
-      "type": "insight",
-      "title": "AI Safety as S+G Imperative",
-      "subtitle": "Robodebt as the crystallising case",
-      "body": "AI safety reframed as a social and governance (S+G) accounting imperative. Robodebt is the emblematic 'what happens when no one is minding the system' case that crystallised this: two decades of navigating tax, welfare interfaces and cross-border rules, watching automated systems fail people without adequate controls or appeal. As more infrastructure is rebuilt with AI, someone with real, enforceable duties to the public has to stand between the models and the people they affect. The public accountant as the missing human control layer in AI-intensive ESG reporting.",
+      "id": "cpd-peerlab-proposal",
+      "era": "cpd-peerlab",
+      "date": "2025-08",
+      "type": "project",
+      "title": "CPD PeerLab",
+      "subtitle": "Member-led CPD marketplace — presented to IPA WA",
+      "body": "Presented to IPA WA August 2025: a pilot program allowing IPA members to create and deliver CPD sessions to peers. Member-led sessions hosted on IPA platforms, automatically logged as structured CPD. Presenters earn and spend CPD credits or charge a fair fee — IPA retains facilitation share. Supported by AI tuols. WA + Malaysia cohort. Topics: crypto/DEFi tax, SME compliance, international tax, risk management, neurodiversity. 'In the age of Gen-AI, credible learning is live, peer-led, and demonstrated.'",
       "tags": [
-        "AI-safety",
-        "ESG",
-        "Robodebt",
+        "CPD",
+        "IPA",
+        "PeerLab",
+        "peer-learning",
+        "CREDU"
+      ],
+      "links": []
+    },
+    {
+      "id": "govfi",
+      "era": "network-state",
+      "date": "2025-02",
+      "type": "insight",
+      "title": "GovFi",
+      "subtitle": "Decentralised model for government efficiency",
+      "body": "GovFi: crowdsourcing government functions to citizens and rewarding verified contributions, reducing bureaucratic waste, fraud, and inefficiency. Instead of funding bloated public services through excessive taxation and borrowing, incentivising real outcomes through decentralised, transparent processes. 'When working on CREDU I envisioned a Decentralised Professional Association (DPA) of Accountants forming, reinventing regulations, and claiming a social mandate to take over the functions of tax agencies like the IRS, ATO, and HMRC.'",
+      "tags": [
         "governance",
-        "public-interest"
+        "bitcoin",
+        "decentralisation",
+        "tax-agencies"
+      ],
+      "links": []
+    },
+    {
+      "id": "bitcoin-unit-of-account",
+      "era": "bitcoin-standard",
+      "date": "2024-12",
+      "type": "insight",
+      "title": "Bitcoin as Unit of Account",
+      "subtitle": "Not payment, not store of value — the base measurement standard",
+      "body": "Most see Bitcoin as a Store of Value or Means of Exchange. Its pivotal function as a Unit of Account (UoA) is less explored. A UoA is essential for measuring and comparing economic value — much like the US dollar in pricing and financial reporting. For global 'cloud countries,' adopting Bitcoin as UoA represents a logical shift away from reliance on the USD. Presented research at Network School on Composite Fractionalized Money using sBTC (Stacks) and stablecoins.",
+      "tags": [
+        "bitcoin",
+        "unit-of-account",
+        "monetary-theory",
+        "network-state"
+      ],
+      "links": [
+        {
+          "label": "Substack: Bitcoin Unit-of-Account",
+          "url": "https://blog.electrafrost.com/p/bitcoin-unit-of-account-establishing"
+        }
+      ]
+    },
+    {
+      "id": "network-school-v1",
+      "era": "network-state",
+      "date": "2024-09",
+      "type": "milestone",
+      "title": "Network School Cohort 1",
+      "subtitle": "90 days building the new accounting profession",
+      "body": "Off to Singapore for The Network State Conference, followed by 90 days with Balaji Srinivasan's first cohort at Network School. Forest City island near Singapore — a Special Economic Zone with zero tax for family offices. Wrote web3 accounting and digital nomad tax classes for Network Schoolers. Met with IPA on the Global Certificate of Public Accounting (GCPA) pathway. 'I'm at the initiation of a pop-up city where society-as-a-service is being developed.'",
+      "tags": [
+        "network-state",
+        "Network-School",
+        "Balaji",
+        "startup-society"
+      ],
+      "links": [
+        {
+          "label": "ns.com",
+          "url": "https://ns.com"
+        }
+      ]
+    },
+    {
+      "id": "credu-concept",
+      "era": "credu-credentials",
+      "date": "2023-10",
+      "type": "project",
+      "title": "CREDU",
+      "subtitle": "Global decentralised CPD/CPE marketplace",
+      "body": "CREDU is a global, peer-led CPE/CPD marketplace and public dashboard that uses blockchain to verify expertise. Four user journeys: accountants, CPE trainers, professional bodies, and the public. Members own and monetise their knowledge. IPA hosts and accredits. Strengthens IPA's credibility and member competitiveness. Pitched for Ready Layer 2 Bitcoin Builders competition at WAWeb3 2024.",
+      "tags": [
+        "CREDU",
+        "CPD",
+        "blockchain",
+        "credentials",
+        "professional-association"
+      ],
+      "links": [
+        {
+          "label": "credu.io",
+          "url": "https://credu.io"
+        }
+      ]
+    },
+    {
+      "id": "stacks-australia",
+      "era": "bitcoin-standard",
+      "date": "2023-04",
+      "type": "project",
+      "title": "Stacks Australia",
+      "subtitle": "Bitcoin Layer 2 developer community",
+      "body": "Co-founded Stacks Australia with Gordon Christian — a special purpose collective to support founders, developers, investors, creators and community managers building on Layer 2 Bitcoin. Ran Nakamoto Launch events across Brisbane, organised workshops, connected the Bitcoin builders movement in Australia. Stacks makes Bitcoin programmable, enabling decentralized apps and smart contracts that inherit Bitcoin's security.",
+      "tags": [
+        "Stacks",
+        "bitcoin",
+        "L2",
+        "community",
+        "Australia"
+      ],
+      "links": []
+    },
+    {
+      "id": "poap-cpd",
+      "era": "credu-credentials",
+      "date": "2023-03",
+      "type": "insight",
+      "title": "POAP as Proof of CPD",
+      "subtitle": "Demoed at AB Expo — blockchain-native credentials",
+      "body": "At Accounting & Business Expo 2023, ran a live demonstration of POAP (Proof of Attendance Protocol) as blockchain-native CPD logging. Onboarded accountants to non-custodial wallets, minted their first NFTs, showed them why CPD logging on blockchain makes sense. 'If only there was an EASIER way to log my CPD in REAL TIME that doesn't cost me, is owned by me, and is transparent and verifies my know-how to anyone who wants to see it, anytime.' This was the seed of CREDU.",
+      "tags": [
+        "POAP",
+        "CPD",
+        "credentials",
+        "blockchain",
+        "CREDU"
+      ],
+      "links": []
+    },
+    {
+      "id": "bitcoin-esg-thesis",
+      "era": "bitcoin-esg",
+      "date": "2022-12",
+      "type": "insight",
+      "title": "Bitcoin is an ESG Asset",
+      "subtitle": "S and G matter as much as E",
+      "body": "While critics focused on Bitcoin's energy use, the social and governance dimensions were being overlooked. Proof-of-work is socially ethical. Bitcoin bootstraps sustainable energy infrastructure in developing countries. It enables energy sovereignty. 'People focusing heavily on the environmental E side of ESG as it relates to Bitcoin often overlook the SG component — at the end of the day, Bitcoin is one of the most ESG assets around.' Planning ESG reporting services for Bitcoin businesses from 2023.",
+      "tags": [
+        "bitcoin",
+        "ESG",
+        "sustainability",
+        "governance"
+      ],
+      "links": [
+        {
+          "label": "Lyn Alden: Bitcoin Energy",
+          "url": "https://www.lynalden.com/bitcoin-energy/"
+        }
+      ]
+    },
+    {
+      "id": "proof-of-state",
+      "era": "electrafi",
+      "date": "2022-11",
+      "type": "insight",
+      "title": "Proof of State",
+      "subtitle": "Blockchain-verified financial statements",
+      "body": "Seven years after falling down the Ethereum rabbit hole following a regulatory conflict related to an accounting treatment, articulated the concept of Proof of State: the validation of 100% of all accounting information from transactions to financial statements using Merkle trees and a blockchain. This term was derived from the idea of a state machine. Engaged with Auditchain Labs on the protocol.",
+      "tags": [
+        "blockchain",
+        "audit",
+        "Auditchain",
+        "proof-of-state"
+      ],
+      "links": []
+    },
+    {
+      "id": "electrafi-pivot",
+      "era": "electrafi",
+      "date": "2022-09",
+      "type": "project",
+      "title": "ElectraFi",
+      "subtitle": "Specialist crypto accounting practice",
+      "body": "Pivoted 15-year-old Electra Frost Advisory into ElectraFi ℔ specialist crypto accounting for businesses operating in digital assets. Built crypto chart of accounts, subledger software stacks (Cryptoworth, AEM Journaler), monthly reconciliation workflows. Exhibited at AB Expo 2023, spoke at Xerocon. Trained Lisa Wilson as senior crypto accountant. Four day working week with Friday as tech/PD day.",
+      "tags": [
+        "crypto-accounting",
+        "ElectraFi",
+        "practice",
+        "web3"
+      ],
+      "links": []
+    },
+    {
+      "id": "accountants-onchain-group",
+      "era": "accountants-onchain",
+      "date": "2022-06",
+      "type": "project",
+      "title": "Accountants OnChain",
+      "subtitle": "Australia's first crypto-curious accountants community",
+      "body": "Founded Accountants OnChain with Digital Playhouse Foundation — a community of small business accountants learning crypto, blockchain and Web3 together. Group tickets to Australian Crypto Convention paid in crypto, received as NFTs. The conviction: crypto-literate small business accountants are the missing layer in mass adoption. They onboarded Australia to cloud accounting — they can do this too.",
+      "tags": [
+        "community",
+        "crypto",
+        "accountants",
+        "Digital-Playhouse-Foundation"
+      ],
+      "links": [
+        {
+          "label": "accountantsonchain.com",
+          "url": "https://accountantsonchain.com"
+        }
+      ]
+    },
+    {
+      "id": "bitcoin-wages",
+      "era": "electrafi",
+      "date": "2022-04",
+      "type": "insight",
+      "title": "Taking Wages in Bitcoin",
+      "subtitle": "Practising what I preach — DCA through payroll",
+      "body": "Started taking wages in Bitcoin. 'I take wages in Bitcoin. So does the Mayor of New York! Easy dollar cost averaging.' This was not theoretical — it required navigating the actual Australian tax and payroll law complexities: PAYG, salary sacrifice agreements, STP reporting, FIFO inventory treatment for Bitcoin coming into and out of the business.",
+      "tags": [
+        "bitcoin",
+        "payroll",
+        "tax",
+        "practice"
+      ],
+      "links": []
+    },
+    {
+      "id": "digital-playhouse-foundation",
+      "era": "accountants-onchain",
+      "date": "2021-01",
+      "type": "project",
+      "title": "Digital Playhouse Foundation",
+      "subtitle": "Public Benevolent Institution for Bitcoin education",
+      "body": "Registered Digital Playhouse Foundation as a Public Benevolent Institution in 2021 with Gordon Christian to 'advance public and social welfare' through Bitcoin-powered digital and financial literacy. Projects include The School of Bitcoin and Stacks Australia. Accepted into El Salvador's My First Bitcoin Node Network in 2024.",
+      "tags": [
+        "bitcoin",
+        "education",
+        "foundation",
+        "social-enterprise"
+      ],
+      "links": [
+        {
+          "label": "digitalplayhouse.org.au",
+          "url": "https://digitalplayhouse.org.au"
+        }
+      ]
+    },
+    {
+      "id": "mental-health-fai",
+      "era": "creative-industries",
+      "date": "2020-01",
+      "type": "credential",
+      "title": "Mental Health First Aid Certificate",
+      "subtitle": "Financial distress and mental health are linked",
+      "body": "Obtained MHFA Certificate from Mental Health First Aid International. There is a clear link between financial distress and mental health issues — being a trusted adviser requires mental health literacy as well as accounting skills. Ran MusicKeeper and CrewKeeper crisis relief grants for music industry workers during COVID.",
+      "tags": [
+        "mental-health",
+        "wellbeing",
+        "creative-industries",
+        "community"
+      ],
+      "links": []
+    },
+    {
+      "id": "automation-question-2019",
+      "era": "bitcoin-conviction",
+      "date": "2019-01",
+      "type": "insight",
+      "title": "The Automation Question",
+      "subtitle": "Can this person add value beyond what a robot can do?",
+      "body": "First public LinkedIn posts in 2019 quoted Thomas Friedman: 'Can this person add value every hour, every day — more than a worker in India, a robot or a computer? Can he or she help my company adapt by not only doing the job today but also reinventing the job for tomorrow?' This frame — the accountant as irreplaceable human intermediary in an automated world — became the root of everything that followed.",
+      "tags": [
+        "automation",
+        "future-of-work",
+        "accountants",
+        "AI"
+      ],
+      "links": []
+    },
+    {
+      "id": "rmit-blockchain",
+      "era": "accountants-onchain",
+      "date": "2018-01",
+      "type": "credential",
+      "title": "RMIT Blockchain Study",
+      "subtitle": "Started blockchain education in 2018",
+      "body": "Started studying blockchain at RMIT in 2018, followed by Blockchain Collective Advanced Diploma in 2022. 'Learning blockchain and trying to explain it to accountants is like being back where I was 20 years ago... studying tax law and trying to explain it to artists.' Through competence we overcome fear — and through shared and relatable knowledge, a positive difference is made to many lives.",
+      "tags": [
+        "blockchain",
+        "education",
+        "credentials",
+        "RMIT"
+      ],
+      "links": []
+    },
+    {
+      "id": "bitcoin-2013",
+      "era": "bitcoin-conviction",
+      "date": "2013-01",
+      "type": "insight",
+      "title": "Bitcoin Discovery",
+      "subtitle": "Found Bitcoin in 2013 as a film-maker's accountant",
+      "body": "Discovered Bitcoin in 2013 as a film-maker's accountant. The conviction formed early: this was not a passing technology. Artists and accountants can lead us to the Bitcoin Standard. The insight that money itself becoming programmable changes the accountant's role — not eliminates it, changes it — would drive the next decade of work.",
+      "tags": [
+        "bitcoin",
+        "origin",
+        "conviction"
+      ],
+      "links": []
+    },
+    {
+      "id": "cta-fellowship",
+      "era": "creative-industries",
+      "date": "2007-01",
+      "type": "credential",
+      "title": "Fellow of the Tax Institute",
+      "subtitle": "CTA attained 2011 — pinacle of tax profession",
+      "body": "Became a Fellow of the Tax Institute in 2007, later attaining Chartered Tax Adviser designation in 2011. Completed two tax degrees. The CTA is the global mark of expertise in taxation. Combined with FIPA from the Institute of Public Accountants, creates a unique dual professional mandate.",
+      "tags": [
+        "tax",
+        "credentials",
+        "IPA",
+        "CTA"
+      ],
+      "links": []
+    },
+    {
+      "id": "electra-frost-advisory",
+      "era": "creative-industries",
+      "date": "2004-01",
+      "type": "project",
+      "title": "Electra Frost Advisory",
+      "subtitle": "15-year accounting practice for creatives and SMEs",
+      "body": "Built Electra Frost Advisory from Sydney, then moved fully online to regional Queensland (Agnes Water). Specialised in creative industries and SMEs. Built a team, moved to cloud accounting before most, navigated clients through the pandemic. Practice became the laboratory for everything that followed: proof that an accountant could build, adapt, and lead rather than just comply.",
+      "tags": [
+        "practice",
+        "creative-industries",
+        "cloud-accounting",
+        "SME"
+      ],
+      "links": []
+    },
+    {
+      "id": "music-industry-origin",
+      "era": "creative-industries",
+      "date": "2000-01",
+      "type": "origin",
+      "title": "Accounting from the Music Industry",
+      "subtitle": "Started in 1998 to help musicians not fear tax",
+      "body": "Came into accounting from the music industry in 1998. A Sydney accountant took my band's enterprise seriously and his impact was so profound I decided to study to be a public accountant. Spent the next two decades as the accountant who made complex systems navigable for creative people — who would otherwise be excluded from professional advice.",
+      "tags": [
+        "creative-industries",
+        "music",
+        "origin",
+        "accounting"
       ],
       "links": []
     }
