@@ -34,7 +34,7 @@ function formatDate(dateStr) {
 // ─── COMPONENTS ───────────────────────────────────────────────────────────────
 
 function Header({ activeTab, setActiveTab, searchQuery, setSearchQuery }) {
-  const tabs = ["GRAPH", "FEED", "INSIGHTS", "ABOUT"];
+  const tabs = ["GRAPH", "FEED", "INSIGHTS", "ABOUT", "CV"];
   return (
     <header className="site-header">
       <div className="header-inner">
@@ -546,6 +546,86 @@ function AboutTab() {
 
 // ─── ROOT APP ──────────────────────────────────────────────────────────────────
 
+
+
+// ─── CV TAB ─────────────────────────────────────────────────────────────────
+function CVTab() {
+  return (
+    <div className="cv-tab">
+      <div className="cv-header">
+        <p className="cv-note">This was requested by the IPA as a prerequisite for a meeting to award the GCPA. It seemed like the wrong format for the conversation. So this graph exists instead.</p>
+        <p className="cv-note">If you still need the traditional version: <a href="mailto:mail@electrafrost.com">mail@electrafrost.com</a></p>
+      </div>
+      <div className="cv-sections">
+        <div className="cv-section">
+          <h3>Qualifications</h3>
+          <ul>
+            <li><strong>FIPA</strong> — Fellow, Institute of Public Accountants (2011–present)</li>
+            <li><strong>CTA</strong> — Chartered Tax Adviser, The Tax Institute (2011–present)</li>
+            <li><strong>FTIA</strong> — Fellow, The Tax Institute (2007–present)</li>
+            <li><strong>GCPA</strong> — Global Certificate of Public Accountant, IPA (2025)</li>
+            <li><strong>MIntTax</strong> — Master of International Taxation, UNSW</li>
+            <li><strong>Advanced Diploma of Applied Blockchain</strong> — Blockchain Collective / TAFE Qld (2022)</li>
+            <li><strong>AGI Strategy</strong> — BlueDot Impact (2026)</li>
+            <li><strong>Frontier AI Governance</strong> — BlueDot Impact, first cohort (2026)</li>
+          </ul>
+        </div>
+        <div className="cv-section">
+          <h3>Registrations</h3>
+          <ul>
+            <li>Registered Tax Agent — Tax Practitioners Board (25+ years)</li>
+            <li>Public Practice Certificate — IPA</li>
+          </ul>
+        </div>
+        <div className="cv-section">
+          <h3>Practice</h3>
+          <ul>
+            <li><strong>Electra Frost Advisory</strong> (2000–2022) — 15-year accounting practice for creative industries and SMEs. Inner-city Sydney to remote Queensland. Sold 2020.</li>
+            <li><strong>ElectraFi</strong> (2022–2024) — Specialist crypto accounting practice. Bitcoin and Web3 businesses, DeFi, NFTs, international tax for digital nomads and founders.</li>
+          </ul>
+        </div>
+        <div className="cv-section">
+          <h3>Founded</h3>
+          <ul>
+            <li><strong>Digital Playhouse Foundation Ltd</strong> (2021–present) — Public Benevolent Institution. Bitcoin-first digital and financial literacy. Agnes Water, Qld.</li>
+            <li><strong>Accountants OnChain</strong> (2022) — Australia's first community of crypto-curious accountants.</li>
+            <li><strong>Stacks Australia</strong> (2022) — Chapter lead, Stacks Open Internet Foundation.</li>
+            <li><strong>CREDU</strong> (2023–present) — Decentralised credentials for the accounting profession on Bitcoin Layer 2.</li>
+          </ul>
+        </div>
+        <div className="cv-section">
+          <h3>Research & Writing</h3>
+          <ul>
+            <li>Contributor, <strong>Forbes</strong> — Bitcoin policy and monetary infrastructure (2024–2025)</li>
+            <li>Contributor, <strong>Cointelegraph</strong> (2022–2023)</li>
+            <li>IPA Member Journal — Web3 and accountancy (2024)</li>
+            <li>Xero Future Focus — Crypto in small business (2023)</li>
+            <li>Substack: <a href="https://blog.electrafrost.com" target="_blank">blog.electrafrost.com</a></li>
+          </ul>
+        </div>
+        <div className="cv-section">
+          <h3>Speaking</h3>
+          <ul>
+            <li>International Conference on Thinking (ICOT) — Melbourne, 2024</li>
+            <li>Xerocon — Sydney, 2022</li>
+            <li>Blockchain Week Australia — 2022, 2023, 2024</li>
+            <li>Accounting & Business Expo (ABExpo) — Sydney and Melbourne, multiple years</li>
+            <li>Token2049 / Network State Conference — Singapore, 2024</li>
+            <li>Bitcoin Nashville — Enterprise Digital Asset Summit, Bitcoin Builders Conference, 2024</li>
+            <li>Singapore FinTech Festival — 2024</li>
+            <li>IPA National Conference, Noosa — 2023</li>
+            <li>Adopting Bitcoin — El Salvador, 2022</li>
+          </ul>
+        </div>
+        <div className="cv-section">
+          <h3>Currently</h3>
+          <p>Embedded at Network School, Malaysia (Cohort 1, September 2024–present). Research-focused on Bitcoin as unit of account, decentralised professional association, and AI governance through the public interest mandate of the global accounting profession.</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function App() {
   const [activeTab, setActiveTab] = useState("GRAPH");
   const [searchQuery, setSearchQuery] = useState("");
@@ -571,6 +651,7 @@ export default function App() {
           <InsightsTab nodes={nodes} eras={eras} />
         )}
         {activeTab === "ABOUT" && <AboutTab />}
+            {activeTab === "CV" && <CVTab />}
       </main>
       <footer className="site-footer">
         <div className="footer-inner">
