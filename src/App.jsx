@@ -1,459 +1,589 @@
-{
-  "meta": {
-    "name": "Electra Frost",
-    "tagline": "The open, machine-readable intellectual provenance of Electra Frost",
-    "description": "A verifiable record of ideas, contributions and predictions spanning 25 years (2000–2026) — from creative industries accounting to constitutional accountancy in the agentic economy.",
-    "version": "0.1.0",
-    "updated": "2026-04-11",
-    "llms": "/llms.txt"
-  },
-  "eras": [
-    {
-      "id": "creative-industries",
-      "label": "Creative Industries",
-      "range": "1998–2019",
-      "color": "#c4a882",
-      "description": "Came into accounting from the music industry in 1998 to help musicians not fear tax. Built Electra Frost Advisory around creative industries — film, music, arts. CTA Fellow 2007, CTA 2011. The philosophical root: accountants as trusted intermediaries who make complex systems navigable for people who'd otherwise be excluded."
-    },
-    {
-      "id": "bitcoin-conviction",
-      "label": "Bitcoin Conviction",
-      "range": "2013–2021",
-      "color": "#e8a838",
-      "description": "Discovered Bitcoin in 2013 as a film-maker's accountant. First public posts 2019 on automation and professional value. The seed question: what does the accountant's role look like when money itself becomes programmable?"
-    },
-    {
-      "id": "accountants-onchain",
-      "label": "Accountants OnChain",
-      "range": "2022",
-      "color": "#e8621a",
-      "description": "RMIT blockchain study (started 2018), Blockchain Collective Advanced Diploma (2022). Founded Accountants OnChain with Digital Playhouse Foundation — Australia's first community of crypto-curious accountants. The conviction: crypto-literate small business accountants are the missing layer in mass adoption."
-    },
-    {
-      "id": "electrafi",
-      "label": "ElectraFi Practice",
-      "range": "2022–2024",
-      "color": "#e8621a",
-      "description": "Pivoted 15-year-old Electra Frost Advisory into ElectraFi — specialist crypto accounting. Built crypto chart of accounts, subledger software stacks, monthly reconciliation workflows for crypto-native businesses. Proof by doing: built the model before it existed."
-    },
-    {
-      "id": "bitcoin-esg",
-      "label": "Bitcoin & ESG",
-      "range": "2022–2023",
-      "color": "#6ab04c",
-      "description": "While everyone attacked Bitcoin on the 'E' (energy), pointed to the S and G — proof-of-work as socially ethical, Bitcoin bootstrapping renewable energy in developing countries, grid stability, energy sovereignty for regions that have none."
-    },
-    {
-      "id": "credu-credentials",
-      "label": "CREDU & Credentials",
-      "range": "2023–2024",
-      "color": "#e8621a",
-      "description": "POAP as proof of CPD attendance — demoed at AB Expo. CREDU as a decentralised professional association. Members own and monetise their knowledge, blockchain-verified credentials. The accounting body monopoly on credentialling is the next thing to break."
-    },
-    {
-      "id": "bitcoin-standard",
-      "label": "Bitcoin Standard",
-      "range": "2023–2025",
-      "color": "#e8a838",
-      "description": "Bitcoin as unit of account — not payment, not store of value alone — but the base measurement standard for a new economy. Composite Fractionalized Money, sBTC on Stacks, dynamic payment design for subscription states. Lessons from Próspera as first startup society on Bitcoin UoA."
-    },
-    {
-      "id": "network-state",
-      "label": "Network State & d/acc",
-      "range": "2024–2025",
-      "color": "#8b5cf6",
-      "description": "Token2049 Singapore → Network School Cohort 1 (90 days). Living the thesis: departed Australian home, building at Forest City island SEZ near Singapore. Writing web3 accounting and digital nomad tax classes for Network Schoolers. 'I'm the only accountant here and I want to change that.'"
-    },
-    {
-      "id": "tax-profession",
-      "label": "Tax & Professional Bodies",
-      "range": "2024–2026",
-      "color": "#c4a882",
-      "description": "25 years tax representation — ATO most active ever. SMSF Bitcoin advice. AML/CTF Tranche 2 reform. Tax Institute/IPA amalgamation — strong support as a federated model analogous to DAO structure. The tax practitioner as frontline professional caught between innovation and regulatory overreach."
-    },
-    {
-      "id": "cpd-peerlab",
-      "label": "CPD PeerLab",
-      "range": "2025",
-      "color": "#e8621a",
-      "description": "Presented to IPA WA August 2025 — a member-led CPD marketplace without blockchain, using IPA's existing infrastructure. Members as creators not consumers. The pre-blockchain MVP of CREDU, stress-tested inside a legacy institution. 'In the age of Gen-AI, credible learning is live, peer-led, and demonstrated.'"
-    },
-    {
-      "id": "ai-governance",
-      "label": "AI Governance",
-      "range": "2025",
-      "color": "#3b82f6",
-      "description": "BlueDot Impact: AGI Strategy (30hr), then Frontier AI Governance (first cohort). Kill chain analysis, threat models, defence-in-depth. Core thesis: the public accounting profession, obligated to the public interest through IFAC standards across 130 jurisdictions, is structurally suited to provide independent AI governance over AI labs and governments alike."
-    },
-    {
-      "id": "ai-accounting",
-      "label": "AI in Accounting",
-      "range": "2025–2026",
-      "color": "#3b82f6",
-      "description": "Python script for tax substantiation → LLM → OneDrive, built during a conference session. Vendor CPD conflict of interest: sponsors want product awareness, not practitioner independence. CREDU Academy 'accountants hackerspace' at Network School. 'Give an accountant a SaaS subscription and you transform their practice for a year. Teach an accountant to code with AI and you transform it for life.'"
-    },
-    {
-      "id": "network-residency",
-      "label": "Network Residency",
-      "range": "2025–2026",
-      "color": "#8b5cf6",
-      "description": "Position paper: network societies will force the emergence of a non-geographic transnational resident class whose tax treatment is negotiated collectively through the network-state entity. Status, not zone. V1→V5→Beyond taxonomy. Goes beyond both Balaji (territory-first) and Próspera (zone-bound)."
-    },
-    {
-      "id": "ai-esg",
-      "label": "AI Safety as ESG",
-      "range": "2026",
-      "color": "#6ab04c",
-      "description": "AI safety as a social and governance (S+G) imperative. Public accountants as the missing AI governance intermediary. Making AI-intensive ESG reporting safe, contestable and investment-grade. Robodebt as the crystallising case: what happens when no one is minding the automated system."
-    },
-    {
-      "id": "constitutional-accountancy",
-      "label": "Constitutional Accountancy",
-      "range": "2026",
-      "color": "#e8621a",
-      "description": "'Code is law' is a category error. Code executes. Rule-setting, execution and interpretation are different functions — societies separated them because concentrated power cannot be trusted. Accountants already work inside these distinctions every day. Protocol engineers designing agentic governance systems need that thinking alongside them."
+import { useState, useMemo, useCallback, useRef, useEffect } from "react";
+import data from "./data.json";
+import "./App.css";
+
+// ─── HELPERS ──────────────────────────────────────────────────────────────────
+
+const TYPE_ICONS = {
+  insight: "◆",
+  publication: "◉",
+  project: "▣",
+  credential: "✦",
+  milestone: "★",
+  origin: "◎",
+};
+
+const TYPE_LABELS = {
+  insight: "Insight",
+  publication: "Publication",
+  project: "Project",
+  credential: "Credential",
+  milestone: "Milestone",
+  origin: "Origin",
+};
+
+function formatDate(dateStr) {
+  if (!dateStr) return "";
+  const [year, month] = dateStr.split("-");
+  if (!month) return year;
+  const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  return `${months[parseInt(month) - 1]} ${year}`;
+}
+
+// ─── COMPONENTS ───────────────────────────────────────────────────────────────
+
+function Header({ activeTab, setActiveTab, searchQuery, setSearchQuery }) {
+  const tabs = ["GRAPH", "FEED", "INSIGHTS", "ABOUT"];
+  return (
+    <header className="site-header">
+      <div className="header-inner">
+        <div className="header-top">
+          <div className="header-title-block">
+            <h1 className="site-name">
+              electrafrost<span className="site-name-tld">.com</span>
+              <span className="version-badge">v0.1</span>
+            </h1>
+            <p className="site-tagline">{data.meta.tagline}</p>
+            <p className="site-description">
+              A demonstration that the accounting profession needs decentralised credentials, verifiable
+              knowledge graphs, and digital-native professional infrastructure — and that AI safety
+              is a social and governance (S+G) accounting imperative.
+            </p>
+            <p className="site-llms">
+              Enter this URL into your LLM to query and verify a graph of ideas, publications and
+              contributions. <a href="/llms.txt" target="_blank" rel="noopener">llms.txt</a>
+            </p>
+          </div>
+        </div>
+        <nav className="header-nav">
+          {tabs.map((t) => (
+            <button
+              key={t}
+              className={`nav-tab ${activeTab === t ? "active" : ""}`}
+              onClick={() => setActiveTab(t)}
+            >
+              {t}
+            </button>
+          ))}
+        </nav>
+        {(activeTab === "GRAPH" || activeTab === "FEED") && (
+          <div className="search-row">
+            <input
+              className="search-input"
+              placeholder="Search nodes, ideas, publications…"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+          </div>
+        )}
+      </div>
+    </header>
+  );
+}
+
+function EraFilter({ eras, activeEra, setActiveEra }) {
+  return (
+    <div className="era-filter">
+      <button
+        className={`era-chip ${activeEra === "all" ? "active" : ""}`}
+        onClick={() => setActiveEra("all")}
+      >
+        All Eras
+      </button>
+      {eras.map((era) => (
+        <button
+          key={era.id}
+          className={`era-chip ${activeEra === era.id ? "active" : ""}`}
+          style={activeEra === era.id ? { borderColor: era.color, color: era.color } : {}}
+          onClick={() => setActiveEra(activeEra === era.id ? "all" : era.id)}
+        >
+          {era.label}
+          <span className="era-range">{era.range}</span>
+        </button>
+      ))}
+    </div>
+  );
+}
+
+function NodeCard({ node, era, onClick }) {
+  const icon = TYPE_ICONS[node.type] || "◆";
+  return (
+    <article
+      className="node-card"
+      onClick={() => onClick(node)}
+      style={{ "--era-color": era?.color || "#e8621a" }}
+    >
+      <div className="node-card-header">
+        <div className="node-type-badge">
+          <span className="node-icon">{icon}</span>
+          <span className="node-type-label">{TYPE_LABELS[node.type] || node.type}</span>
+        </div>
+        <time className="node-date">{formatDate(node.date)}</time>
+      </div>
+      <h3 className="node-title">{node.title}</h3>
+      <p className="node-subtitle">{node.subtitle}</p>
+      <div className="node-tags">
+        {node.tags.slice(0, 4).map((tag) => (
+          <span key={tag} className="tag">#{tag}</span>
+        ))}
+      </div>
+    </article>
+  );
+}
+
+function NodeModal({ node, era, onClose }) {
+  const icon = TYPE_ICONS[node.type] || "◆";
+  useEffect(() => {
+    const handler = (e) => e.key === "Escape" && onClose();
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
+  }, [onClose]);
+
+  return (
+    <div className="modal-overlay" onClick={onClose}>
+      <div className="modal-panel" onClick={(e) => e.stopPropagation()}>
+        <button className="modal-close" onClick={onClose}>✕</button>
+        <div className="modal-header" style={{ borderTopColor: era?.color || "#e8621a" }}>
+          <div className="modal-meta">
+            <span className="node-type-badge">
+              <span className="node-icon">{icon}</span>
+              <span className="node-type-label">{TYPE_LABELS[node.type] || node.type}</span>
+            </span>
+            <time className="node-date">{formatDate(node.date)}</time>
+          </div>
+          {era && (
+            <div className="modal-era" style={{ color: era.color }}>
+              {era.label} · {era.range}
+            </div>
+          )}
+          <h2 className="modal-title">{node.title}</h2>
+          <p className="modal-subtitle">{node.subtitle}</p>
+        </div>
+        <div className="modal-body">
+          <p className="modal-text">{node.body}</p>
+          {node.links && node.links.length > 0 && (
+            <div className="modal-links">
+              {node.links.map((link) => (
+                <a
+                  key={link.url}
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="modal-link"
+                >
+                  → {link.label}
+                </a>
+              ))}
+            </div>
+          )}
+          <div className="modal-tags">
+            {node.tags.map((tag) => (
+              <span key={tag} className="tag">#{tag}</span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function FeaturedCarousel({ nodes, eras, onNodeClick }) {
+  const [idx, setIdx] = useState(0);
+  const featured = useMemo(() =>
+    nodes.filter((n) => ["publication", "insight", "project"].includes(n.type)).slice(0, 8),
+    [nodes]
+  );
+  if (!featured.length) return null;
+  const node = featured[idx];
+  const era = eras.find((e) => e.id === node.era);
+
+  return (
+    <div className="carousel-section">
+      <div className="carousel-label">LATEST THOUGHT LEADERSHIP</div>
+      <div className="carousel-dots">
+        {featured.map((_, i) => (
+          <button
+            key={i}
+            className={`carousel-dot ${i === idx ? "active" : ""}`}
+            onClick={() => setIdx(i)}
+          />
+        ))}
+      </div>
+      <div className="carousel-track">
+        <div
+          className="carousel-card featured"
+          onClick={() => onNodeClick(node)}
+          style={{ "--era-color": era?.color || "#e8621a" }}
+        >
+          <div className="carousel-card-era" style={{ color: era?.color }}>
+            {era?.label?.toUpperCase()} · {node.date?.substring(0, 4)}
+          </div>
+          <h3 className="carousel-card-title">"{node.title}"</h3>
+          <p className="carousel-card-body">{node.body.substring(0, 200)}…</p>
+          {node.links?.[0] && (
+            <a
+              href={node.links[0].url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="carousel-link"
+              onClick={(e) => e.stopPropagation()}
+            >
+              → {node.links[0].label}
+            </a>
+          )}
+        </div>
+        {featured[idx + 1] && (() => {
+          const n2 = featured[idx + 1];
+          const e2 = eras.find((e) => e.id === n2.era);
+          return (
+            <div
+              className="carousel-card secondary"
+              onClick={() => { setIdx(idx + 1); onNodeClick(n2); }}
+              style={{ "--era-color": e2?.color || "#e8621a" }}
+            >
+              <div className="carousel-card-era" style={{ color: e2?.color }}>
+                {e2?.label?.toUpperCase()} · {n2.date?.substring(0, 4)}
+              </div>
+              <h3 className="carousel-card-title">"{n2.title}"</h3>
+              <p className="carousel-card-body">{n2.body.substring(0, 120)}…</p>
+            </div>
+          );
+        })()}
+      </div>
+    </div>
+  );
+}
+
+function GraphTab({ nodes, eras, searchQuery }) {
+  const [activeEra, setActiveEra] = useState("all");
+  const [activeNode, setActiveNode] = useState(null);
+
+  const filtered = useMemo(() => {
+    let result = nodes;
+    if (activeEra !== "all") result = result.filter((n) => n.era === activeEra);
+    if (searchQuery) {
+      const q = searchQuery.toLowerCase();
+      result = result.filter(
+        (n) =>
+          n.title.toLowerCase().includes(q) ||
+          n.subtitle.toLowerCase().includes(q) ||
+          n.body.toLowerCase().includes(q) ||
+          n.tags.some((t) => t.toLowerCase().includes(q))
+      );
     }
-  ],
-  "nodes": [
-    {
-      "id": "cta-fellowship",
-      "era": "creative-industries",
-      "date": "2007-01",
-      "type": "credential",
-      "title": "Fellow of the Tax Institute",
-      "subtitle": "CTA attained 2011 — pinnacle of tax profession",
-      "body": "Became a Fellow of the Tax Institute in 2007, later attaining Chartered Tax Adviser designation in 2011. Completed two tax degrees. The CTA is the global mark of expertise in taxation. Combined with FIPA from the Institute of Public Accountants, creates a unique dual professional mandate.",
-      "tags": ["tax", "credentials", "IPA", "CTA"],
-      "links": []
-    },
-    {
-      "id": "music-industry-origin",
-      "era": "creative-industries",
-      "date": "1998-01",
-      "type": "origin",
-      "title": "Accounting from the Music Industry",
-      "subtitle": "Started in 1998 to help musicians not fear tax",
-      "body": "Came into accounting from the music industry in 1998. A Sydney accountant took my band's enterprise seriously and his impact was so profound I decided to study to be a public accountant. Spent the next two decades as the accountant who made complex systems navigable for creative people — musicians, filmmakers, artists — who would otherwise be excluded from professional advice.",
-      "tags": ["creative-industries", "music", "origin", "accounting"],
-      "links": []
-    },
-    {
-      "id": "electra-frost-advisory",
-      "era": "creative-industries",
-      "date": "2008-01",
-      "type": "project",
-      "title": "Electra Frost Advisory",
-      "subtitle": "15-year accounting practice for creatives and SMEs",
-      "body": "Built Electra Frost Advisory from Sydney, then moved fully online to regional Queensland (Agnes Water). Specialised in creative industries — film, music, arts — and SMEs. Built a team, moved to cloud accounting before most, navigated clients through the pandemic. Practice became the laboratory for everything that followed: proof that an accountant could build, adapt, and lead rather than just comply.",
-      "tags": ["practice", "creative-industries", "cloud-accounting", "SME"],
-      "links": []
-    },
-    {
-      "id": "mental-health-fai",
-      "era": "creative-industries",
-      "date": "2020-01",
-      "type": "credential",
-      "title": "Mental Health First Aid Certificate",
-      "subtitle": "Financial distress and mental health are linked",
-      "body": "Obtained MHFA Certificate from Mental Health First Aid International. There is a clear link between financial distress and mental health issues — being a trusted adviser requires mental health literacy as well as accounting skills. Ran MusicKeeper and CrewKeeper crisis relief grants for music industry workers during COVID.",
-      "tags": ["mental-health", "wellbeing", "creative-industries", "community"],
-      "links": []
-    },
-    {
-      "id": "bitcoin-2013",
-      "era": "bitcoin-conviction",
-      "date": "2013-01",
-      "type": "insight",
-      "title": "Bitcoin Discovery",
-      "subtitle": "Found Bitcoin in 2013 as a film-maker's accountant",
-      "body": "Discovered Bitcoin in 2013 as a film-maker's accountant. The conviction formed early: this was not a passing technology. Artists and accountants can lead us to the Bitcoin Standard. The insight that money itself becoming programmable changes the accountant's role — not eliminates it, changes it — would drive the next decade of work.",
-      "tags": ["bitcoin", "origin", "conviction"],
-      "links": []
-    },
-    {
-      "id": "automation-question-2019",
-      "era": "bitcoin-conviction",
-      "date": "2019-01",
-      "type": "insight",
-      "title": "The Automation Question",
-      "subtitle": "Can this person add value beyond what a robot can do?",
-      "body": "First public LinkedIn posts in 2019 quoted Thomas Friedman: 'Can this person add value every hour, every day — more than a worker in India, a robot or a computer? Can he or she help my company adapt by not only doing the job today but also reinventing the job for tomorrow?' This frame — the accountant as irreplaceable human intermediary in an automated world — became the root of everything that followed.",
-      "tags": ["automation", "future-of-work", "accountants", "AI"],
-      "links": []
-    },
-    {
-      "id": "rmit-blockchain",
-      "era": "accountants-onchain",
-      "date": "2018-01",
-      "type": "credential",
-      "title": "RMIT Blockchain Study",
-      "subtitle": "Started blockchain education in 2018",
-      "body": "Started studying blockchain at RMIT in 2018, followed by Blockchain Collective Advanced Diploma in 2022. 'Learning blockchain and trying to explain it to accountants is like being back where I was 20 years ago... studying tax law and trying to explain it to artists.' Through competence we overcome fear — and through shared and relatable knowledge, a positive difference is made to many lives.",
-      "tags": ["blockchain", "education", "credentials", "RMIT"],
-      "links": []
-    },
-    {
-      "id": "accountants-onchain-group",
-      "era": "accountants-onchain",
-      "date": "2022-06",
-      "type": "project",
-      "title": "Accountants OnChain",
-      "subtitle": "Australia's first crypto-curious accountants community",
-      "body": "Founded Accountants OnChain with Digital Playhouse Foundation — a community of small business accountants learning crypto, blockchain and Web3 together. Group tickets to Australian Crypto Convention paid in crypto, received as NFTs. The conviction: crypto-literate small business accountants are the missing layer in mass adoption. They onboarded Australia to cloud accounting — they can do this too.",
-      "tags": ["community", "crypto", "accountants", "Digital-Playhouse-Foundation"],
-      "links": [{ "label": "accountantsonchain.com", "url": "https://accountantsonchain.com" }]
-    },
-    {
-      "id": "digital-playhouse-foundation",
-      "era": "accountants-onchain",
-      "date": "2021-01",
-      "type": "project",
-      "title": "Digital Playhouse Foundation",
-      "subtitle": "Public Benevolent Institution for Bitcoin education",
-      "body": "Registered Digital Playhouse Foundation as a Public Benevolent Institution in 2021 with Gordon Christian to 'advance public and social welfare' through Bitcoin-powered digital and financial literacy. Projects include The School of Bitcoin and Stacks Australia. Accepted into El Salvador's My First Bitcoin Node Network in 2024.",
-      "tags": ["bitcoin", "education", "foundation", "social-enterprise"],
-      "links": [{ "label": "digitalplayhouse.org.au", "url": "https://digitalplayhouse.org.au" }]
-    },
-    {
-      "id": "electrafi-pivot",
-      "era": "electrafi",
-      "date": "2022-09",
-      "type": "project",
-      "title": "ElectraFi",
-      "subtitle": "Specialist crypto accounting practice",
-      "body": "Pivoted 15-year-old Electra Frost Advisory into ElectraFi — specialist crypto accounting for businesses operating in digital assets. Built crypto chart of accounts, subledger software stacks (Cryptoworth, AEM Journaler), monthly reconciliation workflows. Exhibited at AB Expo 2023, spoke at Xerocon. Trained Lisa Wilson as senior crypto accountant. Four-day working week with Friday as tech/PD day.",
-      "tags": ["crypto-accounting", "ElectraFi", "practice", "web3"],
-      "links": []
-    },
-    {
-      "id": "bitcoin-wages",
-      "era": "electrafi",
-      "date": "2022-04",
-      "type": "insight",
-      "title": "Taking Wages in Bitcoin",
-      "subtitle": "Practising what I preach — DCA through payroll",
-      "body": "Started taking wages in Bitcoin. 'I take wages in Bitcoin. So does the Mayor of New York! Easy dollar cost averaging.' This was not theoretical — it required navigating the actual Australian tax and payroll law complexities: PAYG, salary sacrifice agreements, STP reporting, FIFO inventory treatment for Bitcoin coming into and out of the business. The tax puzzles were being published and discussed with the community in real time.",
-      "tags": ["bitcoin", "payroll", "tax", "practice"],
-      "links": []
-    },
-    {
-      "id": "proof-of-state",
-      "era": "electrafi",
-      "date": "2022-11",
-      "type": "insight",
-      "title": "Proof of State",
-      "subtitle": "Blockchain-verified financial statements",
-      "body": "Seven years after falling down the Ethereum rabbit hole following a regulatory conflict related to an accounting treatment, articulated the concept of Proof of State: the validation of 100% of all accounting information from transactions to financial statements using Merkle trees and a blockchain. This term was derived from the idea of a state machine. Engaged with Auditchain Labs on the protocol.",
-      "tags": ["blockchain", "audit", "Auditchain", "proof-of-state"],
-      "links": []
-    },
-    {
-      "id": "bitcoin-esg-thesis",
-      "era": "bitcoin-esg",
-      "date": "2022-12",
-      "type": "insight",
-      "title": "Bitcoin is an ESG Asset",
-      "subtitle": "S and G matter as much as E",
-      "body": "While critics focused on Bitcoin's energy use, the social and governance dimensions were being overlooked. Proof-of-work is socially ethical. Bitcoin bootstraps sustainable energy infrastructure in developing countries. It enables energy sovereignty. 'People focusing heavily on the environmental E side of ESG as it relates to Bitcoin often overlook the SG component — at the end of the day, Bitcoin is one of the most ESG assets around.' Planning ESG reporting services for Bitcoin businesses from 2023.",
-      "tags": ["bitcoin", "ESG", "sustainability", "governance"],
-      "links": [{ "label": "Lyn Alden: Bitcoin Energy", "url": "https://www.lynalden.com/bitcoin-energy/" }]
-    },
-    {
-      "id": "poap-cpd",
-      "era": "credu-credentials",
-      "date": "2023-03",
-      "type": "insight",
-      "title": "POAP as Proof of CPD",
-      "subtitle": "Demoed at AB Expo — blockchain-native credentials",
-      "body": "At Accounting & Business Expo 2023, ran a live demonstration of POAP (Proof of Attendance Protocol) as blockchain-native CPD logging. Onboarded accountants to non-custodial wallets, minted their first NFTs, showed them why CPD logging on blockchain makes sense. 'If only there was an EASIER way to log my CPD in REAL TIME that doesn't cost me, is owned by me, and is transparent and verifies my know-how to anyone who wants to see it, anytime.' This was the seed of CREDU.",
-      "tags": ["POAP", "CPD", "credentials", "blockchain", "CREDU"],
-      "links": []
-    },
-    {
-      "id": "credu-concept",
-      "era": "credu-credentials",
-      "date": "2023-10",
-      "type": "project",
-      "title": "CREDU",
-      "subtitle": "Global decentralised CPD/CPE marketplace",
-      "body": "CREDU is a global, peer-led CPE/CPD marketplace and public dashboard that uses blockchain to verify expertise. Four user journeys: accountants, CPE trainers, professional bodies, and the public. Members own and monetise their knowledge. IPA hosts and accredits. Strengthens IPA's credibility and member competitiveness. Pitched for Ready Layer 2 Bitcoin Builders competition at WAWeb3 2024.",
-      "tags": ["CREDU", "CPD", "blockchain", "credentials", "professional-association"],
-      "links": [{ "label": "credu.io", "url": "https://credu.io" }]
-    },
-    {
-      "id": "bitcoin-unit-of-account",
-      "era": "bitcoin-standard",
-      "date": "2024-12",
-      "type": "insight",
-      "title": "Bitcoin as Unit of Account",
-      "subtitle": "Not payment, not store of value — the base measurement standard",
-      "body": "Most see Bitcoin as a Store of Value or Means of Exchange. Its pivotal function as a Unit of Account (UoA) is less explored. A UoA is essential for measuring and comparing economic value — much like the US dollar in pricing and financial reporting. For global 'cloud countries,' adopting Bitcoin as UoA represents a logical shift away from reliance on the USD. Presented research at Network School on Composite Fractionalized Money using sBTC (Stacks) and stablecoins.",
-      "tags": ["bitcoin", "unit-of-account", "monetary-theory", "network-state"],
-      "links": [{ "label": "Substack: Bitcoin Unit-of-Account", "url": "https://blog.electrafrost.com/p/bitcoin-unit-of-account-establishing" }]
-    },
-    {
-      "id": "stacks-australia",
-      "era": "bitcoin-standard",
-      "date": "2023-04",
-      "type": "project",
-      "title": "Stacks Australia",
-      "subtitle": "Bitcoin Layer 2 developer community",
-      "body": "Co-founded Stacks Australia with Gordon Christian — a special purpose collective to support founders, developers, investors, creators and community managers building on Layer 2 Bitcoin. Ran Nakamoto Launch events across Brisbane, organised workshops, connected the Bitcoin builders movement in Australia. Stacks makes Bitcoin programmable, enabling decentralized apps and smart contracts that inherit Bitcoin's security.",
-      "tags": ["Stacks", "bitcoin", "L2", "community", "Australia"],
-      "links": []
-    },
-    {
-      "id": "network-school-v1",
-      "era": "network-state",
-      "date": "2024-09",
-      "type": "milestone",
-      "title": "Network School Cohort 1",
-      "subtitle": "90 days building the new accounting profession",
-      "body": "Off to Singapore for The Network State Conference, followed by 90 days with Balaji Srinivasan's first cohort at Network School. Forest City island near Singapore — a Special Economic Zone with zero tax for family offices. Wrote web3 accounting and digital nomad tax classes for Network Schoolers. Met with IPA on the Global Certificate of Public Accounting (GCPA) pathway. 'I'm at the initiation of a pop-up city where society-as-a-service is being developed.'",
-      "tags": ["network-state", "Network-School", "Balaji", "startup-society"],
-      "links": [{ "label": "ns.com", "url": "https://ns.com" }]
-    },
-    {
-      "id": "govfi",
-      "era": "network-state",
-      "date": "2025-02",
-      "type": "insight",
-      "title": "GovFi",
-      "subtitle": "Decentralised model for government efficiency",
-      "body": "GovFi: crowdsourcing government functions to citizens and rewarding verified contributions, reducing bureaucratic waste, fraud, and inefficiency. Instead of funding bloated public services through excessive taxation and borrowing, incentivising real outcomes through decentralised, transparent processes. 'When working on CREDU I envisioned a Decentralised Professional Association (DPA) of Accountants forming, reinventing regulations, and claiming a social mandate to take over the functions of tax agencies like the IRS, ATO, and HMRC.'",
-      "tags": ["governance", "bitcoin", "decentralisation", "tax-agencies"],
-      "links": []
-    },
-    {
-      "id": "ato-compliance-surge",
-      "era": "tax-profession",
-      "date": "2026-02",
-      "type": "insight",
-      "title": "ATO Compliance Surge",
-      "subtitle": "25 years — never seen it this active",
-      "body": "'In 25 years of tax representation, I haven't seen the Australian Tax Office this active. Taking professional advice upfront is now business-critical. Accountants don't have capacity for clean-ups and rescue jobs anymore.' The profession is under pressure from both directions: AI threatening compliance revenue, and regulators increasing enforcement. The accountant's independent public interest role has never been more needed.",
-      "tags": ["ATO", "tax", "compliance", "Australia", "practice"],
-      "links": []
-    },
-    {
-      "id": "ipa-tti-amalgamation",
-      "era": "tax-profession",
-      "date": "2026-03",
-      "type": "insight",
-      "title": "IPA + Tax Institute Amalgamation",
-      "subtitle": "Federation, not merger — the right model",
-      "body": "Attended Tax Institute member consultation in Perth. Strongly supports the IPA/TTI amalgamation proposal — not as a classic merger but as a federated model: each institute keeps its legal entity, brand and post-nominals while sharing governance and infrastructure. 'An amalgamation model is structurally much closer to the federated, member-centric models of the future than a classic centralising merger. When I've previously argued for a DAO-like, decentralised professional association, the core idea has been aligning members while preserving distinct bodies.'",
-      "tags": ["IPA", "Tax-Institute", "federation", "professional-bodies"],
-      "links": []
-    },
-    {
-      "id": "cpd-peerlab-proposal",
-      "era": "cpd-peerlab",
-      "date": "2025-08",
-      "type": "project",
-      "title": "CPD PeerLab",
-      "subtitle": "Member-led CPD marketplace — presented to IPA WA",
-      "body": "Presented to IPA WA August 2025: a pilot program allowing IPA members to create and deliver CPD sessions to peers. Member-led sessions hosted on IPA platforms, automatically logged as structured CPD. Presenters earn and spend CPD credits or charge a fair fee — IPA retains facilitation share. Supported by AI tools. WA + Malaysia cohort. Topics: crypto/DeFi tax, SME compliance, international tax, risk management, neurodiversity. 'In the age of Gen-AI, credible learning is live, peer-led, and demonstrated.'",
-      "tags": ["CPD", "IPA", "PeerLab", "peer-learning", "CREDU"],
-      "links": []
-    },
-    {
-      "id": "public-interest-intermediary",
-      "era": "ai-governance",
-      "date": "2026-03",
-      "type": "publication",
-      "title": "The Public Interest Intermediary AI Governance is Missing",
-      "subtitle": "IFAC-bound accountants as cross-border AI governance layer",
-      "body": "Published on Substack March 2026. Most AI governance proposals assume trusted intermediaries exist — they depend on labs to self-report, regulators to keep pace, or new oversight bodies to emerge in time. Nobody explains where those intermediaries come from or what binds them. The IFAC Code of Conduct binds 3 million professionals across 130 jurisdictions to act in the public interest. That obligation is enforceable, independent, carries consequences and works across borders. Global Public Accountants are the cross-border intermediary layer that currently has no station on the AI governance map.",
-      "tags": ["AI-governance", "IFAC", "public-interest", "accountants"],
-      "links": [{ "label": "Read on Substack", "url": "https://blog.electrafrost.com/p/the-public-interest-intermediary" }]
-    },
-    {
-      "id": "bluedot-agi-strategy",
-      "era": "ai-governance",
-      "date": "2026-02",
-      "type": "credential",
-      "title": "BlueDot Impact: AGI Strategy + Frontier AI Governance",
-      "subtitle": "30hr intensive — first cohort of Frontier AI Governance",
-      "body": "Completed BlueDot Impact's AGI Strategy certification (30hr), then enrolled in the first cohort of their Frontier AI Governance course. Mapped technical AI trends to future capabilities, developed threat models through kill chain analysis, applied defence-in-depth frameworks to design protective interventions, and created an action plan for contributing to beneficial AI outcomes. 'Since January, studying AI safety perspectives across technical alignment, compute governance, regulatory policy, and geopolitical strategy — my conviction has only deepened: the public accounting profession is structurally suited and trusted to provide independent AI governance.'",
-      "tags": ["AI-safety", "BlueDot", "AGI", "governance", "credentials"],
-      "links": [{ "label": "BlueDot Impact", "url": "https://bluedot.org" }]
-    },
-    {
-      "id": "vendor-cpd-conflict",
-      "era": "ai-accounting",
-      "date": "2026-03",
-      "type": "insight",
-      "title": "Vendor CPD Conflict of Interest",
-      "subtitle": "Why your CPD is not teaching you AI",
-      "body": "Published on Substack March 2026. Vendor-sponsored CPD has a structural conflict of interest: the sponsor's goal is product awareness. Each CPD hour leaves the practitioner more dependent on vendors, not less, accumulating subscriptions instead of technical judgment. Real technical CPD teaches how an API works, how to read documentation, how to build a simple automation. That kind of content is uncomfortable to sponsor because it reduces vendor lock-in. 'Give an accountant a SaaS subscription and you transform their practice for a year. Teach an accountant to code with AI and you transform it for life.'",
-      "tags": ["CPD", "AI", "vendor", "technical-literacy", "CREDU-Academy"],
-      "links": [{ "label": "Read on Substack", "url": "https://blog.electrafrost.com/p/why-your-accounting-cpd-is-not-teaching" }]
-    },
-    {
-      "id": "credu-academy",
-      "era": "ai-accounting",
-      "date": "2026-01",
-      "type": "project",
-      "title": "CREDU Academy",
-      "subtitle": "Accountants hackerspace at Network School",
-      "body": "CREDU Academy at Network School Malaysia/Singapore — where accountants work alongside technical builders and founders in AI, Bitcoin, and open technologies. Scoping an accountants' hackerspace in collaboration with an AI research lab and MBA alumni. The mission: give practitioners genuine technical literacy so they can build, not just subscribe. Working on international tax, AI governance, and professional collaboration systems from inside a live startup society.",
-      "tags": ["CREDU-Academy", "Network-School", "AI", "technical-education"],
-      "links": []
-    },
-    {
-      "id": "network-residency-paper",
-      "era": "network-residency",
-      "date": "2026-01",
-      "type": "publication",
-      "title": "From Tax Residency to Network Residency",
-      "subtitle": "The fiscal development path of network societies",
-      "body": "Position paper arguing that network societies will force the emergence of a non-geographic transnational resident class whose tax treatment is negotiated collectively through the network-state entity. Status, not zone. The V1→V5→Beyond taxonomy: V1 (individual compliance inside host systems), V2 (coordinated population, invisible in law), V3 (professional infrastructure), V4 (economic recognition), V5 (collective fiscal counterparty), Beyond (network-resident status). Goes beyond both Balaji's territory-first thesis and Próspera's zone-bound model. 'My thesis is not primarily about zones, enclaves, charter cities, or better-administered digital nomad programs. My real thesis is that network societies will eventually force the emergence of a transnational resident class.'",
-      "tags": ["network-state", "tax", "residency", "international-law", "BEPS"],
-      "links": []
-    },
-    {
-      "id": "ai-esg-imperative",
-      "era": "ai-esg",
-      "date": "2026-04",
-      "type": "insight",
-      "title": "AI Safety as S+G Imperative",
-      "subtitle": "Robodebt as the crystallising case",
-      "body": "AI safety reframed as a social and governance (S+G) accounting imperative. Robodebt is the emblematic 'what happens when no one is minding the system' case that crystallised this: two decades of navigating tax, welfare interfaces and cross-border rules, watching automated systems fail people without adequate controls or appeal. As more infrastructure is rebuilt with AI, someone with real, enforceable duties to the public has to stand between the models and the people they affect. The public accountant as the missing human control layer in AI-intensive ESG reporting.",
-      "tags": ["AI-safety", "ESG", "Robodebt", "governance", "public-interest"],
-      "links": []
-    },
-    {
-      "id": "separation-of-powers",
-      "era": "constitutional-accountancy",
-      "date": "2026-04",
-      "type": "publication",
-      "title": "Separation of Powers in the Agentic Economy",
-      "subtitle": "'Code is law' is a category error",
-      "body": "Published on Substack April 2026. 'Code is law' keeps coming up in discussions about agentic economies and it is a category error. Code executes. Rule-setting, execution and interpretation are different functions, and societies separated them because concentrated power cannot be trusted. When people stop trusting, they leave. Accountants and tax professionals work inside these distinctions every day, so people keep trusting the system is fair and stay. Protocol engineers designing agentic governance systems need that thinking alongside them.",
-      "tags": ["agentic-economy", "governance", "constitutional-accountancy", "AI", "network-state"],
-      "links": [{ "label": "Read on Substack", "url": "https://blog.electrafrost.com/p/separation-of-powers-in-the-agentic" }]
-    },
-    {
-      "id": "ai-tax-tool-startup-society",
-      "era": "constitutional-accountancy",
-      "date": "2026-03",
-      "type": "publication",
-      "title": "What an AI Tax Tool Exposed Inside a Start-up Society",
-      "subtitle": "The limits of determinism in real-world tax compliance",
-      "body": "Published on Substack March 2026. An internal discussion inside a start-up society began with an AI tax tool — and exposed how deterministic systems fail at the edges of real human complexity. Tax compliance is not a lookup table. It requires evidence, judgement, context and professional accountability. The accountant's role is not to be replaced by the AI but to govern its outputs — to be the human in the loop who is actually accountable when the model is wrong.",
-      "tags": ["AI", "tax", "startup-society", "compliance", "judgement"],
-      "links": [{ "label": "Read on Substack", "url": "https://blog.electrafrost.com/p/what-an-ai-tax-tool-exposed-inside" }]
+    return result;
+  }, [nodes, activeEra, searchQuery]);
+
+  const eraMap = useMemo(() => Object.fromEntries(eras.map((e) => [e.id, e])), [eras]);
+
+  // Group by era for timeline view
+  const byEra = useMemo(() => {
+    const groups = {};
+    filtered.forEach((n) => {
+      if (!groups[n.era]) groups[n.era] = [];
+      groups[n.era].push(n);
+    });
+    return groups;
+  }, [filtered]);
+
+  const eraOrder = eras.map((e) => e.id);
+
+  return (
+    <div className="graph-tab">
+      <FeaturedCarousel nodes={data.nodes} eras={eras} onNodeClick={setActiveNode} />
+      <EraFilter eras={eras} activeEra={activeEra} setActiveEra={setActiveEra} />
+
+      <div className="timeline">
+        {eraOrder.map((eraId) => {
+          const eraNodes = byEra[eraId];
+          if (!eraNodes || !eraNodes.length) return null;
+          const era = eraMap[eraId];
+          return (
+            <section key={eraId} className="era-section">
+              <div className="era-header">
+                <div className="era-dot" style={{ background: era.color }} />
+                <div className="era-label-block">
+                  <h2 className="era-name" style={{ color: era.color }}>{era.label}</h2>
+                  <span className="era-range-label">{era.range} · {eraNodes.length} node{eraNodes.length !== 1 ? "s" : ""}</span>
+                </div>
+              </div>
+              <p className="era-description">{era.description}</p>
+              <div className="node-grid">
+                {eraNodes.map((node) => (
+                  <NodeCard
+                    key={node.id}
+                    node={node}
+                    era={era}
+                    onClick={setActiveNode}
+                  />
+                ))}
+              </div>
+            </section>
+          );
+        })}
+        {filtered.length === 0 && (
+          <div className="empty-state">
+            <p>No nodes match your search.</p>
+          </div>
+        )}
+      </div>
+
+      {activeNode && (
+        <NodeModal
+          node={activeNode}
+          era={eraMap[activeNode.era]}
+          onClose={() => setActiveNode(null)}
+        />
+      )}
+    </div>
+  );
+}
+
+function FeedTab({ nodes, eras, searchQuery }) {
+  const [activeNode, setActiveNode] = useState(null);
+  const eraMap = useMemo(() => Object.fromEntries(eras.map((e) => [e.id, e])), [eras]);
+
+  const sorted = useMemo(() => {
+    let result = [...nodes].sort((a, b) => (b.date || "").localeCompare(a.date || ""));
+    if (searchQuery) {
+      const q = searchQuery.toLowerCase();
+      result = result.filter(
+        (n) =>
+          n.title.toLowerCase().includes(q) ||
+          n.subtitle.toLowerCase().includes(q) ||
+          n.tags.some((t) => t.toLowerCase().includes(q))
+      );
     }
-  ],
-  "themes": [
-    { "id": "public-interest", "label": "Public Interest Mandate", "color": "#e8621a" },
-    { "id": "bitcoin", "label": "Bitcoin", "color": "#e8a838" },
-    { "id": "credentials", "label": "Credentials & CPD", "color": "#e8621a" },
-    { "id": "ai-governance", "label": "AI Governance", "color": "#3b82f6" },
-    { "id": "network-state", "label": "Network State", "color": "#8b5cf6" },
-    { "id": "tax", "label": "Tax & International Law", "color": "#c4a882" },
-    { "id": "esg", "label": "ESG & Sustainability", "color": "#6ab04c" },
-    { "id": "community", "label": "Community Building", "color": "#e8621a" }
-  ]
+    return result;
+  }, [nodes, searchQuery]);
+
+  return (
+    <div className="feed-tab">
+      <div className="feed-list">
+        {sorted.map((node) => {
+          const era = eraMap[node.era];
+          const icon = TYPE_ICONS[node.type] || "◆";
+          return (
+            <article
+              key={node.id}
+              className="feed-item"
+              onClick={() => setActiveNode(node)}
+              style={{ "--era-color": era?.color || "#e8621a" }}
+            >
+              <div className="feed-item-left">
+                <div className="feed-icon" style={{ color: era?.color }}>{icon}</div>
+                <div className="feed-timeline-line" />
+              </div>
+              <div className="feed-item-content">
+                <div className="feed-item-meta">
+                  <span className="feed-era" style={{ color: era?.color }}>{era?.label}</span>
+                  <time className="feed-date">{formatDate(node.date)}</time>
+                </div>
+                <h3 className="feed-title">{node.title}</h3>
+                <p className="feed-subtitle">{node.subtitle}</p>
+                <div className="node-tags">
+                  {node.tags.slice(0, 3).map((tag) => (
+                    <span key={tag} className="tag">#{tag}</span>
+                  ))}
+                </div>
+              </div>
+            </article>
+          );
+        })}
+      </div>
+      {activeNode && (
+        <NodeModal
+          node={activeNode}
+          era={eraMap[activeNode.era]}
+          onClose={() => setActiveNode(null)}
+        />
+      )}
+    </div>
+  );
+}
+
+function InsightsTab({ nodes, eras }) {
+  const eraMap = useMemo(() => Object.fromEntries(eras.map((e) => [e.id, e])), [eras]);
+  const publications = nodes.filter((n) => n.type === "publication");
+  const insights = nodes.filter((n) => n.type === "insight");
+  const projects = nodes.filter((n) => n.type === "project");
+  const [activeNode, setActiveNode] = useState(null);
+
+  const Section = ({ title, items, icon }) => (
+    <div className="insights-section">
+      <h2 className="insights-section-title">{icon} {title}</h2>
+      <div className="insights-grid">
+        {items.map((node) => {
+          const era = eraMap[node.era];
+          return (
+            <article
+              key={node.id}
+              className="insight-card"
+              onClick={() => setActiveNode(node)}
+              style={{ "--era-color": era?.color || "#e8621a" }}
+            >
+              <div className="insight-card-meta">
+                <span style={{ color: era?.color }}>{era?.label}</span>
+                <time>{formatDate(node.date)}</time>
+              </div>
+              <h3>{node.title}</h3>
+              <p>{node.subtitle}</p>
+              {node.links?.[0] && (
+                <a
+                  href={node.links[0].url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="insight-link"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  → {node.links[0].label}
+                </a>
+              )}
+            </article>
+          );
+        })}
+      </div>
+    </div>
+  );
+
+  return (
+    <div className="insights-tab">
+      <Section title="Publications" items={publications} icon="◉" />
+      <Section title="Key Insights" items={insights} icon="◆" />
+      <Section title="Projects" items={projects} icon="▣" />
+      {activeNode && (
+        <NodeModal
+          node={activeNode}
+          era={eraMap[activeNode.era]}
+          onClose={() => setActiveNode(null)}
+        />
+      )}
+    </div>
+  );
+}
+
+function AboutTab() {
+  return (
+    <div className="about-tab">
+      <div className="about-content">
+        <div className="about-intro">
+          <h2 className="about-name">Electra Frost</h2>
+          <p className="about-role">
+            Chartered Tax Adviser (CTA) · Fellow of the Institute of Public Accountants (FIPA) ·
+            Fellow of the Tax Institute · Creative Accounting Technologist · International Tax ·
+            AI Governance Researcher · Founder, CREDU
+          </p>
+          <p className="about-location">
+            Currently at Network School V1-V2 · Johor–Singapore Special Economic Zone, Malaysia
+          </p>
+        </div>
+
+        <div className="about-thesis">
+          <h3>Core Thesis</h3>
+          <blockquote>
+            The accounting profession holds a unique, enforceable, cross-border public interest mandate —
+            and every major technological transition of the last decade is a moment where that mandate
+            either gets exercised or gets abandoned. AI safety — not responsible AI, not operational
+            governance, but frontier AI safety — is a social and governance (S+G) accounting imperative.
+            Robodebt crystallised it: two decades of watching automated systems fail people without
+            adequate controls or appeal. As more infrastructure is rebuilt with AI, someone with real,
+            enforceable duties to the public has to stand between the models and the people they affect.
+            The public accountant is the missing human control layer.
+          </blockquote>
+        </div>
+
+        <div className="about-sections">
+          <div className="about-section">
+            <h3>What this site is</h3>
+            <p>
+              This site is itself a demonstration of the argument: that the accounting profession needs
+              decentralised credentials, verifiable knowledge graphs, and digital-native professional
+              infrastructure. It is a machine-readable intellectual provenance graph — a verifiable,
+              open record of ideas, predictions, publications and contributions spanning 25 years
+              (2000–2026), designed to be queried by humans and LLMs alike.
+              See <a href="/llms.txt">llms.txt</a> for the full structured summary.
+            </p>
+          </div>
+
+          <div className="about-section">
+            <h3>Professional credentials</h3>
+            <ul className="about-list">
+              <li>Chartered Tax Adviser (CTA) — Tax Institute Fellow since 2007</li>
+              <li>Fellow of the Institute of Public Accountants (FIPA)</li>
+              <li>Associate, Institute of Certified Management Accountants (ICMA)</li>
+              <li>Advanced Diploma of Applied Blockchain — Blockchain Collective</li>
+              <li>AGI Strategy — BlueDot Impact</li>
+              <li>Frontier AI Governance — BlueDot Impact (Cohort 1)</li>
+              <li>Mental Health First Aid Certificate</li>
+            </ul>
+          </div>
+
+          <div className="about-section">
+            <h3>Key projects</h3>
+            <ul className="about-list">
+              <li><a href="https://credu.io" target="_blank" rel="noopener">CREDU</a> — Decentralised CPD/CPE credentialling platform</li>
+              <li>Digital Playhouse Foundation — Bitcoin education social enterprise</li>
+              <li>Accountants OnChain — Community of crypto-literate accountants</li>
+              <li>Stacks Australia — Bitcoin Layer 2 developer community</li>
+              <li>CPD PeerLab — Member-led CPD marketplace proposal to IPA</li>
+              <li>CREDU Academy — Accountants hackerspace at Network School</li>
+            </ul>
+          </div>
+
+          <div className="about-section">
+            <h3>Contact & verification</h3>
+            <ul className="about-list about-links">
+              <li><a href="https://blog.electrafrost.com" target="_blank" rel="noopener">Substack</a></li>
+              <li><a href="https://linkedin.com/in/electra-frost" target="_blank" rel="noopener">LinkedIn</a></li>
+              <li><a href="https://github.com/electrafrost" target="_blank" rel="noopener">GitHub</a></li>
+              <li><a href="/llms.txt" target="_blank">llms.txt</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ─── ROOT APP ──────────────────────────────────────────────────────────────────
+
+export default function App() {
+  const [activeTab, setActiveTab] = useState("GRAPH");
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const { nodes, eras } = data;
+
+  return (
+    <div className="app">
+      <Header
+        activeTab={activeTab}
+        setActiveTab={setActiveTab}
+        searchQuery={searchQuery}
+        setSearchQuery={setSearchQuery}
+      />
+      <main className="main-content">
+        {activeTab === "GRAPH" && (
+          <GraphTab nodes={nodes} eras={eras} searchQuery={searchQuery} />
+        )}
+        {activeTab === "FEED" && (
+          <FeedTab nodes={nodes} eras={eras} searchQuery={searchQuery} />
+        )}
+        {activeTab === "INSIGHTS" && (
+          <InsightsTab nodes={nodes} eras={eras} />
+        )}
+        {activeTab === "ABOUT" && <AboutTab />}
+      </main>
+      <footer className="site-footer">
+        <div className="footer-inner">
+          <span>electrafrost.com</span>
+          <span className="footer-sep">·</span>
+          <span>Updated April 2026</span>
+          <span className="footer-sep">·</span>
+          <a href="/llms.txt">llms.txt</a>
+          <span className="footer-sep">·</span>
+          <a href="https://github.com/electrafrost" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </footer>
+    </div>
+  );
 }
