@@ -46,9 +46,7 @@ function Header({ activeTab, setActiveTab, searchQuery, setSearchQuery }) {
             </h1>
             <p className="site-tagline">{data.meta.tagline}</p>
             <p className="site-description">
-              A demonstration that the accounting profession needs decentralised credentials, verifiable
-              knowledge graphs, and digital-native professional infrastructure — and that AI safety
-              is a social and governance (S+G) accounting imperative.
+              A specialist public accountant who has been reinventing professional practice at the digital frontier for 25 years - before it was called that. This is her aggregated, sovereign and discoverable record of ideas, contributions and predictions: how the thinking developed, where it came from, and where it is going.
             </p>
             <p className="site-llms">
               Enter this URL into your LLM to query and verify a graph of ideas, publications and
