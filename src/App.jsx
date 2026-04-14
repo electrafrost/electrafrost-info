@@ -513,7 +513,7 @@ function CVTab() {
       </div>
       <div className="cv-sections">
         <div className="cv-summary">
-          <p>Public accounting practitioner and technologist with Australian international tax expertise, self-employed for nearly twenty of the last twenty-five years. Started in the arts and entertainment industries, drawn to accounting to help people of high potential run legitimate, successful businesses. Introduced to Bitcoin through clients’ cross border business activities in 2013, and have been problem-solving at the intersection of frontier technologies, social enterprise and professional practice ever since.</p>
+          <p>Public accounting practitioner and technologist with Australian international tax expertise, self-employed for nearly twenty of the last twenty-five years. Started in the arts and entertainment industries, drawn to accounting to help people of high potential run legitimate, successful businesses. Introduced to Bitcoin through clients’ cross border business activities in 2013, and has been problem-solving at the intersection of frontier technologies, social enterprise and professional practice ever since.</p>
         </div>
         <div className="cv-section">
           <h3>Current</h3>
@@ -610,16 +610,33 @@ function CVTab() {
 }
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState("GRAPH");
+  const getTabFromHash = () => {
+    const hash = window.location.hash.replace('#', '').toUpperCase();
+    const valid = ["GRAPH", "FEED", "INSIGHTS", "THESIS", "CPD", "CV"];
+    return valid.includes(hash) ? hash : "GRAPH";
+  };
+  const [activeTab, setActiveTab] = useState(getTabFromHash);
   const [searchQuery, setSearchQuery] = useState("");
 
   const { nodes, eras } = data;
+
+  useEffect(() => {
+    const onHash = () => {
+      const tab = getTabFromHash();
+      setActiveTab(tab);
+    };
+    window.addEventListener('hashchange', onHash);
+    return () => window.removeEventListener('hashchange', onHash);
+  }, []);
 
   return (
     <div className="app">
       <Header
         activeTab={activeTab}
-        setActiveTab={setActiveTab}
+        setActiveTab={(tab) => {
+        setActiveTab(tab);
+        window.location.hash = tab.toLowerCase();
+      }}
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
       />
