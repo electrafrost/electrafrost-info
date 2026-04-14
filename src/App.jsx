@@ -541,7 +541,7 @@ export default function App() {
         {activeTab === "INSIGHTS" && (
           <InsightsTab nodes={nodes} eras={eras} />
         )}
-        {activeTab === "ABOUT" && <AboutTab />}
+        {activeTab === "THESIS" && <AboutTab />}
             {activeTab === "CV" && <CVTab />}
       </main>
       <footer className="site-footer">
