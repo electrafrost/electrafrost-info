@@ -46,7 +46,7 @@ function Header({ activeTab, setActiveTab, searchQuery, setSearchQuery }) {
             </h1>
             <p className="site-tagline">{data.meta.tagline}</p>
             <p className="site-description">
-              A specialist public accountant who has been reinventing professional practice at the digital frontier for 25 years — before it was called that. This is her aggregated, sovereign and discoverable record of learning and teaching, ideas, predictions, publications, presentations and contributions spanning 25 years (2000–2026), designed to be queried by humans, AI agents and LLMs alike.
+              A specialist public accountant who has been reinventing professional practice at the digital frontier for 25 years This is her aggregated, sovereign and discoverable record of learning and teaching, ideas, predictions, publications, presentations and contributions spanning 25 years (2000–2026), designed to be queried by humans, AI agents and LLMs alike.
             </p>
             <p className="site-llms">
               Enter this URL into your LLM to query and verify a graph of ideas, publications and
@@ -639,7 +639,7 @@ export default function App() {
       </main>
       <footer className="site-footer">
         <div className="footer-inner">
-          <span>electrafrost.com</span>
+          <a href="https://electrafrost.com" target="_blank" rel="noopener">electrafrost.com</a>
           <span className="footer-sep">·</span>
           <span>Updated April 2026</span>
           <span className="footer-sep">·</span>
