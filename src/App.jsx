@@ -34,7 +34,7 @@ function formatDate(dateStr) {
 // âââ COMPONENTS âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 
 function Header({ activeTab, setActiveTab, searchQuery, setSearchQuery }) {
-  const tabs = ["GRAPH", "FEED", "INSIGHTS", "THESIS", "CPD", "CV"];
+  const tabs = ["GRAPH", "FEED", "INSIGHTS", "ABOUT", "CPD", "CV"];
   return (
     <header className="site-header">
       <div className="header-inner">
@@ -476,7 +476,7 @@ function AboutTab() {
           <p className="about-role">
             Chartered Tax Adviser (CTA) · Fellow of the Institute of Public Accountants (FIPA) ·
             Fellow of the Tax Institute · Creative Accounting Technologist · International Tax ·
-            AI Governance Researcher
+            AI Governance Researcher · Founder, CREDU
           </p>
           <p className="about-location">
             Currently at Network School V1-V2 · Johor–Singapore Special Economic Zone, Malaysia
@@ -484,90 +484,126 @@ function AboutTab() {
         </div>
 
         <div className="about-thesis">
-          <div className="about-site-explainer">
-            <div className="core-thesis-kicker">What this site is</div>
-            <p>This site is itself a demonstration of the argument: that the accounting profession needs decentralised credentials, verifiable knowledge graphs, and digital-native professional infrastructure. It is a machine-readable intellectual provenance graph — a verifiable, open record of ideas, predictions, publications and contributions spanning 25 years (2000–2026), designed to be queried by humans and LLMs alike. See <a href="/llms.txt" target="_blank" rel="noopener">llms.txt</a> for the full structured summary.</p>
-            <p>The following Core Thesis is a summary snapshot of an extensive blueprint for the accounting profession that will be published in mid-2026.</p>
-          </div>
-
-          <div className="core-thesis-kicker" style={{marginTop: "2rem"}}>Core Thesis</div>
+          <div className="core-thesis-kicker">Core Thesis</div>
           <p>What is accounting? It’s not what we do, it’s what society requires us to provide:</p>
           <p className="core-thesis-values">Accountability. Advocacy. Trust.</p>
-
           <p>The accounting profession was built on the same values Bitcoin instantiates: truthful records, trustless verification, immutable timestamped ledgers, public auditability. Bitcoin is not a new subject for accountants — it is the monetary infrastructure on a global ledger that expresses what accounting has always been for. Public blockchains let us operate without needing to know and trust the parties we do business with; the further they depart from Bitcoin’s security model, the more trust assumptions and risks arise which require a degree of regulatory intervention.</p>
-
           <p>The profession holds a unique, enforceable, cross-border public interest mandate. As the monetary standard shifts and economic activity moves into open protocols and network societies, that mandate either gets exercised in the new infrastructure or gets abandoned by default. Governments are jurisdictionally limited. Industry is conflicted. The accounting profession is neither — and it is already bound by an enforceable obligation to the public that no other profession carries at global scale.</p>
-
           <p>Every major technological transition of the last decade is a moment where that mandate either gets exercised or gets abandoned. Frontier AI safety is the most urgent current test. Not responsible AI. Not operational governance. Frontier AI safety through cryptographic verifications and proof-of-control on open protocols — as a social and governance (S+G) accounting imperative. Robodebt crystallised it: automated systems failing people without adequate controls or right of appeal. As more critical infrastructure is rebuilt with AI, someone with real, enforceable duties to the public has to stand between the models and the people they affect. The public accounting profession is the missing human regulatory layer to engineer and govern trust in protocols.</p>
-
           <p className="core-thesis-close">Bitcoin is Accounting. Accounting is Bitcoin.</p>
+        </div>
+
+        <div className="about-sections">
+          <div className="about-section">
+            <h3>What this site is</h3>
+            <p>
+              This site is itself a demonstration of the argument: that the accounting profession needs
+              decentralised credentials, verifiable knowledge graphs, and digital-native professional
+              infrastructure. It is a machine-readable intellectual provenance graph — a verifiable,
+              open record of ideas, predictions, publications and contributions spanning 25 years
+              (2000–2026), designed to be queried by humans and LLMs alike.
+              See <a href="/llms.txt">llms.txt</a> for the full structured summary.
+            </p>
+          </div>
+
+          <div className="about-section">
+            <h3>Professional credentials</h3>
+            <ul className="about-list">
+              <li>Chartered Tax Adviser (CTA) — Tax Institute Fellow since 2007</li>
+              <li>Fellow of the Institute of Public Accountants (FIPA)</li>
+              <li>Associate, Institute of Certified Management Accountants (ICMA)</li>
+              <li>Advanced Diploma of Applied Blockchain — Blockchain Collective</li>
+              <li>AGI Strategy — BlueDot Impact</li>
+              <li>Frontier AI Governance — BlueDot Impact (Cohort 1)</li>
+              <li>Mental Health First Aid Certificate</li>
+            </ul>
+          </div>
+
+          <div className="about-section">
+            <h3>Key projects</h3>
+            <ul className="about-list">
+              <li><a href="https://credu.io" target="_blank" rel="noopener">CREDU</a> — Decentralised CPD/CPE credentialling platform</li>
+              <li>Digital Playhouse Foundation — Bitcoin education social enterprise</li>
+              <li>Accountants OnChain — Community of crypto-literate accountants</li>
+              <li>Stacks Australia — Bitcoin Layer 2 developer community</li>
+              <li>CPD PeerLab — Member-led CPD marketplace proposal to IPA</li>
+              <li>CREDU Academy — Accountants hackerspace at Network School</li>
+            </ul>
+          </div>
+
+          <div className="about-section">
+            <h3>Contact & verification</h3>
+            <ul className="about-list about-links">
+              <li><a href="https://blog.electrafrost.com" target="_blank" rel="noopener">Substack</a></li>
+              <li><a href="https://linkedin.com/in/electra-frost" target="_blank" rel="noopener">LinkedIn</a></li>
+              <li><a href="https://github.com/electrafrost" target="_blank" rel="noopener">GitHub</a></li>
+              <li><a href="/llms.txt" target="_blank">llms.txt</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
   );
 }
 
-// ─── CPD TAB ─────────────────────────────────────────────────────────────────
-function CPDTab() {
-  return (
-    <div className="cpd-tab">
-      <div className="cpd-notice">
-        <p>This section is under construction and will soon display a comprehensive record of Electra's 25 years of continuous professional education and development in specialist fields of accounting, tax and technology — which have maintained her qualifications. This is a significant record to reconstruct from gatekept records for the purpose of demonstrating a publicly verifiable and sovereign record of competency.</p>
-      </div>
-    </div>
-  );
-}
+// âââ ROOT APP ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 
 
-// ─── CV TAB ──────────────────────────────────────────────────────────────────
+
+// âââ CV TAB âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 function CVTab() {
   return (
     <div className="cv-tab">
       <div className="cv-header">
-        <h2 className="cv-title">What Electra has done, if you try to put it into a traditional box stack</h2>
-        <div className="cv-contact">
-          <p>Curriculum Vitae — Electra Frost</p>
-          <p>Network School, Forest City, Gelang Patah, Johor 81500, Malaysia</p>
-          <p>+60 10 666 0556 | mail@electrafrost.com</p>
-        </div>
+        <h2 className="cv-title">Curriculum Vitae - Electra Frost</h2>
+        <p className="cv-contact">Network School, Forest City<br />Gelang Patah, Johor 81500, Malaysia<br />+60 10 666 0556 | mail@electrafrost.com</p>
       </div>
       <div className="cv-sections">
-
-        <div className="cv-summary">
-          <p>Public accounting practitioner and technologist with Australian international tax expertise, self-employed for nearly twenty of the last twenty-five years. Started in the arts and entertainment industries, drawn to accounting to help people of high potential run legitimate, successful businesses. Introduced to Bitcoin through clients’ cross border business activities in 2013, and have been problem-solving at the intersection of frontier technologies, social enterprise and professional practice ever since.</p>
-        </div>
 
         <div className="cv-section">
           <h3>Current</h3>
           <ul>
-            <li><strong>Founding Cohort Member — Network School</strong> (Sep 2024–present, Forest City, Malaysia/Singapore). Selected into V1 first cohort of 128 from over 5,000 applications. One of the earlier long-term NS residents. Contributing to peer mentoring and informal learner-programming of the international digital nomad, entrepreneur and founder community. Base for independently building professional accounting ecosystems for an AI-driven decentralised digital economy, and startup-society transnational tax coordination solutions.</li>
-            <li><strong>Founder and Lead Architect — Kigumi Solutions</strong> (Oct 2025–present). Developing a platform-based business model and architecture to facilitate AI-assisted client-serving collaboration between public accountants and legal firms for legal, documentation, customer due diligence and corporate secretarial services.</li>
-            <li><strong>Operations and Platform Partnerships — Consulta Mirabilis Law</strong> (Oct 2025–present). Leading the operations and strategic partnerships, building the practice’s operational infrastructure for integration with Kigumi platform. Engaging SME accounting practices to identify market gaps, developing service models that define human and AI roles at each workflow touchpoint, and navigating the regulatory and ethical frameworks for agentic practice.</li>
-            <li><strong>Founder / Researcher — CREDU</strong> (Feb 2024–present). Researching and developing CREDU as a global verified credentialing, audit and procurement platform for accountants’ CPE/CPD using open source technologies. Solving inefficiencies in aggregating, tracking, verifying and monetising knowledge credibility. Professional bodies and autonomous agents can publicly inspect CPE/CPD compliance and expertise with proof on open blockchain.</li>
-            <li><strong>Deputy President — IPA Malaysia Member Advisory Committee (MMAC)</strong>, Institute of Public Accountants (Sep 2025–present).</li>
-            <li><strong>Co-Founder and Director — Digital Playhouse Foundation</strong> (Apr 2021–present, Agnes Water, Queensland). Public Benevolent Institution (PBI) advancing social or public welfare. Projects: The School of Bitcoin, Stacks Australia, Accountants On-Chain, Coding 4 Kids, GameChangers.</li>
-            <li><strong>Enterprise Engagement — Stacks Australia</strong> (Feb 2024–present, Remote). Raising awareness of Stacks as a high-integrity Bitcoin Layer 2. Content creation, public speaking, enterprise stakeholder engagement.</li>
+            <li><strong>Founding Cohort Member — Network School</strong> (Sep 2024–present, Forest City, Malaysia/Singapore). Selected into V1 first cohort of 128 'dark talent' from over 5,000 applications. One of the earlier long-term NS residents. Contributing to peer mentoring and informal learner-programming of the international digital nomad, entrepreneur and founder community. Base for independently building professional accounting ecosystems for an AI-driven decentralised digital economy, and startup-society transnational tax coordination solutions.</li>
+
+            <li><strong>Founder and Lead Architect — Kigumi Solutions</strong> (October 2025–present). Developing a platform-based business model and architecture to facilitate AI-assisted client-serving collaboration between public accountants and legal firms for legal, documentation, customer due diligence and corporate secretarial services.</li>
+
+            <li><strong>Operations and Platform Partnerships — Consulta Mirabilis Law</strong> (October 2025–present). Leading the operations and strategic partnerships, building the practice's operational infrastructure for integration with Kigumi platform. Engaging SME accounting practices to identify market gaps, while developing service models that define human and AI roles at each workflow touchpoint, and navigating the regulatory and ethical frameworks for agentic practice.</li>
+
+            <li><strong>Founder / Researcher — CREDU</strong> (Feb 2024–present). Researching and developing CREDU as a global verified credentialing, audit and procurement platform for accountants' continuous professional education (CPE/CPD) using open source technologies. Solving inefficiencies in aggregating, tracking, verifying and monetising knowledge credibility. Professional bodies and autonomous agents can publicly inspect CPE/CPD compliance and expertise of their membership with proof on open blockchain.</li>
+
+            <li><strong>Deputy President — IPA Malaysia Member Advisory Committee (MMAC), Institute of Public Accountants</strong> (Sep 2025–present).</li>
           </ul>
         </div>
 
         <div className="cv-section">
-          <h3>Previous Roles</h3>
+          <h3>Previous</h3>
           <ul>
-            <li><strong>Crypto Accounting Systems and Advisory — ElectraFi</strong> (Jul 2023–Apr 2026, Australia/Online). Advisory-led public accounting practice with a fractional finance-team year-round service model for scale-up enterprises. Specialising in bitcoin treasury, crypto operations, international tax and structuring. Led implementations of crypto accounting and financial operations systems with Xero/QB integration. Australian tax agent services. Developed advisory resources and CPD for the accounting industry.</li>
-            <li><strong>Public Accounting Practitioner, Business Advisor — Electra Frost Advisory</strong> (May 2008–2022, Sydney–Brisbane, Online/Remote). Sold tax practice during pandemic and rebranded as advisory-led practice. Holistic advisory packages, specialist networks, remote-first with cloud tools and 4-day working week. Long-term specialist accounting, tax and business advisory for artistic and creative industries and international tax for Australians abroad.</li>
-            <li><strong>Accounting Workflow & App Implementation Consultant — Sorrento Strategic Accounting</strong> (Feb–Apr 2025, Perth). Increased efficiency and future-proofing through improved practice management and cloud tech stack implementation for a boutique accounting practice.</li>
-            <li><strong>Project Lead — Accountants On-Chain</strong> (2021–2024, The Internet). Webinars, training, consulting and speaking for crypto-curious accountants, bookkeepers and advisers. Crypto subledger tools, professional services DAO research, blockchain business models, tax practitioner ethics and competencies.</li>
-            <li><strong>Blockchain Education Manager — Blockchain Academy International</strong> (Feb–Jun 2023, Brisbane, Remote). High quality delivery of Diploma and Advanced Diploma of Applied Blockchain and AI under the Australian Qualifications Framework. Conducted competency mapping across the Applied Blockchain and Accounting Diploma qualifications to develop an integrated pathway positioning blockchain and AI within accounting practice.</li>
-            <li><strong>Principal and Consultant — Discovery Accountants & Advisers</strong> (2016–May 2020, Agnes Water, Queensland). Accounting, tax and advisory for SMEs, digital entrepreneurs and remote business operators. Closed May 2020 on consolidation.</li>
-            <li><strong>Tax Consultant and Accountant — entArt Accounting</strong> (Aug 2002–May 2008, Bondi Junction, Sydney). Specialist business management and tax for the music and entertainment industry. Established by Barry Moore CA.</li>
-            <li><strong>Tax Preparer and Bookkeeper</strong> (Jan 2000–Jul 2002, Sydney). Formative professional experience at Moneypenny Business & Tax Services at Fox Studios and Page Harrison & Co, North Sydney.</li>
+            <li><strong>Crypto Accounting Systems and Advisory — ElectraFi</strong> (Rebranded Electra Frost Advisory, Jul 2023–April 2026, Australia/Online). Advisory led public accounting practice with a fractional finance-team year-round service model for scale-up enterprises. Specialising in bitcoin treasury, crypto operations, international tax and structuring. Led implementations of crypto accounting and financial operations systems with Xero/QB integration. Australian tax agent services. Developed advisory resources and CPD for the accounting industry.</li>
+
+            <li><strong>Public Accounting Practitioner, Business Advisor — Electra Frost Advisory</strong> (May 2008–2022, Sydney-Brisbane, Online/Remote). Sold tax practice during pandemic and rebranded as advisory-led practice. Holistic advisory packages, specialist networks, remote-first with cloud tools and 4-day working week. Long term specialist accounting, tax and business advisory for artistic and creative industries, international tax for Australians abroad.</li>
+
+            <li><strong>Accounting Workflow &amp; App Implementation Consultant — Sorrento Strategic Accounting</strong> (Feb–Apr 2025, Perth). Increased efficiency and future proofing through improved accounting practice management and cloud tech stack implementation for a boutique accounting practice.</li>
+
+            <li><strong>Co-Founder and Director — Digital Playhouse Foundation</strong> (Apr 2021–present, Agnes Water, Queensland). Public Benevolent Institution (PBI) recognised for 'Advancing social or public welfare'. Projects: The School of Bitcoin, Stacks Australia, Accountants On-Chain, Coding 4 Kids, GameChangers.</li>
+
+            <li><strong>Enterprise Engagement — Stacks Australia</strong> (Feb 2024–present, Remote). Raising awareness of Stacks as a high-integrity Bitcoin Layer 2 in the Australian blockchain industry. Content creation, public speaking, enterprise stakeholder engagement. Working with Stacks Australia Leads to articulate the value proposition of Bitcoin L1/L2 to decision-makers, investors and partners.</li>
+
+            <li><strong>Project Lead — Accountants On-Chain</strong> (2021–2024, The Internet). Webinars, training, consulting and speaking for crypto-curious accountants, bookkeepers and advisers. Crypto accounting subledger tools, professional services DAO research, blockchain business models, tax practitioner ethics and competencies.</li>
+
+            <li><strong>Blockchain Education Manager — Blockchain Academy International</strong> (Feb–Jun 2023, Brisbane, Remote). Ensuring high quality delivery of Diploma and Advanced Diploma of Applied Blockchain and AI under the Australian Qualifications Framework. Training, support and career guidance for students entering the field. Conducted competency mapping across the Applied Blockchain and Accounting Diploma qualifications to develop an integrated pathway positioning blockchain and AI technology within accounting practice.</li>
+
+            <li><strong>Principal and Consultant — Discovery Accountants &amp; Advisers</strong> (2016–May 2020, Agnes Water, Queensland). Accounting, tax and advisory services for SMEs, digital entrepreneurs and remote business operators on the Discovery Coast. Closed May 2020 on consolidation into Electra Frost Advisory.</li>
+
+            <li><strong>Tax Consultant and Accountant — entArt Accounting</strong> (Aug 2002–May 2008, Bondi Junction, Sydney). Specialist business management and tax services for the music and entertainment industry. Established by Barry Moore CA in the early 1990s.</li>
+
+            <li><strong>Tax Preparer and Bookkeeper</strong> (Jan 2000–Jul 2002, Sydney). Formative professional experience at specialist CA practices including Moneypenny Business &amp; Tax Services at Fox Studios and Page Harrison &amp; Co, North Sydney.</li>
           </ul>
         </div>
 
         <div className="cv-section">
-          <h3>Professional Registrations & Designations</h3>
+          <h3>Professional Registrations &amp; Designations</h3>
           <ul>
-            <li><strong>FIPA</strong> — Fellow, Institute of Public Accountants. FIPA Qualified Accountant, Professional Practice Certificate (MIPA from Jan 2011)</li>
+            <li><strong>FIPA</strong> — Fellow, Institute of Public Accountants. FIPA Qualified Accountant, Professional Practice Certificate (2018, MIPA from Jan 2011)</li>
             <li><strong>CTA</strong> — Chartered Tax Adviser, The Tax Institute (issued Jan 2010)</li>
             <li><strong>FTIA</strong> — Fellow, The Tax Institute (issued Nov 2007)</li>
             <li><strong>Registered Tax Agent</strong> — Tax Practitioners Board (issued Jan 2007, 25+ years continuous registration)</li>
@@ -577,31 +613,42 @@ function CVTab() {
         <div className="cv-section">
           <h3>Education</h3>
           <ul>
-            <li><strong>Master of International Taxation</strong> — UNSW Australia (2012–2015). Australian international tax; USA, Canada, China, NZ, Hong Kong, Singapore, Europe, DTAs, tax system design and structures, transfer pricing, employee remuneration, financial planning tax strategies.</li>
-            <li><strong>First Cohort, International/Global Studies</strong> — The Network School (Sep 2024–present). Founded by Balaji Srinivasan. Contributing Web3 Accounting and business workshops; developing a futurist accounting faculty and a Bitcoin-principled competencies framework.</li>
-            <li><strong>Advanced Diploma of Applied Blockchain</strong> — Blockchain Academy International / TAFE Queensland (May 2022–Dec 2023).</li>
-            <li><strong>AI Safety — Frontier AI Governance</strong> — BlueDot Impact (Mar 2026, first cohort, selective intake).</li>
-            <li><strong>AI Safety — AGI Strategy</strong> — BlueDot Impact (Jan 2026, selective intake). 30-hour intensive.</li>
-            <li><strong>Crypto Accounting Academy</strong> — The Accountant Quits (Jul 2024, Credential #18).</li>
-            <li><strong>Master of Business Administration (MBA)</strong> — Bond University (2020–2021, withdrew to study blockchain instead).</li>
-            <li><strong>Developing Blockchain Strategy</strong> — RMIT University (2018).</li>
-            <li><strong>Bachelor of Taxation</strong> — UNSW (2002–2007). Tax law, policy and administration, commercial law, economics and accounting.</li>
-            <li><strong>Diploma of Financial Planning</strong> — Mentor Education (2012–2014). RG146 compliance.</li>
-            <li><strong>Diploma of Advanced Taxation</strong> — The Tax Institute (2007). Required for FTIA designation.</li>
-            <li><strong>Advanced Diploma of Accounting</strong> — TAFE NSW (1999–2001).</li>
+            <li><strong>Master of International Taxation — UNSW Australia</strong> (2012–2015). Australian international tax; USA, Canada, China, NZ, Hong Kong, Singapore, Europe, DTAs, tax system design and structures, transfer pricing, employee remuneration, financial planning tax strategies.</li>
+
+            <li><strong>First Cohort, International/Global Studies — The Network School</strong> (Sep 2024–present). Founded by Balaji Srinivasan for co-developing society-as-a-service with peer-to-peer interdisciplinary learning: entrepreneurship, cryptography, Bitcoin, AI, coding, startup growth, digital governance. Contributing Web3 Accounting and business workshops; developing a futurist accounting faculty and a Bitcoin-principled competencies framework.</li>
+
+            <li><strong>Advanced Diploma of Applied Blockchain — Blockchain Academy International / TAFE Queensland</strong> (May 2022–Dec 2023). Blockchain framework, decentralised consensus, smart contracts, blockchain governance, interoperability, network stewardship.</li>
+
+            <li><strong>AI Safety: Frontier AI Governance — BlueDot Impact</strong> (issued Mar 2026, first cohort, selective intake). Frontier AI capability assessment, institutional power and dependencies, governance frameworks under crisis and competitive dynamics. Action plan: global public accountants as cross-border AI governance intermediary layer.</li>
+
+            <li><strong>AI Safety: AGI Strategy — BlueDot Impact</strong> (issued Jan 2026, selective intake). 30-hour intensive. Technical AI trends, threat models via kill chain analysis, defence-in-depth frameworks, action plan for beneficial AI outcomes.</li>
+
+            <li><strong>Crypto Accounting Academy — The Accountant Quits</strong> (issued Jul 2024, Credential #18). Block explorers, on-chain accounting, treasury management, tax, audit.</li>
+
+            <li><strong>Master of Business Administration (MBA, incomplete) — Bond University</strong> (2020–2021). Withdrew to study blockchain instead.</li>
+
+            <li><strong>Developing Blockchain Strategy — RMIT University</strong> (2018). Blockchain technology, use cases, value propositions, strategic frameworks.</li>
+
+            <li><strong>Bachelor of Taxation — UNSW</strong> (2002–2007). Tax law, policy and administration, commercial law, economics and accounting.</li>
+
+            <li><strong>Diploma of Financial Planning — Mentor Education</strong> (2012–2014). RG146 compliance for superannuation, SMSF, investments, lending, insurances; limited AFSL (accountants' licence).</li>
+
+            <li><strong>Diploma of Advanced Taxation — The Tax Institute</strong> (2007). CGT, GST, property transactions. Required for FTIA designation.</li>
+
+            <li><strong>Advanced Diploma of Accounting — TAFE NSW</strong> (1999–2001).</li>
           </ul>
         </div>
 
         <div className="cv-section">
           <h3>Volunteering</h3>
           <ul>
-            <li><strong>Deputy President — IPA MAC Malaysia</strong>, Institute of Public Accountants (Sep 2025–present)</li>
-            <li><strong>Public Officer — Digital Playhouse Foundation</strong> (May 2021–present).</li>
-            <li><strong>Business Mentor — The School of Bitcoin</strong> (Jul 2021–present). Free and open source learning community on Nostr.</li>
-            <li><strong>Mentoring for Growth (M4G) Consultant — Queensland Government</strong> (Feb 2021–present).</li>
-            <li><strong>Vice President — Discovery Coast Tourism and Commerce</strong> (Oct 2020–Oct 2021).</li>
-            <li><strong>Committee Member — 1770 Art Show</strong> (Oct 2019–Jan 2022).</li>
-            <li><strong>Treasurer — Startup Gladstone Inc.</strong> (Aug 2019–Aug 2020).</li>
+            <li><strong>Deputy President — IPA MAC Malaysia, Institute of Public Accountants</strong> (Sep 2025–present)</li>
+            <li><strong>Public Officer — Digital Playhouse Foundation</strong> (May 2021–present). PBI charity delivering digital skills and financial literacy programs.</li>
+            <li><strong>Business Mentor — The School of Bitcoin</strong> (Jul 2021–present). Free and open source learning community on Nostr. Value 4 Value lessons, Bitcoin project mentorship and funding.</li>
+            <li><strong>Mentoring for Growth (M4G) Consultant — Queensland Government</strong> (Feb 2021–present). Panel mentoring for small business startups on financial management, budgeting, cloud accounting tools.</li>
+            <li><strong>Vice President — Discovery Coast Tourism and Commerce</strong> (Oct 2020–Oct 2021). Strategy, grants, membership, business community relationships.</li>
+            <li><strong>Committee Member — 1770 Art Show</strong> (Oct 2019–Jan 2022). Annual regional art show, Agnes Water, Qld. Prize pool $10,000+. Worked with QAG/GOMA curator.</li>
+            <li><strong>Treasurer — Startup Gladstone Inc.</strong> (Aug 2019–Aug 2020). Not-for-profit social enterprise. Digitalised record keeping, online collaboration tools, monthly management reporting.</li>
           </ul>
         </div>
 
@@ -609,29 +656,29 @@ function CVTab() {
           <h3>Organisations</h3>
           <ul>
             <li><strong>Western Australian AI Hub</strong> — Founding Member (2024)</li>
-            <li><strong>CryptoCFOs</strong> — Member (Feb 2024–present).</li>
-            <li><strong>Web3Finance Club</strong> — “First 100” Member (Jan 2022–present).</li>
+            <li><strong>CryptoCFOs</strong> — Member (Feb 2024–present). Premier community for Web3 finance professionals.</li>
+            <li><strong>Web3Finance Club</strong> — "First 100" Member (Jan 2022–present). Community for finance leaders in Web3. Membership NFT holder.</li>
             <li><strong>Digital Economy Council of Australia</strong> (formerly Blockchain Australia) — Member since 2021</li>
             <li><strong>LawFi DAO</strong> — Member (2022–2023)</li>
           </ul>
         </div>
 
         <div className="cv-section">
-          <h3>Writing & Media</h3>
+          <h3>Writing &amp; Media</h3>
           <ul>
-            <li><strong>Forbes</strong> — Contributor. Bitcoin policy, monetary infrastructure, UK crypto regulation (2024–2025)</li>
-            <li><strong>Cointelegraph</strong> — Contributor. Crypto accounting, Indigenous metaverse, Web3 for business (2022–2023)</li>
-            <li><strong>IPA Member Journal</strong> — “Web3: what is it and how will it transform accountancy?” (2024)</li>
+            <li><strong>Contributor</strong> — Bitcoin policy, monetary infrastructure, UK crypto regulation (2024–2025)</li>
+            <li><strong>Contributor</strong> — Crypto accounting, Indigenous metaverse, Web3 for business (2022–2023)</li>
+            <li><strong>IPA Member Journal</strong> — "Web3: what is it and how will it transform accountancy?" (2024)</li>
             <li><strong>Xero Future Focus</strong> — Featured expert, crypto in small business (2023)</li>
             <li><strong>Global Crypto Tax Report</strong> — Australian overview, Web3 Accountant (2024, English and Chinese)</li>
             <li><strong>Cryptoworth Top 60</strong> — Top 60 Web3 Leaders of Crypto Accounting globally (2024)</li>
-            <li><strong>Substack</strong> — <a href="https://blog.electrafrost.com" target="_blank">blog.electrafrost.com</a> (2023–present)</li>
+            <li><strong>Substack</strong> — blog.electrafrost.com (2023–present)</li>
           </ul>
         </div>
 
         <div className="cv-section">
           <h3>Skills</h3>
-          <p>International Tax · Bitcoin · Crypto Accounting · Applied Blockchain · Web3 · DeFi · Tax Advisory · Business Advisory · Accounting Software · Financial Reporting · Management Accounting · Cryptocurrency Regulation · ESG · AI Governance · IT Governance · Frontier AI · AGI Strategy · Strategic Consulting · Community Engagement · Public Speaking · Conference Speaking · Training & Development · Start-up Consulting · Treasury Management · Internal Controls · Audit Readiness · Professional Ethics · Tax Audit Representation</p>
+          <p className="cv-skills">International Tax · Bitcoin · Crypto Accounting · Applied Blockchain · Web3 · DeFi · Tax Advisory · Business Advisory · Accounting Software · Financial Reporting · Management Accounting · Cryptocurrency Regulation · ESG · AI Governance · IT Governance · Frontier AI · AGI Strategy · Strategic Consulting · Community Engagement · Public Speaking · Conference Speaking · Training &amp; Development · Start-up Consulting · Treasury Management · Internal Controls · Audit Readiness · Professional Ethics · Tax Audit Representation</p>
         </div>
 
       </div>
@@ -640,9 +687,7 @@ function CVTab() {
 }
 
 
-
-
-function App() {
+export default function App() {
   const [activeTab, setActiveTab] = useState("GRAPH");
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -694,44 +739,4 @@ function CPDTab() {
   );
 }
 
-export default function App() {
-  const [activeTab, setActiveTab] = useState("GRAPH");
-  const [searchQuery, setSearchQuery] = useState("");
 
-  const { nodes, eras } = data;
-
-  return (
-    <div className="app">
-      <Header
-        activeTab={activeTab}
-        setActiveTab={setActiveTab}
-        searchQuery={searchQuery}
-        setSearchQuery={setSearchQuery}
-      />
-      <main className="main-content">
-        {activeTab === "GRAPH" && (
-          <GraphTab nodes={nodes} eras={eras} searchQuery={searchQuery} />
-        )}
-        {activeTab === "FEED" && (
-          <FeedTab nodes={nodes} eras={eras} searchQuery={searchQuery} />
-        )}
-        {activeTab === "INSIGHTS" && (
-          <InsightsTab nodes={nodes} eras={eras} />
-        )}
-        {activeTab === "ABOUT" && <AboutTab />}
-            {activeTab === "CV" && <CVTab />}
-      </main>
-      <footer className="site-footer">
-        <div className="footer-inner">
-          <span>electrafrost.com</span>
-          <span className="footer-sep">·</span>
-          <span>Updated April 2026</span>
-          <span className="footer-sep">·</span>
-          <a href="/llms.txt">llms.txt</a>
-          <span className="footer-sep">·</span>
-          <a href="https://github.com/electrafrost" target="_blank" rel="noopener">GitHub</a>
-        </div>
-      </footer>
-    </div>
-  );
-}
