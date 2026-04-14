@@ -523,12 +523,12 @@ function CVTab() {
         <div className="cv-section">
           <h3>Current</h3>
           <ul>
-            <li><strong>Founding Cohort Member — Network School</strong> (Sep 2024–present, Forest City, Malaysia/Singapore). Selected into V1 first cohort of 128 ‘dark talent’ from over 5,000 applications. Contributing to peer mentoring and informal learner-programming of the international digital nomad, entrepreneur and founder community. Base for independently building professional accounting ecosystems for an AI-driven decentralised digital economy, and startup-society transnational tax coordination solutions.</li>
+            <li><strong>Founding Cohort Member — Network School</strong> (Sep 2024–present, Forest City, Malaysia/Singapore). Selected into V1 first cohort of 128 ‘dark talent’ from over 5,000 applications. One of the earlier long-term NS residents. Contributing to peer mentoring and informal learner-programming of the international digital nomad, entrepreneur and founder community. Base for independently building professional accounting ecosystems for an AI-driven decentralised digital economy, and startup-society transnational tax coordination solutions.</li>
             <li><strong>Founder and Lead Architect — Kigumi Solutions</strong> (October 2025–present). Developing a platform-based business model and architecture to facilitate AI-assisted client-serving collaboration between public accountants and legal firms for legal, documentation, customer due diligence and corporate secretarial services.</li>
-            <li><strong>Operations and Platform Partnerships — Consulta Mirabilis Law</strong> (October 2025–present). Leading the operations and strategic partnerships, building the practice’s operational infrastructure for integration with Kigumi platform. Engaging SME accounting practices to identify market gaps, while developing service models that define human and AI roles at each workflow touchpoint, and navigating the regulatory and ethical frameworks for agentic practice.</li>
-            <li><strong>Founder / Researcher — CREDU</strong> (Feb 2024–present). Researching and developing CREDU as a global verified credentialing, audit and procurement platform for accountants’ CPE/CPD using open source technologies. Professional bodies and autonomous agents can publicly inspect CPE/CPD compliance and expertise with proof on open blockchain.</li>
+            <li><strong>Operations and Platform Partnerships — Consulta Mirabilis Law</strong> (October 2025–present). Leading operations and strategic partnerships, building the practice’s operational infrastructure for integration with Kigumi platform. Engaging SME accounting practices to identify market gaps, developing service models that define human and AI roles at each workflow touchpoint.</li>
+            <li><strong>Founder / Researcher — CREDU</strong> (Feb 2024–present). Researching and developing CREDU as a global verified credentialing, audit and procurement platform for accountants’ CPE/CPD using open source technologies. Professional bodies and autonomous agents can publicly inspect CPE/CPD compliance with proof on open blockchain.</li>
             <li><strong>Deputy President — IPA Malaysia Member Advisory Committee (MMAC)</strong> (Sep 2025–present).</li>
-            <li><strong>Co-Founder and Director — Digital Playhouse Foundation</strong> (Apr 2021–present). Public Benevolent Institution (PBI). Projects: The School of Bitcoin, Stacks Australia, Accountants On-Chain, Coding 4 Kids, GameChangers.</li>
+            <li><strong>Co-Founder and Director — Digital Playhouse Foundation</strong> (Apr 2021–present, Agnes Water, Queensland). Public Benevolent Institution (PBI). Projects: The School of Bitcoin, Stacks Australia, Accountants On-Chain, Coding 4 Kids, GameChangers.</li>
             <li><strong>Enterprise Engagement — Stacks Australia</strong> (Feb 2024–present). Raising awareness of Stacks as a high-integrity Bitcoin Layer 2 in the Australian blockchain industry.</li>
           </ul>
         </div>
@@ -539,7 +539,7 @@ function CVTab() {
             <li><strong>Public Accounting Practitioner, Business Advisor — Electra Frost Advisory</strong> (May 2008–2022, Sydney–Brisbane). Long term specialist accounting, tax and business advisory for artistic and creative industries, international tax for Australians abroad.</li>
             <li><strong>Accounting Workflow and App Implementation Consultant — Sorrento Strategic Accounting</strong> (Feb–Apr 2025, Perth).</li>
             <li><strong>Project Lead — Accountants On-Chain</strong> (2021–2024). Webinars, training, consulting and speaking for crypto-curious accountants, bookkeepers and advisers.</li>
-            <li><strong>Blockchain Education Manager — Blockchain Academy International</strong> (Feb–Jun 2023, Brisbane). Conducted competency mapping across the Applied Blockchain and Accounting Diploma qualifications to develop an integrated pathway positioning blockchain and AI technology within accounting practice.</li>
+            <li><strong>Blockchain Education Manager — Blockchain Academy International</strong> (Feb–Jun 2023, Brisbane). Conducted competency mapping across the Applied Blockchain and Accounting Diploma qualifications to develop an integrated pathway positioning blockchain and AI within accounting practice.</li>
             <li><strong>Principal and Consultant — Discovery Accountants and Advisers</strong> (2016–May 2020, Agnes Water, Queensland).</li>
             <li><strong>Tax Consultant and Accountant — entArt Accounting</strong> (Aug 2002–May 2008, Bondi Junction, Sydney). Specialist business management and tax services for the music and entertainment industry.</li>
             <li><strong>Tax Preparer and Bookkeeper</strong> (Jan 2000–Jul 2002, Sydney). Formative professional experience at Moneypenny Business and Tax Services and Page Harrison and Co.</li>
@@ -609,67 +609,5 @@ function CVTab() {
           <h3>Skills</h3>
           <p>International Tax · Bitcoin · Crypto Accounting · Applied Blockchain · Web3 · DeFi · Tax Advisory · Business Advisory · Accounting Software · Financial Reporting · Management Accounting · Cryptocurrency Regulation · AI Governance · IT Governance · Frontier AI · AGI Strategy · Strategic Consulting · Community Engagement · Public Speaking · Conference Speaking · Training and Development · Start-up Consulting · Treasury Management · Internal Controls · Audit Readiness · Professional Ethics · Tax Audit Representation</p>
         </div>
-      </div></div>
-    </div>
-  );
-}
+      </div>
 
-export default function App() {
-  const getTabFromHash = () => {
-    const hash = window.location.hash.replace('#', '').toUpperCase();
-    const valid = ["GRAPH", "FEED", "INSIGHTS", "THESIS", "CPD", "CV"];
-    return valid.includes(hash) ? hash : "GRAPH";
-  };
-  const [activeTab, setActiveTab] = useState(getTabFromHash);
-  const [searchQuery, setSearchQuery] = useState("");
-
-  const { nodes, eras } = data;
-
-  useEffect(() => {
-    const onHash = () => {
-      const tab = getTabFromHash();
-      setActiveTab(tab);
-    };
-    window.addEventListener('hashchange', onHash);
-    return () => window.removeEventListener('hashchange', onHash);
-  }, []);
-
-  return (
-    <div className="app">
-      <Header
-        activeTab={activeTab}
-        setActiveTab={(tab) => {
-        setActiveTab(tab);
-        window.location.hash = tab.toLowerCase();
-      }}
-        searchQuery={searchQuery}
-        setSearchQuery={setSearchQuery}
-      />
-      <main className="main-content">
-        {activeTab === "GRAPH" && (
-          <GraphTab nodes={nodes} eras={eras} searchQuery={searchQuery} />
-        )}
-        {activeTab === "FEED" && (
-          <FeedTab nodes={nodes} eras={eras} searchQuery={searchQuery} />
-        )}
-        {activeTab === "INSIGHTS" && (
-          <InsightsTab nodes={nodes} eras={eras} />
-        )}
-        {activeTab === "THESIS" && <AboutTab />}
-            {activeTab === "CPD" && <CPDTab />}
-            {activeTab === "CV" && <CVTab />}
-      </main>
-      <footer className="site-footer">
-        <div className="footer-inner">
-          <a href="https://electrafrost.com" target="_blank" rel="noopener">electrafrost.com</a>
-          <span className="footer-sep">·</span>
-          <span>Updated April 2026</span>
-          <span className="footer-sep">·</span>
-          <a href="/llms.txt">llms.txt</a>
-          <span className="footer-sep">·</span>
-          <a href="https://github.com/electrafrost" target="_blank" rel="noopener">GitHub</a>
-        </div>
-      </footer>
-    </div>
-  );
-}// ─── CPD TAB ─────────────────────────────────────────────────────────────────
