@@ -987,3 +987,16 @@
   line-height: 1.75;
 }
 .about-thesis > p:last-child { margin-bottom: 0; }
+
+/* ─── CV SUMMARY ────────────────────────────────────────────────────── */
+.cv-summary {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+}
+.cv-summary p {
+  font-size: 1rem;
+  color: var(--text-primary);
+  line-height: 1.75;
+  margin: 0;
+}
