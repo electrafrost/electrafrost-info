@@ -484,17 +484,13 @@ function AboutTab() {
         </div>
 
         <div className="about-thesis">
-          <h3>Core Thesis</h3>
-          <blockquote>
-            The accounting profession holds a unique, enforceable, cross-border public interest mandate —
-            and every major technological transition of the last decade is a moment where that mandate
-            either gets exercised or gets abandoned. AI safety — not responsible AI, not operational
-            governance, but frontier AI safety — is a social and governance (S+G) accounting imperative.
-            Robodebt crystallised it: two decades of watching automated systems fail people without
-            adequate controls or appeal. As more infrastructure is rebuilt with AI, someone with real,
-            enforceable duties to the public has to stand between the models and the people they affect.
-            The public accountant is the missing human control layer.
-          </blockquote>
+          <div className="core-thesis-kicker">Core Thesis</div>
+          <p>What is accounting? It’s not what we do, it’s what society requires us to provide:</p>
+          <p className="core-thesis-values">Accountability. Advocacy. Trust.</p>
+          <p>The accounting profession was built on the same values Bitcoin instantiates: truthful records, trustless verification, immutable timestamped ledgers, public auditability. Bitcoin is not a new subject for accountants — it is the monetary infrastructure on a global ledger that expresses what accounting has always been for. Public blockchains let us operate without needing to know and trust the parties we do business with; the further they depart from Bitcoin’s security model, the more trust assumptions and risks arise which require a degree of regulatory intervention.</p>
+          <p>The profession holds a unique, enforceable, cross-border public interest mandate. As the monetary standard shifts and economic activity moves into open protocols and network societies, that mandate either gets exercised in the new infrastructure or gets abandoned by default. Governments are jurisdictionally limited. Industry is conflicted. The accounting profession is neither — and it is already bound by an enforceable obligation to the public that no other profession carries at global scale.</p>
+          <p>Every major technological transition of the last decade is a moment where that mandate either gets exercised or gets abandoned. Frontier AI safety is the most urgent current test. Not responsible AI. Not operational governance. Frontier AI safety through cryptographic verifications and proof-of-control on open protocols — as a social and governance (S+G) accounting imperative. Robodebt crystallised it: automated systems failing people without adequate controls or right of appeal. As more critical infrastructure is rebuilt with AI, someone with real, enforceable duties to the public has to stand between the models and the people they affect. The public accounting profession is the missing human regulatory layer to engineer and govern trust in protocols.</p>
+          <p className="core-thesis-close">Bitcoin is Accounting. Accounting is Bitcoin.</p>
         </div>
 
         <div className="about-sections">
@@ -730,15 +726,6 @@ export default function App() {
           <a href="https://github.com/electrafrost" target="_blank" rel="noopener">GitHub</a>
         </div>
       </footer>
-      <div className="core-thesis">
-        <div className="core-thesis-kicker">Core Thesis</div>
-        <p>What is accounting? It’s not what we do, it’s what society requires us to provide:</p>
-        <p className="core-thesis-values">Accountability. Advocacy. Trust.</p>
-        <p>The accounting profession was built on the same values Bitcoin instantiates: truthful records, trustless verification, immutable timestamped ledgers, public auditability. Bitcoin is not a new subject for accountants — it is the monetary infrastructure on a global ledger that expresses what accounting has always been for. Public blockchains let us operate without needing to know and trust the parties we do business with; the further they depart from Bitcoin’s security model, the more trust assumptions and risks arise which require a degree of regulatory intervention.</p>
-        <p>The profession holds a unique, enforceable, cross-border public interest mandate. As the monetary standard shifts and economic activity moves into open protocols and network societies, that mandate either gets exercised in the new infrastructure or gets abandoned by default. Governments are jurisdictionally limited. Industry is conflicted. The accounting profession is neither — and it is already bound by an enforceable obligation to the public that no other profession carries at global scale.</p>
-        <p>Every major technological transition of the last decade is a moment where that mandate either gets exercised or gets abandoned. Frontier AI safety is the most urgent current test. Not responsible AI. Not operational governance. Frontier AI safety through cryptographic verifications and proof-of-control on open protocols — as a social and governance (S+G) accounting imperative. Robodebt crystallised it: automated systems failing people without adequate controls or right of appeal. As more critical infrastructure is rebuilt with AI, someone with real, enforceable duties to the public has to stand between the models and the people they affect. The public accounting profession is the missing human regulatory layer to engineer and govern trust in protocols.</p>
-        <p className="core-thesis-close">Bitcoin is Accounting. Accounting is Bitcoin.</p>
-      </div>
     </div>
   );
 }// ─── CPD TAB ─────────────────────────────────────────────────────────────────
