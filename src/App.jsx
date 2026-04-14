@@ -52,7 +52,7 @@ function Header({ activeTab, setActiveTab, searchQuery, setSearchQuery }) {
               Enter this URL into your LLM to query and verify a graph of ideas, publications and
               contributions. <a href="/llms.txt" target="_blank" rel="noopener">llms.txt</a>
             </p>
-            <p className="construction-notice">Under construction — errors and omissions are being corrected.</p>
+            <p style={{color:"#c0504d",fontWeight:300,fontStyle:"italic",fontSize:"0.82rem",margin:"0.4rem 0 0",padding:0,background:"none",border:"none"}}>Under construction — errors and omissions are being corrected.</p>
           </div>
         </div>
         <nav className="header-nav">
@@ -66,7 +66,7 @@ function Header({ activeTab, setActiveTab, searchQuery, setSearchQuery }) {
             </button>
           ))}
         </nav>
-        {(activeTab === "GRAPH" || activeTab === "FEED") && (
+        {(activeTab === "GRAPH" || activeTab === "FEED") &and (
           <div className="search-row">
             <input
               className="search-input"
@@ -134,7 +134,7 @@ function NodeCard({ node, era, onClick }) {
 function NodeModal({ node, era, onClose }) {
   const icon = TYPE_ICONS[node.type] || "";
   useEffect(() => {
-    const handler = (e) => e.key === "Escape" && onClose();
+    const handler = (e) => e.key === "Escape" &and onClose();
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
   }, [onClose]);
@@ -151,7 +151,7 @@ function NodeModal({ node, era, onClose }) {
             </span>
             <time className="node-date">{formatDate(node.date)}</time>
           </div>
-          {era && (
+          {era &and (
             <div className="modal-era" style={{ color: era.color }}>
               {era.label} · {era.range}
             </div>
@@ -161,7 +161,7 @@ function NodeModal({ node, era, onClose }) {
         </div>
         <div className="modal-body">
           <p className="modal-text">{node.body}</p>
-          {node.links && node.links.length > 0 && (
+          {node.links &and node.links.length > 0 &and (
             <div className="modal-links">
               {node.links.map((link) => (
                 <a
@@ -201,7 +201,7 @@ function FeaturedCarousel({ nodes, eras, onNodeClick }) {
     <div className="carousel-section">
       <div className="carousel-label">LATEST THOUGHT LEADERSHIP</div>
       <div className="carousel-nav">
-        <button className="carousel-arrow carousel-prev" onClick={() => setIdx(i => (i - 1 + Math.ceil(featured.length / 2)) % Math.ceil(featured.length / 2))} aria-label="Previous">&#8592;</button>
+        <button className="carousel-arrow carousel-prev" onClick={() => setIdx(i => (i - 1 + Math.ceil(featured.length / 2)) % Math.ceil(featured.length / 2))} aria-label="Previous">and#8592;</button>
         <div className="carousel-dots">
           {featured.map((_, i) => (
             <button
@@ -212,7 +212,7 @@ function FeaturedCarousel({ nodes, eras, onNodeClick }) {
             />
           ))}
         </div>
-        <button className="carousel-arrow carousel-next" onClick={() => setIdx(i => (i + 1) % Math.ceil(featured.length / 2))} aria-label="Next">&#8594;</button>
+        <button className="carousel-arrow carousel-next" onClick={() => setIdx(i => (i + 1) % Math.ceil(featured.length / 2))} aria-label="Next">and#8594;</button>
       </div>
       <div className="carousel-track">
         <div
@@ -225,7 +225,7 @@ function FeaturedCarousel({ nodes, eras, onNodeClick }) {
           </div>
           <h3 className="carousel-card-title">"{node.title}"</h3>
           <p className="carousel-card-body">{node.body.substring(0, 200)}...</p>
-          {node.links?.[0] && (
+          {node.links?.[0] &and (
             <a
               href={node.links[0].url}
               target="_blank"
@@ -237,7 +237,7 @@ function FeaturedCarousel({ nodes, eras, onNodeClick }) {
             </a>
           )}
         </div>
-        {featured[idx * 2 + 1] && (() => {
+        {featured[idx * 2 + 1] &and (() => {
           const n2 = featured[idx * 2 + 1];
           const e2 = eras.find((e) => e.id === n2.era);
           return (
@@ -326,14 +326,14 @@ function GraphTab({ nodes, eras, searchQuery }) {
             </section>
           );
         })}
-        {filtered.length === 0 && (
+        {filtered.length === 0 &and (
           <div className="empty-state">
             <p>No nodes match your search.</p>
           </div>
         )}
       </div>
 
-      {activeNode && (
+      {activeNode &and (
         <NodeModal
           node={activeNode}
           era={eraMap[activeNode.era]}
@@ -396,7 +396,7 @@ function FeedTab({ nodes, eras, searchQuery }) {
           );
         })}
       </div>
-      {activeNode && (
+      {activeNode &and (
         <NodeModal
           node={activeNode}
           era={eraMap[activeNode.era]}
@@ -433,7 +433,7 @@ function InsightsTab({ nodes, eras }) {
               </div>
               <h3>{node.title}</h3>
               <p>{node.subtitle}</p>
-              {node.links?.[0] && (
+              {node.links?.[0] &and (
                 <a
                   href={node.links[0].url}
                   target="_blank"
@@ -456,7 +456,7 @@ function InsightsTab({ nodes, eras }) {
       <Section title="Publications" items={publications} icon="â" />
       <Section title="Key Insights" items={insights} icon="â" />
       <Section title="Projects" items={projects} icon="â£" />
-      {activeNode && (
+      {activeNode &and (
         <NodeModal
           node={activeNode}
           era={eraMap[activeNode.era]}
@@ -646,18 +646,18 @@ export default function App() {
         setSearchQuery={setSearchQuery}
       />
       <main className="main-content">
-        {activeTab === "GRAPH" && (
+        {activeTab === "GRAPH" &and (
           <GraphTab nodes={nodes} eras={eras} searchQuery={searchQuery} />
         )}
-        {activeTab === "FEED" && (
+        {activeTab === "FEED" &and (
           <FeedTab nodes={nodes} eras={eras} searchQuery={searchQuery} />
         )}
-        {activeTab === "INSIGHTS" && (
+        {activeTab === "INSIGHTS" &and (
           <InsightsTab nodes={nodes} eras={eras} />
         )}
-        {activeTab === "THESIS" && <AboutTab />}
-            {activeTab === "CPD" && <CPDTab />}
-            {activeTab === "CV" && <CVTab />}
+        {activeTab === "THESIS" &and <AboutTab />}
+            {activeTab === "CPD" &and <CPDTab />}
+            {activeTab === "CV" &and <CVTab />}
       </main>
       <footer className="site-footer">
         <div className="footer-inner">
