@@ -34,7 +34,7 @@ function formatDate(dateStr) {
 // âââ COMPONENTS âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 
 function Header({ activeTab, setActiveTab, searchQuery, setSearchQuery }) {
-  const tabs = ["GRAPH", "FEED", "INSIGHTS", "ABOUT", "CV"];
+  const tabs = ["GRAPH", "FEED", "INSIGHTS", "ABOUT", "CPD", "CV"];
   return (
     <header className="site-header">
       <div className="header-inner">
@@ -52,6 +52,7 @@ function Header({ activeTab, setActiveTab, searchQuery, setSearchQuery }) {
               Enter this URL into your LLM to query and verify a graph of ideas, publications and
               contributions. <a href="/llms.txt" target="_blank" rel="noopener">llms.txt</a>
             </p>
+            <p className="construction-notice">Under construction — may contain AI-generated errors and omissions currently being corrected.</p>
           </div>
         </div>
         <nav className="header-nav">
@@ -715,6 +716,7 @@ export default function App() {
           <InsightsTab nodes={nodes} eras={eras} />
         )}
         {activeTab === "ABOUT" && <AboutTab />}
+            {activeTab === "CPD" && <CPDTab />}
             {activeTab === "CV" && <CVTab />}
       </main>
       <footer className="site-footer">
@@ -730,4 +732,15 @@ export default function App() {
       </footer>
     </div>
   );
+}// ─── CPD TAB ─────────────────────────────────────────────────────────────────
+function CPDTab() {
+  return (
+    <div className="cpd-tab">
+      <div className="cpd-notice">
+        <p>This section is under construction and will soon display a comprehensive record of Electra's 25 years of continuous professional education and development in specialist fields of accounting, tax and technology — which have maintained her qualifications. This is a significant record to reconstruct from gatekept records for the purpose of demonstrating a publicly verifiable and sovereign record of competency.</p>
+      </div>
+    </div>
+  );
 }
+
+
