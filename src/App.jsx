@@ -106,7 +106,7 @@ function EraFilter({ eras, activeEra, setActiveEra }) {
 }
 
 function NodeCard({ node, era, onClick }) {
-  const icon = TYPE_ICONS[node.type] || "â";
+  const icon = TYPE_ICONS[node.type] || "";
   return (
     <article
       className="node-card"
@@ -132,7 +132,7 @@ function NodeCard({ node, era, onClick }) {
 }
 
 function NodeModal({ node, era, onClose }) {
-  const icon = TYPE_ICONS[node.type] || "â";
+  const icon = TYPE_ICONS[node.type] || "";
   useEffect(() => {
     const handler = (e) => e.key === "Escape" && onClose();
     window.addEventListener("keydown", handler);
@@ -367,7 +367,7 @@ function FeedTab({ nodes, eras, searchQuery }) {
       <div className="feed-list">
         {sorted.map((node) => {
           const era = eraMap[node.era];
-          const icon = TYPE_ICONS[node.type] || "â";
+          const icon = TYPE_ICONS[node.type] || "";
           return (
             <article
               key={node.id}
