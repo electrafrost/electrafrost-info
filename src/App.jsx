@@ -656,14 +656,3 @@ export default function App() {
     </div>
   );
 }// ─── CPD TAB ─────────────────────────────────────────────────────────────────
-function CPDTab() {
-  return (
-    <div className="cpd-tab">
-      <div className="cpd-notice">
-        <p>This section is under construction and will soon display a comprehensive record of Electra's 25 years of continuous professional education and development in specialist fields of accounting, tax and technology — which have maintained her qualifications. This is a significant record to reconstruct from gatekept records for the purpose of demonstrating a publicly verifiable and sovereign record of competency.</p>
-      </div>
-    </div>
-  );
-}
-
-
