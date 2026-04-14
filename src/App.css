@@ -963,3 +963,27 @@
   padding-top: 1.25rem;
   border-top: 1px solid var(--border);
 }
+
+/* ─── THESIS TAB EXPLAINER ──────────────────────────────────────────── */
+.about-site-explainer {
+  background: var(--surface);
+  border-left: 3px solid var(--border);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 2.5rem;
+}
+.about-site-explainer p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0 0 0.75rem;
+}
+.about-site-explainer p:last-child { margin-bottom: 0; }
+.about-site-explainer a { color: var(--accent); }
+/* Paragraph spacing inside about-thesis */
+.about-thesis > p {
+  margin-bottom: 1.25rem;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+}
+.about-thesis > p:last-child { margin-bottom: 0; }
