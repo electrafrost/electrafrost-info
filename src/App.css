@@ -1000,3 +1000,8 @@
   line-height: 1.75;
   margin: 0;
 }
+
+.about-preamble { background: var(--bg); padding: 2rem 0 1.5rem; }
+.about-preamble .about-name { font-size: 1.5rem; font-weight: 700; color: var(--text); margin: 0 0 0.5rem; }
+.about-preamble .about-location { margin-bottom: 1rem; }
+.about-preamble p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.7; margin: 0 0 0.8rem; }
