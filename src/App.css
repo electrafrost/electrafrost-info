@@ -900,3 +900,29 @@
 .cv-section li strong { color: var(--text-primary); }
 .cv-section p { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.65; margin: 0; }
 .cv-section a { color: var(--accent); }
+
+/* ─── CONSTRUCTION NOTICE ───────────────────────────────────────────── */
+.construction-notice {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: #c0392b;
+  background: #fdf2f0;
+  border-left: 3px solid #e74c3c;
+  padding: 0.45rem 0.75rem;
+  margin-top: 0.75rem;
+  line-height: 1.5;
+}
+
+/* ─── CPD TAB ────────────────────────────────────────────────────────── */
+.cpd-tab { max-width: 720px; margin: 0 auto; padding: 2rem 0 4rem; }
+.cpd-notice {
+  border-left: 3px solid var(--border);
+  padding: 1.25rem 1.5rem;
+  background: var(--surface);
+}
+.cpd-notice p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0;
+}
