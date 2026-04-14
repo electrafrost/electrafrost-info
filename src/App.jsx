@@ -66,7 +66,7 @@ function Header({ activeTab, setActiveTab, searchQuery, setSearchQuery }) {
             </button>
           ))}
         </nav>
-        {(activeTab === "GRAPH" || activeTab === "FEED") &and (
+        {(activeTab === "GRAPH" || activeTab === "FEED") && (
           <div className="search-row">
             <input
               className="search-input"
@@ -134,7 +134,7 @@ function NodeCard({ node, era, onClick }) {
 function NodeModal({ node, era, onClose }) {
   const icon = TYPE_ICONS[node.type] || "";
   useEffect(() => {
-    const handler = (e) => e.key === "Escape" &and onClose();
+    const handler = (e) => e.key === "Escape" && onClose();
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
   }, [onClose]);
@@ -151,7 +151,7 @@ function NodeModal({ node, era, onClose }) {
             </span>
             <time className="node-date">{formatDate(node.date)}</time>
           </div>
-          {era &and (
+          {era && (
             <div className="modal-era" style={{ color: era.color }}>
               {era.label} · {era.range}
             </div>
@@ -161,7 +161,7 @@ function NodeModal({ node, era, onClose }) {
         </div>
         <div className="modal-body">
           <p className="modal-text">{node.body}</p>
-          {node.links &and node.links.length > 0 &and (
+          {node.links && node.links.length > 0 && (
             <div className="modal-links">
               {node.links.map((link) => (
                 <a
@@ -201,7 +201,7 @@ function FeaturedCarousel({ nodes, eras, onNodeClick }) {
     <div className="carousel-section">
       <div className="carousel-label">LATEST THOUGHT LEADERSHIP</div>
       <div className="carousel-nav">
-        <button className="carousel-arrow carousel-prev" onClick={() => setIdx(i => (i - 1 + Math.ceil(featured.length / 2)) % Math.ceil(featured.length / 2))} aria-label="Previous">and#8592;</button>
+        <button className="carousel-arrow carousel-prev" onClick={() => setIdx(i => (i - 1 + Math.ceil(featured.length / 2)) % Math.ceil(featured.length / 2))} aria-label="Previous">&#8592;</button>
         <div className="carousel-dots">
           {featured.map((_, i) => (
             <button
@@ -212,7 +212,7 @@ function FeaturedCarousel({ nodes, eras, onNodeClick }) {
             />
           ))}
         </div>
-        <button className="carousel-arrow carousel-next" onClick={() => setIdx(i => (i + 1) % Math.ceil(featured.length / 2))} aria-label="Next">and#8594;</button>
+        <button className="carousel-arrow carousel-next" onClick={() => setIdx(i => (i + 1) % Math.ceil(featured.length / 2))} aria-label="Next">&#8594;</button>
       </div>
       <div className="carousel-track">
         <div
@@ -225,7 +225,7 @@ function FeaturedCarousel({ nodes, eras, onNodeClick }) {
           </div>
           <h3 className="carousel-card-title">"{node.title}"</h3>
           <p className="carousel-card-body">{node.body.substring(0, 200)}...</p>
-          {node.links?.[0] &and (
+          {node.links?.[0] && (
             <a
               href={node.links[0].url}
               target="_blank"
@@ -237,7 +237,7 @@ function FeaturedCarousel({ nodes, eras, onNodeClick }) {
             </a>
           )}
         </div>
-        {featured[idx * 2 + 1] &and (() => {
+        {featured[idx * 2 + 1] && (() => {
           const n2 = featured[idx * 2 + 1];
           const e2 = eras.find((e) => e.id === n2.era);
           return (
@@ -326,14 +326,14 @@ function GraphTab({ nodes, eras, searchQuery }) {
             </section>
           );
         })}
-        {filtered.length === 0 &and (
+        {filtered.length === 0 && (
           <div className="empty-state">
             <p>No nodes match your search.</p>
           </div>
         )}
       </div>
 
-      {activeNode &and (
+      {activeNode && (
         <NodeModal
           node={activeNode}
           era={eraMap[activeNode.era]}
@@ -396,7 +396,7 @@ function FeedTab({ nodes, eras, searchQuery }) {
           );
         })}
       </div>
-      {activeNode &and (
+      {activeNode && (
         <NodeModal
           node={activeNode}
           era={eraMap[activeNode.era]}
@@ -433,7 +433,7 @@ function InsightsTab({ nodes, eras }) {
               </div>
               <h3>{node.title}</h3>
               <p>{node.subtitle}</p>
-              {node.links?.[0] &and (
+              {node.links?.[0] && (
                 <a
                   href={node.links[0].url}
                   target="_blank"
@@ -456,7 +456,7 @@ function InsightsTab({ nodes, eras }) {
       <Section title="Publications" items={publications} icon="â" />
       <Section title="Key Insights" items={insights} icon="â" />
       <Section title="Projects" items={projects} icon="â£" />
-      {activeNode &and (
+      {activeNode && (
         <NodeModal
           node={activeNode}
           era={eraMap[activeNode.era]}
@@ -558,15 +558,15 @@ function CVTab() {
           <h3>Education</h3>
           <ul>
             <li><strong>Master of International Taxation — UNSW Australia (2012–2015).</strong> Australian international tax; USA, Canada, China, NZ, Hong Kong, Singapore, Europe, DTAs, tax system design and structures, transfer pricing, employee remuneration, financial planning tax strategies.</li>
-            <li><strong>First Cohort, International/Global Studies — The Network School (Sep 2024–present).</strong> Founded by Balaji Srinivasan for co-developing society-as-a-service with peer-to-peer interdisciplinary learning: entrepreneurship, cryptography, Bitcoin, AI, coding, startup growth, digital governance. Contributing Web3 Accounting and business workshops; developing a futurist accounting faculty and a Bitcoin-principled competencies framework.</li>
+            <li><strong>First Cohort, International/Global Studies — The Network School (Sep 2024–present).</strong> Founded by Balaji Srinivasan for co-developing society-as-a-service with peer-to-peer interdisciplinary learning: entrepreneurship, cryptography, Bitcoin, AI, coding, startup growth, digital governance.</li>
             <li><strong>Advanced Diploma of Applied Blockchain — Blockchain Academy International / TAFE Queensland (May 2022–Dec 2023).</strong> Blockchain framework, decentralised consensus, smart contracts, blockchain governance, interoperability, network stewardship.</li>
             <li><strong>AI Safety: Frontier AI Governance — BlueDot Impact (issued Mar 2026, first cohort, selective intake).</strong> Frontier AI capability assessment, institutional power and dependencies, governance frameworks under crisis and competitive dynamics. Action plan: global public accountants as cross-border AI governance intermediary layer.</li>
             <li><strong>AI Safety: AGI Strategy — BlueDot Impact (issued Jan 2026, selective intake).</strong> 30-hour intensive. Technical AI trends, threat models via kill chain analysis, defence-in-depth frameworks, action plan for beneficial AI outcomes.</li>
             <li><strong>Crypto Accounting Academy — The Accountant Quits (issued Jul 2024, Credential #18).</strong> Block explorers, on-chain accounting, treasury management, tax, audit.</li>
             <li><strong>Master of Business Administration (MBA, incomplete) — Bond University (2020–2021).</strong> Withdrew to study blockchain instead.</li>
-            <li><strong>Developing Blockchain Strategy — RMIT University (2018).</strong> Blockchain technology, use cases, value propositions, strategic frameworks.</li>
+            <li><strong>Developing Blockchain Strategy — RMIT University (2018).</strong></li>
             <li><strong>Bachelor of Taxation — UNSW (2002–2007).</strong> Tax law, policy and administration, commercial law, economics and accounting.</li>
-            <li><strong>Diploma of Financial Planning — Mentor Education (2012–2014).</strong> RG146 compliance for superannuation, SMSF, investments, lending, insurances; limited AFSL (accountants’ licence).</li>
+            <li><strong>Diploma of Financial Planning — Mentor Education (2012–2014).</strong> RG146 compliance for superannuation, SMSF, investments, lending, insurances.</li>
             <li><strong>Diploma of Advanced Taxation — The Tax Institute (2007).</strong> CGT, GST, property transactions. Required for FTIA designation.</li>
             <li><strong>Advanced Diploma of Accounting — TAFE NSW (1999–2001).</strong></li>
           </ul>
@@ -574,13 +574,13 @@ function CVTab() {
         <div className="cv-section">
           <h3>Volunteering</h3>
           <ul>
-            <li><strong>Deputy President — IPA MAC Malaysia, Institute of Public Accountants</strong> (Sep 2025–present)</li>
+            <li><strong>Deputy President — IPA MAC Malaysia</strong> (Sep 2025–present)</li>
             <li><strong>Public Officer — Digital Playhouse Foundation</strong> (May 2021–present). PBI charity delivering digital skills and financial literacy programs.</li>
             <li><strong>Business Mentor — The School of Bitcoin</strong> (Jul 2021–present). Free and open source learning community on Nostr. Value 4 Value lessons, Bitcoin project mentorship and funding.</li>
             <li><strong>Mentoring for Growth Consultant — Queensland Government</strong> (Feb 2021–present). Panel mentoring for small business startups on financial management, budgeting, cloud accounting tools.</li>
-            <li><strong>Vice President — Discovery Coast Tourism and Commerce</strong> (Oct 2020–Oct 2021). Strategy, grants, membership, business community relationships.</li>
-            <li><strong>Committee Member — 1770 Art Show</strong> (Oct 2019–Jan 2022). Annual regional art show, Agnes Water, Qld. Prize pool $10,000+. Worked with QAG/GOMA curator.</li>
-            <li><strong>Treasurer — Startup Gladstone Inc.</strong> (Aug 2019–Aug 2020). Not-for-profit social enterprise. Digitalised record keeping, online collaboration tools, monthly management reporting.</li>
+            <li><strong>Vice President — Discovery Coast Tourism and Commerce</strong> (Oct 2020–Oct 2021).</li>
+            <li><strong>Committee Member — 1770 Art Show</strong> (Oct 2019–Jan 2022). Annual regional art show, Agnes Water, Qld.</li>
+            <li><strong>Treasurer — Startup Gladstone Inc.</strong> (Aug 2019–Aug 2020). Not-for-profit social enterprise.</li>
           </ul>
         </div>
         <div className="cv-section">
@@ -588,7 +588,7 @@ function CVTab() {
           <ul>
             <li><strong>Western Australian AI Hub</strong> — Founding Member (2024)</li>
             <li><strong>CryptoCFOs</strong> — Member (Feb 2024–present). Premier community for Web3 finance professionals.</li>
-            <li><strong>Web3Finance Club</strong> — “First 100” Member (Jan 2022–present). Community for finance leaders in Web3. Membership NFT holder.</li>
+            <li><strong>Web3Finance Club</strong> — “First 100” Member (Jan 2022–present).</li>
             <li><strong>Digital Economy Council of Australia</strong> (formerly Blockchain Australia) — Member since 2021</li>
             <li><strong>LawFi DAO</strong> — Member (2022–2023)</li>
           </ul>
@@ -646,18 +646,18 @@ export default function App() {
         setSearchQuery={setSearchQuery}
       />
       <main className="main-content">
-        {activeTab === "GRAPH" &and (
+        {activeTab === "GRAPH" && (
           <GraphTab nodes={nodes} eras={eras} searchQuery={searchQuery} />
         )}
-        {activeTab === "FEED" &and (
+        {activeTab === "FEED" && (
           <FeedTab nodes={nodes} eras={eras} searchQuery={searchQuery} />
         )}
-        {activeTab === "INSIGHTS" &and (
+        {activeTab === "INSIGHTS" && (
           <InsightsTab nodes={nodes} eras={eras} />
         )}
-        {activeTab === "THESIS" &and <AboutTab />}
-            {activeTab === "CPD" &and <CPDTab />}
-            {activeTab === "CV" &and <CVTab />}
+        {activeTab === "THESIS" && <AboutTab />}
+            {activeTab === "CPD" && <CPDTab />}
+            {activeTab === "CV" && <CVTab />}
       </main>
       <footer className="site-footer">
         <div className="footer-inner">
