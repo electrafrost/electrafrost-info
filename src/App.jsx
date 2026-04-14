@@ -199,14 +199,19 @@ function FeaturedCarousel({ nodes, eras, onNodeClick }) {
   return (
     <div className="carousel-section">
       <div className="carousel-label">LATEST THOUGHT LEADERSHIP</div>
-      <div className="carousel-dots">
-        {featured.map((_, i) => (
-          <button
-            key={i}
-            className={`carousel-dot ${i === idx ? "active" : ""}`}
-            onClick={() => setIdx(i)}
-          />
-        ))}
+      <div className="carousel-nav">
+        <button className="carousel-arrow carousel-prev" onClick={() => setIdx(i => (i - 1 + featured.length) % featured.length)} aria-label="Previous">&#8592;</button>
+        <div className="carousel-dots">
+          {featured.map((_, i) => (
+            <button
+              key={i}
+              className={`carousel-dot ${i === idx ? "active" : ""}`}
+              onClick={() => setIdx(i)}
+              aria-label={`Slide ${i + 1}`}
+            />
+          ))}
+        </div>
+        <button className="carousel-arrow carousel-next" onClick={() => setIdx(i => (i + 1) % featured.length)} aria-label="Next">&#8594;</button>
       </div>
       <div className="carousel-track">
         <div
