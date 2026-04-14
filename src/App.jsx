@@ -52,7 +52,7 @@ function Header({ activeTab, setActiveTab, searchQuery, setSearchQuery }) {
               Enter this URL into your LLM to query and verify a graph of ideas, publications and
               contributions. <a href="/llms.txt" target="_blank" rel="noopener">llms.txt</a>
             </p>
-            <p className="construction-notice">Under construction — may contain AI-generated errors and omissions currently being corrected.</p>
+            <p className="construction-notice">Under construction — errors and omissions are being corrected.</p>
           </div>
         </div>
         <nav className="header-nav">
