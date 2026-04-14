@@ -859,3 +859,37 @@
 .cv-item li::before { content: '—'; position: absolute; left: 0; color: var(--accent); }
 .cv-item li strong { color: var(--text-primary); }
 .cv-item a { color: var(--accent); }
+
+/* ─── CAROUSEL NAV ─────────────────────────────────────────────────── */
+.carousel-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+.carousel-arrow {
+  background: none;
+  border: 1.5px solid var(--border);
+  color: var(--text-secondary);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+  flex-shrink: 0;
+}
+.carousel-arrow:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--surface);
+}
+.carousel-dots {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+}
