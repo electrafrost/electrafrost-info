@@ -109,25 +109,6 @@
   ],
   "nodes": [
     {
-      "id": "ai-safety-sg-imperative",
-      "era": "ai-esg",
-      "date": "2026-04",
-      "type": "thesis",
-      "title": "AI Safety as S+G Imperative",
-      "subtitle": "Robodebt as the case that crystallised two decades of insight",
-      "body": "AI safety reframed as a social and governance (S+G) accounting imperative. Robodebt is the emblematic case: an AI-automated debt recovery system caused catastrophic harm because there was no qualified, independent, public-interest-bound professional accountable for what it produced. The accounting profession's ESG reporting mandate already covers this territory. AI safety is not a separate problem — it is the governance gap that accountants were built to fill.",
-      "tags": [
-        "AI-safety",
-        "ESG",
-        "S+G",
-        "governance",
-        "Robodebt",
-        "thesis",
-        "IFAC"
-      ],
-      "links": []
-    },
-    {
       "id": "code-is-not-law",
       "era": "ai-esg",
       "date": "2026-04",
