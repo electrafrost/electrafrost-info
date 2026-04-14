@@ -189,18 +189,18 @@ function NodeModal({ node, era, onClose }) {
 function FeaturedCarousel({ nodes, eras, onNodeClick }) {
   const [idx, setIdx] = useState(0);
   const featured = useMemo(() =>
-    nodes.filter((n) => ["publication", "insight", "project"].includes(n.type)).slice(0, 8),
+    nodes.filter((n) => ["thesis", "position", "publication", "insight", "project", "milestone", "spark", "credential"].includes(n.type)).slice(0, 16),
     [nodes]
   );
   if (!featured.length) return null;
-  const node = featured[idx];
+  const node = featured[idx * 2];
   const era = eras.find((e) => e.id === node.era);
 
   return (
     <div className="carousel-section">
       <div className="carousel-label">LATEST THOUGHT LEADERSHIP</div>
       <div className="carousel-nav">
-        <button className="carousel-arrow carousel-prev" onClick={() => setIdx(i => (i - 1 + featured.length) % featured.length)} aria-label="Previous">&#8592;</button>
+        <button className="carousel-arrow carousel-prev" onClick={() => setIdx(i => (i - 1 + Math.ceil(featured.length / 2)) % Math.ceil(featured.length / 2))} aria-label="Previous">&#8592;</button>
         <div className="carousel-dots">
           {featured.map((_, i) => (
             <button
@@ -211,7 +211,7 @@ function FeaturedCarousel({ nodes, eras, onNodeClick }) {
             />
           ))}
         </div>
-        <button className="carousel-arrow carousel-next" onClick={() => setIdx(i => (i + 1) % featured.length)} aria-label="Next">&#8594;</button>
+        <button className="carousel-arrow carousel-next" onClick={() => setIdx(i => (i + 1) % Math.ceil(featured.length / 2))} aria-label="Next">&#8594;</button>
       </div>
       <div className="carousel-track">
         <div
