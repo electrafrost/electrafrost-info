@@ -539,7 +539,7 @@ function CVTab() {
             <li><strong>Public Accounting Practitioner, Business Advisor — Electra Frost Advisory</strong> (May 2008–2022, Sydney–Brisbane). Long term specialist accounting, tax and business advisory for artistic and creative industries, international tax for Australians abroad.</li>
             <li><strong>Accounting Workflow and App Implementation Consultant — Sorrento Strategic Accounting</strong> (Feb–Apr 2025, Perth).</li>
             <li><strong>Project Lead — Accountants On-Chain</strong> (2021–2024). Webinars, training, consulting and speaking for crypto-curious accountants, bookkeepers and advisers.</li>
-            <li><strong>Blockchain Education Manager — Blockchain Academy International</strong> (Feb–Jun 2023, Brisbane). Conducted competency mapping across the Applied Blockchain and Accounting Diploma qualifications to develop an integrated pathway positioning blockchain and AI within accounting practice.</li>
+            <li><strong>Blockchain Education Manager — Blockchain Academy International</strong> (Feb–Jun 2023, Brisbane). Conducted competency mapping across Applied Blockchain and Accounting Diploma qualifications to develop an integrated pathway positioning blockchain and AI within accounting practice.</li>
             <li><strong>Principal and Consultant — Discovery Accountants and Advisers</strong> (2016–May 2020, Agnes Water, Queensland).</li>
             <li><strong>Tax Consultant and Accountant — entArt Accounting</strong> (Aug 2002–May 2008, Bondi Junction, Sydney). Specialist business management and tax services for the music and entertainment industry.</li>
             <li><strong>Tax Preparer and Bookkeeper</strong> (Jan 2000–Jul 2002, Sydney). Formative professional experience at Moneypenny Business and Tax Services and Page Harrison and Co.</li>
@@ -557,12 +557,12 @@ function CVTab() {
         <div className="cv-section">
           <h3>Education</h3>
           <ul>
-            <li><strong>Master of International Taxation — UNSW Australia (2012–2015).</strong> Australian international tax; USA, Canada, China, NZ, Hong Kong, Singapore, Europe, DTAs, tax system design and structures, transfer pricing, employee remuneration, financial planning tax strategies.</li>
+            <li><strong>Master of International Taxation — UNSW Australia (2012–2015).</strong> Australian international tax; USA, Canada, China, NZ, Hong Kong, Singapore, Europe, DTAs, tax system design, transfer pricing, employee remuneration, financial planning tax strategies.</li>
             <li><strong>First Cohort, International/Global Studies — The Network School (Sep 2024–present).</strong> Founded by Balaji Srinivasan. Contributing Web3 Accounting and business workshops; developing a futurist accounting faculty and a Bitcoin-principled competencies framework.</li>
             <li><strong>Advanced Diploma of Applied Blockchain — Blockchain Academy International / TAFE Queensland (May 2022–Dec 2023).</strong></li>
-            <li><strong>AI Safety: Frontier AI Governance — BlueDot Impact (issued Mar 2026, first cohort, selective intake).</strong> Action plan: global public accountants as cross-border AI governance intermediary layer.</li>
-            <li><strong>AI Safety: AGI Strategy — BlueDot Impact (issued Jan 2026, selective intake).</strong> 30-hour intensive. Technical AI trends, threat models via kill chain analysis, defence-in-depth frameworks.</li>
-            <li><strong>Crypto Accounting Academy — The Accountant Quits (issued Jul 2024, Credential #18).</strong></li>
+            <li><strong>AI Safety: Frontier AI Governance — BlueDot Impact (Mar 2026, first cohort, selective intake).</strong> Action plan: global public accountants as cross-border AI governance intermediary layer.</li>
+            <li><strong>AI Safety: AGI Strategy — BlueDot Impact (Jan 2026, selective intake).</strong> 30-hour intensive. Technical AI trends, threat models via kill chain analysis, defence-in-depth frameworks.</li>
+            <li><strong>Crypto Accounting Academy — The Accountant Quits (Jul 2024, Credential #18).</strong></li>
             <li><strong>Master of Business Administration (MBA, incomplete) — Bond University (2020–2021).</strong> Withdrew to study blockchain instead.</li>
             <li><strong>Developing Blockchain Strategy — RMIT University (2018).</strong></li>
             <li><strong>Bachelor of Taxation — UNSW (2002–2007).</strong></li>
@@ -610,4 +610,66 @@ function CVTab() {
           <p>International Tax · Bitcoin · Crypto Accounting · Applied Blockchain · Web3 · DeFi · Tax Advisory · Business Advisory · Accounting Software · Financial Reporting · Management Accounting · Cryptocurrency Regulation · AI Governance · IT Governance · Frontier AI · AGI Strategy · Strategic Consulting · Community Engagement · Public Speaking · Conference Speaking · Training and Development · Start-up Consulting · Treasury Management · Internal Controls · Audit Readiness · Professional Ethics · Tax Audit Representation</p>
         </div>
       </div>
+    </div>
+  );
+}
 
+export default function App() {
+  const getTabFromHash = () => {
+    const hash = window.location.hash.replace('#', '').toUpperCase();
+    const valid = ["GRAPH", "FEED", "INSIGHTS", "THESIS", "CPD", "CV"];
+    return valid.includes(hash) ? hash : "GRAPH";
+  };
+  const [activeTab, setActiveTab] = useState(getTabFromHash);
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const { nodes, eras } = data;
+
+  useEffect(() => {
+    const onHash = () => {
+      const tab = getTabFromHash();
+      setActiveTab(tab);
+    };
+    window.addEventListener('hashchange', onHash);
+    return () => window.removeEventListener('hashchange', onHash);
+  }, []);
+
+  return (
+    <div className="app">
+      <Header
+        activeTab={activeTab}
+        setActiveTab={(tab) => {
+        setActiveTab(tab);
+        window.location.hash = tab.toLowerCase();
+      }}
+        searchQuery={searchQuery}
+        setSearchQuery={setSearchQuery}
+      />
+      <main className="main-content">
+        {activeTab === "GRAPH" && (
+          <GraphTab nodes={nodes} eras={eras} searchQuery={searchQuery} />
+        )}
+        {activeTab === "FEED" && (
+          <FeedTab nodes={nodes} eras={eras} searchQuery={searchQuery} />
+        )}
+        {activeTab === "INSIGHTS" && (
+          <InsightsTab nodes={nodes} eras={eras} />
+        )}
+        {activeTab === "THESIS" && <AboutTab />}
+            {activeTab === "CPD" && <CPDTab />}
+            {activeTab === "CV" && <CVTab />}
+      </main>
+      <footer className="site-footer">
+        <div className="footer-inner">
+          <a href="https://electrafrost.com" target="_blank" rel="noopener">electrafrost.com</a>
+          <span className="footer-sep">·</span>
+          <span>Updated April 2026</span>
+          <span className="footer-sep">·</span>
+          <a href="/llms.txt">llms.txt</a>
+          <span className="footer-sep">·</span>
+          <a href="https://github.com/electrafrost" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </footer>
+    </div>
+  );
+}// ─── CPD TAB ─────────────────────────────────────────────────────────────────
