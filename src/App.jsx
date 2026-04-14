@@ -34,7 +34,7 @@ function formatDate(dateStr) {
 // âââ COMPONENTS âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 
 function Header({ activeTab, setActiveTab, searchQuery, setSearchQuery }) {
-  const tabs = ["GRAPH", "FEED", "INSIGHTS", "ABOUT", "CPD", "CV"];
+  const tabs = ["GRAPH", "FEED", "INSIGHTS", "THESIS", "CPD", "CV"];
   return (
     <header className="site-header">
       <div className="header-inner">
@@ -561,7 +561,11 @@ function CVTab() {
       <div className="cv-sections">
 
         <div className="cv-section">
-          <h3>Current</h3>
+          <div className="cv-summary">
+          <p>Public accounting practitioner and technologist with Australian international tax expertise, self-employed for nearly twenty of the last twenty-five years. Started in the arts and entertainment industries, drawn to accounting to help people of high potential run legitimate, successful businesses. Introduced to Bitcoin through clients’ cross border business activities in 2013, and have been problem-solving at the intersection of frontier technologies, social enterprise and professional practice ever since.</p>
+        </div>
+
+        <h3>Current</h3>
           <ul>
             <li><strong>Founding Cohort Member — Network School</strong> (Sep 2024–present, Forest City, Malaysia/Singapore). Selected into V1 first cohort of 128 'dark talent' from over 5,000 applications. One of the earlier long-term NS residents. Contributing to peer mentoring and informal learner-programming of the international digital nomad, entrepreneur and founder community. Base for independently building professional accounting ecosystems for an AI-driven decentralised digital economy, and startup-society transnational tax coordination solutions.</li>
 
@@ -711,7 +715,7 @@ export default function App() {
         {activeTab === "INSIGHTS" && (
           <InsightsTab nodes={nodes} eras={eras} />
         )}
-        {activeTab === "ABOUT" && <AboutTab />}
+        {activeTab === "THESIS" && <AboutTab />}
             {activeTab === "CPD" && <CPDTab />}
             {activeTab === "CV" && <CVTab />}
       </main>
