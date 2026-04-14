@@ -640,3 +640,58 @@ function CVTab() {
 }
 
 
+
+
+function App() {
+  const [activeTab, setActiveTab] = useState("GRAPH");
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const { nodes, eras } = data;
+
+  return (
+    <div className="app">
+      <Header
+        activeTab={activeTab}
+        setActiveTab={setActiveTab}
+        searchQuery={searchQuery}
+        setSearchQuery={setSearchQuery}
+      />
+      <main className="main-content">
+        {activeTab === "GRAPH" && (
+          <GraphTab nodes={nodes} eras={eras} searchQuery={searchQuery} />
+        )}
+        {activeTab === "FEED" && (
+          <FeedTab nodes={nodes} eras={eras} searchQuery={searchQuery} />
+        )}
+        {activeTab === "INSIGHTS" && (
+          <InsightsTab nodes={nodes} eras={eras} />
+        )}
+        {activeTab === "ABOUT" && <AboutTab />}
+            {activeTab === "CPD" && <CPDTab />}
+            {activeTab === "CV" && <CVTab />}
+      </main>
+      <footer className="site-footer">
+        <div className="footer-inner">
+          <span>electrafrost.com</span>
+          <span className="footer-sep">·</span>
+          <span>Updated April 2026</span>
+          <span className="footer-sep">·</span>
+          <a href="/llms.txt">llms.txt</a>
+          <span className="footer-sep">·</span>
+          <a href="https://github.com/electrafrost" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </footer>
+    </div>
+  );
+}// ─── CPD TAB ─────────────────────────────────────────────────────────────────
+function CPDTab() {
+  return (
+    <div className="cpd-tab">
+      <div className="cpd-notice">
+        <p>This section is under construction and will soon display a comprehensive record of Electra's 25 years of continuous professional education and development in specialist fields of accounting, tax and technology — which have maintained her qualifications. This is a significant record to reconstruct from gatekept records for the purpose of demonstrating a publicly verifiable and sovereign record of competency.</p>
+      </div>
+    </div>
+  );
+}
+
+
