@@ -46,7 +46,7 @@ function Header({ activeTab, setActiveTab, searchQuery, setSearchQuery }) {
             </h1>
             <p className="site-tagline">{data.meta.tagline}</p>
             <p className="site-description">
-              A specialist public accountant who has been reinventing professional practice at the digital frontier for 25 years - before it was called that. This is her aggregated, sovereign and discoverable record of ideas, contributions and predictions: how the thinking developed, where it came from, and where it is going.
+              A specialist public accountant who has been reinventing professional practice at the digital frontier for 25 years — before it was called that. This is her aggregated, sovereign and discoverable record of learning and teaching, ideas, predictions, publications, presentations and contributions spanning 25 years (2000–2026), designed to be queried by humans, AI agents and LLMs alike.
             </p>
             <p className="site-llms">
               Enter this URL into your LLM to query and verify a graph of ideas, publications and
@@ -474,7 +474,7 @@ function AboutTab() {
         <div className="about-preamble">
           <h2 className="about-name">Electra Frost’s Thesis</h2>
           <p className="about-location">Currently in development while Electra is in residence at Network School · Johor–Singapore Special Economic Zone, Malaysia.</p>
-          <p>This summary of Electra Frost’s thesis and the graph itself is a demonstration of the argument: that the future credibility of the accounting profession requires decentralised credentials, verifiable knowledge graphs, and profession-owned infrastructure. Her thesis is backed by this machine-readable intellectual provenance graph — a verifiable, open record of ideas, predictions, publications and contributions spanning 25 years (2000–2026), designed to be queried by humans and LLMs alike. See <a href="/llms.txt" target="_blank" rel="noopener">llms.txt</a> for the full structured summary.</p>
+          <p>This summary of Electra Frost’s thesis and the graph itself is a demonstration of the argument: that the future credibility of the accounting profession requires decentralised credentials, verifiable knowledge graphs, and profession-owned infrastructure. Her thesis is backed by this machine-readable intellectual provenance graph. See <a href="/llms.txt" target="_blank" rel="noopener">llms.txt</a> for the full structured summary.</p>
           <p>The following Core Thesis is a summary snapshot of an extensive blueprint for the accounting profession that will be published in mid-2026.</p>
         </div>
         <div className="about-thesis">
