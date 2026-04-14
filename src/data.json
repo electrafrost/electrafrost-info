@@ -109,23 +109,6 @@
   ],
   "nodes": [
     {
-      "id": "ai-esg-imperative",
-      "era": "ai-esg",
-      "date": "2026-04",
-      "type": "insight",
-      "title": "AI Safety as S+G Imperative",
-      "subtitle": "Robodebt as the crystallising case",
-      "body": "AI safety reframed as a social and governance (S+G) accounting imperative. Robodebt is the emblematic 'what happens when no one is minding the system' case that crystallised this: two decades of navigating tax, welfare interfaces and cross-border rules, watching automated systems fail people without adequate controls or appeal. As more infrastructure is rebuilt with AI, someone with real, enforceable duties to the public has to stand between the models and the people they affect. The public accountant as the missing human control layer in AI-intensive ESG reporting.",
-      "tags": [
-        "AI-safety",
-        "ESG",
-        "Robodebt",
-        "governance",
-        "public-interest"
-      ],
-      "links": []
-    },
-    {
       "id": "ai-safety-sg-imperative",
       "era": "ai-esg",
       "date": "2026-04",
@@ -168,22 +151,6 @@
       ]
     },
     {
-      "id": "ipa-tti-amalgamation",
-      "era": "tax-profession",
-      "date": "2026-03",
-      "type": "insight",
-      "title": "IPA + Tax Institute Amalgamation",
-      "subtitle": "Federation, not merger — the right model",
-      "body": "Attended Tax Institute member consultation in Perth. Strongly supports the IPA/TTI amalgamation proposal — not as a classic merger but as a federated model: each institute keeps its legal entity, brand and post-nominals while sharing governance and infrastructure. 'An amalgamation model is structurally much closer to the federated, member-centric models of the future than a classic centralising merger. When I've previously argued for a DAO-like, decentralised professional association, the core idea has been aligning members while preserving distinct bodies.'",
-      "tags": [
-        "IPA",
-        "Tax-Institute",
-        "federation",
-        "professional-bodies"
-      ],
-      "links": []
-    },
-    {
       "id": "public-interest-intermediary",
       "era": "ai-governance",
       "date": "2026-03",
@@ -201,28 +168,6 @@
         {
           "label": "Read on Substack",
           "url": "https://blog.electrafrost.com/p/the-public-interest-intermediary"
-        }
-      ]
-    },
-    {
-      "id": "vendor-cpd-conflict",
-      "era": "ai-accounting",
-      "date": "2026-03",
-      "type": "insight",
-      "title": "Vendor CPD Conflict of Interest",
-      "subtitle": "Why your CPD is not teaching you AI",
-      "body": "Published on Substack March 2026. Vendor-sponsored CPD has a structural conflict of interest: the sponsor's goal is product awareness. Each CPD hour leaves the practitioner more dependent on vendors, not less, accumulating subscriptions instead of technical judgment. Real technical CPD teaches how an API works, how to read documentation, how to build a simple automation. That kind of content is uncomfortable to sponsor because it reduces vendor lock-in. 'Give an accountant a SaaS subscription and you transform their practice for a year. Teach an accountant to code with AI and you transform it for life.'",
-      "tags": [
-        "CPD",
-        "AI",
-        "vendor",
-        "technical-literacy",
-        "CREDU-Academy"
-      ],
-      "links": [
-        {
-          "label": "Read on Substack",
-          "url": "https://blog.electrafrost.com/p/why-your-accounting-cpd-is-not-teaching"
         }
       ]
     },
@@ -283,28 +228,6 @@
       "links": []
     },
     {
-      "id": "bluedot-agi-strategy",
-      "era": "ai-governance",
-      "date": "2026-02",
-      "type": "credential",
-      "title": "BlueDot Impact: AGI Strategy + Frontier AI Governance",
-      "subtitle": "30hr intensive — first cohort of Frontier AI Governance",
-      "body": "Completed BlueDot Impact's AGI Strategy certification (30hr), then enrolled in the first cohort of their Frontier AI Governance course. Mapped technical AI trends to future capabilities, developed threat models through kill chain analysis, applied defence-in-depth frameworks to design protective interventions, and created an action plan for contributing to beneficial AI outcomes. 'Since January, studying AI safety perspectives across technical alignment, compute governance, regulatory policy, and geopolitical strategy — conviction has only deepened: the public accounting profession is structurally suited and trusted to provide independent AI governance.'",
-      "tags": [
-        "AI-safety",
-        "BlueDot",
-        "AGI",
-        "governance",
-        "credentials"
-      ],
-      "links": [
-        {
-          "label": "BlueDot Impact",
-          "url": "https://bluedot.org"
-        }
-      ]
-    },
-    {
       "id": "bluedot-frontier-ai-governance",
       "era": "ai-governance",
       "date": "2026-02",
@@ -319,39 +242,6 @@
         "governance",
         "credential",
         "IFAC"
-      ],
-      "links": []
-    },
-    {
-      "id": "credu-academy",
-      "era": "ai-accounting",
-      "date": "2026-01",
-      "type": "project",
-      "title": "CREDU Academy",
-      "subtitle": "Accountants hackerspace at Network School",
-      "body": "CREDU Academy at Network School Malaysia/Singapore — where accountants work alongside technical builders and founders in AI, Bitcoin, and open technologies. Scoping on accountants' hackerspace in collaboration with an AI research lab and MBA alumni. The mission: give practitioners genuine technical literacy so they can build, not just subscribe. Working on international tax, AI governance, and professional collaboration systems from inside a live startup society.",
-      "tags": [
-        "CREU-Academy",
-        "Network-School",
-        "AI",
-        "technical-education"
-      ],
-      "links": []
-    },
-    {
-      "id": "network-residency-paper",
-      "era": "network-residency",
-      "date": "2026-01",
-      "type": "publication",
-      "title": "From Tax Residency to Network Residency",
-      "subtitle": "The fiscal development path of network societies",
-      "body": "Position paper arguing that network societies will force the emergence of a non-geographic transnational resident class whose tax treatment is negotiated collectively through the network-state entity. Status, not zone. The V1→V5→Beyond taxonomy: V1 (individual compliance inside host systems), V2 (coordinated population, invisible in law), V3 (professional infrastructure), V4 (economic recognition), V5 (collective fiscal counterparty), Beyond (network-resident status). Goes beyond both Balaji's territory-first thesis and Próspera's zone-bound model. 'My thesis is not primarily about zones, enclaves, charter cities, or better-administered digital nomad programs. My real thesis is that network societies will eventually force the emergence of a transnational resident class.'",
-      "tags": [
-        "network-state",
-        "tax",
-        "residency",
-        "international-law",
-        "BEPS"
       ],
       "links": []
     },
@@ -446,23 +336,6 @@
       "links": []
     },
     {
-      "id": "cpd-peerlab-proposal",
-      "era": "cpd-peerlab",
-      "date": "2025-08",
-      "type": "project",
-      "title": "CPD PeerLab",
-      "subtitle": "Member-led CPD marketplace — presented to IPA WA",
-      "body": "Presented to IPA WA August 2025: a pilot program allowing IPA members to create and deliver CPD sessions to peers. Member-led sessions hosted on IPA platforms, automatically logged as structured CPD. Presenters earn and spend CPD credits or charge a fair fee — IPA retains facilitation share. Supported by AI tuols. WA + Malaysia cohort. Topics: crypto/DEFi tax, SME compliance, international tax, risk management, neurodiversity. 'In the age of Gen-AI, credible learning is live, peer-led, and demonstrated.'",
-      "tags": [
-        "CPD",
-        "IPA",
-        "PeerLab",
-        "peer-learning",
-        "CREDU"
-      ],
-      "links": []
-    },
-    {
       "id": "cpd-peerlab-concept",
       "era": "cpd-peerlab",
       "date": "2025-08",
@@ -494,22 +367,6 @@
         "unit-of-account",
         "payments",
         "dorsey"
-      ],
-      "links": []
-    },
-    {
-      "id": "govfi",
-      "era": "network-state",
-      "date": "2025-02",
-      "type": "insight",
-      "title": "GovFi",
-      "subtitle": "Decentralised model for government efficiency",
-      "body": "GovFi: crowdsourcing government functions to citizens and rewarding verified contributions, reducing bureaucratic waste, fraud, and inefficiency. Instead of funding bloated public services through excessive taxation and borrowing, incentivising real outcomes through decentralised, transparent processes. 'When working on CREDU I envisioned a Decentralised Professional Association (DPA) of Accountants forming, reinventing regulations, and claiming a social mandate to take over the functions of tax agencies like the IRS, ATO, and HMRC.'",
-      "tags": [
-        "governance",
-        "bitcoin",
-        "decentralisation",
-        "tax-agencies"
       ],
       "links": []
     },
@@ -583,27 +440,6 @@
         "compliance"
       ],
       "links": []
-    },
-    {
-      "id": "network-school-v1",
-      "era": "network-state",
-      "date": "2024-09",
-      "type": "milestone",
-      "title": "Network School Cohort 1",
-      "subtitle": "90 days building the new accounting profession",
-      "body": "Off to Singapore for The Network State Conference, followed by 90 days with Balaji Srinivasan's first cohort at Network School. Forest City island near Singapore — a Special Economic Zone with zero tax for family offices. Wrote web3 accounting and digital nomad tax classes for Network Schoolers. Met with IPA on the Global Certificate of Public Accounting (GCPA) pathway. 'I'm at the initiation of a pop-up city where society-as-a-service is being developed.'",
-      "tags": [
-        "network-state",
-        "Network-School",
-        "Balaji",
-        "startup-society"
-      ],
-      "links": [
-        {
-          "label": "ns.com",
-          "url": "https://ns.com"
-        }
-      ]
     },
     {
       "id": "network-school-arrival",
