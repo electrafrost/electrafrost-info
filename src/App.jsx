@@ -509,9 +509,8 @@ function CVTab() {
   return (
     <div className="cv-tab">
       <div className="cv-header">
-        <h2 className="cv-title">What Electra has done, if you try to put it into a traditional box stack</h2>
         <div className="cv-contact">
-          <p>Curriculum Vitae — Electra Frost</p>
+          <h2 className="cv-title">Curriculum Vitae — Electra Frost</h2>
           <p>Network School, Forest City, Gelang Patah, Johor 81500, Malaysia</p>
           <p>+60 10 666 0556 | mail@electrafrost.com</p>
         </div>
