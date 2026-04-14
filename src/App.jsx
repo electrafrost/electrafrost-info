@@ -236,8 +236,8 @@ function FeaturedCarousel({ nodes, eras, onNodeClick }) {
             </a>
           )}
         </div>
-        {featured[idx + 1] && (() => {
-          const n2 = featured[idx + 1];
+        {featured[idx * 2 + 1] && (() => {
+          const n2 = featured[idx * 2 + 1];
           const e2 = eras.find((e) => e.id === n2.era);
           return (
             <div
