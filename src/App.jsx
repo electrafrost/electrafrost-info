@@ -1,4 +1,4 @@
-// v0.1.1 â updated description, nodes sorted newest-first
+// v0.1.1 — updated description, nodes sorted newest-first
 import { useState, useMemo, useCallback, useRef, useEffect } from "react";
 import data from "./data.json";
 import "./App.css";
@@ -69,7 +69,7 @@ function Header({ activeTab, setActiveTab, searchQuery, setSearchQuery }) {
           <div className="search-row">
             <input
               className="search-input"
-              placeholder="Search nodes, ideas, publicationsâ¦"
+              placeholder="Search nodes, ideas, publications..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
@@ -152,7 +152,7 @@ function NodeModal({ node, era, onClose }) {
           </div>
           {era && (
             <div className="modal-era" style={{ color: era.color }}>
-              {era.label} Â· {era.range}
+              {era.label} · {era.range}
             </div>
           )}
           <h2 className="modal-title">{node.title}</h2>
@@ -220,10 +220,10 @@ function FeaturedCarousel({ nodes, eras, onNodeClick }) {
           style={{ "--era-color": era?.color || "#e8621a" }}
         >
           <div className="carousel-card-era" style={{ color: era?.color }}>
-            {era?.label?.toUpperCase()} Â· {node.date?.substring(0, 4)}
+            {era?.label?.toUpperCase()} · {node.date?.substring(0, 4)}
           </div>
           <h3 className="carousel-card-title">"{node.title}"</h3>
-          <p className="carousel-card-body">{node.body.substring(0, 200)}â¦</p>
+          <p className="carousel-card-body">{node.body.substring(0, 200)}...</p>
           {node.links?.[0] && (
             <a
               href={node.links[0].url}
@@ -246,10 +246,10 @@ function FeaturedCarousel({ nodes, eras, onNodeClick }) {
               style={{ "--era-color": e2?.color || "#e8621a" }}
             >
               <div className="carousel-card-era" style={{ color: e2?.color }}>
-                {e2?.label?.toUpperCase()} Â· {n2.date?.substring(0, 4)}
+                {e2?.label?.toUpperCase()} · {n2.date?.substring(0, 4)}
               </div>
               <h3 className="carousel-card-title">"{n2.title}"</h3>
-              <p className="carousel-card-body">{n2.body.substring(0, 120)}â¦</p>
+              <p className="carousel-card-body">{n2.body.substring(0, 120)}...</p>
             </div>
           );
         })()}
@@ -308,7 +308,7 @@ function GraphTab({ nodes, eras, searchQuery }) {
                 <div className="era-dot" style={{ background: era.color }} />
                 <div className="era-label-block">
                   <h2 className="era-name" style={{ color: era.color }}>{era.label}</h2>
-                  <span className="era-range-label">{era.range} Â· {eraNodes.length} node{eraNodes.length !== 1 ? "s" : ""}</span>
+                  <span className="era-range-label">{era.range} · {eraNodes.length} node{eraNodes.length !== 1 ? "s" : ""}</span>
                 </div>
               </div>
               <p className="era-description">{era.description}</p>
@@ -473,22 +473,22 @@ function AboutTab() {
         <div className="about-intro">
           <h2 className="about-name">Electra Frost</h2>
           <p className="about-role">
-            Chartered Tax Adviser (CTA) Â· Fellow of the Institute of Public Accountants (FIPA) Â·
-            Fellow of the Tax Institute Â· Creative Accounting Technologist Â· International Tax Â·
-            AI Governance Researcher Â· Founder, CREDU
+            Chartered Tax Adviser (CTA) · Fellow of the Institute of Public Accountants (FIPA) ·
+            Fellow of the Tax Institute · Creative Accounting Technologist · International Tax ·
+            AI Governance Researcher · Founder, CREDU
           </p>
           <p className="about-location">
-            Currently at Network School V1-V2 Â· JohorâSingapore Special Economic Zone, Malaysia
+            Currently at Network School V1-V2 · Johor–Singapore Special Economic Zone, Malaysia
           </p>
         </div>
 
         <div className="about-thesis">
           <h3>Core Thesis</h3>
           <blockquote>
-            The accounting profession holds a unique, enforceable, cross-border public interest mandate â
+            The accounting profession holds a unique, enforceable, cross-border public interest mandate —
             and every major technological transition of the last decade is a moment where that mandate
-            either gets exercised or gets abandoned. AI safety â not responsible AI, not operational
-            governance, but frontier AI safety â is a social and governance (S+G) accounting imperative.
+            either gets exercised or gets abandoned. AI safety — not responsible AI, not operational
+            governance, but frontier AI safety — is a social and governance (S+G) accounting imperative.
             Robodebt crystallised it: two decades of watching automated systems fail people without
             adequate controls or appeal. As more infrastructure is rebuilt with AI, someone with real,
             enforceable duties to the public has to stand between the models and the people they affect.
@@ -502,9 +502,9 @@ function AboutTab() {
             <p>
               This site is itself a demonstration of the argument: that the accounting profession needs
               decentralised credentials, verifiable knowledge graphs, and digital-native professional
-              infrastructure. It is a machine-readable intellectual provenance graph â a verifiable,
+              infrastructure. It is a machine-readable intellectual provenance graph — a verifiable,
               open record of ideas, predictions, publications and contributions spanning 25 years
-              (2000â2026), designed to be queried by humans and LLMs alike.
+              (2000–2026), designed to be queried by humans and LLMs alike.
               See <a href="/llms.txt">llms.txt</a> for the full structured summary.
             </p>
           </div>
@@ -512,12 +512,12 @@ function AboutTab() {
           <div className="about-section">
             <h3>Professional credentials</h3>
             <ul className="about-list">
-              <li>Chartered Tax Adviser (CTA) â Tax Institute Fellow since 2007</li>
+              <li>Chartered Tax Adviser (CTA) — Tax Institute Fellow since 2007</li>
               <li>Fellow of the Institute of Public Accountants (FIPA)</li>
               <li>Associate, Institute of Certified Management Accountants (ICMA)</li>
-              <li>Advanced Diploma of Applied Blockchain â Blockchain Collective</li>
-              <li>AGI Strategy â BlueDot Impact</li>
-              <li>Frontier AI Governance â BlueDot Impact (Cohort 1)</li>
+              <li>Advanced Diploma of Applied Blockchain — Blockchain Collective</li>
+              <li>AGI Strategy — BlueDot Impact</li>
+              <li>Frontier AI Governance — BlueDot Impact (Cohort 1)</li>
               <li>Mental Health First Aid Certificate</li>
             </ul>
           </div>
@@ -525,12 +525,12 @@ function AboutTab() {
           <div className="about-section">
             <h3>Key projects</h3>
             <ul className="about-list">
-              <li><a href="https://credu.io" target="_blank" rel="noopener">CREDU</a> â Decentralised CPD/CPE credentialling platform</li>
-              <li>Digital Playhouse Foundation â Bitcoin education social enterprise</li>
-              <li>Accountants OnChain â Community of crypto-literate accountants</li>
-              <li>Stacks Australia â Bitcoin Layer 2 developer community</li>
-              <li>CPD PeerLab â Member-led CPD marketplace proposal to IPA</li>
-              <li>CREDU Academy â Accountants hackerspace at Network School</li>
+              <li><a href="https://credu.io" target="_blank" rel="noopener">CREDU</a> — Decentralised CPD/CPE credentialling platform</li>
+              <li>Digital Playhouse Foundation — Bitcoin education social enterprise</li>
+              <li>Accountants OnChain — Community of crypto-literate accountants</li>
+              <li>Stacks Australia — Bitcoin Layer 2 developer community</li>
+              <li>CPD PeerLab — Member-led CPD marketplace proposal to IPA</li>
+              <li>CREDU Academy — Accountants hackerspace at Network School</li>
             </ul>
           </div>
 
@@ -720,11 +720,11 @@ export default function App() {
       <footer className="site-footer">
         <div className="footer-inner">
           <span>electrafrost.com</span>
-          <span className="footer-sep">Â·</span>
+          <span className="footer-sep">·</span>
           <span>Updated April 2026</span>
-          <span className="footer-sep">Â·</span>
+          <span className="footer-sep">·</span>
           <a href="/llms.txt">llms.txt</a>
-          <span className="footer-sep">Â·</span>
+          <span className="footer-sep">·</span>
           <a href="https://github.com/electrafrost" target="_blank" rel="noopener">GitHub</a>
         </div>
       </footer>
