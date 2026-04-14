@@ -471,18 +471,14 @@ function AboutTab() {
   return (
     <div className="about-tab">
       <div className="about-content">
-        <div className="about-intro">
-          <h2 className="about-name">Electra Frost</h2>
-          <p className="about-role">Chartered Tax Adviser (CTA) · Fellow of the Institute of Public Accountants (FIPA) · Fellow of the Tax Institute · Creative Accounting Technologist · International Tax · AI Governance Researcher</p>
-          <p className="about-location">Currently at Network School V1-V2 · Johor–Singapore Special Economic Zone, Malaysia</p>
+        <div className="about-preamble">
+          <h2 className="about-name">Electra Frost’s Thesis</h2>
+          <p className="about-location">Currently in development while Electra is in residence at Network School · Johor–Singapore Special Economic Zone, Malaysia.</p>
+          <p>This summary of Electra Frost’s thesis and the graph itself is a demonstration of the argument: that the future credibility of the accounting profession requires decentralised credentials, verifiable knowledge graphs, and profession-owned infrastructure. Her thesis is backed by this machine-readable intellectual provenance graph — a verifiable, open record of ideas, predictions, publications and contributions spanning 25 years (2000–2026), designed to be queried by humans and LLMs alike. See <a href="/llms.txt" target="_blank" rel="noopener">llms.txt</a> for the full structured summary.</p>
+          <p>The following Core Thesis is a summary snapshot of an extensive blueprint for the accounting profession that will be published in mid-2026.</p>
         </div>
         <div className="about-thesis">
-          <div className="about-site-explainer">
-            <div className="core-thesis-kicker">What this site is</div>
-            <p>This site is itself a demonstration of the argument: that the accounting profession needs decentralised credentials, verifiable knowledge graphs, and digital-native professional infrastructure. It is a machine-readable intellectual provenance graph — a verifiable, open record of ideas, predictions, publications and contributions spanning 25 years (2000–2026), designed to be queried by humans and LLMs alike. See <a href="/llms.txt" target="_blank" rel="noopener">llms.txt</a> for the full structured summary.</p>
-            <p>The following Core Thesis is a summary snapshot of an extensive blueprint for the accounting profession that will be published in mid-2026.</p>
-          </div>
-          <div className="core-thesis-kicker" style={{marginTop: "2rem"}}>Core Thesis</div>
+          <div className="core-thesis-kicker">Core Thesis</div>
           <p>What is accounting? It’s not what we do, it’s what society requires us to provide:</p>
           <p className="core-thesis-values">Accountability. Advocacy. Trust.</p>
           <p>The accounting profession was built on the same values Bitcoin instantiates: truthful records, trustless verification, immutable timestamped ledgers, public auditability. Bitcoin is not a new subject for accountants — it is the monetary infrastructure on a global ledger that expresses what accounting has always been for. Public blockchains let us operate without needing to know and trust the parties we do business with; the further they depart from Bitcoin’s security model, the more trust assumptions and risks arise which require a degree of regulatory intervention.</p>
