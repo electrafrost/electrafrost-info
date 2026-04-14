@@ -4,7 +4,7 @@
     "tagline": "The open, machine-readable intellectual provenance of Electra Frost",
     "description": "A specialist public accountant who has been reinventing professional practice at the digital frontier for 25 years - before it was called that. This is her aggregated, sovereign and discoverable record of ideas, contributions and predictions: how the thinking developed, where it came from, and where it is going.",
     "version": "0.1.0",
-    "updated": "2026-04-13",
+    "updated": "2026-04-14",
     "llms": "/llms.txt"
   },
   "eras": [
@@ -126,6 +126,48 @@
       "links": []
     },
     {
+      "id": "ai-safety-sg-imperative",
+      "era": "ai-esg",
+      "date": "2026-04",
+      "type": "thesis",
+      "title": "AI Safety as S+G Imperative",
+      "subtitle": "Robodebt as the case that crystallised two decades of insight",
+      "body": "AI safety reframed as a social and governance (S+G) accounting imperative. Robodebt is the emblematic case: an AI-automated debt recovery system caused catastrophic harm because there was no qualified, independent, public-interest-bound professional accountable for what it produced. The accounting profession's ESG reporting mandate already covers this territory. AI safety is not a separate problem — it is the governance gap that accountants were built to fill.",
+      "tags": [
+        "AI-safety",
+        "ESG",
+        "S+G",
+        "governance",
+        "Robodebt",
+        "thesis",
+        "IFAC"
+      ],
+      "links": []
+    },
+    {
+      "id": "code-is-not-law",
+      "era": "ai-esg",
+      "date": "2026-04",
+      "type": "thesis",
+      "title": "Code Is Not Law — Separation of Powers in the Agentic Economy",
+      "subtitle": "Why 'code is law' cannot hold a network society together",
+      "body": "Published to Substack April 2026. Code is execution. It performs an executive function. The legislative function — deciding what the rules are — and the judicial function — interpreting those rules when facts are ambiguous or contested — are different tasks. Any system that exercises authority over people, assets or decisions needs all three powers separated. Accountants already operate across all three layers.",
+      "tags": [
+        "separation-of-powers",
+        "agentic-economy",
+        "thesis",
+        "code-is-law",
+        "network-state",
+        "accountants"
+      ],
+      "links": [
+        {
+          "label": "Substack",
+          "url": "https://blog.electrafrost.com/p/separation-of-powers-in-the-agentic"
+        }
+      ]
+    },
+    {
       "id": "ipa-tti-amalgamation",
       "era": "tax-profession",
       "date": "2026-03",
@@ -185,6 +227,45 @@
       ]
     },
     {
+      "id": "ipa-tax-institute-amalgamation",
+      "era": "tax-profession",
+      "date": "2026-03",
+      "type": "position",
+      "title": "IPA + Tax Institute Amalgamation — Federation, Not Merger",
+      "subtitle": "The federated model is structurally closer to a DAO",
+      "body": "Attended the Tax Institute member consultation in Perth. Strongly supports the amalgamation proposal — but as federation, not merger. An amalgamation model is structurally much closer to the direction accounting needs to go — shared infrastructure, maintained professional identity. Analogous to the DAO structure being proposed for decentralised professional association.",
+      "tags": [
+        "IPA",
+        "Tax-Institute",
+        "federation",
+        "professional-bodies",
+        "position"
+      ],
+      "links": []
+    },
+    {
+      "id": "ai-not-replacing-judgment",
+      "era": "ai-accounting",
+      "date": "2026-03",
+      "type": "thesis",
+      "title": "Tax Law Is Not a Lookup Table",
+      "subtitle": "What an AI tax tool exposed inside a startup society",
+      "body": "Published to Substack March 2026. Tax statutes are written as deterministic rules. It is easy to assume code is law. The difficulty is that professional tax work rarely begins with reliable inputs. Facts are incomplete. Client records are contradictory. Stated intentions conflict with transaction patterns. An AI tool can assist with research and drafting. It cannot replace interpretive judgment or carry the professional obligation.",
+      "tags": [
+        "AI",
+        "tax",
+        "professional-judgment",
+        "thesis",
+        "determinism"
+      ],
+      "links": [
+        {
+          "label": "Substack",
+          "url": "https://blog.electrafrost.com/p/what-an-ai-tax-tool-exposed-inside"
+        }
+      ]
+    },
+    {
       "id": "ato-compliance-surge",
       "era": "tax-profession",
       "date": "2026-02",
@@ -224,6 +305,24 @@
       ]
     },
     {
+      "id": "bluedot-frontier-ai-governance",
+      "era": "ai-governance",
+      "date": "2026-02",
+      "type": "credential",
+      "title": "BlueDot Impact — Frontier AI Governance",
+      "subtitle": "First cohort: the trust gap and the missing intermediary",
+      "body": "Completed BlueDot Impact's Frontier AI Governance course — first cohort, selective intake. Focused on the trust gap: most AI governance proposals assume reliable non-conflicted intermediaries exist. None explain where they come from or what enforceable obligation binds them. Action plan: global public accountants as a cross-border intermediary layer — mandated by an independent public-interest obligation that currently has no clear place in AI governance.",
+      "tags": [
+        "AI-safety",
+        "BlueDot",
+        "frontier-AI",
+        "governance",
+        "credential",
+        "IFAC"
+      ],
+      "links": []
+    },
+    {
       "id": "credu-academy",
       "era": "ai-accounting",
       "date": "2026-01",
@@ -257,6 +356,96 @@
       "links": []
     },
     {
+      "id": "bitcoin-cannot-be-regulated",
+      "era": "bitcoin-standard",
+      "date": "2026-01",
+      "type": "position",
+      "title": "Bitcoin Cannot Be Regulated and Doesn't Need to Be",
+      "subtitle": "The regulatory framework for everything adjacent to Bitcoin",
+      "body": "Bitcoin cannot be regulated and does not need to be. That is the starting point. Everything adjacent to Bitcoin needs regulation to the extent that it departs from Bitcoin's security model. The further from Bitcoin's base layer, the more regulatory risk exists — because counterparties and trust assumptions increase. Accountants are the natural layer to provide that regulation, not governments.",
+      "tags": [
+        "bitcoin",
+        "regulation",
+        "position",
+        "open-protocols"
+      ],
+      "links": []
+    },
+    {
+      "id": "credu-academy-network-school",
+      "era": "ai-accounting",
+      "date": "2026-01",
+      "type": "project",
+      "title": "CREDU Academy at Network School",
+      "subtitle": "The accountants' hackerhouse — building the new profession",
+      "body": "Establishing CREDU Academy at Network School — an accounting technologist hackerspace where practitioners learn to build their own tools, verify credentials on-chain, and design compliance systems for agentic economies. Give an accountant a SaaS subscription and you transform their practice for a year. Teach an accountant to code with AI and you transform their practice for life.",
+      "tags": [
+        "CREDU",
+        "network-school",
+        "accounting-technologist",
+        "AI",
+        "education"
+      ],
+      "links": []
+    },
+    {
+      "id": "network-residency-position-paper",
+      "era": "network-residency",
+      "date": "2026-01",
+      "type": "thesis",
+      "title": "From Tax Residency to Network Residency",
+      "subtitle": "The pathway to diplomatic recognition through tax status",
+      "body": "Position paper: network societies will force the emergence of a non-geographic tax residency framework. V1: full compliance with existing domestic laws. V2: treaty-based carve-outs. V3: bilateral recognition agreements. V4: multinational frameworks. V5: diplomatic recognition of network residency as a legal status. Origin: a 2012 international tax masters paper proposing a global tax system for global citizens. The idea predated Network States by over a decade.",
+      "tags": [
+        "network-residency",
+        "tax",
+        "international-tax",
+        "thesis",
+        "network-state",
+        "diplomatic-recognition"
+      ],
+      "links": []
+    },
+    {
+      "id": "freo-neuhaus",
+      "era": "network-state",
+      "date": "2025-12",
+      "type": "project",
+      "title": "Freo Neuhaus",
+      "subtitle": "Seeding a startup society node in Fremantle, Western Australia",
+      "body": "Freo Neuhaus: seeding a node of the Network School global network in Fremantle, WA. A port city with a history of radicalism, creative industries, and openness to experiment. A network society without professional services infrastructure is a society that cannot account for itself. The accounting and professional services component is foundational, not administrative.",
+      "tags": [
+        "network-state",
+        "Fremantle",
+        "WA",
+        "startup-society",
+        "project"
+      ],
+      "links": [
+        {
+          "label": "Substack",
+          "url": "https://blog.electrafrost.com/p/freo-neuhaus-the-human-spark-comes"
+        }
+      ]
+    },
+    {
+      "id": "bitcoin-is-accounting-position",
+      "era": "bitcoin-standard",
+      "date": "2025-09",
+      "type": "position",
+      "title": "Bitcoin Is Accounting. Accountants Are Bitcoin.",
+      "subtitle": "The most explicit statement of the convergence thesis",
+      "body": "September 2025: Accounting, at its core, is about truth in value, ethics, integrity of records, and the protection of purchasing power over time. Bitcoin matters because it reintroduces objective scarcity. It is a programmable accounting primitive on an immutable, time-stamped ledger. The hashtags BitcoinIsAccounting and AccountantsAreBitcoin as position statements. The accountants who study this now will be the ones designing the future of our role.",
+      "tags": [
+        "bitcoin",
+        "accounting",
+        "position",
+        "thesis",
+        "bitcoin-standard"
+      ],
+      "links": []
+    },
+    {
       "id": "cpd-peerlab-proposal",
       "era": "cpd-peerlab",
       "date": "2025-08",
@@ -274,6 +463,41 @@
       "links": []
     },
     {
+      "id": "cpd-peerlab-concept",
+      "era": "cpd-peerlab",
+      "date": "2025-08",
+      "type": "project",
+      "title": "CPD PeerLab",
+      "subtitle": "Peer-led CPD marketplace — presented to IPA WA",
+      "body": "Presented to IPA WA August 2025: a member-led CPD marketplace where practitioners deliver and spend CPD credits or charge a fair fee. IPA retains a facilitation share. Supported by AI tools. WA and Malaysia cohort. In the age of Gen-AI, credible learning is live, peer-led, and demonstrated. The proto-CREDU model in practice.",
+      "tags": [
+        "CPD",
+        "PeerLab",
+        "IPA",
+        "peer-learning",
+        "CREDU",
+        "WA"
+      ],
+      "links": []
+    },
+    {
+      "id": "bitcoin-not-payments",
+      "era": "bitcoin-standard",
+      "date": "2025-06",
+      "type": "position",
+      "title": "Bitcoin Is Not a Payments Platform",
+      "subtitle": "Disagreeing with Jack Dorsey — fundamentally",
+      "body": "People keep talking about using Bitcoin for payments. This idea is holding us back. Jack Dorsey said Bitcoin must be payments for it to be relevant. Disagrees fundamentally. Bitcoin is the world's number one ledger — the most secure settlement layer for ALL digital currencies and financial instruments on ALL chains. BTC-for-payments is not essential — what matters is that everything settles back to Bitcoin's fixed supply.",
+      "tags": [
+        "bitcoin",
+        "position",
+        "unit-of-account",
+        "payments",
+        "dorsey"
+      ],
+      "links": []
+    },
+    {
       "id": "govfi",
       "era": "network-state",
       "date": "2025-02",
@@ -286,6 +510,23 @@
         "bitcoin",
         "decentralisation",
         "tax-agencies"
+      ],
+      "links": []
+    },
+    {
+      "id": "govfi-insight",
+      "era": "network-state",
+      "date": "2025-02",
+      "type": "insight",
+      "title": "GovFi — Decentralised Model for Government Efficiency",
+      "subtitle": "Crowdsourcing government functions to verified citizens",
+      "body": "GovFi: a decentralised model where government functions are crowdsourced to citizens and rewarded for verified contributions, reducing bureaucracy and increasing accountability. The accounting profession — with its existing public interest mandate, global federation, and verification infrastructure — is the natural operator of this model. Governments cannot self-govern; accountants can provide the independent layer.",
+      "tags": [
+        "GovFi",
+        "governance",
+        "bitcoin",
+        "decentralisation",
+        "accountability"
       ],
       "links": []
     },
@@ -311,6 +552,39 @@
       ]
     },
     {
+      "id": "decentralised-professional-association-call",
+      "era": "credu-credentials",
+      "date": "2024-11",
+      "type": "thesis",
+      "title": "Decentralised Professional Association — The Call",
+      "subtitle": "Member-driven, digital, globally scaled, distributed governance",
+      "body": "November 2024: Imagine a decentralised professional association — member-driven, digital, globally scaled and collaborative, low-cost, and with distributed governance and ownership by us. The clearest early public articulation of the DPA concept beyond DAO theory. Asking who would join a research group to explore it. The response was strongly positive.",
+      "tags": [
+        "decentralised-association",
+        "thesis",
+        "professional-bodies",
+        "governance"
+      ],
+      "links": []
+    },
+    {
+      "id": "nomadic-tax-compliance",
+      "era": "network-state",
+      "date": "2024-10",
+      "type": "insight",
+      "title": "Nomadic Tax Compliance — The Gap No One is Filling",
+      "subtitle": "AI tax tools at Network School are dangerously wrong",
+      "body": "An AI tax tool circulating inside Network School was giving dangerously wrong advice on Malaysian tax residency. Pivoted to designing a scalable model for defensible, global tax compliance for nomadic crypto netizens — logic-driven, auditable, with qualified human judgment at every step. We can build a proper system: structured by professionals, logic-driven, auditable, and up to legal standards. The professional layer that startup societies are missing.",
+      "tags": [
+        "network-state",
+        "tax",
+        "nomadic",
+        "AI-tools",
+        "compliance"
+      ],
+      "links": []
+    },
+    {
       "id": "network-school-v1",
       "era": "network-state",
       "date": "2024-09",
@@ -328,6 +602,79 @@
         {
           "label": "ns.com",
           "url": "https://ns.com"
+        }
+      ]
+    },
+    {
+      "id": "network-school-arrival",
+      "era": "network-state",
+      "date": "2024-09",
+      "type": "milestone",
+      "title": "Network School Cohort 1 — Forest City, Malaysia",
+      "subtitle": "Living the thesis in a startup society",
+      "body": "September 2024: selected into V1 first cohort of Network School, Forest City, Malaysia — a man-made island facing Singapore. The only accountant there, learning and building with purpose. The experiment of living inside a startup society while building the professional infrastructure it needs. Every conversation confirmed the thesis: network societies need accountants more than they realise.",
+      "tags": [
+        "network-state",
+        "network-school",
+        "malaysia",
+        "milestone",
+        "Balaji"
+      ],
+      "links": []
+    },
+    {
+      "id": "quadruple-entry-accounting",
+      "era": "network-state",
+      "date": "2024-09",
+      "type": "thesis",
+      "title": "Quadruple-Entry Accounting",
+      "subtitle": "AI generates claims; crypto verifies them; accountants validate the proofs",
+      "body": "Are you ready for Quadruple-Entry Accounting? AI is going to create lots of jobs in verification — taking on-chain proof to off-chain. Beyond blockchain triple-entry, quadruple-entry becomes the accounting industry backbone of attestable computation and verifiable financial outcomes. AI generates claims; crypto verifies them; accountants validate the proofs across systems.",
+      "tags": [
+        "quadruple-entry",
+        "accounting-theory",
+        "AI",
+        "crypto",
+        "verification",
+        "thesis"
+      ],
+      "links": []
+    },
+    {
+      "id": "aml-ctf-tranche2-position",
+      "era": "tax-profession",
+      "date": "2024-07",
+      "type": "position",
+      "title": "AML/CTF Tranche 2 — Time to Step Back",
+      "subtitle": "The regulatory risk is now too high for traditional facilitation services",
+      "body": "With Tranche 2 reforms coming, re-evaluating services that fall into AML/CTF territory: entity setup, acting as ASIC agent, offshore structuring, assisting with crypto accounts. Never been fully comfortable. Planning to go hands-off. A position that accelerated the pivot toward advisory-only and protocol-level work. The profession needs better infrastructure, not fewer practitioners.",
+      "tags": [
+        "AML-CTF",
+        "regulation",
+        "position",
+        "accounting-practice",
+        "compliance"
+      ],
+      "links": []
+    },
+    {
+      "id": "dao-vs-merger-thesis",
+      "era": "credu-credentials",
+      "date": "2023-12",
+      "type": "thesis",
+      "title": "DAO vs Merger — Merge the Accountants, Not Their Bodies",
+      "subtitle": "If we're creating a monopoly, make it a decentralised one",
+      "body": "Published to Substack December 2023. A proposed merger of Australia's accounting bodies signals further centralisation — the wrong direction. A DAO would merge the members, not the institutions. Rather than forming a dominant entity, a DAO would merge the members of these bodies into a member-governed digital organisation. The professional bodies remain; the members gain sovereignty.",
+      "tags": [
+        "DAO",
+        "accounting-bodies",
+        "thesis",
+        "decentralised-association"
+      ],
+      "links": [
+        {
+          "label": "Substack",
+          "url": "https://blog.electrafrost.com/p/dao-vs-merger-merge-the-accountants"
         }
       ]
     },
@@ -388,6 +735,57 @@
       "links": []
     },
     {
+      "id": "bitcoin-ipa-conference-2023",
+      "era": "accountants-onchain",
+      "date": "2023-03",
+      "type": "milestone",
+      "title": "IPA National Conference — Getting Raw About Bitcoin",
+      "subtitle": "The Xero analogy that landed for the mainstream profession",
+      "body": "Presented at IPA National Conference, Noosa 2023. Some people say they have no interest in Bitcoin but the technology behind it sounds useful. As a futurist accountant, that is like hearing: I would like to use Xero but do not need to learn accounting. The analogy that made the mainstream profession stop and think.",
+      "tags": [
+        "IPA",
+        "speaking",
+        "bitcoin",
+        "accounting-profession",
+        "Noosa"
+      ],
+      "links": []
+    },
+    {
+      "id": "anti-crypto-is-anti-competitive",
+      "era": "accountants-onchain",
+      "date": "2023-02",
+      "type": "position",
+      "title": "Anti-Crypto is Anti-Competitive",
+      "subtitle": "Banks discriminating against crypto businesses violate competition principles",
+      "body": "Anti-crypto is anti-competitive. Competition leads to lower prices, more choice and better products for consumers. Those innovating with crypto and blockchain use cases are driving greater value and protections to us than ever before, financially and personally. Time to challenge all banks and corporations that discriminate against crypto businesses. A legal and moral argument, not just an ideological one.",
+      "tags": [
+        "position",
+        "crypto",
+        "banking",
+        "competition-law",
+        "advocacy"
+      ],
+      "links": []
+    },
+    {
+      "id": "dao-for-accountants-first",
+      "era": "credu-credentials",
+      "date": "2023-01",
+      "type": "spark",
+      "title": "Accountants DAO on Stacks — First Articulation",
+      "subtitle": "We can build Accountants DAO on Stacks protocol",
+      "body": "January 2023: We can build Accountants DAO on Stacks protocol. The first explicit naming of a DAO architecture for the accounting profession. Not a reform of existing bodies — a parallel, member-governed structure built on open protocols. This would evolve into CREDU and the decentralised professional association thesis.",
+      "tags": [
+        "DAO",
+        "accountants",
+        "stacks",
+        "spark",
+        "decentralised-association"
+      ],
+      "links": []
+    },
+    {
       "id": "bitcoin-esg-thesis",
       "era": "bitcoin-esg",
       "date": "2022-12",
@@ -407,6 +805,23 @@
           "url": "https://www.lynalden.com/bitcoin-energy/"
         }
       ]
+    },
+    {
+      "id": "bitcoin-esg-position",
+      "era": "bitcoin-esg",
+      "date": "2022-12",
+      "type": "position",
+      "title": "Bitcoin is an ESG Asset — S and G Matter as Much as E",
+      "subtitle": "The SG component is consistently overlooked",
+      "body": "People focusing heavily on the environmental E side of ESG as it relates to Bitcoin often overlook the SG component — at the end of the day, Bitcoin is one of the most ESG assets around. Proof-of-work is socially ethical: Bitcoin bootstraps sustainable energy, enables energy sovereignty, and provides the governance transparency that traditional finance lacks.",
+      "tags": [
+        "bitcoin",
+        "ESG",
+        "position",
+        "sustainability",
+        "governance"
+      ],
+      "links": []
     },
     {
       "id": "proof-of-state",
@@ -441,6 +856,38 @@
       "links": []
     },
     {
+      "id": "xerocon-2022-blockchain-panel",
+      "era": "accountants-onchain",
+      "date": "2022-09",
+      "type": "milestone",
+      "title": "Xerocon 2022 — Blockchain Panel",
+      "subtitle": "Urging Xero accountants to read the Bitcoin whitepaper",
+      "body": "Spoke at Xerocon Sydney 2022, urging a packed house of crypto-curious Xero accountants to read the Bitcoin whitepaper, learn by doing, and be pioneers of best practice for Web3 business. Accountants onboarded everyone to cloud accounting and we can do this. The moment the mainstream accounting software community started listening.",
+      "tags": [
+        "xero",
+        "speaking",
+        "bitcoin",
+        "accountants-onchain"
+      ],
+      "links": []
+    },
+    {
+      "id": "triple-entry-accounting-discovery",
+      "era": "accountants-onchain",
+      "date": "2022-07",
+      "type": "spark",
+      "title": "Triple Entry Accounting — The Blockchain Accounting Primitive",
+      "subtitle": "The accounting implications of an immutable public ledger",
+      "body": "Attending the Enterprise Blockchain Conference 2022, hearing about triple entry accounting — blockchain adds a third entry (the cryptographic receipt on a shared ledger) to double-entry bookkeeping. The spark: if triple entry is where we are, quadruple entry is where we're going. AI generates claims; crypto verifies them; accountants validate the proofs.",
+      "tags": [
+        "triple-entry",
+        "blockchain",
+        "accounting-theory",
+        "innovation"
+      ],
+      "links": []
+    },
+    {
       "id": "accountants-onchain-group",
       "era": "accountants-onchain",
       "date": "2022-06",
@@ -462,6 +909,39 @@
       ]
     },
     {
+      "id": "auditchain-discovery",
+      "era": "accountants-onchain",
+      "date": "2022-06",
+      "type": "spark",
+      "title": "Auditchain — Automated Accountancy on Blockchain",
+      "subtitle": "Seeing the future of audit and financial reporting",
+      "body": "Discovered Auditchain — the world's first decentralised continuous audit and reporting protocol. Hosted Australian meetups with Andrew Noble to explore process-control NFTs, XBRL machine-readable reports, and proof-of-state validation. Blockchain, cryptography and Bitcoin PoW provide the underlying internet and financial infrastructure for evidence-grade records. The earliest articulation of accountants as infrastructure, not just compliance.",
+      "tags": [
+        "auditchain",
+        "blockchain",
+        "accounting",
+        "audit",
+        "XBRL"
+      ],
+      "links": []
+    },
+    {
+      "id": "stacks-australia-launch",
+      "era": "electrafi",
+      "date": "2022-06",
+      "type": "project",
+      "title": "Stacks Australia",
+      "subtitle": "Bitcoin Layer 2 chapter — building on Bitcoin",
+      "body": "Digital Playhouse Foundation confirmed as recipient of the Stacks ANZ Chapter Grant. Stacks Australia launched — supporting founders, developers, investors and creators building on Layer 2 Bitcoin. The conviction: Bitcoin's programmable layers would be where the accounting profession's future work was conducted.",
+      "tags": [
+        "stacks",
+        "bitcoin-L2",
+        "Digital-Playhouse-Foundation",
+        "Australia"
+      ],
+      "links": []
+    },
+    {
       "id": "bitcoin-wages",
       "era": "electrafi",
       "date": "2022-04",
@@ -474,6 +954,71 @@
         "payroll",
         "tax",
         "practice"
+      ],
+      "links": []
+    },
+    {
+      "id": "cbdc-threat-position",
+      "era": "accountants-onchain",
+      "date": "2022-04",
+      "type": "position",
+      "title": "CBDCs Are a Threat to Financial Sovereignty",
+      "subtitle": "Any accountant promoting themselves as a small business advocate must study this",
+      "body": "Any accountant promoting themselves as a small business advocate should be objectively apprehending the societal consequences of a retail CBDC and studying Bitcoin and decentralised blockchain technologies now. Their clients will. CBDCs represent programmable surveillance money — the antithesis of the permissionless, trust-minimised financial infrastructure Bitcoin enables.",
+      "tags": [
+        "CBDC",
+        "position",
+        "bitcoin",
+        "financial-sovereignty",
+        "small-business"
+      ],
+      "links": []
+    },
+    {
+      "id": "wages-in-bitcoin",
+      "era": "electrafi",
+      "date": "2022-04",
+      "type": "milestone",
+      "title": "Taking Wages in Bitcoin",
+      "subtitle": "Practising what is preached",
+      "body": "Now only offering advisory services for payment in BTC with part of salary paid in BTC. Dollar cost averaging through earned income, not just buying. Living the Bitcoin standard professionally before advocating it to others. A demonstration that practitioners can operate in a Bitcoin-denominated way within existing legal and tax frameworks.",
+      "tags": [
+        "bitcoin",
+        "practice",
+        "bitcoin-standard",
+        "electrafi"
+      ],
+      "links": []
+    },
+    {
+      "id": "accountants-onchain-launch",
+      "era": "accountants-onchain",
+      "date": "2022-02",
+      "type": "project",
+      "title": "Accountants OnChain",
+      "subtitle": "Australia's first community of crypto-curious accountants",
+      "body": "Launched Accountants OnChain under Digital Playhouse Foundation — webinars, training, consulting and speaking for accountants, bookkeepers and advisers learning to support Web3 businesses. Crypto subledger tools, DAO research, blockchain accounting projects, tax ethics, peer problem-solving. The conviction: accountants needed to learn this now, not wait for regulators to catch up.",
+      "tags": [
+        "accountants-onchain",
+        "community",
+        "crypto-accounting",
+        "Digital-Playhouse-Foundation"
+      ],
+      "links": []
+    },
+    {
+      "id": "open-protocols-financial-literacy",
+      "era": "accountants-onchain",
+      "date": "2021-06",
+      "type": "spark",
+      "title": "Centralised vs Decentralised — The Core Distinction",
+      "subtitle": "First articulation of the open protocols argument",
+      "body": "June 2021: Financial literacy in the digital age begins with being able to distinguish between centralised and decentralised purpose. The innovations in identity and data are being driven by blockchain — permissionless, trustless, decentralised identity systems — in contrast to centralised authority models. This distinction became the foundational frame for everything that followed.",
+      "tags": [
+        "open-protocols",
+        "financial-literacy",
+        "decentralisation",
+        "identity"
       ],
       "links": []
     },
@@ -531,6 +1076,22 @@
       "links": []
     },
     {
+      "id": "agnes-water-digital-currency-town",
+      "era": "bitcoin-conviction",
+      "date": "2018-06",
+      "type": "milestone",
+      "title": "Agnes Water — Australia's First Digital Currency Town",
+      "subtitle": "Building Bitcoin literacy in regional Queensland",
+      "body": "Agnes Water, where Electra was based, was named Australia's first Digital Currency Town in 2018. Operating a remote accounting practice from regional Queensland while Bitcoin and blockchain were still fringe topics in the profession. The isolation was generative — space to think differently about what money, value, and professional services could become.",
+      "tags": [
+        "bitcoin",
+        "regional-australia",
+        "community",
+        "agnes-water"
+      ],
+      "links": []
+    },
+    {
       "id": "rmit-blockchain",
       "era": "accountants-onchain",
       "date": "2018-01",
@@ -547,6 +1108,22 @@
       "links": []
     },
     {
+      "id": "rmit-blockchain-2018",
+      "era": "bitcoin-conviction",
+      "date": "2018-01",
+      "type": "credential",
+      "title": "RMIT Blockchain Strategy",
+      "subtitle": "First formal blockchain study",
+      "body": "Completed RMIT University's Developing Blockchain Strategy course in 2018 — conceptual understanding of blockchain technology, use cases across industries, and strategic frameworks. The same year Agnes Water was named Australia's first Digital Currency Town. The professional conviction was forming: this technology was about accounting and governance, not just speculation.",
+      "tags": [
+        "blockchain",
+        "education",
+        "RMIT",
+        "credentials"
+      ],
+      "links": []
+    },
+    {
       "id": "bitcoin-2013",
       "era": "bitcoin-conviction",
       "date": "2013-01",
@@ -558,6 +1135,22 @@
         "bitcoin",
         "origin",
         "conviction"
+      ],
+      "links": []
+    },
+    {
+      "id": "bitcoin-discovery-2013",
+      "era": "bitcoin-conviction",
+      "date": "2013-01",
+      "type": "spark",
+      "title": "Bitcoin on the Balance Sheet",
+      "subtitle": "First encounter: a film-maker's accountant pays overseas artists in BTC",
+      "body": "Discovered Bitcoin in 2013 through a film production client paying overseas artists in BTC. In the absence of official guidance, applied FOREX accounting principles and built the first spreadsheets. The conviction formed immediately: this was not a passing technology. 'We first put Bitcoin on the balance sheet in 2014.' The start of everything.",
+      "tags": [
+        "bitcoin",
+        "creative-industries",
+        "origin",
+        "accounting"
       ],
       "links": []
     },
@@ -590,6 +1183,22 @@
         "creative-industries",
         "cloud-accounting",
         "SME"
+      ],
+      "links": []
+    },
+    {
+      "id": "entart-accounting",
+      "era": "creative-industries",
+      "date": "2002-08",
+      "type": "milestone",
+      "title": "entArt Accounting — Music Industry Accounting",
+      "subtitle": "The original creative industries practice",
+      "body": "Joined entArt Accounting, Bondi Junction — specialist business management and tax services for the music industry, established by Barry Moore CA. The formative experience: accounting as a service to people who create, not just people who comply. Spent nearly 6 years here before founding Electra Frost Accounting and Tax Services.",
+      "tags": [
+        "creative-industries",
+        "music",
+        "accounting",
+        "sydney"
       ],
       "links": []
     },
