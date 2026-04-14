@@ -6,12 +6,12 @@ import "./App.css";
 // âââ HELPERS ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 
 const TYPE_ICONS = {
-  insight: "▸",
-  publication: "▸",
-  project: "▸",
-  credential: "▸",
-  milestone: "▸",
-  origin: "▸",
+  insight: "",
+  publication: "",
+  project: "",
+  credential: "",
+  milestone: "",
+  origin: "",
 };
 
 const TYPE_LABELS = {
