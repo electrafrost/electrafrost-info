@@ -854,8 +854,8 @@
 .cv-item-header { font-size: 0.95rem; color: var(--text-primary); margin-bottom: 0.2rem; }
 .cv-item-date { font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.5rem; }
 .cv-item p { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.65; margin: 0; }
-.cv-item ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.55rem; }
-.cv-item li { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.55; padding-left: 1rem; position: relative; }
+.cv-item ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1.1rem; }
+.cv-item li { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6; padding-left: 1rem; position: relative; margin-bottom: 0; }
 .cv-item li::before { content: '—'; position: absolute; left: 0; color: var(--accent); }
 .cv-item li strong { color: var(--text-primary); }
 .cv-item a { color: var(--accent); }
@@ -893,3 +893,9 @@
   gap: 0.4rem;
   align-items: center;
 }
+
+.cv-section ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1.1rem; }
+.cv-section li { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.65; }
+.cv-section li strong { color: var(--text-primary); }
+.cv-section p { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.65; margin: 0; }
+.cv-section a { color: var(--accent); }
