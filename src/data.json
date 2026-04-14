@@ -101,16 +101,16 @@
     },
     {
       "id": "ai-esg",
-      "label": "AI Safety as ESG",
+      "label": "AI Safety",
       "range": "2026",
       "color": "#6ab04c",
-      "description": "AI safety as a social and governance (S+G) imperative. Public accountants as the missing AI governance intermediary. Making AI-intensive ESG reporting safe, contestable and investment-grade. Robodebt as the crystallising case: what happens when no one is minding the automated system."
+      "description": "AI safety as a social and governance (S+G) imperative. Public accountants as the missing AI governance intermediary. Making AI-intensive  reporting safe, contestable and investment-grade. Robodebt as the crystallising case: what happens when no one is minding the automated system."
     }
   ],
   "nodes": [
     {
       "id": "code-is-not-law",
-      "era": "ai-esg",
+      "era": "ai-governance",
       "date": "2026-04",
       "type": "thesis",
       "title": "Code Is Not Law — Separation of Powers in the Agentic Economy",
