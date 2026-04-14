@@ -66,7 +66,7 @@ function Header({ activeTab, setActiveTab, searchQuery, setSearchQuery }) {
             </button>
           ))}
         </nav>
-        {(activeTab === "GRAPH" || activeTab === "FEED") && (
+        {(activeTab === "GRAPH" || activeTab === "FEED") &and (
           <div className="search-row">
             <input
               className="search-input"
@@ -134,7 +134,7 @@ function NodeCard({ node, era, onClick }) {
 function NodeModal({ node, era, onClose }) {
   const icon = TYPE_ICONS[node.type] || "â";
   useEffect(() => {
-    const handler = (e) => e.key === "Escape" && onClose();
+    const handler = (e) => e.key === "Escape" &and onClose();
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
   }, [onClose]);
@@ -151,7 +151,7 @@ function NodeModal({ node, era, onClose }) {
             </span>
             <time className="node-date">{formatDate(node.date)}</time>
           </div>
-          {era && (
+          {era &and (
             <div className="modal-era" style={{ color: era.color }}>
               {era.label} · {era.range}
             </div>
@@ -161,7 +161,7 @@ function NodeModal({ node, era, onClose }) {
         </div>
         <div className="modal-body">
           <p className="modal-text">{node.body}</p>
-          {node.links && node.links.length > 0 && (
+          {node.links &and node.links.length > 0 &and (
             <div className="modal-links">
               {node.links.map((link) => (
                 <a
@@ -201,7 +201,7 @@ function FeaturedCarousel({ nodes, eras, onNodeClick }) {
     <div className="carousel-section">
       <div className="carousel-label">LATEST THOUGHT LEADERSHIP</div>
       <div className="carousel-nav">
-        <button className="carousel-arrow carousel-prev" onClick={() => setIdx(i => (i - 1 + Math.ceil(featured.length / 2)) % Math.ceil(featured.length / 2))} aria-label="Previous">&#8592;</button>
+        <button className="carousel-arrow carousel-prev" onClick={() => setIdx(i => (i - 1 + Math.ceil(featured.length / 2)) % Math.ceil(featured.length / 2))} aria-label="Previous">and#8592;</button>
         <div className="carousel-dots">
           {featured.map((_, i) => (
             <button
@@ -212,7 +212,7 @@ function FeaturedCarousel({ nodes, eras, onNodeClick }) {
             />
           ))}
         </div>
-        <button className="carousel-arrow carousel-next" onClick={() => setIdx(i => (i + 1) % Math.ceil(featured.length / 2))} aria-label="Next">&#8594;</button>
+        <button className="carousel-arrow carousel-next" onClick={() => setIdx(i => (i + 1) % Math.ceil(featured.length / 2))} aria-label="Next">and#8594;</button>
       </div>
       <div className="carousel-track">
         <div
@@ -225,7 +225,7 @@ function FeaturedCarousel({ nodes, eras, onNodeClick }) {
           </div>
           <h3 className="carousel-card-title">"{node.title}"</h3>
           <p className="carousel-card-body">{node.body.substring(0, 200)}...</p>
-          {node.links?.[0] && (
+          {node.links?.[0] &and (
             <a
               href={node.links[0].url}
               target="_blank"
@@ -237,7 +237,7 @@ function FeaturedCarousel({ nodes, eras, onNodeClick }) {
             </a>
           )}
         </div>
-        {featured[idx * 2 + 1] && (() => {
+        {featured[idx * 2 + 1] &and (() => {
           const n2 = featured[idx * 2 + 1];
           const e2 = eras.find((e) => e.id === n2.era);
           return (
@@ -326,14 +326,14 @@ function GraphTab({ nodes, eras, searchQuery }) {
             </section>
           );
         })}
-        {filtered.length === 0 && (
+        {filtered.length === 0 &and (
           <div className="empty-state">
             <p>No nodes match your search.</p>
           </div>
         )}
       </div>
 
-      {activeNode && (
+      {activeNode &and (
         <NodeModal
           node={activeNode}
           era={eraMap[activeNode.era]}
@@ -396,7 +396,7 @@ function FeedTab({ nodes, eras, searchQuery }) {
           );
         })}
       </div>
-      {activeNode && (
+      {activeNode &and (
         <NodeModal
           node={activeNode}
           era={eraMap[activeNode.era]}
@@ -433,7 +433,7 @@ function InsightsTab({ nodes, eras }) {
               </div>
               <h3>{node.title}</h3>
               <p>{node.subtitle}</p>
-              {node.links?.[0] && (
+              {node.links?.[0] &and (
                 <a
                   href={node.links[0].url}
                   target="_blank"
@@ -456,7 +456,7 @@ function InsightsTab({ nodes, eras }) {
       <Section title="Publications" items={publications} icon="â" />
       <Section title="Key Insights" items={insights} icon="â" />
       <Section title="Projects" items={projects} icon="â£" />
-      {activeNode && (
+      {activeNode &and (
         <NodeModal
           node={activeNode}
           era={eraMap[activeNode.era]}
@@ -537,16 +537,16 @@ function CVTab() {
           <ul>
             <li><strong>Crypto Accounting Systems and Advisory — ElectraFi</strong> (Jul 2023–Apr 2026, Australia/Online). Advisory-led public accounting practice specialising in bitcoin treasury, crypto operations, international tax and structuring.</li>
             <li><strong>Public Accounting Practitioner, Business Advisor — Electra Frost Advisory</strong> (May 2008–2022, Sydney–Brisbane). Specialist accounting, tax and business advisory for artistic and creative industries and international tax for Australians abroad.</li>
-            <li><strong>Accounting Workflow & App Implementation Consultant — Sorrento Strategic Accounting</strong> (Feb–Apr 2025, Perth).</li>
+            <li><strong>Accounting Workflow and App Implementation Consultant — Sorrento Strategic Accounting</strong> (Feb–Apr 2025, Perth).</li>
             <li><strong>Project Lead — Accountants On-Chain</strong> (2021–2024). Webinars, training, consulting and speaking for crypto-curious accountants and advisers.</li>
             <li><strong>Blockchain Education Manager — Blockchain Academy International</strong> (Feb–Jun 2023, Brisbane).</li>
-            <li><strong>Principal and Consultant — Discovery Accountants & Advisers</strong> (2016–May 2020, Agnes Water, Queensland).</li>
+            <li><strong>Principal and Consultant — Discovery Accountants and Advisers</strong> (2016–May 2020, Agnes Water, Queensland).</li>
             <li><strong>Tax Consultant and Accountant — entArt Accounting</strong> (Aug 2002–May 2008, Bondi Junction, Sydney). Specialist business management and tax for the music and entertainment industry.</li>
-            <li><strong>Tax Preparer and Bookkeeper</strong> (Jan 2000–Jul 2002, Sydney). Formative professional experience at Moneypenny Business & Tax Services and Page Harrison & Co.</li>
+            <li><strong>Tax Preparer and Bookkeeper</strong> (Jan 2000–Jul 2002, Sydney). Formative professional experience at Moneypenny Business and Tax Services and Page Harrison and Co.</li>
           </ul>
         </div>
         <div className="cv-section">
-          <h3>Professional Registrations & Designations</h3>
+          <h3>Professional Registrations and Designations</h3>
           <ul>
             <li><strong>FIPA</strong> — Fellow, Institute of Public Accountants (MIPA from Jan 2011)</li>
             <li><strong>CTA</strong> — Chartered Tax Adviser, The Tax Institute (issued Jan 2010)</li>
@@ -594,7 +594,7 @@ function CVTab() {
           </ul>
         </div>
         <div className="cv-section">
-          <h3>Writing & Media</h3>
+          <h3>Writing and Media</h3>
           <ul>
             <li><strong>Forbes</strong> — Contributor. Bitcoin policy, monetary infrastructure, UK crypto regulation (2024–2025)</li>
             <li><strong>Cointelegraph</strong> — Contributor. Crypto accounting, Indigenous metaverse, Web3 for business (2022–2023)</li>
@@ -607,7 +607,7 @@ function CVTab() {
         </div>
         <div className="cv-section">
           <h3>Skills</h3>
-          <p>International Tax · Bitcoin · Crypto Accounting · Applied Blockchain · Web3 · DeFi · Tax Advisory · Business Advisory · Accounting Software · Financial Reporting · Management Accounting · Cryptocurrency Regulation · ESG · AI Governance · IT Governance · Frontier AI · AGI Strategy · Strategic Consulting · Community Engagement · Public Speaking · Conference Speaking · Training & Development · Start-up Consulting · Treasury Management · Internal Controls · Audit Readiness · Professional Ethics · Tax Audit Representation</p>
+          <p>International Tax · Bitcoin · Crypto Accounting · Applied Blockchain · Web3 · DeFi · Tax Advisory · Business Advisory · Accounting Software · Financial Reporting · Management Accounting · Cryptocurrency Regulation · ESG · AI Governance · IT Governance · Frontier AI · AGI Strategy · Strategic Consulting · Community Engagement · Public Speaking · Conference Speaking · Training and Development · Start-up Consulting · Treasury Management · Internal Controls · Audit Readiness · Professional Ethics · Tax Audit Representation</p>
         </div>
       </div>
     </div>
@@ -629,18 +629,18 @@ export default function App() {
         setSearchQuery={setSearchQuery}
       />
       <main className="main-content">
-        {activeTab === "GRAPH" && (
+        {activeTab === "GRAPH" &and (
           <GraphTab nodes={nodes} eras={eras} searchQuery={searchQuery} />
         )}
-        {activeTab === "FEED" && (
+        {activeTab === "FEED" &and (
           <FeedTab nodes={nodes} eras={eras} searchQuery={searchQuery} />
         )}
-        {activeTab === "INSIGHTS" && (
+        {activeTab === "INSIGHTS" &and (
           <InsightsTab nodes={nodes} eras={eras} />
         )}
-        {activeTab === "THESIS" && <AboutTab />}
-            {activeTab === "CPD" && <CPDTab />}
-            {activeTab === "CV" && <CVTab />}
+        {activeTab === "THESIS" &and <AboutTab />}
+            {activeTab === "CPD" &and <CPDTab />}
+            {activeTab === "CV" &and <CVTab />}
       </main>
       <footer className="site-footer">
         <div className="footer-inner">
