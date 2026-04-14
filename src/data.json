@@ -1034,6 +1034,29 @@
         "accounting"
       ],
       "links": []
+    },
+    {
+      "id": "ai-safety-sg-imperative",
+      "era": "ai-esg",
+      "date": "2026-03",
+      "type": "position",
+      "title": "AI Safety as S+G Imperative",
+      "subtitle": "Robodebt as the crystallising case",
+      "body": "Frontier AI safety is not responsible AI or operational AI governance. It is a social and governance (S+G) accounting imperative. Robodebt crystallised it: automated systems failing people without adequate controls or right of appeal. As more critical infrastructure is rebuilt with AI, someone with real, enforceable duties to the public has to stand between the models and the people they affect. The public accounting profession — obligated to the public interest through IFAC standards of conduct across 130+ jurisdictions — is structurally suited and trusted to provide independent AI governance over AI labs and governments alike. No single lab, state, or institution can legitimately perform that function, or be trusted to distribute it. The public accountant is the missing human regulatory layer.",
+      "tags": [
+        "AI-safety",
+        "Robodebt",
+        "governance",
+        "public-interest",
+        "frontier-AI",
+        "IFAC"
+      ],
+      "links": [
+        {
+          "label": "The public interest intermediary AI governance is missing",
+          "url": "https://blog.electrafrost.com/p/the-public-interest-intermediary"
+        }
+      ]
     }
   ],
   "themes": [
