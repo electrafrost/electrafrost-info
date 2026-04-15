@@ -496,12 +496,66 @@ function AboutTab() {
   );
 }
 
-function CPDTab() {
+function CPDTab({ data }) {
+  const cpd = (data.cpd || []).slice().sort((a, b) => b.date.localeCompare(a.date));
+  
+  // Group by year
+  const byYear = {};
+  cpd.forEach(item => {
+    const year = item.date.slice(0, 4);
+    if (!byYear[year]) byYear[year] = [];
+    byYear[year].push(item);
+  });
+  const years = Object.keys(byYear).sort((a, b) => b - a);
+  
+  const totalHours = cpd.reduce((sum, item) => sum + item.hours, 0);
+  const currentYear = new Date().getFullYear().toString();
+  const currentYearHours = (byYear[currentYear] || []).reduce((sum, i) => sum + i.hours, 0);
+
+  const formatDate = (dateStr) => {
+    const [y, m, d] = dateStr.split('-');
+    const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    return `${parseInt(d)} ${months[parseInt(m)-1]} ${y}`;
+  };
+
   return (
     <div className="cpd-tab">
-      <div className="cpd-notice">
-        <p>This section is under construction and will soon display a comprehensive record of Electra’s 25 years of continuous professional education and development in specialist fields of accounting, tax and technology — which have maintained her qualifications. This is a significant record to reconstruct from gatekept records for the purpose of demonstrating a publicly verifiable and sovereign record of competency.</p>
+      <div className="cpd-summary">
+        <div className="cpd-stat">
+          <span className="cpd-stat-number">{currentYearHours}</span>
+          <span className="cpd-stat-label">{currentYear} hours</span>
+        </div>
+        <div className="cpd-stat">
+          <span className="cpd-stat-number">{totalHours.toLocaleString()}</span>
+          <span className="cpd-stat-label">total hours logged</span>
+        </div>
+        <div className="cpd-stat">
+          <span className="cpd-stat-number">{cpd.length}</span>
+          <span className="cpd-stat-label">events recorded</span>
+        </div>
       </div>
+      <p className="cpd-note">Verified CPD logged with the Institute of Public Accountants since 2011. Additional professional learning included where verifiable. Records are updated contemporaneously.</p>
+      {years.map(year => (
+        <div key={year} className="cpd-year-group">
+          <div className="cpd-year-header">
+            <span className="cpd-year-label">{year}</span>
+            <span className="cpd-year-hours">{byYear[year].reduce((s, i) => s + i.hours, 0)} hrs</span>
+          </div>
+          <div className="cpd-entries">
+            {byYear[year].map((item, idx) => (
+              <div key={idx} className="cpd-entry">
+                <div className="cpd-entry-meta">
+                  <span className="cpd-entry-date">{formatDate(item.date)}</span>
+                  <span className="cpd-entry-hours">{item.hours} hrs</span>
+                  {!item.verified && <span className="cpd-entry-unverified">unverified</span>}
+                </div>
+                <div className="cpd-entry-event">{item.event}</div>
+                <div className="cpd-entry-provider">{item.provider}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
     </div>
   );
 }
@@ -656,7 +710,7 @@ export default function App() {
           <InsightsTab nodes={nodes} eras={eras} />
         )}
         {activeTab === "THESIS" && <AboutTab />}
-            {activeTab === "CPD" && <CPDTab />}
+            {activeTab === "CPD" && <CPDTab data={data} />}
             {activeTab === "CV" && <CVTab />}
       </main>
       <footer className="site-footer">
