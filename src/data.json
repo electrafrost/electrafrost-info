@@ -1100,5 +1100,448 @@
       "label": "Community Building",
       "color": "#e8621a"
     }
+  ],
+  "cpd": [
+    {
+      "date": "2026-04-22",
+      "provider": "IPA Group",
+      "event": "AML/CTF Program Workshop - WA",
+      "hours": 7,
+      "verified": true
+    },
+    {
+      "date": "2026-03-29",
+      "provider": "Model Citizn",
+      "event": "The AI-Powered Accountant Program",
+      "hours": 8,
+      "verified": false
+    },
+    {
+      "date": "2026-02-10",
+      "provider": "BlueDot Impact",
+      "event": "AI Safety: Frontier AI Governance (first cohort, selective intake)",
+      "hours": 30,
+      "verified": true
+    },
+    {
+      "date": "2026-01-15",
+      "provider": "BlueDot Impact",
+      "event": "AI Safety: AGI Strategy (selective intake)",
+      "hours": 30,
+      "verified": true
+    },
+    {
+      "date": "2025-12-03",
+      "provider": "IPA Group",
+      "event": "IPA WA Christmas Party 2025",
+      "hours": 2,
+      "verified": true
+    },
+    {
+      "date": "2025-11-11",
+      "provider": "IPA Group",
+      "event": "Get Seen, Get Connected: Make LinkedIn Work for You in 2026",
+      "hours": 1,
+      "verified": true
+    },
+    {
+      "date": "2025-09-19",
+      "provider": "IPA Group",
+      "event": "IPA WA Fellows Lunch 2025",
+      "hours": 2,
+      "verified": true
+    },
+    {
+      "date": "2025-09-19",
+      "provider": "Smart Business Solutions Group",
+      "event": "Skybots 2-day AI and RPA Workshop",
+      "hours": 14,
+      "verified": true
+    },
+    {
+      "date": "2025-09-13",
+      "provider": "Network School",
+      "event": "Learnathon - Vibe to App with Cursor AI",
+      "hours": 6,
+      "verified": true
+    },
+    {
+      "date": "2025-09-02",
+      "provider": "Institute of Public Accountants",
+      "event": "Malaysia Member Advisory Committee in KL",
+      "hours": 1,
+      "verified": true
+    },
+    {
+      "date": "2025-08-25",
+      "provider": "IPA Group",
+      "event": "IPA Group Strategic Plan Launch WA",
+      "hours": 2,
+      "verified": true
+    },
+    {
+      "date": "2025-08-19",
+      "provider": "Smart Business Solutions Group",
+      "event": "Skybots 2-day AI and RPA Workshop",
+      "hours": 14,
+      "verified": true
+    },
+    {
+      "date": "2025-07-09",
+      "provider": "ElectraFi and Squeeze Taxes USA",
+      "event": "Don’t Get Tax Rekt: Crypto Taxes USA",
+      "hours": 1,
+      "verified": true
+    },
+    {
+      "date": "2025-07-03",
+      "provider": "IPA Group",
+      "event": "National Divisional Advisory Committee (DAC) Town Hall",
+      "hours": 1,
+      "verified": true
+    },
+    {
+      "date": "2025-06-19",
+      "provider": "The Tax Institute",
+      "event": "Tax Institute International Tax Summit",
+      "hours": 7,
+      "verified": true
+    },
+    {
+      "date": "2025-06-12",
+      "provider": "IPA Group",
+      "event": "A Comprehensive and Practical Guide To The New TASA Rules and The Deductibility of Financial Advice Fees",
+      "hours": 1,
+      "verified": true
+    },
+    {
+      "date": "2025-05-28",
+      "provider": "IPA Group",
+      "event": "2025 Tax Retreat - Singapore",
+      "hours": 15,
+      "verified": true
+    },
+    {
+      "date": "2025-05-22",
+      "provider": "ChangeGPS",
+      "event": "TASA Compliance QMS Workshop",
+      "hours": 1,
+      "verified": true
+    },
+    {
+      "date": "2025-05-21",
+      "provider": "CPA Australia",
+      "event": "Accounting Beyond the Balance Sheet",
+      "hours": 3,
+      "verified": true
+    },
+    {
+      "date": "2025-03-20",
+      "provider": "IPA Group",
+      "event": "2025 WA Conference",
+      "hours": 20,
+      "verified": true
+    },
+    {
+      "date": "2025-01-28",
+      "provider": "IPA Group",
+      "event": "Future of Accounting: Why Sustainability Matters to Your Practice",
+      "hours": 1,
+      "verified": true
+    },
+    {
+      "date": "2024-11-27",
+      "provider": "IPA Group",
+      "event": "IPA 2024 Annual General Meeting",
+      "hours": 1,
+      "verified": true
+    },
+    {
+      "date": "2024-10-29",
+      "provider": "The Tax Institute",
+      "event": "Trust Distributions — harder than you think",
+      "hours": 1.5,
+      "verified": true
+    },
+    {
+      "date": "2024-09-19",
+      "provider": "IPA Group",
+      "event": "QLD Fellows Lunch",
+      "hours": 2,
+      "verified": true
+    },
+    {
+      "date": "2024-08-22",
+      "provider": "HWL Ebsworth Lawyers",
+      "event": "Tax n’ Lunch - ATO authorities, the hierarchy of what’s binding",
+      "hours": 1,
+      "verified": true
+    },
+    {
+      "date": "2024-08-22",
+      "provider": "CAANZ and AEM Algorithm",
+      "event": "Workshop on Crypto Finance and Web3 Accounting (as presenter and attendee)",
+      "hours": 1,
+      "verified": true
+    },
+    {
+      "date": "2024-08-21",
+      "provider": "Advisers Digest",
+      "event": "Advising Clients On Structures (Webinar)",
+      "hours": 1,
+      "verified": true
+    },
+    {
+      "date": "2024-08-13",
+      "provider": "The Tax Institute",
+      "event": "The Employee Versus Contractor Distinction",
+      "hours": 1.5,
+      "verified": true
+    },
+    {
+      "date": "2024-08-08",
+      "provider": "IPA Group",
+      "event": "Introduction to Sustainability Reporting",
+      "hours": 1.5,
+      "verified": true
+    },
+    {
+      "date": "2024-07-24",
+      "provider": "The Accountant Quits",
+      "event": "Crypto Accounting Academy (Credential #18)",
+      "hours": 40,
+      "verified": true
+    },
+    {
+      "date": "2023-12-01",
+      "provider": "Blockchain Academy International / TAFE Queensland",
+      "event": "Advanced Diploma of Applied Blockchain",
+      "hours": 200,
+      "verified": true
+    },
+    {
+      "date": "2023-04-18",
+      "provider": "RMIT University",
+      "event": "Developing Blockchain Strategy",
+      "hours": 20,
+      "verified": true
+    },
+    {
+      "date": "2021-11-04",
+      "provider": "Advisers Digest",
+      "event": "BAS Advanced Disclosure and Compliance Masterclass",
+      "hours": 1,
+      "verified": true
+    },
+    {
+      "date": "2021-10-07",
+      "provider": "Advisers Digest",
+      "event": "Effective Salary Packaging Masterclass (3 sessions)",
+      "hours": 3,
+      "verified": true
+    },
+    {
+      "date": "2021-09-30",
+      "provider": "IPA Group",
+      "event": "Tax Treatment of Cryptocurrency and Digital Assets",
+      "hours": 2,
+      "verified": true
+    },
+    {
+      "date": "2021-09-09",
+      "provider": "Advisers Digest",
+      "event": "Employment Intensive Masterclass (3 sessions)",
+      "hours": 3,
+      "verified": true
+    },
+    {
+      "date": "2021-07-08",
+      "provider": "Advisers Digest",
+      "event": "Tax Aspects of Marital Separation and Divorce (3-session masterclass)",
+      "hours": 3,
+      "verified": true
+    },
+    {
+      "date": "2020-06-24",
+      "provider": "IPA Group",
+      "event": "A Guide to Company Tax Returns - Three Part Series",
+      "hours": 6,
+      "verified": true
+    },
+    {
+      "date": "2020-06-08",
+      "provider": "IPA Group",
+      "event": "Support for COVID-19 affected QLD small business and landlords",
+      "hours": 1,
+      "verified": true
+    },
+    {
+      "date": "2020-02-11",
+      "provider": "IPA Group",
+      "event": "GST Masterclass Series",
+      "hours": 6,
+      "verified": true
+    },
+    {
+      "date": "2020-02-10",
+      "provider": "IPA Group",
+      "event": "AUSKey ends in March. Get ready for myGovID and RAM",
+      "hours": 1,
+      "verified": true
+    },
+    {
+      "date": "2019-11-06",
+      "provider": "IPA Group",
+      "event": "Trusts - an Overview",
+      "hours": 2,
+      "verified": true
+    },
+    {
+      "date": "2019-10-31",
+      "provider": "IPA Group",
+      "event": "Mental Health First Aid for IPA Members and Small Business",
+      "hours": 7,
+      "verified": true
+    },
+    {
+      "date": "2019-10-25",
+      "provider": "IPA Group",
+      "event": "Financial Accounting and Reporting: Back to Basics",
+      "hours": 6.5,
+      "verified": true
+    },
+    {
+      "date": "2019-08-15",
+      "provider": "IPA Group",
+      "event": "Are you selling a product or a service? PSI rules",
+      "hours": 2,
+      "verified": true
+    },
+    {
+      "date": "2019-07-25",
+      "provider": "IPA Group",
+      "event": "How to Manage ATO audits and TPB Investigations",
+      "hours": 3,
+      "verified": true
+    },
+    {
+      "date": "2019-06-20",
+      "provider": "IPA Group",
+      "event": "A Guide to Company Tax Returns - Three Part Series",
+      "hours": 6,
+      "verified": true
+    },
+    {
+      "date": "2018-06-11",
+      "provider": "IPA Group",
+      "event": "Tax Agent Guide: Brisbane Encore",
+      "hours": 7.5,
+      "verified": true
+    },
+    {
+      "date": "2017-03-21",
+      "provider": "IPA Group",
+      "event": "New Payroll Developments",
+      "hours": 2,
+      "verified": true
+    },
+    {
+      "date": "2016-02-01",
+      "provider": "Mentor Education",
+      "event": "Diploma of Financial Planning",
+      "hours": 50,
+      "verified": true
+    },
+    {
+      "date": "2016-01-13",
+      "provider": "FGS",
+      "event": "Xero PM Training",
+      "hours": 16,
+      "verified": false
+    },
+    {
+      "date": "2016-01-08",
+      "provider": "Xero",
+      "event": "Webinar - OzForex and Xero",
+      "hours": 1,
+      "verified": false
+    },
+    {
+      "date": "2015-12-12",
+      "provider": "ESS BIZTOOLS",
+      "event": "Webinar - Delivery of Business Advisory Services",
+      "hours": 1,
+      "verified": false
+    },
+    {
+      "date": "2015-10-15",
+      "provider": "IPA Group",
+      "event": "Xero Advanced",
+      "hours": 8,
+      "verified": true
+    },
+    {
+      "date": "2015-09-17",
+      "provider": "IPA Group",
+      "event": "Xero Intermediate and Payroll",
+      "hours": 8,
+      "verified": true
+    },
+    {
+      "date": "2015-08-27",
+      "provider": "IPA Group",
+      "event": "Real Estate Agent and Trust Account Audit and Optional Auditing NFP",
+      "hours": 3,
+      "verified": true
+    },
+    {
+      "date": "2015-08-13",
+      "provider": "IPA Group",
+      "event": "Xero Fundamentals and Payroll",
+      "hours": 8,
+      "verified": true
+    },
+    {
+      "date": "2015-01-10",
+      "provider": "UNSW Australia",
+      "event": "Master of International Taxation",
+      "hours": 300,
+      "verified": true
+    },
+    {
+      "date": "2013-04-29",
+      "provider": "IPA Group",
+      "event": "Divisional Advisory Committee",
+      "hours": 1.5,
+      "verified": true
+    },
+    {
+      "date": "2012-11-15",
+      "provider": "IPA Group",
+      "event": "IPA NSW and ACT Congress and Business Expo 2012",
+      "hours": 14,
+      "verified": true
+    },
+    {
+      "date": "2012-06-29",
+      "provider": "IPA Group",
+      "event": "Tax Agents Guide Roadshow",
+      "hours": 7,
+      "verified": true
+    },
+    {
+      "date": "2012-05-08",
+      "provider": "IPA Group",
+      "event": "Evolution II - Accountant To Business Mentor",
+      "hours": 7.5,
+      "verified": true
+    },
+    {
+      "date": "2012-03-05",
+      "provider": "IPA Group",
+      "event": "Professional Practice Program (PPP)",
+      "hours": 16,
+      "verified": true
+    }
   ]
 }
