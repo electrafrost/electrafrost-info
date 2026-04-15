@@ -996,3 +996,24 @@
 .about-preamble .about-name { font-size: 1.5rem; font-weight: 700; color: var(--text); margin: 0 0 0.5rem; }
 .about-preamble .about-location { margin-bottom: 1rem; }
 .about-preamble p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.7; margin: 0 0 0.8rem; }
+
+/* CPD Tab */
+.cpd-tab { padding: 1.5rem 0; }
+.cpd-summary { display: flex; gap: 2rem; margin-bottom: 1rem; flex-wrap: wrap; }
+.cpd-stat { display: flex; flex-direction: column; }
+.cpd-stat-number { font-size: 2rem; font-weight: 700; color: var(--accent); line-height: 1; }
+.cpd-stat-label { font-size: 0.72rem; font-family: var(--font-mono); color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 0.2rem; }
+.cpd-note { font-size: 0.82rem; color: var(--text-muted); margin: 0.5rem 0 2rem; line-height: 1.6; font-style: italic; }
+.cpd-year-group { margin-bottom: 2rem; }
+.cpd-year-header { display: flex; align-items: baseline; gap: 1rem; border-bottom: 1px solid var(--border); padding-bottom: 0.4rem; margin-bottom: 0.75rem; }
+.cpd-year-label { font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent); font-weight: 600; letter-spacing: 0.05em; }
+.cpd-year-hours { font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted); }
+.cpd-entries { display: flex; flex-direction: column; gap: 0; }
+.cpd-entry { padding: 0.65rem 0; border-bottom: 1px solid var(--border-subtle, #f0ece8); }
+.cpd-entry:last-child { border-bottom: none; }
+.cpd-entry-meta { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.2rem; }
+.cpd-entry-date { font-family: var(--font-mono); font-size: 0.68rem; color: var(--text-muted); }
+.cpd-entry-hours { font-family: var(--font-mono); font-size: 0.68rem; color: var(--accent); font-weight: 600; }
+.cpd-entry-unverified { font-family: var(--font-mono); font-size: 0.62rem; color: #aaa; background: #f5f5f5; padding: 0.1rem 0.4rem; border-radius: 2px; }
+.cpd-entry-event { font-size: 0.88rem; color: var(--text-primary); line-height: 1.4; }
+.cpd-entry-provider { font-size: 0.75rem; color: var(--text-muted); margin-top: 0.1rem; }
