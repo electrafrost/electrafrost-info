@@ -453,9 +453,9 @@ function InsightsTab({ nodes, eras }) {
 
   return (
     <div className="insights-tab">
-      <Section title="Publications" items={publications} icon="â" />
-      <Section title="Key Insights" items={insights} icon="â" />
-      <Section title="Projects" items={projects} icon="â£" />
+      <Section title="Publications" items={publications} icon="" />
+      <Section title="Key Insights" items={insights} icon="" />
+      <Section title="Projects" items={projects} icon="" />
       {activeNode && (
         <NodeModal
           node={activeNode}
