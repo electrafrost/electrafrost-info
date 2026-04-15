@@ -534,6 +534,7 @@ function CPDTab({ data }) {
           <span className="cpd-stat-label">events recorded</span>
         </div>
       </div>
+      <p className="cpd-incomplete">This is an incomplete set which is currently being updated.</p>
       <p className="cpd-note">Verified CPD logged with the Institute of Public Accountants since 2011. Additional professional learning included where verifiable. Records are updated contemporaneously.</p>
       {years.map(year => (
         <div key={year} className="cpd-year-group">
