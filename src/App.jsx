@@ -1,4 +1,4 @@
-// v0.1.2 — Posts tab added with fixed search functionality
+// v0.1.3 — Sitewide search above tabs with result counts
 import { useState, useMemo, useCallback, useRef, useEffect } from "react";
 import data from "./data.json";
 import "./App.css";
@@ -30,8 +30,42 @@ function formatDate(dateStr) {
   return `${months[parseInt(month) - 1]} ${year}`;
 }
 
+// Helper function to get search result counts for each tab
+function getSearchCount(tab, query, posts = []) {
+  if (!query) return 0;
+  
+  const q = query.toLowerCase();
+  
+  switch (tab) {
+    case "GRAPH":
+    case "FEED":
+    case "INSIGHTS":
+      return data.nodes.filter(n => 
+        n.title.toLowerCase().includes(q) ||
+        n.subtitle.toLowerCase().includes(q) ||
+        n.body.toLowerCase().includes(q) ||
+        n.tags.some(t => t.toLowerCase().includes(q))
+      ).length;
+      
+    case "CPD":
+      return (data.cpd || []).filter(item =>
+        item.event.toLowerCase().includes(q) ||
+        item.provider.toLowerCase().includes(q)
+      ).length;
+      
+    case "POSTS":
+      return posts.filter(p =>
+        p.text.toLowerCase().includes(q) ||
+        (p.title && p.title.toLowerCase().includes(q))
+      ).length;
+      
+    default:
+      return 0;
+  }
+}
+
 // ─── COMPONENTS ───────────────────────────────────────────────────────────────
-function Header({ activeTab, setActiveTab, searchQuery, setSearchQuery }) {
+function Header({ activeTab, setActiveTab, searchQuery, setSearchQuery, posts = [] }) {
   const tabs = ["GRAPH", "FEED", "POSTS", "INSIGHTS", "THESIS", "CPD", "CV"];
 
   return (
@@ -56,28 +90,54 @@ function Header({ activeTab, setActiveTab, searchQuery, setSearchQuery }) {
           </div>
         </div>
         
-        <nav className="header-nav">
-          {tabs.map((t) => (
-            <button
-              key={t}
-              className={`nav-tab ${activeTab === t ? "active" : ""}`}
-              onClick={() => setActiveTab(t)}
-            >
-              {t}
-            </button>
-          ))}
-        </nav>
-        
-        {(activeTab === "GRAPH" || activeTab === "FEED" || activeTab === "POSTS" || activeTab === "INSIGHTS" || activeTab === "CPD") && (
-          <div className="search-row">
+        {/* Sitewide Search Bar */}
+        <div className="search-row sitewide-search">
+          <div className="search-container">
             <input
               className="search-input"
-              placeholder="Search nodes, ideas, publications..."
+              placeholder="Search all content: nodes, posts, insights, publications, CPD..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
+            {searchQuery && (
+              <button 
+                className="search-clear"
+                onClick={() => setSearchQuery('')}
+                aria-label="Clear search"
+              >
+                ×
+              </button>
+            )}
           </div>
-        )}
+          {searchQuery && (
+            <div className="search-results-summary">
+              {(() => {
+                const totalResults = tabs.reduce((sum, tab) => 
+                  sum + getSearchCount(tab, searchQuery, posts), 0);
+                return `${totalResults} results across all content`;
+              })()}
+            </div>
+          )}
+        </div>
+        
+        <nav className="header-nav">
+          {tabs.map((t) => {
+            const count = searchQuery ? getSearchCount(t, searchQuery, posts) : 0;
+            return (
+              <button
+                key={t}
+                className={`nav-tab ${activeTab === t ? "active" : ""} ${searchQuery && count === 0 ? "no-results" : ""}`}
+                onClick={() => setActiveTab(t)}
+              >
+                {t}
+                {/* Show search result counts per tab when searching */}
+                {searchQuery && count > 0 && (
+                  <span className="search-count">({count})</span>
+                )}
+              </button>
+            );
+          })}
+        </nav>
       </div>
     </header>
   );
@@ -315,7 +375,9 @@ function GraphTab({ nodes, eras, searchQuery }) {
 
   return (
     <div className="graph-tab">
-      <FeaturedCarousel nodes={data.nodes} eras={eras} onNodeClick={setActiveNode} />
+      {!searchQuery && (
+        <FeaturedCarousel nodes={data.nodes} eras={eras} onNodeClick={setActiveNode} />
+      )}
       <EraFilter eras={eras} activeEra={activeEra} setActiveEra={setActiveEra} />
       <div className="timeline">
         {eraOrder.map((eraId) => {
@@ -369,6 +431,7 @@ function FeedTab({ nodes, eras, searchQuery }) {
         (n) =>
           n.title.toLowerCase().includes(q) ||
           n.subtitle.toLowerCase().includes(q) ||
+          n.body.toLowerCase().includes(q) ||
           n.tags.some((t) => t.toLowerCase().includes(q))
       );
     }
@@ -377,6 +440,11 @@ function FeedTab({ nodes, eras, searchQuery }) {
 
   return (
     <div className="feed-tab">
+      {searchQuery && (
+        <div className="search-results-info">
+          Showing {sorted.length} result{sorted.length !== 1 ? "s" : ""} for "{searchQuery}"
+        </div>
+      )}
       <div className="feed-list">
         {sorted.map((node) => {
           const era = eraMap[node.era];
@@ -409,6 +477,11 @@ function FeedTab({ nodes, eras, searchQuery }) {
           );
         })}
       </div>
+      {sorted.length === 0 && searchQuery && (
+        <div className="empty-state">
+          <p>No feed items match your search for "{searchQuery}".</p>
+        </div>
+      )}
       {activeNode && (
         <NodeModal
           node={activeNode}
@@ -443,43 +516,57 @@ function InsightsTab({ nodes, eras, searchQuery }) {
 
   const Section = ({ title, items, icon }) => (
     <div className="insights-section">
-      <h2 className="insights-section-title">{icon} {title}</h2>
-      <div className="insights-grid">
-        {items.map((node) => {
-          const era = eraMap[node.era];
-          return (
-            <article
-              key={node.id}
-              className="insight-card"
-              onClick={() => setActiveNode(node)}
-              style={{ "--era-color": era?.color || "#e8621a" }}
-            >
-              <div className="insight-card-meta">
-                <span style={{ color: era?.color }}>{era?.label}</span>
-                <time>{formatDate(node.date)}</time>
-              </div>
-              <h3>{node.title}</h3>
-              <p>{node.subtitle}</p>
-              {node.links?.[0] && (
-                <a
-                  href={node.links[0].url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="insight-link"
-                  onClick={(e) => e.stopPropagation()}
-                >
-                  → {node.links[0].label}
-                </a>
-              )}
-            </article>
-          );
-        })}
-      </div>
+      <h2 className="insights-section-title">
+        {icon} {title}
+        {searchQuery && (
+          <span className="section-count">({items.length})</span>
+        )}
+      </h2>
+      {items.length === 0 && searchQuery ? (
+        <p className="empty-section">No {title.toLowerCase()} match your search.</p>
+      ) : (
+        <div className="insights-grid">
+          {items.map((node) => {
+            const era = eraMap[node.era];
+            return (
+              <article
+                key={node.id}
+                className="insight-card"
+                onClick={() => setActiveNode(node)}
+                style={{ "--era-color": era?.color || "#e8621a" }}
+              >
+                <div className="insight-card-meta">
+                  <span style={{ color: era?.color }}>{era?.label}</span>
+                  <time>{formatDate(node.date)}</time>
+                </div>
+                <h3>{node.title}</h3>
+                <p>{node.subtitle}</p>
+                {node.links?.[0] && (
+                  <a
+                    href={node.links[0].url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="insight-link"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    → {node.links[0].label}
+                  </a>
+                )}
+              </article>
+            );
+          })}
+        </div>
+      )}
     </div>
   );
 
   return (
     <div className="insights-tab">
+      {searchQuery && (
+        <div className="search-results-info">
+          Showing {filteredNodes.length} result{filteredNodes.length !== 1 ? "s" : ""} for "{searchQuery}"
+        </div>
+      )}
       <Section title="Publications" items={publications} icon="📄" />
       <Section title="Key Insights" items={insights} icon="💡" />
       <Section title="Projects" items={projects} icon="🚧" />
@@ -525,7 +612,10 @@ function AboutTab() {
 }
 
 function CPDTab({ data, searchQuery }) {
-  const allCpd = (data.cpd || []).slice().sort((a, b) => b.date.localeCompare(a.date));
+  const allCpd = useMemo(() => 
+    (data.cpd || []).slice().sort((a, b) => b.date.localeCompare(a.date)), 
+    [data.cpd]
+  );
   
   // Filter CPD entries based on search query
   const cpd = useMemo(() => {
@@ -539,12 +629,15 @@ function CPDTab({ data, searchQuery }) {
   }, [allCpd, searchQuery]);
 
   // Group by year
-  const byYear = {};
-  cpd.forEach(item => {
-    const year = item.date.slice(0, 4);
-    if (!byYear[year]) byYear[year] = [];
-    byYear[year].push(item);
-  });
+  const byYear = useMemo(() => {
+    const groups = {};
+    cpd.forEach(item => {
+      const year = item.date.slice(0, 4);
+      if (!groups[year]) groups[year] = [];
+      groups[year].push(item);
+    });
+    return groups;
+  }, [cpd]);
 
   const years = Object.keys(byYear).sort((a, b) => b - a);
   const totalHours = cpd.reduce((sum, item) => sum + item.hours, 0);
@@ -559,6 +652,11 @@ function CPDTab({ data, searchQuery }) {
 
   return (
     <div className="cpd-tab">
+      {searchQuery && (
+        <div className="search-results-info">
+          Showing {cpd.length} result{cpd.length !== 1 ? "s" : ""} for "{searchQuery}"
+        </div>
+      )}
       <div className="cpd-summary">
         <div className="cpd-stat">
           <span className="cpd-stat-number">{currentYearHours}</span>
@@ -575,27 +673,33 @@ function CPDTab({ data, searchQuery }) {
       </div>
       <p className="cpd-incomplete">This is an incomplete set which is currently being updated.</p>
       <p className="cpd-note">Verified CPD logged with the Institute of Public Accountants since 2011. Additional professional learning included where verifiable. Records are updated contemporaneously.</p>
-      {years.map(year => (
-        <div key={year} className="cpd-year-group">
-          <div className="cpd-year-header">
-            <span className="cpd-year-label">{year}</span>
-            <span className="cpd-year-hours">{byYear[year].reduce((s, i) => s + i.hours, 0)} hrs</span>
-          </div>
-          <div className="cpd-entries">
-            {byYear[year].map((item, idx) => (
-              <div key={idx} className="cpd-entry">
-                <div className="cpd-entry-meta">
-                  <span className="cpd-entry-date">{formatDate(item.date)}</span>
-                  <span className="cpd-entry-hours">{item.hours} hrs</span>
-                  {!item.verified && <span className="cpd-entry-unverified">unverified</span>}
-                </div>
-                <div className="cpd-entry-event">{item.event}</div>
-                <div className="cpd-entry-provider">{item.provider}</div>
-              </div>
-            ))}
-          </div>
+      {years.length === 0 && searchQuery ? (
+        <div className="empty-state">
+          <p>No CPD events match your search for "{searchQuery}".</p>
         </div>
-      ))}
+      ) : (
+        years.map(year => (
+          <div key={year} className="cpd-year-group">
+            <div className="cpd-year-header">
+              <span className="cpd-year-label">{year}</span>
+              <span className="cpd-year-hours">{byYear[year].reduce((s, i) => s + i.hours, 0)} hrs</span>
+            </div>
+            <div className="cpd-entries">
+              {byYear[year].map((item, idx) => (
+                <div key={idx} className="cpd-entry">
+                  <div className="cpd-entry-meta">
+                    <span className="cpd-entry-date">{formatDate(item.date)}</span>
+                    <span className="cpd-entry-hours">{item.hours} hrs</span>
+                    {!item.verified && <span className="cpd-entry-unverified">unverified</span>}
+                  </div>
+                  <div className="cpd-entry-event">{item.event}</div>
+                  <div className="cpd-entry-provider">{item.provider}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))
+      )}
     </div>
   );
 }
@@ -797,6 +901,12 @@ function PostsTab({ searchQuery }) {
         <p>A comprehensive archive of 657 posts spanning 8 years (2018–2026) across LinkedIn, Facebook groups, and Substack. This cleaned corpus contains only Electra's original content and provides the source material underlying the intellectual provenance graph.</p>
       </div>
       
+      {searchQuery && (
+        <div className="search-results-info">
+          Showing {filtered.length} result{filtered.length !== 1 ? "s" : ""} for "{searchQuery}"
+        </div>
+      )}
+      
       <div className="posts-filters">
         {["all", "facebook", "linkedin", "substack"].map(source => (
           <button
@@ -814,40 +924,40 @@ function PostsTab({ searchQuery }) {
       </div>
       
       <div className="posts-content">
-        {Object.keys(grouped).sort((a, b) => {
-          if (a === "undated") return 1;
-          if (b === "undated") return -1;
-          return b.localeCompare(a); // Newest first
-        }).map(period => (
-          <div key={period} className="posts-period">
-            <h3 className="posts-period-title">
-              {period === "undated" ? "Undated" : formatDate(period + "-01")}
-              <span className="posts-period-count">({grouped[period].length})</span>
-            </h3>
-            <div className="posts-list">
-              {grouped[period].map((post, idx) => (
-                <article key={idx} className="post-card">
-                  <div className="post-header">
-                    <div className="post-source">{post.source}{post.group ? ` (${post.group})` : ""}</div>
-                    {post.date && <div className="post-date">{post.date}</div>}
-                  </div>
-                  {post.title && <h4 className="post-title">{post.title}</h4>}
-                  <div className="post-text">{post.text}</div>
-                  {post.url && (
-                    <a href={post.url} target="_blank" rel="noopener" className="post-link">
-                      → Read full post
-                    </a>
-                  )}
-                </article>
-              ))}
-            </div>
-          </div>
-        ))}
-        
-        {filtered.length === 0 && (
+        {Object.keys(grouped).length === 0 && searchQuery ? (
           <div className="empty-state">
-            <p>No posts match your search.</p>
+            <p>No posts match your search for "{searchQuery}".</p>
           </div>
+        ) : (
+          Object.keys(grouped).sort((a, b) => {
+            if (a === "undated") return 1;
+            if (b === "undated") return -1;
+            return b.localeCompare(a); // Newest first
+          }).map(period => (
+            <div key={period} className="posts-period">
+              <h3 className="posts-period-title">
+                {period === "undated" ? "Undated" : formatDate(period + "-01")}
+                <span className="posts-period-count">({grouped[period].length})</span>
+              </h3>
+              <div className="posts-list">
+                {grouped[period].map((post, idx) => (
+                  <article key={idx} className="post-card">
+                    <div className="post-header">
+                      <div className="post-source">{post.source}{post.group ? ` (${post.group})` : ""}</div>
+                      {post.date && <div className="post-date">{post.date}</div>}
+                    </div>
+                    {post.title && <h4 className="post-title">{post.title}</h4>}
+                    <div className="post-text">{post.text}</div>
+                    {post.url && (
+                      <a href={post.url} target="_blank" rel="noopener" className="post-link">
+                        → Read full post
+                      </a>
+                    )}
+                  </article>
+                ))}
+              </div>
+            </div>
+          ))
         )}
       </div>
     </div>
@@ -863,6 +973,7 @@ export default function App() {
 
   const [activeTab, setActiveTab] = useState(getTabFromHash);
   const [searchQuery, setSearchQuery] = useState("");
+  const [posts, setPosts] = useState([]);
   const { nodes, eras } = data;
 
   useEffect(() => {
@@ -872,6 +983,20 @@ export default function App() {
     };
     window.addEventListener('hashchange', onHash);
     return () => window.removeEventListener('hashchange', onHash);
+  }, []);
+
+  // Load posts for search count calculation
+  useEffect(() => {
+    const loadPosts = async () => {
+      try {
+        const resp = await fetch('/posts.json');
+        const data = await resp.json();
+        setPosts(data);
+      } catch (err) {
+        console.error('Failed to load posts for search counts:', err);
+      }
+    };
+    loadPosts();
   }, []);
 
   return (
@@ -884,6 +1009,7 @@ export default function App() {
         }}
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
+        posts={posts}
       />
       <main className="main-content">
         {activeTab === "GRAPH" && (
