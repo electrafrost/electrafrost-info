@@ -1,9 +1,9 @@
-// v0.1.1 Ã¢ÂÂ updated description, nodes sorted newest-first
+// v0.1.1 — updated description, nodes sorted newest-first
 import { useState, useMemo, useCallback, useRef, useEffect } from "react";
 import data from "./data.json";
 import "./App.css";
 
-// ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ HELPERS ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ
+// ─── HELPERS ──────────────────────────────────────────────────────────────────
 
 const TYPE_ICONS = {
   insight: "",
@@ -31,7 +31,7 @@ function formatDate(dateStr) {
   return `${months[parseInt(month) - 1]} ${year}`;
 }
 
-// ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ COMPONENTS ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ
+// ─── COMPONENTS ───────────────────────────────────────────────────────────────
 
 function Header({ activeTab, setActiveTab, searchQuery, setSearchQuery }) {
   const tabs = ["GRAPH", "FEED", "INSIGHTS", "THESIS", "CPD", "CV"];
@@ -46,13 +46,13 @@ function Header({ activeTab, setActiveTab, searchQuery, setSearchQuery }) {
             </h1>
             <p className="site-tagline">{data.meta.tagline}</p>
             <p className="site-description">
-              A specialist public accountant who has been reinventing professional practice at the digital frontier for 25 years This is her aggregated, sovereign and discoverable record of learning and teaching, ideas, predictions, publications, presentations and contributions spanning 25 years (2000Ã¢ÂÂ2026), designed to be queried by humans, AI agents and LLMs alike.
+              A specialist public accountant who has been reinventing professional practice at the digital frontier for 25 years This is her aggregated, sovereign and discoverable record of learning and teaching, ideas, predictions, publications, presentations and contributions spanning 25 years (2000–2026), designed to be queried by humans, AI agents and LLMs alike.
             </p>
             <p className="site-llms">
               Enter this URL into your LLM to query and verify a graph of ideas, publications and
               contributions. <a href="/llms.txt" target="_blank" rel="noopener">llms.txt</a>
             </p>
-            <p style={{color:"#c0504d",fontWeight:300,fontStyle:"italic",fontSize:"0.82rem",margin:"0.4rem 0 0",padding:0,background:"none",border:"none"}}>Under construction Ã¢ÂÂ errors and omissions are being corrected.</p>
+            <p style={{color:"#c0504d",fontWeight:300,fontStyle:"italic",fontSize:"0.82rem",margin:"0.4rem 0 0",padding:0,background:"none",border:"none"}}>Under construction — errors and omissions are being corrected.</p>
           </div>
         </div>
         <nav className="header-nav">
@@ -142,7 +142,7 @@ function NodeModal({ node, era, onClose }) {
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-panel" onClick={(e) => e.stopPropagation()}>
-        <button className="modal-close" onClick={onClose}>ÃÂ¢ÃÂÃÂ</button>
+        <button className="modal-close" onClick={onClose}>✕</button>
         <div className="modal-header" style={{ borderTopColor: era?.color || "#e8621a" }}>
           <div className="modal-meta">
             <span className="node-type-badge">
@@ -153,7 +153,7 @@ function NodeModal({ node, era, onClose }) {
           </div>
           {era && (
             <div className="modal-era" style={{ color: era.color }}>
-              {era.label} ÃÂ· {era.range}
+              {era.label} · {era.range}
             </div>
           )}
           <h2 className="modal-title">{node.title}</h2>
@@ -171,7 +171,7 @@ function NodeModal({ node, era, onClose }) {
                   rel="noopener noreferrer"
                   className="modal-link"
                 >
-                  ÃÂ¢ÃÂÃÂ {link.label}
+                  → {link.label}
                 </a>
               ))}
             </div>
@@ -221,7 +221,7 @@ function FeaturedCarousel({ nodes, eras, onNodeClick }) {
           style={{ "--era-color": era?.color || "#e8621a" }}
         >
           <div className="carousel-card-era" style={{ color: era?.color }}>
-            {era?.label?.toUpperCase()} ÃÂ· {node.date?.substring(0, 4)}
+            {era?.label?.toUpperCase()} · {node.date?.substring(0, 4)}
           </div>
           <h3 className="carousel-card-title">"{node.title}"</h3>
           <p className="carousel-card-body">{node.body.substring(0, 200)}...</p>
@@ -233,7 +233,7 @@ function FeaturedCarousel({ nodes, eras, onNodeClick }) {
               className="carousel-link"
               onClick={(e) => e.stopPropagation()}
             >
-              ÃÂ¢ÃÂÃÂ {node.links[0].label}
+              → {node.links[0].label}
             </a>
           )}
         </div>
@@ -247,7 +247,7 @@ function FeaturedCarousel({ nodes, eras, onNodeClick }) {
               style={{ "--era-color": e2?.color || "#e8621a" }}
             >
               <div className="carousel-card-era" style={{ color: e2?.color }}>
-                {e2?.label?.toUpperCase()} ÃÂ· {n2.date?.substring(0, 4)}
+                {e2?.label?.toUpperCase()} · {n2.date?.substring(0, 4)}
               </div>
               <h3 className="carousel-card-title">"{n2.title}"</h3>
               <p className="carousel-card-body">{n2.body.substring(0, 120)}...</p>
@@ -309,7 +309,7 @@ function GraphTab({ nodes, eras, searchQuery }) {
                 <div className="era-dot" style={{ background: era.color }} />
                 <div className="era-label-block">
                   <h2 className="era-name" style={{ color: era.color }}>{era.label}</h2>
-                  <span className="era-range-label">{era.range} ÃÂ· {eraNodes.length} node{eraNodes.length !== 1 ? "s" : ""}</span>
+                  <span className="era-range-label">{era.range} · {eraNodes.length} node{eraNodes.length !== 1 ? "s" : ""}</span>
                 </div>
               </div>
               <p className="era-description">{era.description}</p>
@@ -441,7 +441,7 @@ function InsightsTab({ nodes, eras }) {
                   className="insight-link"
                   onClick={(e) => e.stopPropagation()}
                 >
-                  ÃÂ¢ÃÂÃÂ {node.links[0].label}
+                  → {node.links[0].label}
                 </a>
               )}
             </article>
@@ -472,16 +472,16 @@ function AboutTab() {
     <div className="about-tab">
       <div className="about-content">
         <div className="about-preamble">
-          <h2 className="about-name">Electra FrostÃ¢ÂÂs Thesis</h2>
-          <p className="about-location">Currently in development while Electra is in residence at Network School ÃÂ· JohorÃ¢ÂÂSingapore Special Economic Zone, Malaysia.</p>
-          <p>This summary of Electra FrostÃ¢ÂÂs thesis and the graph itself is a demonstration of the argument: that the future credibility of the accounting profession requires decentralised credentials, verifiable knowledge graphs, and profession-owned infrastructure. Her thesis is backed by this machine-readable intellectual provenance graph. See <a href="/llms.txt" target="_blank" rel="noopener">llms.txt</a> for the full structured summary.</p>
+          <h2 className="about-name">Electra Frost’s Thesis</h2>
+          <p className="about-location">Currently in development while Electra is in residence at Network School · Johor–Singapore Special Economic Zone, Malaysia.</p>
+          <p>This summary of Electra Frost’s thesis and the graph itself is a demonstration of the argument: that the future credibility of the accounting profession requires decentralised credentials, verifiable knowledge graphs, and profession-owned infrastructure. Her thesis is backed by this machine-readable intellectual provenance graph. See <a href="/llms.txt" target="_blank" rel="noopener">llms.txt</a> for the full structured summary.</p>
           <p>The following Core Thesis is a summary snapshot of an extensive blueprint for the accounting profession that will be published in mid-2026.</p>
         </div>
         <div className="about-thesis">
           <div className="core-thesis-kicker">Core Thesis</div>
-          <p>Accounting is not defined by todayÃ¢ÂÂs service lines. It is the social function of making economic activity legible, accountable, contestable, and trustworthy across distance, time, and conflicting interests.</p>
-          <p>That function sits beneath the professionÃ¢ÂÂs visible tasks. Tax, audit, reporting, controls, assurance, and advisory are only different expressions of a deeper requirement society imposes wherever value moves, records are relied upon, and decisions affect other people. The professionÃ¢ÂÂs enduring purpose is to provide accountability, advocacy, and trust where they cannot be left to self-assertion or programming.</p>
-          <p>Bitcoin expresses in protocol form several properties accountants have historically been engaged to secure: truthful records, timestamped events, verifiable ownership, constrained authority, and public auditability. It is a ledger-based monetary system that eliminates counterparty trust by moving verification into open, shared infrastructure. Bitcoin does not require regulation. Where other systems depart from BitcoinÃ¢ÂÂs security model, additional trust assumptions arise. Those assumptions create new risk, new governance requirements, and a stronger case for intervention, assurance, and oversight.</p>
+          <p>Accounting is not defined by today’s service lines. It is the social function of making economic activity legible, accountable, contestable, and trustworthy across distance, time, and conflicting interests.</p>
+          <p>That function sits beneath the profession’s visible tasks. Tax, audit, reporting, controls, assurance, and advisory are only different expressions of a deeper requirement society imposes wherever value moves, records are relied upon, and decisions affect other people. The profession’s enduring purpose is to provide accountability, advocacy, and trust where they cannot be left to self-assertion or programming.</p>
+          <p>Bitcoin expresses in protocol form several properties accountants have historically been engaged to secure: truthful records, timestamped events, verifiable ownership, constrained authority, and public auditability. It is a ledger-based monetary system that eliminates counterparty trust by moving verification into open, shared infrastructure. Bitcoin does not require regulation. Where other systems depart from Bitcoin’s security model, additional trust assumptions arise. Those assumptions create new risk, new governance requirements, and a stronger case for intervention, assurance, and oversight.</p>
           <p>Around 150 professional bodies globally qualify their members under common codes of ethics and public-interest obligations enforced across borders. Governments are jurisdictionally bounded. Industry is commercially conflicted. The profession is imperfect, but it is already bound by enforceable duties that travel with the practitioner. And the environment those duties now have to operate in runs on open protocols, transnational coordination, and networks that do not stop at borders.</p>
           <p>That mandate either gets exercised where trust is now being produced, or it gets abandoned in practice. It does not survive in standards, licensing, or rhetoric alone.</p>
           <p>Open protocols, network societies, and AI-mediated infrastructure are all moving the site at which trust, control, and accountability have to be established. The profession cannot remain oriented only to reporting after the fact while the systems of coordination are being rebuilt without it.</p>
@@ -566,103 +566,103 @@ function CVTab() {
     <div className="cv-tab">
       <div className="cv-header">
         <div className="cv-contact">
-          <h2 className="cv-title">Curriculum Vitae Ã¢ÂÂ Electra Frost</h2>
+          <h2 className="cv-title">Curriculum Vitae — Electra Frost</h2>
           <p>Network School, Forest City, Gelang Patah, Johor 81500, Malaysia</p>
           <p>+60 10 666 0556 | mail@electrafrost.com</p>
         </div>
       </div>
       <div className="cv-sections">
         <div className="cv-summary">
-          <p>Public accounting practitioner and technologist with Australian international tax expertise, self-employed for nearly twenty of the last twenty-five years. Started in the arts and entertainment industries, drawn to accounting to help people of high potential run legitimate, successful businesses. Introduced to Bitcoin through clientsÃ¢ÂÂ cross border business activities in 2013, and has been problem-solving at the intersection of frontier technologies, social enterprise and professional practice ever since.</p>
+          <p>Public accounting practitioner and technologist with Australian international tax expertise, self-employed for nearly twenty of the last twenty-five years. Started in the arts and entertainment industries, drawn to accounting to help people of high potential run legitimate, successful businesses. Introduced to Bitcoin through clients’ cross border business activities in 2013, and has been problem-solving at the intersection of frontier technologies, social enterprise and professional practice ever since.</p>
         </div>
         <div className="cv-section">
           <h3>Current</h3>
           <ul>
-            <li><strong>Founding Cohort Member Ã¢ÂÂ Network School</strong> (Sep 2024Ã¢ÂÂpresent, Forest City, Malaysia/Singapore). Selected into V1 first cohort of 128 Ã¢ÂÂdark talentÃ¢ÂÂ from over 5,000 applications. One of the earlier long-term NS residents. Contributing to peer mentoring and informal learner-programming of the international digital nomad, entrepreneur and founder community. Base for independently building professional accounting ecosystems for an AI-driven decentralised digital economy, and startup-society transnational tax coordination solutions.</li>
-            <li><strong>Founder and Lead Architect Ã¢ÂÂ Kigumi Solutions</strong> (October 2025Ã¢ÂÂpresent). Developing a platform-based business model and architecture to facilitate AI-assisted client-serving collaboration between public accountants and legal firms for legal, documentation, customer due diligence and corporate secretarial services.</li>
-            <li><strong>Operations and Platform Partnerships Ã¢ÂÂ Consulta Mirabilis Law</strong> (October 2025Ã¢ÂÂpresent). Leading operations and strategic partnerships, building the practiceÃ¢ÂÂs operational infrastructure for integration with Kigumi platform. Engaging SME accounting practices to identify market gaps, developing service models that define human and AI roles at each workflow touchpoint.</li>
-            <li><strong>Founder / Researcher Ã¢ÂÂ CREDU</strong> (Feb 2024Ã¢ÂÂpresent). Researching and developing CREDU as a global verified credentialing, audit and procurement platform for accountantsÃ¢ÂÂ CPE/CPD using open source technologies. Professional bodies and autonomous agents can publicly inspect CPE/CPD compliance with proof on open blockchain.</li>
-            <li><strong>Deputy President Ã¢ÂÂ IPA Malaysia Member Advisory Committee (MMAC)</strong> (Sep 2025Ã¢ÂÂpresent).</li>
-            <li><strong>Co-Founder and Director Ã¢ÂÂ Digital Playhouse Foundation</strong> (Apr 2021Ã¢ÂÂpresent, Agnes Water, Queensland). Public Benevolent Institution (PBI). Projects: The School of Bitcoin, Stacks Australia, Accountants On-Chain, Coding 4 Kids, GameChangers.</li>
-            <li><strong>Enterprise Engagement Ã¢ÂÂ Stacks Australia</strong> (Feb 2024Ã¢ÂÂpresent). Raising awareness of Stacks as a high-integrity Bitcoin Layer 2 in the Australian blockchain industry.</li>
+            <li><strong>Founding Cohort Member — Network School</strong> (Sep 2024–present, Forest City, Malaysia/Singapore). Selected into V1 first cohort of 128 ‘dark talent’ from over 5,000 applications. One of the earlier long-term NS residents. Contributing to peer mentoring and informal learner-programming of the international digital nomad, entrepreneur and founder community. Base for independently building professional accounting ecosystems for an AI-driven decentralised digital economy, and startup-society transnational tax coordination solutions.</li>
+            <li><strong>Founder and Lead Architect — Kigumi Solutions</strong> (October 2025–present). Developing a platform-based business model and architecture to facilitate AI-assisted client-serving collaboration between public accountants and legal firms for legal, documentation, customer due diligence and corporate secretarial services.</li>
+            <li><strong>Operations and Platform Partnerships — Consulta Mirabilis Law</strong> (October 2025–present). Leading operations and strategic partnerships, building the practice’s operational infrastructure for integration with Kigumi platform. Engaging SME accounting practices to identify market gaps, developing service models that define human and AI roles at each workflow touchpoint.</li>
+            <li><strong>Founder / Researcher — CREDU</strong> (Feb 2024–present). Researching and developing CREDU as a global verified credentialing, audit and procurement platform for accountants’ CPE/CPD using open source technologies. Professional bodies and autonomous agents can publicly inspect CPE/CPD compliance with proof on open blockchain.</li>
+            <li><strong>Deputy President — IPA Malaysia Member Advisory Committee (MMAC)</strong> (Sep 2025–present).</li>
+            <li><strong>Co-Founder and Director — Digital Playhouse Foundation</strong> (Apr 2021–present, Agnes Water, Queensland). Public Benevolent Institution (PBI). Projects: The School of Bitcoin, Stacks Australia, Accountants On-Chain, Coding 4 Kids, GameChangers.</li>
+            <li><strong>Enterprise Engagement — Stacks Australia</strong> (Feb 2024–present). Raising awareness of Stacks as a high-integrity Bitcoin Layer 2 in the Australian blockchain industry.</li>
           </ul>
         </div>
         <div className="cv-section">
           <h3>Previous Roles</h3>
           <ul>
-            <li><strong>Crypto Accounting Systems and Advisory Ã¢ÂÂ ElectraFi</strong> (Jul 2023Ã¢ÂÂApril 2026, Australia/Online). Advisory led public accounting practice specialising in bitcoin treasury, crypto operations, international tax and structuring. Led implementations of crypto accounting systems with Xero/QB integration. Developed advisory resources and CPD for the accounting industry.</li>
-            <li><strong>Public Accounting Practitioner, Business Advisor Ã¢ÂÂ Electra Frost Advisory</strong> (May 2008Ã¢ÂÂ2022, SydneyÃ¢ÂÂBrisbane). Long term specialist accounting, tax and business advisory for artistic and creative industries, international tax for Australians abroad.</li>
-            <li><strong>Accounting Workflow and App Implementation Consultant Ã¢ÂÂ Sorrento Strategic Accounting</strong> (FebÃ¢ÂÂApr 2025, Perth).</li>
-            <li><strong>Project Lead Ã¢ÂÂ Accountants On-Chain</strong> (2021Ã¢ÂÂ2024). Webinars, training, consulting and speaking for crypto-curious accountants, bookkeepers and advisers.</li>
-            <li><strong>Blockchain Education Manager Ã¢ÂÂ Blockchain Academy International</strong> (FebÃ¢ÂÂJun 2023, Brisbane). Conducted competency mapping across Applied Blockchain and Accounting Diploma qualifications to develop an integrated pathway positioning blockchain and AI within accounting practice.</li>
-            <li><strong>Principal and Consultant Ã¢ÂÂ Discovery Accountants and Advisers</strong> (2016Ã¢ÂÂMay 2020, Agnes Water, Queensland).</li>
-            <li><strong>Tax Consultant and Accountant Ã¢ÂÂ entArt Accounting</strong> (Aug 2002Ã¢ÂÂMay 2008, Bondi Junction, Sydney). Specialist business management and tax services for the music and entertainment industry.</li>
-            <li><strong>Tax Preparer and Bookkeeper</strong> (Jan 2000Ã¢ÂÂJul 2002, Sydney). Formative professional experience at Moneypenny Business and Tax Services and Page Harrison and Co.</li>
+            <li><strong>Crypto Accounting Systems and Advisory — ElectraFi</strong> (Jul 2023–April 2026, Australia/Online). Advisory led public accounting practice specialising in bitcoin treasury, crypto operations, international tax and structuring. Led implementations of crypto accounting systems with Xero/QB integration. Developed advisory resources and CPD for the accounting industry.</li>
+            <li><strong>Public Accounting Practitioner, Business Advisor — Electra Frost Advisory</strong> (May 2008–2022, Sydney–Brisbane). Long term specialist accounting, tax and business advisory for artistic and creative industries, international tax for Australians abroad.</li>
+            <li><strong>Accounting Workflow and App Implementation Consultant — Sorrento Strategic Accounting</strong> (Feb–Apr 2025, Perth).</li>
+            <li><strong>Project Lead — Accountants On-Chain</strong> (2021–2024). Webinars, training, consulting and speaking for crypto-curious accountants, bookkeepers and advisers.</li>
+            <li><strong>Blockchain Education Manager — Blockchain Academy International</strong> (Feb–Jun 2023, Brisbane). Conducted competency mapping across Applied Blockchain and Accounting Diploma qualifications to develop an integrated pathway positioning blockchain and AI within accounting practice.</li>
+            <li><strong>Principal and Consultant — Discovery Accountants and Advisers</strong> (2016–May 2020, Agnes Water, Queensland).</li>
+            <li><strong>Tax Consultant and Accountant — entArt Accounting</strong> (Aug 2002–May 2008, Bondi Junction, Sydney). Specialist business management and tax services for the music and entertainment industry.</li>
+            <li><strong>Tax Preparer and Bookkeeper</strong> (Jan 2000–Jul 2002, Sydney). Formative professional experience at Moneypenny Business and Tax Services and Page Harrison and Co.</li>
           </ul>
         </div>
         <div className="cv-section">
           <h3>Professional Registrations and Designations</h3>
           <ul>
-            <li><strong>FIPA Ã¢ÂÂ Fellow, Institute of Public Accountants</strong> (MIPA from Jan 2011)</li>
-            <li><strong>CTA Ã¢ÂÂ Chartered Tax Adviser, The Tax Institute</strong> (issued Jan 2010)</li>
-            <li><strong>FTIA Ã¢ÂÂ Fellow, The Tax Institute</strong> (issued Nov 2007)</li>
-            <li><strong>Registered Tax Agent Ã¢ÂÂ Tax Practitioners Board</strong> (issued Jan 2007, 25+ years continuous registration)</li>
+            <li><strong>FIPA — Fellow, Institute of Public Accountants</strong> (MIPA from Jan 2011)</li>
+            <li><strong>CTA — Chartered Tax Adviser, The Tax Institute</strong> (issued Jan 2010)</li>
+            <li><strong>FTIA — Fellow, The Tax Institute</strong> (issued Nov 2007)</li>
+            <li><strong>Registered Tax Agent — Tax Practitioners Board</strong> (issued Jan 2007, 25+ years continuous registration)</li>
           </ul>
         </div>
         <div className="cv-section">
           <h3>Education</h3>
           <ul>
-            <li><strong>Master of International Taxation Ã¢ÂÂ UNSW Australia (2012Ã¢ÂÂ2015).</strong> Australian international tax; USA, Canada, China, NZ, Hong Kong, Singapore, Europe, DTAs, tax system design, transfer pricing, employee remuneration, financial planning tax strategies.</li>
-            <li><strong>First Cohort, International/Global Studies Ã¢ÂÂ The Network School (Sep 2024Ã¢ÂÂpresent).</strong> Founded by Balaji Srinivasan. Contributing Web3 Accounting and business workshops; developing a futurist accounting faculty and a Bitcoin-principled competencies framework.</li>
-            <li><strong>Advanced Diploma of Applied Blockchain Ã¢ÂÂ Blockchain Academy International / TAFE Queensland (May 2022Ã¢ÂÂDec 2023).</strong></li>
-            <li><strong>AI Safety: Frontier AI Governance Ã¢ÂÂ BlueDot Impact (Mar 2026, first cohort, selective intake).</strong> Action plan: global public accountants as cross-border AI governance intermediary layer.</li>
-            <li><strong>AI Safety: AGI Strategy Ã¢ÂÂ BlueDot Impact (Jan 2026, selective intake).</strong> 30-hour intensive. Technical AI trends, threat models via kill chain analysis, defence-in-depth frameworks.</li>
-            <li><strong>Crypto Accounting Academy Ã¢ÂÂ The Accountant Quits (Jul 2024, Credential #18).</strong></li>
-            <li><strong>Master of Business Administration (MBA, incomplete) Ã¢ÂÂ Bond University (2020Ã¢ÂÂ2021).</strong> Withdrew to study blockchain instead.</li>
-            <li><strong>Developing Blockchain Strategy Ã¢ÂÂ RMIT University (2018).</strong></li>
-            <li><strong>Bachelor of Taxation Ã¢ÂÂ UNSW (2002Ã¢ÂÂ2007).</strong></li>
-            <li><strong>Diploma of Financial Planning Ã¢ÂÂ Mentor Education (2012Ã¢ÂÂ2014).</strong></li>
-            <li><strong>Diploma of Advanced Taxation Ã¢ÂÂ The Tax Institute (2007).</strong></li>
-            <li><strong>Advanced Diploma of Accounting Ã¢ÂÂ TAFE NSW (1999Ã¢ÂÂ2001).</strong></li>
+            <li><strong>Master of International Taxation — UNSW Australia (2012–2015).</strong> Australian international tax; USA, Canada, China, NZ, Hong Kong, Singapore, Europe, DTAs, tax system design, transfer pricing, employee remuneration, financial planning tax strategies.</li>
+            <li><strong>First Cohort, International/Global Studies — The Network School (Sep 2024–present).</strong> Founded by Balaji Srinivasan. Contributing Web3 Accounting and business workshops; developing a futurist accounting faculty and a Bitcoin-principled competencies framework.</li>
+            <li><strong>Advanced Diploma of Applied Blockchain — Blockchain Academy International / TAFE Queensland (May 2022–Dec 2023).</strong></li>
+            <li><strong>AI Safety: Frontier AI Governance — BlueDot Impact (Mar 2026, first cohort, selective intake).</strong> Action plan: global public accountants as cross-border AI governance intermediary layer.</li>
+            <li><strong>AI Safety: AGI Strategy — BlueDot Impact (Jan 2026, selective intake).</strong> 30-hour intensive. Technical AI trends, threat models via kill chain analysis, defence-in-depth frameworks.</li>
+            <li><strong>Crypto Accounting Academy — The Accountant Quits (Jul 2024, Credential #18).</strong></li>
+            <li><strong>Master of Business Administration (MBA, incomplete) — Bond University (2020–2021).</strong> Withdrew to study blockchain instead.</li>
+            <li><strong>Developing Blockchain Strategy — RMIT University (2018).</strong></li>
+            <li><strong>Bachelor of Taxation — UNSW (2002–2007).</strong></li>
+            <li><strong>Diploma of Financial Planning — Mentor Education (2012–2014).</strong></li>
+            <li><strong>Diploma of Advanced Taxation — The Tax Institute (2007).</strong></li>
+            <li><strong>Advanced Diploma of Accounting — TAFE NSW (1999–2001).</strong></li>
           </ul>
         </div>
         <div className="cv-section">
           <h3>Volunteering</h3>
           <ul>
-            <li><strong>Deputy President Ã¢ÂÂ IPA MAC Malaysia</strong> (Sep 2025Ã¢ÂÂpresent)</li>
-            <li><strong>Public Officer Ã¢ÂÂ Digital Playhouse Foundation</strong> (May 2021Ã¢ÂÂpresent).</li>
-            <li><strong>Business Mentor Ã¢ÂÂ The School of Bitcoin</strong> (Jul 2021Ã¢ÂÂpresent).</li>
-            <li><strong>Mentoring for Growth Consultant Ã¢ÂÂ Queensland Government</strong> (Feb 2021Ã¢ÂÂpresent).</li>
-            <li><strong>Vice President Ã¢ÂÂ Discovery Coast Tourism and Commerce</strong> (Oct 2020Ã¢ÂÂOct 2021).</li>
-            <li><strong>Committee Member Ã¢ÂÂ 1770 Art Show</strong> (Oct 2019Ã¢ÂÂJan 2022).</li>
-            <li><strong>Treasurer Ã¢ÂÂ Startup Gladstone Inc.</strong> (Aug 2019Ã¢ÂÂAug 2020).</li>
+            <li><strong>Deputy President — IPA MAC Malaysia</strong> (Sep 2025–present)</li>
+            <li><strong>Public Officer — Digital Playhouse Foundation</strong> (May 2021–present).</li>
+            <li><strong>Business Mentor — The School of Bitcoin</strong> (Jul 2021–present).</li>
+            <li><strong>Mentoring for Growth Consultant — Queensland Government</strong> (Feb 2021–present).</li>
+            <li><strong>Vice President — Discovery Coast Tourism and Commerce</strong> (Oct 2020–Oct 2021).</li>
+            <li><strong>Committee Member — 1770 Art Show</strong> (Oct 2019–Jan 2022).</li>
+            <li><strong>Treasurer — Startup Gladstone Inc.</strong> (Aug 2019–Aug 2020).</li>
           </ul>
         </div>
         <div className="cv-section">
           <h3>Organisations</h3>
           <ul>
-            <li><strong>Western Australian AI Hub</strong> Ã¢ÂÂ Founding Member (2024)</li>
-            <li><strong>CryptoCFOs</strong> Ã¢ÂÂ Member (Feb 2024Ã¢ÂÂpresent).</li>
-            <li><strong>Web3Finance Club</strong> Ã¢ÂÂ Ã¢ÂÂFirst 100Ã¢ÂÂ Member (Jan 2022Ã¢ÂÂpresent).</li>
-            <li><strong>Digital Economy Council of Australia</strong> Ã¢ÂÂ Member since 2021</li>
-            <li><strong>LawFi DAO</strong> Ã¢ÂÂ Member (2022Ã¢ÂÂ2023)</li>
+            <li><strong>Western Australian AI Hub</strong> — Founding Member (2024)</li>
+            <li><strong>CryptoCFOs</strong> — Member (Feb 2024–present).</li>
+            <li><strong>Web3Finance Club</strong> — “First 100” Member (Jan 2022–present).</li>
+            <li><strong>Digital Economy Council of Australia</strong> — Member since 2021</li>
+            <li><strong>LawFi DAO</strong> — Member (2022–2023)</li>
           </ul>
         </div>
         <div className="cv-section">
           <h3>Writing and Media</h3>
           <ul>
-            <li><strong>Forbes</strong> Ã¢ÂÂ Contributor. Bitcoin policy, monetary infrastructure, UK crypto regulation (2024Ã¢ÂÂ2025)</li>
-            <li><strong>Cointelegraph</strong> Ã¢ÂÂ Contributor. Crypto accounting, Indigenous metaverse, Web3 for business (2022Ã¢ÂÂ2023)</li>
-            <li><strong>IPA Member Journal</strong> Ã¢ÂÂ Ã¢ÂÂWeb3: what is it and how will it transform accountancy?Ã¢ÂÂ (2024)</li>
-            <li><strong>Xero Future Focus</strong> Ã¢ÂÂ Featured expert, crypto in small business (2023)</li>
-            <li><strong>Global Crypto Tax Report</strong> Ã¢ÂÂ Australian overview, Web3 Accountant (2024, English and Chinese)</li>
-            <li><strong>Cryptoworth Top 60</strong> Ã¢ÂÂ Top 60 Web3 Leaders of Crypto Accounting globally (2024)</li>
-            <li><strong>Substack</strong> Ã¢ÂÂ <a href="https://blog.electrafrost.com" target="_blank" rel="noopener">blog.electrafrost.com</a> (2023Ã¢ÂÂpresent)</li>
+            <li><strong>Forbes</strong> — Contributor. Bitcoin policy, monetary infrastructure, UK crypto regulation (2024–2025)</li>
+            <li><strong>Cointelegraph</strong> — Contributor. Crypto accounting, Indigenous metaverse, Web3 for business (2022–2023)</li>
+            <li><strong>IPA Member Journal</strong> — “Web3: what is it and how will it transform accountancy?” (2024)</li>
+            <li><strong>Xero Future Focus</strong> — Featured expert, crypto in small business (2023)</li>
+            <li><strong>Global Crypto Tax Report</strong> — Australian overview, Web3 Accountant (2024, English and Chinese)</li>
+            <li><strong>Cryptoworth Top 60</strong> — Top 60 Web3 Leaders of Crypto Accounting globally (2024)</li>
+            <li><strong>Substack</strong> — <a href="https://blog.electrafrost.com" target="_blank" rel="noopener">blog.electrafrost.com</a> (2023–present)</li>
           </ul>
         </div>
         <div className="cv-section">
           <h3>Skills</h3>
-          <p>International Tax ÃÂ· Bitcoin ÃÂ· Crypto Accounting ÃÂ· Applied Blockchain ÃÂ· Web3 ÃÂ· DeFi ÃÂ· Tax Advisory ÃÂ· Business Advisory ÃÂ· Accounting Software ÃÂ· Financial Reporting ÃÂ· Management Accounting ÃÂ· Cryptocurrency Regulation ÃÂ· AI Governance ÃÂ· IT Governance ÃÂ· Frontier AI ÃÂ· AGI Strategy ÃÂ· Strategic Consulting ÃÂ· Community Engagement ÃÂ· Public Speaking ÃÂ· Conference Speaking ÃÂ· Training and Development ÃÂ· Start-up Consulting ÃÂ· Treasury Management ÃÂ· Internal Controls ÃÂ· Audit Readiness ÃÂ· Professional Ethics ÃÂ· Tax Audit Representation</p>
+          <p>International Tax · Bitcoin · Crypto Accounting · Applied Blockchain · Web3 · DeFi · Tax Advisory · Business Advisory · Accounting Software · Financial Reporting · Management Accounting · Cryptocurrency Regulation · AI Governance · IT Governance · Frontier AI · AGI Strategy · Strategic Consulting · Community Engagement · Public Speaking · Conference Speaking · Training and Development · Start-up Consulting · Treasury Management · Internal Controls · Audit Readiness · Professional Ethics · Tax Audit Representation</p>
         </div>
       </div>
     </div>
@@ -717,14 +717,14 @@ export default function App() {
       <footer className="site-footer">
         <div className="footer-inner">
           <a href="https://electrafrost.com" target="_blank" rel="noopener">electrafrost.com</a>
-          <span className="footer-sep">ÃÂ·</span>
+          <span className="footer-sep">·</span>
           <span>Updated April 2026</span>
-          <span className="footer-sep">ÃÂ·</span>
+          <span className="footer-sep">·</span>
           <a href="/llms.txt">llms.txt</a>
-          <span className="footer-sep">ÃÂ·</span>
+          <span className="footer-sep">·</span>
           <a href="https://github.com/electrafrost" target="_blank" rel="noopener">GitHub</a>
         </div>
       </footer>
     </div>
   );
-}// Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ CPD TAB Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
+}// ─── CPD TAB ─────────────────────────────────────────────────────────────────
