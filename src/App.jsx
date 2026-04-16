@@ -769,18 +769,17 @@ function PostsTab({ searchQuery }) {
   return (
     <div className="posts-tab">
       <div className="posts-intro">
-        <p>A comprehensive archive of posts spanning 8 years (2018–2026) across LinkedIn, Facebook groups, Substack, and comments. This raw corpus provides the source material underlying the intellectual provenance graph.</p>
+        <p>A comprehensive archive of 657 posts spanning 8 years (2018–2026) across LinkedIn, Facebook groups, and Substack. This cleaned corpus contains only Electra's original content and provides the source material underlying the intellectual provenance graph.</p>
       </div>
       
       <div className="posts-filters">
-        {["all", "facebook", "linkedin", "linkedin-comment", "substack"].map(source => (
+        {["all", "facebook", "linkedin", "substack"].map(source => (
           <button
             key={source}
             className={`posts-filter-btn ${sourceFilter === source ? "active" : ""}`}
             onClick={() => setSourceFilter(source)}
           >
             {source === "all" ? "All" : 
-             source === "linkedin-comment" ? "LI Comments" :
              source === "facebook" ? "Facebook" :
              source === "linkedin" ? "LinkedIn" :
              source === "substack" ? "Substack" : source}
