@@ -32,7 +32,7 @@ function formatDate(dateStr) {
 
 // ─── COMPONENTS ───────────────────────────────────────────────────────────────
 function Header({ activeTab, setActiveTab, searchQuery, setSearchQuery }) {
-  const tabs = ["GRAPH", "FEED", "INSIGHTS", "THESIS", "CPD", "CV", "POSTS"];
+  const tabs = ["GRAPH", "FEED", "POSTS", "INSIGHTS", "THESIS", "CPD", "CV"];
 
   return (
     <header className="site-header">
