@@ -587,7 +587,7 @@ function CVTab() {
       </div>
       <div className="cv-sections">
         <div className="cv-summary">
-          <p>Public accounting practitioner and technologist with Australian international tax expertise, self-employed for nearly twenty of the last twenty-five years. Started in the arts and entertainment industries, drawn to accounting to help people of high potential run legitimate, successful businesses. Introduced to Bitcoin through clients' cross border business activities in 2013, and has been problem-solving at the intersection of frontier technologies, social enterprise and professional practice ever since.</p>
+          <p>Public accounting practitioner and technologist with Australian international tax expertise, self-employed for nearly twenty of the last twenty-five years. Started in the arts and entertainment industries, drawn to accounting to help people of high potential run legitimate, successful businesses. Introduced to Bitcoin through clients' cross border business activities in 2013, and has been problem-solving at the intersection of frontier technologies, enterprise and professional practice ever since.</p>
         </div>
         
         <div className="cv-section">
