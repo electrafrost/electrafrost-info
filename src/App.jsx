@@ -1,22 +1,21 @@
-// v0.1.1 — updated description, nodes sorted newest-first
+// v0.1.2 — Posts tab added
 import { useState, useMemo, useCallback, useRef, useEffect } from "react";
 import data from "./data.json";
 import "./App.css";
 
-// ─── HELPERS ──────────────────────────────────────────────────────────────────
-
+// ─── HELPERS ───────────────────────────────────────────────────────────────────
 const TYPE_ICONS = {
-  insight: "",
-  publication: "",
-  project: "",
-  credential: "",
-  milestone: "",
-  origin: "",
+  insight: "💡",
+  publication: "📄", 
+  project: "🚧",
+  credential: "🏆",
+  milestone: "🌟",
+  origin: "🌱",
 };
 
 const TYPE_LABELS = {
   insight: "Insight",
-  publication: "Publication",
+  publication: "Publication", 
   project: "Project",
   credential: "Credential",
   milestone: "Milestone",
@@ -32,9 +31,9 @@ function formatDate(dateStr) {
 }
 
 // ─── COMPONENTS ───────────────────────────────────────────────────────────────
-
 function Header({ activeTab, setActiveTab, searchQuery, setSearchQuery }) {
-  const tabs = ["GRAPH", "FEED", "INSIGHTS", "THESIS", "CPD", "CV"];
+  const tabs = ["GRAPH", "FEED", "INSIGHTS", "THESIS", "CPD", "CV", "POSTS"];
+
   return (
     <header className="site-header">
       <div className="header-inner">
@@ -46,15 +45,17 @@ function Header({ activeTab, setActiveTab, searchQuery, setSearchQuery }) {
             </h1>
             <p className="site-tagline">{data.meta.tagline}</p>
             <p className="site-description">
-              A specialist public accountant who has been reinventing professional practice at the digital frontier for 25 years This is her aggregated, sovereign and discoverable record of learning and teaching, ideas, predictions, publications, presentations and contributions spanning 25 years (2000–2026), designed to be queried by humans, AI agents and LLMs alike.
+              A specialist public accountant who has been reinventing professional practice at the digital frontier for 25 years
+              This is her aggregated, sovereign and discoverable record of learning and teaching, ideas, predictions, publications, presentations and contributions spanning 25 years (2000–2026), designed to be queried by humans, AI agents and LLMs alike.
             </p>
             <p className="site-llms">
-              Enter this URL into your LLM to query and verify a graph of ideas, publications and
-              contributions. <a href="/llms.txt" target="_blank" rel="noopener">llms.txt</a>
+              Enter this URL into your LLM to query and verify a graph of ideas, publications and contributions.
+              <a href="/llms.txt" target="_blank" rel="noopener">llms.txt</a>
             </p>
             <p style={{color:"#c0504d",fontWeight:300,fontStyle:"italic",fontSize:"0.82rem",margin:"0.4rem 0 0",padding:0,background:"none",border:"none"}}>Under construction — errors and omissions are being corrected.</p>
           </div>
         </div>
+        
         <nav className="header-nav">
           {tabs.map((t) => (
             <button
@@ -66,7 +67,8 @@ function Header({ activeTab, setActiveTab, searchQuery, setSearchQuery }) {
             </button>
           ))}
         </nav>
-        {(activeTab === "GRAPH" || activeTab === "FEED") && (
+        
+        {(activeTab === "GRAPH" || activeTab === "FEED" || activeTab === "POSTS") && (
           <div className="search-row">
             <input
               className="search-input"
@@ -106,7 +108,8 @@ function EraFilter({ eras, activeEra, setActiveEra }) {
 }
 
 function NodeCard({ node, era, onClick }) {
-  const icon = TYPE_ICONS[node.type] || "";
+  const icon = TYPE_ICONS[node.type] || "📌";
+  
   return (
     <article
       className="node-card"
@@ -132,7 +135,8 @@ function NodeCard({ node, era, onClick }) {
 }
 
 function NodeModal({ node, era, onClose }) {
-  const icon = TYPE_ICONS[node.type] || "";
+  const icon = TYPE_ICONS[node.type] || "📌";
+  
   useEffect(() => {
     const handler = (e) => e.key === "Escape" && onClose();
     window.addEventListener("keydown", handler);
@@ -142,7 +146,7 @@ function NodeModal({ node, era, onClose }) {
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-panel" onClick={(e) => e.stopPropagation()}>
-        <button className="modal-close" onClick={onClose}>✕</button>
+        <button className="modal-close" onClick={onClose}>×</button>
         <div className="modal-header" style={{ borderTopColor: era?.color || "#e8621a" }}>
           <div className="modal-meta">
             <span className="node-type-badge">
@@ -189,11 +193,15 @@ function NodeModal({ node, era, onClose }) {
 
 function FeaturedCarousel({ nodes, eras, onNodeClick }) {
   const [idx, setIdx] = useState(0);
-  const featured = useMemo(() =>
-    nodes.filter((n) => ["thesis", "position", "publication", "insight", "project", "milestone", "spark", "credential"].includes(n.type)).slice(0, 16),
-    [nodes]
+  
+  const featured = useMemo(() => 
+    nodes.filter((n) => 
+      ["thesis", "position", "publication", "insight", "project", "milestone", "spark", "credential"].includes(n.type)
+    ).slice(0, 16), [nodes]
   );
+
   if (!featured.length) return null;
+
   const node = featured[idx * 2];
   const era = eras.find((e) => e.id === node.era);
 
@@ -201,7 +209,13 @@ function FeaturedCarousel({ nodes, eras, onNodeClick }) {
     <div className="carousel-section">
       <div className="carousel-label">LATEST THOUGHT LEADERSHIP</div>
       <div className="carousel-nav">
-        <button className="carousel-arrow carousel-prev" onClick={() => setIdx(i => (i - 1 + Math.ceil(featured.length / 2)) % Math.ceil(featured.length / 2))} aria-label="Previous">&#8592;</button>
+        <button 
+          className="carousel-arrow carousel-prev" 
+          onClick={() => setIdx(i => (i - 1 + Math.ceil(featured.length / 2)) % Math.ceil(featured.length / 2))}
+          aria-label="Previous"
+        >
+          ←
+        </button>
         <div className="carousel-dots">
           {featured.map((_, i) => (
             <button
@@ -212,11 +226,17 @@ function FeaturedCarousel({ nodes, eras, onNodeClick }) {
             />
           ))}
         </div>
-        <button className="carousel-arrow carousel-next" onClick={() => setIdx(i => (i + 1) % Math.ceil(featured.length / 2))} aria-label="Next">&#8594;</button>
+        <button 
+          className="carousel-arrow carousel-next" 
+          onClick={() => setIdx(i => (i + 1) % Math.ceil(featured.length / 2))}
+          aria-label="Next"
+        >
+          →
+        </button>
       </div>
       <div className="carousel-track">
-        <div
-          className="carousel-card featured"
+        <div 
+          className="carousel-card featured" 
           onClick={() => onNodeClick(node)}
           style={{ "--era-color": era?.color || "#e8621a" }}
         >
@@ -226,9 +246,9 @@ function FeaturedCarousel({ nodes, eras, onNodeClick }) {
           <h3 className="carousel-card-title">"{node.title}"</h3>
           <p className="carousel-card-body">{node.body.substring(0, 200)}...</p>
           {node.links?.[0] && (
-            <a
-              href={node.links[0].url}
-              target="_blank"
+            <a 
+              href={node.links[0].url} 
+              target="_blank" 
               rel="noopener noreferrer"
               className="carousel-link"
               onClick={(e) => e.stopPropagation()}
@@ -241,8 +261,8 @@ function FeaturedCarousel({ nodes, eras, onNodeClick }) {
           const n2 = featured[idx * 2 + 1];
           const e2 = eras.find((e) => e.id === n2.era);
           return (
-            <div
-              className="carousel-card secondary"
+            <div 
+              className="carousel-card secondary" 
               onClick={() => { setIdx(idx + 1); onNodeClick(n2); }}
               style={{ "--era-color": e2?.color || "#e8621a" }}
             >
@@ -297,7 +317,6 @@ function GraphTab({ nodes, eras, searchQuery }) {
     <div className="graph-tab">
       <FeaturedCarousel nodes={data.nodes} eras={eras} onNodeClick={setActiveNode} />
       <EraFilter eras={eras} activeEra={activeEra} setActiveEra={setActiveEra} />
-
       <div className="timeline">
         {eraOrder.map((eraId) => {
           const eraNodes = byEra[eraId];
@@ -315,12 +334,7 @@ function GraphTab({ nodes, eras, searchQuery }) {
               <p className="era-description">{era.description}</p>
               <div className="node-grid">
                 {eraNodes.map((node) => (
-                  <NodeCard
-                    key={node.id}
-                    node={node}
-                    era={era}
-                    onClick={setActiveNode}
-                  />
+                  <NodeCard key={node.id} node={node} era={era} onClick={setActiveNode} />
                 ))}
               </div>
             </section>
@@ -332,7 +346,6 @@ function GraphTab({ nodes, eras, searchQuery }) {
           </div>
         )}
       </div>
-
       {activeNode && (
         <NodeModal
           node={activeNode}
@@ -367,7 +380,7 @@ function FeedTab({ nodes, eras, searchQuery }) {
       <div className="feed-list">
         {sorted.map((node) => {
           const era = eraMap[node.era];
-          const icon = TYPE_ICONS[node.type] || "";
+          const icon = TYPE_ICONS[node.type] || "📌";
           return (
             <article
               key={node.id}
@@ -453,9 +466,9 @@ function InsightsTab({ nodes, eras }) {
 
   return (
     <div className="insights-tab">
-      <Section title="Publications" items={publications} icon="" />
-      <Section title="Key Insights" items={insights} icon="" />
-      <Section title="Projects" items={projects} icon="" />
+      <Section title="Publications" items={publications} icon="📄" />
+      <Section title="Key Insights" items={insights} icon="💡" />
+      <Section title="Projects" items={projects} icon="🚧" />
       {activeNode && (
         <NodeModal
           node={activeNode}
@@ -472,16 +485,17 @@ function AboutTab() {
     <div className="about-tab">
       <div className="about-content">
         <div className="about-preamble">
-          <h2 className="about-name">Electra Frost’s Thesis</h2>
+          <h2 className="about-name">Electra Frost's Thesis</h2>
           <p className="about-location">Currently in development while Electra is in residence at Network School · Johor–Singapore Special Economic Zone, Malaysia.</p>
-          <p>This summary of Electra Frost’s thesis and the graph itself is a demonstration of the argument: that the future credibility of the accounting profession requires decentralised credentials, verifiable knowledge graphs, and profession-owned infrastructure. Her thesis is backed by this machine-readable intellectual provenance graph. See <a href="/llms.txt" target="_blank" rel="noopener">llms.txt</a> for the full structured summary.</p>
+          <p>This summary of Electra Frost's thesis and the graph itself is a demonstration of the argument: that the future credibility of the accounting profession requires decentralised credentials, verifiable knowledge graphs, and profession-owned infrastructure. Her thesis is backed by this machine-readable intellectual provenance graph. See <a href="/llms.txt" target="_blank" rel="noopener">llms.txt</a> for the full structured summary.</p>
           <p>The following Core Thesis is a summary snapshot of an extensive blueprint for the accounting profession that will be published in mid-2026.</p>
         </div>
+        
         <div className="about-thesis">
           <div className="core-thesis-kicker">Core Thesis</div>
-          <p>Accounting is not defined by today’s service lines. It is the social function of making economic activity legible, accountable, contestable, and trustworthy across distance, time, and conflicting interests.</p>
-          <p>That function sits beneath the profession’s visible tasks. Tax, audit, reporting, controls, assurance, and advisory are only different expressions of a deeper requirement society imposes wherever value moves, records are relied upon, and decisions affect other people. The profession’s enduring purpose is to provide accountability, advocacy, and trust where they cannot be left to self-assertion or programming.</p>
-          <p>Bitcoin expresses in protocol form several properties accountants have historically been engaged to secure: truthful records, timestamped events, verifiable ownership, constrained authority, and public auditability. It is a ledger-based monetary system that eliminates counterparty trust by moving verification into open, shared infrastructure. Bitcoin does not require regulation. Where other systems depart from Bitcoin’s security model, additional trust assumptions arise. Those assumptions create new risk, new governance requirements, and a stronger case for intervention, assurance, and oversight.</p>
+          <p>Accounting is not defined by today's service lines. It is the social function of making economic activity legible, accountable, contestable, and trustworthy across distance, time, and conflicting interests.</p>
+          <p>That function sits beneath the profession's visible tasks. Tax, audit, reporting, controls, assurance, and advisory are only different expressions of a deeper requirement society imposes wherever value moves, records are relied upon, and decisions affect other people. The profession's enduring purpose is to provide accountability, advocacy, and trust where they cannot be left to self-assertion or programming.</p>
+          <p>Bitcoin expresses in protocol form several properties accountants have historically been engaged to secure: truthful records, timestamped events, verifiable ownership, constrained authority, and public auditability. It is a ledger-based monetary system that eliminates counterparty trust by moving verification into open, shared infrastructure. Bitcoin does not require regulation. Where other systems depart from Bitcoin's security model, additional trust assumptions arise. Those assumptions create new risk, new governance requirements, and a stronger case for intervention, assurance, and oversight.</p>
           <p>Around 150 professional bodies globally qualify their members under common codes of ethics and public-interest obligations enforced across borders. Governments are jurisdictionally bounded. Industry is commercially conflicted. The profession is imperfect, but it is already bound by enforceable duties that travel with the practitioner. And the environment those duties now have to operate in runs on open protocols, transnational coordination, and networks that do not stop at borders.</p>
           <p>That mandate either gets exercised where trust is now being produced, or it gets abandoned in practice. It does not survive in standards, licensing, or rhetoric alone.</p>
           <p>Open protocols, network societies, and AI-mediated infrastructure are all moving the site at which trust, control, and accountability have to be established. The profession cannot remain oriented only to reporting after the fact while the systems of coordination are being rebuilt without it.</p>
@@ -498,7 +512,7 @@ function AboutTab() {
 
 function CPDTab({ data }) {
   const cpd = (data.cpd || []).slice().sort((a, b) => b.date.localeCompare(a.date));
-  
+
   // Group by year
   const byYear = {};
   cpd.forEach(item => {
@@ -506,8 +520,8 @@ function CPDTab({ data }) {
     if (!byYear[year]) byYear[year] = [];
     byYear[year].push(item);
   });
+
   const years = Object.keys(byYear).sort((a, b) => b - a);
-  
   const totalHours = cpd.reduce((sum, item) => sum + item.hours, 0);
   const currentYear = new Date().getFullYear().toString();
   const currentYearHours = (byYear[currentYear] || []).reduce((sum, i) => sum + i.hours, 0);
@@ -535,7 +549,7 @@ function CPDTab({ data }) {
         </div>
       </div>
       <p className="cpd-incomplete">This is an incomplete set which is currently being updated.</p>
-      <p className="cpd-note">Verified CPD logged with professional bodies, industry associations, recognised training & education providers, and peer-to-peer CPD events since 2011. Additional professional learning included where verifiable and structured. Records are updated contemporaneously.</p>
+      <p className="cpd-note">Verified CPD logged with the Institute of Public Accountants since 2011. Additional professional learning included where verifiable. Records are updated contemporaneously.</p>
       {years.map(year => (
         <div key={year} className="cpd-year-group">
           <div className="cpd-year-header">
@@ -573,20 +587,22 @@ function CVTab() {
       </div>
       <div className="cv-sections">
         <div className="cv-summary">
-          <p>Public accounting practitioner and technologist with Australian international tax expertise, self-employed for nearly twenty of the last twenty-five years. Started in the arts and entertainment industries, drawn to accounting to help people of high potential run legitimate, successful businesses. Introduced to Bitcoin through clients’ cross border business activities in 2013, and has been problem-solving at the intersection of frontier technologies, social enterprise and professional practice ever since.</p>
+          <p>Public accounting practitioner and technologist with Australian international tax expertise, self-employed for nearly twenty of the last twenty-five years. Started in the arts and entertainment industries, drawn to accounting to help people of high potential run legitimate, successful businesses. Introduced to Bitcoin through clients' cross border business activities in 2013, and has been problem-solving at the intersection of frontier technologies, social enterprise and professional practice ever since.</p>
         </div>
+        
         <div className="cv-section">
           <h3>Current</h3>
           <ul>
-            <li><strong>Founding Cohort Member — Network School</strong> (Sep 2024–present, Forest City, Malaysia/Singapore). Selected into V1 first cohort of 128 ‘dark talent’ from over 5,000 applications. One of the earlier long-term NS residents. Contributing to peer mentoring and informal learner-programming of the international digital nomad, entrepreneur and founder community. Base for independently building professional accounting ecosystems for an AI-driven decentralised digital economy, and startup-society transnational tax coordination solutions.</li>
+            <li><strong>Founding Cohort Member — Network School</strong> (Sep 2024–present, Forest City, Malaysia/Singapore). Selected into V1 first cohort of 128 'dark talent' from over 5,000 applications. One of the earlier long-term NS residents. Contributing to peer mentoring and informal learner-programming of the international digital nomad, entrepreneur and founder community. Base for independently building professional accounting ecosystems for an AI-driven decentralised digital economy, and startup-society transnational tax coordination solutions.</li>
             <li><strong>Founder and Lead Architect — Kigumi Solutions</strong> (October 2025–present). Developing a platform-based business model and architecture to facilitate AI-assisted client-serving collaboration between public accountants and legal firms for legal, documentation, customer due diligence and corporate secretarial services.</li>
-            <li><strong>Operations and Platform Partnerships — Consulta Mirabilis Law</strong> (October 2025–present). Leading operations and strategic partnerships, building the practice’s operational infrastructure for integration with Kigumi platform. Engaging SME accounting practices to identify market gaps, developing service models that define human and AI roles at each workflow touchpoint.</li>
-            <li><strong>Founder / Researcher — CREDU</strong> (Feb 2024–present). Researching and developing CREDU as a global verified credentialing, audit and procurement platform for accountants’ CPE/CPD using open source technologies. Professional bodies and autonomous agents can publicly inspect CPE/CPD compliance with proof on open blockchain.</li>
+            <li><strong>Operations and Platform Partnerships — Consulta Mirabilis Law</strong> (October 2025–present). Leading operations and strategic partnerships, building the practice's operational infrastructure for integration with Kigumi platform. Engaging SME accounting practices to identify market gaps, developing service models that define human and AI roles at each workflow touchpoint.</li>
+            <li><strong>Founder / Researcher — CREDU</strong> (Feb 2024–present). Researching and developing CREDU as a global verified credentialing, audit and procurement platform for accountants' CPE/CPD using open source technologies. Professional bodies and autonomous agents can publicly inspect CPE/CPD compliance with proof on open blockchain.</li>
             <li><strong>Deputy President — IPA Malaysia Member Advisory Committee (MMAC)</strong> (Sep 2025–present).</li>
             <li><strong>Co-Founder and Director — Digital Playhouse Foundation</strong> (Apr 2021–present, Agnes Water, Queensland). Public Benevolent Institution (PBI). Projects: The School of Bitcoin, Stacks Australia, Accountants On-Chain, Coding 4 Kids, GameChangers.</li>
             <li><strong>Enterprise Engagement — Stacks Australia</strong> (Feb 2024–present). Raising awareness of Stacks as a high-integrity Bitcoin Layer 2 in the Australian blockchain industry.</li>
           </ul>
         </div>
+        
         <div className="cv-section">
           <h3>Previous Roles</h3>
           <ul>
@@ -600,6 +616,7 @@ function CVTab() {
             <li><strong>Tax Preparer and Bookkeeper</strong> (Jan 2000–Jul 2002, Sydney). Formative professional experience at Moneypenny Business and Tax Services and Page Harrison and Co.</li>
           </ul>
         </div>
+        
         <div className="cv-section">
           <h3>Professional Registrations and Designations</h3>
           <ul>
@@ -609,6 +626,7 @@ function CVTab() {
             <li><strong>Registered Tax Agent — Tax Practitioners Board</strong> (issued Jan 2007, 25+ years continuous registration)</li>
           </ul>
         </div>
+        
         <div className="cv-section">
           <h3>Education</h3>
           <ul>
@@ -626,6 +644,7 @@ function CVTab() {
             <li><strong>Advanced Diploma of Accounting — TAFE NSW (1999–2001).</strong></li>
           </ul>
         </div>
+        
         <div className="cv-section">
           <h3>Volunteering</h3>
           <ul>
@@ -638,28 +657,31 @@ function CVTab() {
             <li><strong>Treasurer — Startup Gladstone Inc.</strong> (Aug 2019–Aug 2020).</li>
           </ul>
         </div>
+        
         <div className="cv-section">
           <h3>Organisations</h3>
           <ul>
             <li><strong>Western Australian AI Hub</strong> — Founding Member (2024)</li>
             <li><strong>CryptoCFOs</strong> — Member (Feb 2024–present).</li>
-            <li><strong>Web3Finance Club</strong> — “First 100” Member (Jan 2022–present).</li>
+            <li><strong>Web3Finance Club</strong> — "First 100" Member (Jan 2022–present).</li>
             <li><strong>Digital Economy Council of Australia</strong> — Member since 2021</li>
             <li><strong>LawFi DAO</strong> — Member (2022–2023)</li>
           </ul>
         </div>
+        
         <div className="cv-section">
           <h3>Writing and Media</h3>
           <ul>
             <li><strong>Forbes</strong> — Contributor. Bitcoin policy, monetary infrastructure, UK crypto regulation (2024–2025)</li>
             <li><strong>Cointelegraph</strong> — Contributor. Crypto accounting, Indigenous metaverse, Web3 for business (2022–2023)</li>
-            <li><strong>IPA Member Journal</strong> — “Web3: what is it and how will it transform accountancy?” (2024)</li>
+            <li><strong>IPA Member Journal</strong> — "Web3: what is it and how will it transform accountancy?" (2024)</li>
             <li><strong>Xero Future Focus</strong> — Featured expert, crypto in small business (2023)</li>
             <li><strong>Global Crypto Tax Report</strong> — Australian overview, Web3 Accountant (2024, English and Chinese)</li>
             <li><strong>Cryptoworth Top 60</strong> — Top 60 Web3 Leaders of Crypto Accounting globally (2024)</li>
             <li><strong>Substack</strong> — <a href="https://blog.electrafrost.com" target="_blank" rel="noopener">blog.electrafrost.com</a> (2023–present)</li>
           </ul>
         </div>
+        
         <div className="cv-section">
           <h3>Skills</h3>
           <p>International Tax · Bitcoin · Crypto Accounting · Applied Blockchain · Web3 · DeFi · Tax Advisory · Business Advisory · Accounting Software · Financial Reporting · Management Accounting · Cryptocurrency Regulation · AI Governance · IT Governance · Frontier AI · AGI Strategy · Strategic Consulting · Community Engagement · Public Speaking · Conference Speaking · Training and Development · Start-up Consulting · Treasury Management · Internal Controls · Audit Readiness · Professional Ethics · Tax Audit Representation</p>
@@ -669,15 +691,154 @@ function CVTab() {
   );
 }
 
+// POSTS TAB COMPONENT
+function PostsTab({ searchQuery }) {
+  const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [sourceFilter, setSourceFilter] = useState("all");
+  
+  // Load posts on first mount
+  useEffect(() => {
+    const loadPosts = async () => {
+      try {
+        const resp = await fetch('/posts.json');
+        const data = await resp.json();
+        setPosts(data);
+      } catch (err) {
+        console.error('Failed to load posts:', err);
+      } finally {
+        setLoading(false);
+      }
+    };
+    loadPosts();
+  }, []);
+  
+  const filtered = useMemo(() => {
+    let result = posts;
+    
+    // Filter by source
+    if (sourceFilter !== "all") {
+      result = result.filter(p => p.source === sourceFilter);
+    }
+    
+    // Filter by search query
+    if (searchQuery) {
+      const q = searchQuery.toLowerCase();
+      result = result.filter(p => 
+        p.text.toLowerCase().includes(q) ||
+        (p.title && p.title.toLowerCase().includes(q))
+      );
+    }
+    
+    return result;
+  }, [posts, sourceFilter, searchQuery]);
+  
+  // Group by year-month for display
+  const grouped = useMemo(() => {
+    const groups = {};
+    filtered.forEach(post => {
+      if (post.date) {
+        const yearMonth = post.date.substring(0, 7); // YYYY-MM
+        if (!groups[yearMonth]) groups[yearMonth] = [];
+        groups[yearMonth].push(post);
+      } else {
+        // Undated posts go in "undated" group
+        if (!groups["undated"]) groups["undated"] = [];
+        groups["undated"].push(post);
+      }
+    });
+    return groups;
+  }, [filtered]);
+  
+  const sourceCounts = useMemo(() => {
+    const counts = { all: posts.length };
+    posts.forEach(p => {
+      counts[p.source] = (counts[p.source] || 0) + 1;
+    });
+    return counts;
+  }, [posts]);
+  
+  if (loading) {
+    return (
+      <div className="posts-tab">
+        <div className="posts-loading">Loading posts...</div>
+      </div>
+    );
+  }
+  
+  return (
+    <div className="posts-tab">
+      <div className="posts-intro">
+        <p>A comprehensive archive of posts spanning 8 years (2018–2026) across LinkedIn, Facebook groups, Substack, and comments. This raw corpus provides the source material underlying the intellectual provenance graph.</p>
+      </div>
+      
+      <div className="posts-filters">
+        {["all", "facebook", "linkedin", "linkedin-comment", "substack"].map(source => (
+          <button
+            key={source}
+            className={`posts-filter-btn ${sourceFilter === source ? "active" : ""}`}
+            onClick={() => setSourceFilter(source)}
+          >
+            {source === "all" ? "All" : 
+             source === "linkedin-comment" ? "LI Comments" :
+             source === "facebook" ? "Facebook" :
+             source === "linkedin" ? "LinkedIn" :
+             source === "substack" ? "Substack" : source}
+            <span className="filter-count">({sourceCounts[source] || 0})</span>
+          </button>
+        ))}
+      </div>
+      
+      <div className="posts-content">
+        {Object.keys(grouped).sort((a, b) => {
+          if (a === "undated") return 1;
+          if (b === "undated") return -1;
+          return b.localeCompare(a); // Newest first
+        }).map(period => (
+          <div key={period} className="posts-period">
+            <h3 className="posts-period-title">
+              {period === "undated" ? "Undated" : formatDate(period + "-01")}
+              <span className="posts-period-count">({grouped[period].length})</span>
+            </h3>
+            <div className="posts-list">
+              {grouped[period].map((post, idx) => (
+                <article key={idx} className="post-card">
+                  <div className="post-header">
+                    <div className="post-source">{post.source}{post.group ? ` (${post.group})` : ""}</div>
+                    {post.date && <div className="post-date">{post.date}</div>}
+                  </div>
+                  {post.title && <h4 className="post-title">{post.title}</h4>}
+                  <div className="post-text">{post.text}</div>
+                  {post.url && (
+                    <a href={post.url} target="_blank" rel="noopener" className="post-link">
+                      → Read full post
+                    </a>
+                  )}
+                </article>
+              ))}
+            </div>
+          </div>
+        ))}
+        
+        {filtered.length === 0 && (
+          <div className="empty-state">
+            <p>No posts match your search.</p>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
 export default function App() {
   const getTabFromHash = () => {
     const hash = window.location.hash.replace('#', '').toUpperCase();
-    const valid = ["GRAPH", "FEED", "INSIGHTS", "THESIS", "CPD", "CV"];
+    const valid = ["GRAPH", "FEED", "INSIGHTS", "THESIS", "CPD", "CV", "POSTS"];
     return valid.includes(hash) ? hash : "GRAPH";
   };
+
   const [activeTab, setActiveTab] = useState(getTabFromHash);
   const [searchQuery, setSearchQuery] = useState("");
-
   const { nodes, eras } = data;
 
   useEffect(() => {
@@ -694,9 +855,9 @@ export default function App() {
       <Header
         activeTab={activeTab}
         setActiveTab={(tab) => {
-        setActiveTab(tab);
-        window.location.hash = tab.toLowerCase();
-      }}
+          setActiveTab(tab);
+          window.location.hash = tab.toLowerCase();
+        }}
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
       />
@@ -711,8 +872,9 @@ export default function App() {
           <InsightsTab nodes={nodes} eras={eras} />
         )}
         {activeTab === "THESIS" && <AboutTab />}
-            {activeTab === "CPD" && <CPDTab data={data} />}
-            {activeTab === "CV" && <CVTab />}
+        {activeTab === "CPD" && <CPDTab data={data} />}
+        {activeTab === "CV" && <CVTab />}
+        {activeTab === "POSTS" && <PostsTab searchQuery={searchQuery} />}
       </main>
       <footer className="site-footer">
         <div className="footer-inner">
@@ -727,4 +889,4 @@ export default function App() {
       </footer>
     </div>
   );
-}// ─── CPD TAB ─────────────────────────────────────────────────────────────────
+}
