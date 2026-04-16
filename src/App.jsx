@@ -1,4 +1,4 @@
-// v0.1.2 — Posts tab added
+// v0.1.2 — Posts tab added with fixed search functionality
 import { useState, useMemo, useCallback, useRef, useEffect } from "react";
 import data from "./data.json";
 import "./App.css";
@@ -68,7 +68,7 @@ function Header({ activeTab, setActiveTab, searchQuery, setSearchQuery }) {
           ))}
         </nav>
         
-        {(activeTab === "GRAPH" || activeTab === "FEED" || activeTab === "POSTS") && (
+        {(activeTab === "GRAPH" || activeTab === "FEED" || activeTab === "POSTS" || activeTab === "INSIGHTS" || activeTab === "CPD") && (
           <div className="search-row">
             <input
               className="search-input"
@@ -420,11 +420,25 @@ function FeedTab({ nodes, eras, searchQuery }) {
   );
 }
 
-function InsightsTab({ nodes, eras }) {
+function InsightsTab({ nodes, eras, searchQuery }) {
   const eraMap = useMemo(() => Object.fromEntries(eras.map((e) => [e.id, e])), [eras]);
-  const publications = nodes.filter((n) => n.type === "publication");
-  const insights = nodes.filter((n) => n.type === "insight");
-  const projects = nodes.filter((n) => n.type === "project");
+  
+  // Filter nodes based on search query
+  const filteredNodes = useMemo(() => {
+    if (!searchQuery) return nodes;
+    const q = searchQuery.toLowerCase();
+    return nodes.filter(
+      (n) =>
+        n.title.toLowerCase().includes(q) ||
+        n.subtitle.toLowerCase().includes(q) ||
+        n.body.toLowerCase().includes(q) ||
+        n.tags.some((t) => t.toLowerCase().includes(q))
+    );
+  }, [nodes, searchQuery]);
+  
+  const publications = filteredNodes.filter((n) => n.type === "publication");
+  const insights = filteredNodes.filter((n) => n.type === "insight");
+  const projects = filteredNodes.filter((n) => n.type === "project");
   const [activeNode, setActiveNode] = useState(null);
 
   const Section = ({ title, items, icon }) => (
@@ -510,8 +524,19 @@ function AboutTab() {
   );
 }
 
-function CPDTab({ data }) {
-  const cpd = (data.cpd || []).slice().sort((a, b) => b.date.localeCompare(a.date));
+function CPDTab({ data, searchQuery }) {
+  const allCpd = (data.cpd || []).slice().sort((a, b) => b.date.localeCompare(a.date));
+  
+  // Filter CPD entries based on search query
+  const cpd = useMemo(() => {
+    if (!searchQuery) return allCpd;
+    const q = searchQuery.toLowerCase();
+    return allCpd.filter(
+      (item) =>
+        item.event.toLowerCase().includes(q) ||
+        item.provider.toLowerCase().includes(q)
+    );
+  }, [allCpd, searchQuery]);
 
   // Group by year
   const byYear = {};
@@ -587,7 +612,7 @@ function CVTab() {
       </div>
       <div className="cv-sections">
         <div className="cv-summary">
-          <p>Public accounting practitioner and technologist with Australian international tax expertise, self-employed for nearly twenty of the last twenty-five years. Started in the arts and entertainment industries, drawn to accounting to help people of high potential run legitimate, successful businesses. Introduced to Bitcoin through clients' cross border business activities in 2013, and has been problem-solving at the intersection of frontier technologies, enterprise and professional practice ever since.</p>
+          <p>Public accounting practitioner and technologist with Australian international tax expertise, self-employed for nearly twenty of the last twenty-five years. Started in the arts and entertainment industries, drawn to accounting to help people of high potential run legitimate, successful businesses. Introduced to Bitcoin through clients' cross border business activities in 2013, and has been problem-solving at the intersection of frontier technologies, social enterprise and professional practice ever since.</p>
         </div>
         
         <div className="cv-section">
@@ -832,7 +857,7 @@ function PostsTab({ searchQuery }) {
 export default function App() {
   const getTabFromHash = () => {
     const hash = window.location.hash.replace('#', '').toUpperCase();
-    const valid = ["GRAPH", "FEED", "INSIGHTS", "THESIS", "CPD", "CV", "POSTS"];
+    const valid = ["GRAPH", "FEED", "POSTS", "INSIGHTS", "THESIS", "CPD", "CV"];
     return valid.includes(hash) ? hash : "GRAPH";
   };
 
@@ -867,13 +892,13 @@ export default function App() {
         {activeTab === "FEED" && (
           <FeedTab nodes={nodes} eras={eras} searchQuery={searchQuery} />
         )}
+        {activeTab === "POSTS" && <PostsTab searchQuery={searchQuery} />}
         {activeTab === "INSIGHTS" && (
-          <InsightsTab nodes={nodes} eras={eras} />
+          <InsightsTab nodes={nodes} eras={eras} searchQuery={searchQuery} />
         )}
         {activeTab === "THESIS" && <AboutTab />}
-        {activeTab === "CPD" && <CPDTab data={data} />}
+        {activeTab === "CPD" && <CPDTab data={data} searchQuery={searchQuery} />}
         {activeTab === "CV" && <CVTab />}
-        {activeTab === "POSTS" && <PostsTab searchQuery={searchQuery} />}
       </main>
       <footer className="site-footer">
         <div className="footer-inner">
