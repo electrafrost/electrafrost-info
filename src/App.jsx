@@ -74,7 +74,7 @@ function Header({ activeTab, setActiveTab, searchQuery, setSearchQuery, posts = 
         <div className="header-top">
           <div className="header-title-block">
             <h1 className="site-name">
-  <a href="https://electrafrost.com/" className="site-name-link">
+  <a href="https://electrafrost.com/" target="_blank" rel="noopener" className="site-name-link">
     electrafrost<span className="site-name-tld">.com</span>
     <span className="version-badge">v0.1</span>
   </a>
