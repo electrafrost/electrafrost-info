@@ -74,9 +74,11 @@ function Header({ activeTab, setActiveTab, searchQuery, setSearchQuery, posts = 
         <div className="header-top">
           <div className="header-title-block">
             <h1 className="site-name">
-              electrafrost<span className="site-name-tld">.com</span>
-              <span className="version-badge">v0.1</span>
-            </h1>
+  <a href="https://electrafrost.com/" className="site-name-link">
+    electrafrost<span className="site-name-tld">.com</span>
+    <span className="version-badge">v0.1</span>
+  </a>
+</h1>
             <p className="site-tagline">{data.meta.tagline}</p>
             <p className="site-description">
               A specialist public accountant who has been reinventing professional practice at the digital frontier for 25 years
