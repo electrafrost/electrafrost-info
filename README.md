@@ -1,4 +1,3 @@
-Here's the complete README in one single piece - copy ALL of this from start to finish:
 # Electra Frost Intellectual Provenance Graph
 
 **🌐 Live Site:** [graph.electrafrost.com](https://graph.electrafrost.com)
