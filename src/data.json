@@ -109,6 +109,36 @@
   ],
   "nodes": [
     {
+      "id": "network-residency-substack-apr-2026",
+      "era": "network-residency",
+      "date": "2026-04",
+      "type": "publication",
+      "title": "From Tax Residency to Network Residency",
+      "subtitle": "The tax problem the network state movement can solve with profession-led representation",
+      "body": "Published to Substack April 2026. Balaji’s network state framework is crypto-native with blockchain infrastructure for citizen records and keys — but does not address who makes the network state recognised by the jurisdictions that give its members passports. That is the gap. His concept of geodesic over geographic distance shows why existing tax systems cannot handle cloud communities: residence tests, source rules, and permanent establishment thresholds assume a geographical base. A staged pathway from V1 (individual filing) to V5 (network society negotiating collectively with host sovereigns through a credentialed professional network) and beyond, to a recognised non-geographic resident class whose tax affairs are mediated collectively by status agreement. Does not require new international law — a domestic administrative arrangement, reporting safe harbour, or delegated withholding framework with a willing host sovereign can carry it. The profession cannot be contracted in downstream. Network banks acting as host sovereigns’ consolidated tax collection agents compromise fiscal independence — Bitcoin is the unit of account this model depends on at advanced stages, with credentialed public accountants operating as decentralised oversight nodes calibrated to distance from Bitcoin settlement.",
+      "tags": [
+        "network-residency",
+        "tax",
+        "network-state",
+        "V1-V5",
+        "geodesic",
+        "bitcoin-standard",
+        "CREDU",
+        "profession-led",
+        "diplomatic-recognition"
+      ],
+      "links": [
+        {
+          "label": "Read on Substack",
+          "url": "https://blog.electrafrost.com/p/from-tax-residency-to-network-residency"
+        },
+        {
+          "label": "Position paper (GitHub)",
+          "url": "https://github.com/electrafrost/tax-residency-to-network-residency"
+        }
+      ]
+    },
+    {
       "id": "code-is-not-law",
       "era": "ai-governance",
       "date": "2026-04",
