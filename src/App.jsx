@@ -761,16 +761,16 @@ function CVTab() {
         <div className="cv-section">
           <h3>Education</h3>
           <ul>
-            <li><strong>Master of International Taxation — UNSW Australia (2012–2015).</strong> Australian international tax; USA, Canada, China, NZ, Hong Kong, Singapore, Europe, DTAs, tax system design, transfer pricing, employee remuneration, financial planning tax strategies.</li>
-            <li><strong>First Cohort, International/Global Studies — The Network School (Sep 2024–present).</strong> Founded by Balaji Srinivasan. Contributing Web3 Accounting and business workshops; developing a futurist accounting faculty and a Bitcoin-principled competencies framework.</li>
-            <li><strong>Advanced Diploma of Applied Blockchain — Blockchain Academy International / TAFE Queensland (May 2022–Dec 2023).</strong></li>
             <li><strong>AI Safety: Frontier AI Governance — BlueDot Impact (Mar 2026, first cohort, selective intake).</strong> Action plan: global public accountants as cross-border AI governance intermediary layer.</li>
             <li><strong>AI Safety: AGI Strategy — BlueDot Impact (Jan 2026, selective intake).</strong> 30-hour intensive. Technical AI trends, threat models via kill chain analysis, defence-in-depth frameworks.</li>
+            <li><strong>First Cohort, International/Global Studies — The Network School (Sep 2024–present).</strong> Founded by Balaji Srinivasan. Contributing Web3 Accounting and business workshops; developing a futurist accounting faculty and a Bitcoin-principled competencies framework.</li>
             <li><strong>Crypto Accounting Academy — The Accountant Quits (Jul 2024, Credential #18).</strong></li>
+            <li><strong>Advanced Diploma of Applied Blockchain — Blockchain Academy International / TAFE Queensland (May 2022–Dec 2023).</strong></li>
             <li><strong>Master of Business Administration (MBA, incomplete) — Bond University (2020–2021).</strong> Withdrew to study blockchain instead.</li>
             <li><strong>Developing Blockchain Strategy — RMIT University (2018).</strong></li>
-            <li><strong>Bachelor of Taxation — UNSW (2002–2007).</strong></li>
+            <li><strong>Master of International Taxation — UNSW Australia (2012–2015).</strong> Australian international tax; USA, Canada, China, NZ, Hong Kong, Singapore, Europe, DTAs, tax system design, transfer pricing, employee remuneration, financial planning tax strategies.</li>
             <li><strong>Diploma of Financial Planning — Mentor Education (2012–2014).</strong></li>
+            <li><strong>Bachelor of Taxation — UNSW (2002–2007).</strong></li>
             <li><strong>Diploma of Advanced Taxation — The Tax Institute (2007).</strong></li>
             <li><strong>Advanced Diploma of Accounting — TAFE NSW (1999–2001).</strong></li>
           </ul>
@@ -781,8 +781,8 @@ function CVTab() {
           <ul>
             <li><strong>Deputy President — IPA MAC Malaysia</strong> (Sep 2025–present)</li>
             <li><strong>Public Officer — Digital Playhouse Foundation</strong> (May 2021–present).</li>
-            <li><strong>Business Mentor — The School of Bitcoin</strong> (Jul 2021–present).</li>
-            <li><strong>Mentoring for Growth Consultant — Queensland Government</strong> (Feb 2021–present).</li>
+            <li><strong>Business Mentor — The School of Bitcoin</strong> (Jul 2021–Sep 2024).</li>
+            <li><strong>Mentoring for Growth Consultant — Queensland Government</strong> (Feb 2021–Sep 2024).</li>
             <li><strong>Vice President — Discovery Coast Tourism and Commerce</strong> (Oct 2020–Oct 2021).</li>
             <li><strong>Committee Member — 1770 Art Show</strong> (Oct 2019–Jan 2022).</li>
             <li><strong>Treasurer — Startup Gladstone Inc.</strong> (Aug 2019–Aug 2020).</li>
