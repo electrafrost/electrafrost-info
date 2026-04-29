@@ -1,6 +1,7 @@
 // v0.1.3 — Sitewide search above tabs with result counts
 import { useState, useMemo, useCallback, useRef, useEffect } from "react";
 import data from "./data.json";
+import { AskTab, FloatingAskWidget } from "./AskTab";
 import "./App.css";
 
 // ─── HELPERS ───────────────────────────────────────────────────────────────────
@@ -66,7 +67,7 @@ function getSearchCount(tab, query, posts = []) {
 
 // ─── COMPONENTS ───────────────────────────────────────────────────────────────
 function Header({ activeTab, setActiveTab, searchQuery, setSearchQuery, posts = [] }) {
-  const tabs = ["GRAPH", "FEED", "POSTS", "INSIGHTS", "THESIS", "CPD", "CV"];
+  const tabs = ["GRAPH", "FEED", "POSTS", "INSIGHTS", "ASK", "THESIS", "CPD", "CV"];
 
   return (
     <header className="site-header">
@@ -969,7 +970,7 @@ function PostsTab({ searchQuery }) {
 export default function App() {
   const getTabFromHash = () => {
     const hash = window.location.hash.replace('#', '').toUpperCase();
-    const valid = ["GRAPH", "FEED", "POSTS", "INSIGHTS", "THESIS", "CPD", "CV"];
+    const valid = ["GRAPH", "FEED", "POSTS", "INSIGHTS", "ASK", "THESIS", "CPD", "CV"];
     return valid.includes(hash) ? hash : "GRAPH";
   };
 
@@ -1024,6 +1025,7 @@ export default function App() {
         {activeTab === "INSIGHTS" && (
           <InsightsTab nodes={nodes} eras={eras} searchQuery={searchQuery} />
         )}
+        {activeTab === "ASK" && <AskTab />}
         {activeTab === "THESIS" && <AboutTab />}
         {activeTab === "CPD" && <CPDTab data={data} searchQuery={searchQuery} />}
         {activeTab === "CV" && <CVTab />}
@@ -1039,6 +1041,7 @@ export default function App() {
           <a href="https://github.com/electrafrost" target="_blank" rel="noopener">GitHub</a>
         </div>
       </footer>
+      {activeTab !== "ASK" && <FloatingAskWidget />}
     </div>
   );
 }

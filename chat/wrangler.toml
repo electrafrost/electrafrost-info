@@ -1,0 +1,20 @@
+name = "electra-chat"
+main = "worker.mjs"
+compatibility_date = "2026-04-01"
+
+# AI binding for embeddings
+[ai]
+binding = "AI"
+
+# Vectorize binding for the corpus index
+[[vectorize]]
+binding = "VECTORIZE"
+index_name = "electra-corpus"
+
+# Observability — see logs in the Cloudflare dashboard
+[observability]
+enabled = true
+
+# Limits — protect from runaway costs
+[limits]
+cpu_ms = 30000  # 30 seconds — generous for Claude generation
