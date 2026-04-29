@@ -15,6 +15,6 @@ index_name = "electra-corpus"
 [observability]
 enabled = true
 
-# Limits — protect from runaway costs
-[limits]
-cpu_ms = 30000  # 30 seconds — generous for Claude generation
+# Note: [limits] cpu_ms is only available on paid Workers plans.
+# Free plan gives 10 seconds CPU per request, which is sufficient
+# for embed-question + Vectorize-query + Claude generation.
