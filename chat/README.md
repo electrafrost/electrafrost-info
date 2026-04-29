@@ -25,6 +25,7 @@ Worker that answers questions in Electra's voice, grounded in the same
 - `schema.sql` — D1 table schema for the question log.
 - **[`SETUP.md`](./SETUP.md)** — full setup from scratch, including D1 + admin key.
 - **[`RUNBOOK.md`](./RUNBOOK.md)** — operational reference. Daily and recurring commands.
-- **[`WEEKLY_REVIEW.md`](./WEEKLY_REVIEW.md)** — the 30-minute Monday ritual that turns visitor questions into corpus improvements.
+- **[`REVIEW.md`](./REVIEW.md)** — the 30-minute review ritual every 4 days. Turns visitor questions into corpus improvements.
+- **[`CLAUDE_CODE_PROMPT.md`](./CLAUDE_CODE_PROMPT.md)** — the prompt to paste into Claude Code at the start of each review cycle.
 - **[`FAQS.md`](./FAQS.md)** — schema and workflow for canonical FAQ entries.
-- **[`BUILDLOG.md`](./BUILDLOG.md)** — honest log of how this got built (29 April 2026), with all the friction. Source material for the article.
+- **[`BUILDLOG.md`](./BUILDLOG.md)** — honest log of how this got built (29 April 2026), with all the friction. Source material for the article. Cycle notes append here.
