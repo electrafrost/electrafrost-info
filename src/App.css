@@ -1650,3 +1650,18 @@
     font-size: 0.75rem;
   }
 }
+
+.ask-privacy-notice {
+  color: var(--text-muted);
+  font-size: 0.7rem;
+  text-align: center;
+  font-family: var(--font-mono);
+  margin-top: 0.4rem;
+  font-style: italic;
+  opacity: 0.7;
+}
+
+.ask-privacy-notice-widget {
+  margin-top: 0.3rem;
+  font-size: 0.65rem;
+}

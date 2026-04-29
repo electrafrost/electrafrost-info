@@ -11,6 +11,13 @@ binding = "AI"
 binding = "VECTORIZE"
 index_name = "electra-corpus"
 
+# D1 binding for the question log
+# Database ID gets filled in by `wrangler d1 create electra-chat-log`
+[[d1_databases]]
+binding = "DB"
+database_name = "electra-chat-log"
+database_id = "REPLACE_WITH_DATABASE_ID_FROM_WRANGLER_D1_CREATE"
+
 # Observability — see logs in the Cloudflare dashboard
 [observability]
 enabled = true
