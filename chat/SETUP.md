@@ -67,16 +67,47 @@ Visitor on graph.electrafrost.com OR electrafrost.com
    - Account resources: include your account
    - Save the token in your password manager.
 
-### Step 1 — Set the Anthropic API key as a Worker secret
+### Step 1 — Create the D1 database (question log)
 
-From the project root:
 ```powershell
-cd $HOME\claudeprojects\electrafrost-info-fresh\chat
-wrangler secret put ANTHROPIC_API_KEY
+cd $HOME\claudeprojects\electrafrost-info-live\chat
+wrangler d1 create electra-chat-log
 ```
-Paste the key when prompted. It's stored encrypted on Cloudflare. Never visible again.
 
-### Step 2 — Embed the corpus into Vectorize
+Wrangler prints something like:
+```
+✅ Successfully created DB 'electra-chat-log'
+[[d1_databases]]
+binding = "DB"
+database_name = "electra-chat-log"
+database_id = "abc123def456-..."
+```
+
+**Copy the `database_id`** and paste it into `wrangler.toml`, replacing `REPLACE_WITH_DATABASE_ID_FROM_WRANGLER_D1_CREATE`.
+
+Then create the schema:
+```powershell
+wrangler d1 execute electra-chat-log --remote --file=schema.sql
+```
+
+### Step 2 — Set the Anthropic API key as a Worker secret
+
+```powershell
+$key = "<paste-your-anthropic-key>"
+$key | wrangler secret put ANTHROPIC_API_KEY
+```
+
+### Step 3 — Set the admin key (for the question review panel)
+
+Generate a long random string for protecting the admin panel. In PowerShell:
+
+```powershell
+$adminKey = -join ((48..57) + (65..90) + (97..122) | Get-Random -Count 40 | ForEach-Object {[char]$_})
+$adminKey  # save this somewhere — it's how you'll access the admin panel
+$adminKey | wrangler secret put ADMIN_KEY
+```
+
+### Step 4 — Embed the corpus into Vectorize
 
 Set the env vars for the embedding script (PowerShell):
 ```powershell
@@ -86,43 +117,53 @@ $env:CF_API_TOKEN  = "<the-cloudflare-token-from-prerequisite-4>"
 
 Then from the project root:
 ```powershell
-cd $HOME\claudeprojects\electrafrost-info-fresh
+cd $HOME\claudeprojects\electrafrost-info-live
 node chat/embed-corpus.mjs
 ```
 
-Expected output:
-```
-Loading corpus…
-  data.json    : 55 nodes, 14 eras, 88 CPD records
-  posts.json   : 658 posts
-Chunking complete: ~720 chunks
-Embedding + uploading…
-  720/720 (12.5 chunks/sec, 58s)
-✓ Complete. 720 vectors uploaded to electra-corpus in 58.0s
-```
-
-### Step 3 — Deploy the Worker
+### Step 5 — Deploy the Worker
 
 ```powershell
-cd $HOME\claudeprojects\electrafrost-info-fresh\chat
+cd $HOME\claudeprojects\electrafrost-info-live\chat
 wrangler deploy
 ```
 
-Expected output:
-```
-✓ Deployed electra-chat triggers
-  https://electra-chat.electrafrost.workers.dev
-```
+### Step 6 — Test
 
-### Step 4 — Test the Worker
-
+Health:
 ```powershell
-curl -X POST https://electra-chat.electrafrost.workers.dev/ask `
-  -H "Content-Type: application/json" `
-  -d '{\"question\": \"What is CREDU?\"}'
+curl.exe https://electra-chat.electrafrost.workers.dev/health
 ```
 
-You should get a JSON response with `answer` and `citations`.
+Ask:
+```powershell
+$body = @{ question = "What is CREDU?" } | ConvertTo-Json
+Invoke-RestMethod -Uri "https://electra-chat.electrafrost.workers.dev/ask" -Method POST -Body $body -ContentType "application/json"
+```
+
+Admin panel — visit in browser (replace YOUR_ADMIN_KEY):
+```
+https://electra-chat.electrafrost.workers.dev/admin?key=YOUR_ADMIN_KEY
+```
+
+You should see the question you just asked logged, with retrieval scores and citation chunks.
+
+## The corpus improvement loop
+
+This is the key workflow. Every visitor question becomes data for improving the corpus:
+
+1. Visit the admin panel weekly
+2. Default view = thin retrieval first (red border, top score < 0.6)
+3. For each thin question:
+   a. Read the question and the bot's answer
+   b. Decide what the corpus is missing (an FAQ entry, a new node, a clarification)
+   c. Add it to `src/data.json` (locally)
+   d. Commit and push (Vercel rebuilds the graph)
+   e. Re-run `node chat/embed-corpus.mjs` (re-embeds the new content)
+   f. In the admin panel, click **Mark addressed** with the commit SHA in the note field
+4. Over time, the corpus grows in response to actual visitor curiosity.
+
+This is the magic loop. Your corpus becomes more comprehensive every week, driven by what people actually ask, not what you guess they'll ask.
 
 ## Weekly corpus update flow
 

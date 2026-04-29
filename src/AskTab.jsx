@@ -213,6 +213,11 @@ export function AskTab() {
       <div className="ask-hint">
         Enter to send · Shift+Enter for new line · answers grounded in Electra's own corpus
       </div>
+
+      <div className="ask-privacy-notice">
+        Questions are logged so the corpus can be improved over time.
+        Don't include personal information.
+      </div>
     </div>
   );
 }
@@ -298,6 +303,9 @@ export function FloatingAskWidget() {
 
       <div className="ask-widget-footer">
         <a href="#ask" onClick={() => { setOpen(false); window.location.hash = "ask"; }}>Open full ASK tab →</a>
+        <div className="ask-privacy-notice ask-privacy-notice-widget">
+          Questions logged. No personal info.
+        </div>
       </div>
     </div>
   );

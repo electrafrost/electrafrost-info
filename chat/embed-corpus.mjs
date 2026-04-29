@@ -49,7 +49,7 @@ console.log('Loading corpus…');
 const data  = JSON.parse(readFileSync(join(ROOT, 'src/data.json'), 'utf8'));
 const posts = JSON.parse(readFileSync(join(ROOT, 'public/posts.json'), 'utf8'));
 
-console.log(`  data.json    : ${data.nodes.length} nodes, ${data.eras.length} eras, ${data.cpd?.length || 0} CPD records`);
+console.log(`  data.json    : ${data.nodes.length} nodes, ${data.eras.length} eras, ${data.cpd?.length || 0} CPD records, ${(data.faqs || []).filter(f => f.category !== 'template').length} FAQs`);
 console.log(`  posts.json   : ${posts.length} posts`);
 
 // ─── CHUNKING ────────────────────────────────────────────────────────────────
@@ -109,6 +109,32 @@ for (const cpd of (data.cpd || [])) {
       provider: cpd.provider || '',
       event: cpd.event || '',
       url: 'https://graph.electrafrost.com/#cpd',
+    },
+  });
+}
+
+// 3b. FAQs — canonical clarifications. Highest-trust chunks: short, written
+//     specifically to anchor common questions. Each gets one chunk.
+//     Skip template/documentation entries (category === "template").
+for (const faq of (data.faqs || [])) {
+  if (faq.category === 'template') continue;
+  const text = [
+    `FAQ: ${faq.question}`,
+    '',
+    faq.answer,
+    faq.context ? `\nContext: ${faq.context}` : '',
+  ].filter(Boolean).join('\n');
+
+  chunks.push({
+    id: faq.id,
+    text,
+    metadata: {
+      type: 'faq',
+      category: faq.category || '',
+      date_added: faq.date_added || '',
+      title: faq.question || '',
+      tags: (faq.tags || []).join(','),
+      url: 'https://graph.electrafrost.com/#faq',
     },
   });
 }
