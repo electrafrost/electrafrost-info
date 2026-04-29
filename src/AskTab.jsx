@@ -26,16 +26,10 @@ const ERA_COLORS = {
   "ai-esg": "#ff6b35",
 };
 
-// Topic chips — seed common questions
-const CHIPS = [
-  { label: "ai-governance", q: "Why are accountants the missing layer in AI governance?" },
-  { label: "credu", q: "What is CREDU and why does it need to exist?" },
-  { label: "network-state", q: "How does the Network State change tax compliance?" },
-  { label: "cpd-reform", q: "What is wrong with the current CPD system?" },
-  { label: "decentralised", q: "Why a decentralised professional association?" },
-  { label: "bitcoin-standard", q: "What does Bitcoin as unit of account mean for the profession?" },
-  { label: "thesis", q: "What is the structure of your thesis?" },
-];
+// Topic chips — empty until Electra provides her actual frequently-asked questions.
+// The previous chip set was AI-generated guesses that triggered cross-era retrieval
+// and pushed the bot toward conflation. Removed pending real ones.
+const CHIPS = [];
 
 // ─── SHARED CHAT LOGIC ────────────────────────────────────────────────────────
 
@@ -166,10 +160,12 @@ export function AskTab() {
   return (
     <div className="ask-tab">
       <div className="ask-intro">
-        Ask the corpus. <strong>658 posts, 55 thesis nodes, 88 CPD records, 14 eras</strong> — every answer cites specific nodes you can click into.
+        Ask the corpus directly. <strong>658 posts, 55 thesis nodes, 88 CPD records, 14 eras spanning 2000–2026.</strong>
+        Answers are grounded in what I have actually written — citations link to the source.
+        If the corpus is thin on something, the bot says so rather than inventing.
       </div>
 
-      {messages.length === 0 && (
+      {messages.length === 0 && CHIPS.length > 0 && (
         <div className="ask-chips">
           {CHIPS.map(c => (
             <button
@@ -269,20 +265,23 @@ export function FloatingAskWidget() {
         {messages.length === 0 && (
           <>
             <div className="ask-widget-intro">
-              Ask the corpus directly. 658 posts, 55 thesis nodes, every era from 2000–2026.
+              Ask the corpus. 658 posts, 55 thesis nodes, every era from 2000–2026.
+              Answers grounded in what I've actually written.
             </div>
-            <div className="ask-chips ask-chips-compact">
-              {CHIPS.slice(0, 5).map(c => (
-                <button
-                  key={c.label}
-                  className="ask-chip"
-                  onClick={() => ask(c.q)}
-                  disabled={pending}
-                >
-                  <span className="ask-chip-hash">#</span>{c.label}
-                </button>
-              ))}
-            </div>
+            {CHIPS.length > 0 && (
+              <div className="ask-chips ask-chips-compact">
+                {CHIPS.slice(0, 5).map(c => (
+                  <button
+                    key={c.label}
+                    className="ask-chip"
+                    onClick={() => ask(c.q)}
+                    disabled={pending}
+                  >
+                    <span className="ask-chip-hash">#</span>{c.label}
+                  </button>
+                ))}
+              </div>
+            )}
           </>
         )}
         {messages.map((m, i) => <Message key={i} m={m} />)}
