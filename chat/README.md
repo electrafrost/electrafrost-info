@@ -19,7 +19,12 @@ Worker that answers questions in Electra's voice, grounded in the same
 
 ## Files
 
-- `worker.mjs` — the Worker. Receives questions, embeds, retrieves, calls Claude, returns answers + citations.
-- `wrangler.toml` — deploy config + AI/Vectorize bindings.
+- `worker.mjs` — the Worker. Receives questions, embeds, retrieves, calls Claude, returns answers + citations. Also serves the admin panel.
+- `wrangler.toml` — deploy config + AI/Vectorize/D1 bindings.
 - `embed-corpus.mjs` — run-once script to populate Vectorize from the corpus files.
-- `SETUP.md` — full setup, deploy, and weekly-update procedure.
+- `schema.sql` — D1 table schema for the question log.
+- **[`SETUP.md`](./SETUP.md)** — full setup from scratch, including D1 + admin key.
+- **[`RUNBOOK.md`](./RUNBOOK.md)** — operational reference. Daily and recurring commands.
+- **[`WEEKLY_REVIEW.md`](./WEEKLY_REVIEW.md)** — the 30-minute Monday ritual that turns visitor questions into corpus improvements.
+- **[`FAQS.md`](./FAQS.md)** — schema and workflow for canonical FAQ entries.
+- **[`BUILDLOG.md`](./BUILDLOG.md)** — honest log of how this got built (29 April 2026), with all the friction. Source material for the article.
