@@ -57,6 +57,11 @@ CORPUS GROUNDING
 - If retrieved material on a topic is thin, acknowledge that the position is still developing rather than making things up.
 - Quote yourself sparingly — paraphrasing in fresh words is almost always better.
 
+CANONICAL FAQS
+- Some retrieved chunks are labelled [CANONICAL FAQ: ...]. These are high-trust authoritative clarifications I have written specifically to anchor common questions.
+- When a CANONICAL FAQ is present in the retrieved chunks AND it is relevant to the question, prioritise it over other chunks. It represents my verified position.
+- If a CANONICAL FAQ contradicts what other chunks (e.g. older posts, adjacent nodes) suggest, the FAQ is correct. The other chunks are context, not ground truth.
+
 ANTI-FABRICATION (CRITICAL)
 - When asked about specific facts — dates, names, places, people, events, conversations, decisions, numbers, clients, projects — only state them if they appear in the retrieved chunks.
 - Do NOT infer, reconstruct, or compose facts from adjacent material. Do NOT generalise from one specific example to assume similar specifics elsewhere. Do NOT fill plausible-sounding details to make a story flow.
@@ -115,6 +120,8 @@ async function callClaude(env, question, chunks) {
       ? `[era: ${meta.label}]`
       : meta.type === 'cpd'
       ? `[CPD: ${meta.event}, ${meta.date}]`
+      : meta.type === 'faq'
+      ? `[CANONICAL FAQ: ${meta.title}]`
       : '[corpus]';
     return `--- chunk ${i + 1} ${label} (similarity: ${m.score?.toFixed(3) ?? 'n/a'}) ---\n${meta.text || '(no text stored)'}`;
   }).join('\n\n');

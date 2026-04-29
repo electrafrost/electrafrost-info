@@ -4,7 +4,7 @@
     "tagline": "The open, machine-readable intellectual provenance of Electra Frost",
     "description": "A specialist public accountant who has been reinventing professional practice at the digital frontier for 25 years - before it was called that. This is her aggregated, sovereign and discoverable record of ideas, contributions and predictions: how the thinking developed, where it came from, and where it is going.",
     "version": "0.1.0",
-    "updated": "2026-04-14",
+    "updated": "2026-04-29",
     "llms": "/llms.txt"
   },
   "eras": [
@@ -1747,6 +1747,22 @@
       "event": "Professional Practice Program (PPP)",
       "hours": 16,
       "verified": true
+    }
+  ],
+  "faqs": [
+    {
+      "id": "faq-example-template",
+      "type": "faq",
+      "date_added": "2026-04-29",
+      "category": "template",
+      "question": "What goes in this FAQ section?",
+      "answer": "This section holds canonical clarifications and corrections — short, authoritative answers to questions where the broader corpus might be thin or ambiguous. Each FAQ is a chunk the chatbot can retrieve and ground its answer in, so it represents Electra's verified position on a specific question.\n\nDelete this template entry once real FAQs are added.",
+      "tags": [
+        "template",
+        "documentation"
+      ],
+      "supersedes": null,
+      "context": "Added when the FAQ structure was first introduced (April 2026)."
     }
   ]
 }
