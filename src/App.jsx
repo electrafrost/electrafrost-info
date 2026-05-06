@@ -325,15 +325,26 @@ function FeaturedCarousel({ nodes, eras, onNodeClick }) {
           const e2 = eras.find((e) => e.id === n2.era);
           return (
             <div 
-              className="carousel-card secondary" 
-              onClick={() => { setIdx(idx + 1); onNodeClick(n2); }}
+              className="carousel-card featured" 
+              onClick={() => onNodeClick(n2)}
               style={{ "--era-color": e2?.color || "#e8621a" }}
             >
               <div className="carousel-card-era" style={{ color: e2?.color }}>
                 {e2?.label?.toUpperCase()} · {n2.date?.substring(0, 4)}
               </div>
               <h3 className="carousel-card-title">"{n2.title}"</h3>
-              <p className="carousel-card-body">{n2.body.substring(0, 120)}...</p>
+              <p className="carousel-card-body">{n2.body.substring(0, 200)}...</p>
+              {n2.links?.[0] && (
+                <a 
+                  href={n2.links[0].url} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="carousel-link"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  → {n2.links[0].label}
+                </a>
+              )}
             </div>
           );
         })()}
