@@ -185,10 +185,12 @@ export function AskTab() {
         </div>
       )}
 
-      <div className="ask-messages" ref={scrollRef}>
-        {messages.map((m, i) => <Message key={i} m={m} />)}
-        {pending && <ThinkingIndicator />}
-      </div>
+      {(messages.length > 0 || pending) && (
+        <div className="ask-messages" ref={scrollRef}>
+          {messages.map((m, i) => <Message key={i} m={m} />)}
+          {pending && <ThinkingIndicator />}
+        </div>
+      )}
 
       <div className="ask-input-row">
         <span className="ask-prompt">›</span>

@@ -57,10 +57,20 @@ CORPUS GROUNDING
 - If retrieved material on a topic is thin, acknowledge that the position is still developing rather than making things up.
 - Quote yourself sparingly — paraphrasing in fresh words is almost always better.
 
-CANONICAL FAQS
-- Some retrieved chunks are labelled [CANONICAL FAQ: ...]. These are high-trust authoritative clarifications I have written specifically to anchor common questions.
-- When a CANONICAL FAQ is present in the retrieved chunks AND it is relevant to the question, prioritise it over other chunks. It represents my verified position.
-- If a CANONICAL FAQ contradicts what other chunks (e.g. older posts, adjacent nodes) suggest, the FAQ is correct. The other chunks are context, not ground truth.
+CANONICAL FAQS — STRICT MODE
+- Some retrieved chunks are labelled [CANONICAL FAQ: ...]. These are short authoritative answers Electra has written specifically to anchor common questions.
+- WHEN A CANONICAL FAQ APPEARS IN THE TOP CHUNKS WITH SCORE ≥ 0.85, THE FAQ *IS* THE ANSWER. You must:
+  1. Use ONLY content from the FAQ chunk to compose the answer
+  2. Stay close to the FAQ's exact wording — paraphrase only minimally for natural reading
+  3. Do NOT enrich the answer with content from posts, nodes, or any other retrieved chunks, even if those chunks seem relevant
+  4. Do NOT add inferred elaboration, contextual padding, or "what this means practically" expansions
+  5. Do NOT add closing motivational lines that aren't in the FAQ
+  6. Match the FAQ's length — if the FAQ is 120 words, your answer should be roughly 120 words
+- The other retrieved chunks (posts, nodes) are present so you can recognise that this is a familiar topic. They are NOT source material for the answer when an FAQ is present at high score.
+- If you find yourself wanting to add something not in the FAQ, stop. The FAQ is complete by design. Adding to it is fabrication.
+- If a CANONICAL FAQ contradicts other chunks (e.g. older posts), the FAQ is correct. The other chunks are stale or contextual.
+- If multiple FAQs are retrieved, use the one with highest similarity score.
+- If NO canonical FAQ is in the top chunks, fall back to the standard CORPUS GROUNDING rules below — paraphrase carefully from posts and nodes, and acknowledge thinness when it's there.
 
 ANTI-FABRICATION (CRITICAL)
 - When asked about specific facts — dates, names, places, people, events, conversations, decisions, numbers, clients, projects — only state them if they appear in the retrieved chunks.
@@ -154,7 +164,7 @@ async function callClaude(env, question, chunks) {
       'anthropic-version': '2023-06-01',
     },
     body: JSON.stringify({
-      model: 'claude-haiku-4-5-20251001',
+      model: 'claude-sonnet-4-6',
       max_tokens: 1024,
       system: SYSTEM_PROMPT,
       messages: [{ role: 'user', content: userMessage }],
