@@ -517,9 +517,13 @@ function InsightsTab({ nodes, eras, searchQuery }) {
     );
   }, [nodes, searchQuery]);
   
-  const publications = filteredNodes.filter((n) => n.type === "publication");
-  const insights = filteredNodes.filter((n) => n.type === "insight");
-  const projects = filteredNodes.filter((n) => n.type === "project");
+  // Sort by date descending (newest first) for each section
+  const sortByDate = (a, b) => (b.date || "").localeCompare(a.date || "");
+
+  const publications = filteredNodes.filter((n) => n.type === "publication").sort(sortByDate);
+  const positions = filteredNodes.filter((n) => n.type === "position").sort(sortByDate);
+  const insights = filteredNodes.filter((n) => n.type === "insight").sort(sortByDate);
+  const projects = filteredNodes.filter((n) => n.type === "project").sort(sortByDate);
   const [activeNode, setActiveNode] = useState(null);
 
   const Section = ({ title, items, icon }) => (
@@ -575,6 +579,7 @@ function InsightsTab({ nodes, eras, searchQuery }) {
           Showing {filteredNodes.length} result{filteredNodes.length !== 1 ? "s" : ""} for "{searchQuery}"
         </div>
       )}
+      <Section title="Positions" items={positions} icon="📌" />
       <Section title="Publications" items={publications} icon="📄" />
       <Section title="Key Insights" items={insights} icon="💡" />
       <Section title="Projects" items={projects} icon="🚧" />

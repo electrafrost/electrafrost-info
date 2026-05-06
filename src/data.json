@@ -109,6 +109,74 @@
   ],
   "nodes": [
     {
+      "id": "tpb-d62-ai-submission-apr-2026",
+      "era": "ai-governance",
+      "date": "2026-04-23",
+      "type": "publication",
+      "title": "Submission to the Tax Practitioners Board on AI and the Code of Professional Conduct",
+      "subtitle": "Seven areas where Exposure Draft TPB(I) D62/2026 needs strengthening — full analysis to follow",
+      "body": "Lodged a formal submission to the Tax Practitioners Board on Exposure Draft TPB(I) D62/2026 — the use of Artificial Intelligence and the Code of Professional Conduct. The submission supports the TPB issuing the guidance and identifies seven areas where it can be strengthened before finalisation. Distinguishing probabilistic from deterministic AI for the purposes of reasonable care. A three-tier analysis of consent and third-party disclosure under Code item 6. A practical baseline for section 40 quality management where AI is in use. CPD in execution governance and vendor evaluation literacy under Code item 8. The Determination 2024 data handling expansion as AI-driven meeting transcript and biometric capture become routine. The agentic AI gap that will introduce the most challenging compliance issues within the next 12-24 months. Smaller drafting points on chatbot capability, model limitations, and client consent. The Code obligations have not changed. Their application takes on new context as practitioners rely on tools that can fail in ways the Code did not contemplate when drafted. AI tax tools are also being promoted outside the regulated profession with claims the underlying technology cannot support. Licenced tax practitioners using these tools are responsible to represent and protect their clients, and need a much higher level of technical fluency to exercise their duties under the Code. AI vendors do not carry that duty. Nor do AI tools. You can't sue or deregister an AI. Full analysis and position paper to follow on Substack once the TPB responds.",
+      "tags": [
+        "tpb",
+        "ai-governance",
+        "code-of-conduct",
+        "tax-practice",
+        "submission",
+        "agentic-ai",
+        "regulation",
+        "professional-obligation",
+        "australia"
+      ],
+      "links": []
+    },
+    {
+      "id": "ai-in-practice-summit-jun-2026",
+      "era": "ai-accounting",
+      "date": "2026-06-02",
+      "type": "milestone",
+      "title": "Speaking — Accountants at the Frontier (AI in Practice Summit)",
+      "subtitle": "AI governance, decentralised frontier oversight, and live-demo of machine-readable specialist expertise",
+      "body": "Presenting at the AI in Practice Summit on 2 June 2026, hosted by The Firm. Session: Accountants at the Frontier — AI, Trust, and the New Role of the Profession. Three takeaways for practitioners. First: where AI governance is missing trustworthy intermediaries, and why the gap has the profession's name on it. Second: what frontier governance technologies for AI look like when accountants collectively build them, in the public interest, with decentralised approaches. Third: claiming a competitive edge by making specialist expertise machine-readable on the practitioner's own domain, discoverable by AI agents looking to procure it. Live demo of graph.electrafrost.com — a personal knowledge graph that bots can query directly. The first public demonstration of accountant-curated AI-discoverable provenance.",
+      "tags": [
+        "speaking",
+        "ai-in-practice-summit",
+        "ai-governance",
+        "credu",
+        "machine-readable",
+        "knowledge-graph",
+        "demo",
+        "the-firm"
+      ],
+      "links": [
+        {
+          "label": "Talk page (free registration)",
+          "url": "https://ai-summit.thefirm.media/talks/accountants-at-the-frontier-ai-trust-and-the-new-role-of-the-profession/"
+        }
+      ]
+    },
+    {
+      "id": "credu-protocol-not-stack-may-2026",
+      "era": "ai-accounting",
+      "date": "2026-04-30",
+      "type": "position",
+      "title": "CREDU is a Protocol, Not a Stack — and the Accounting Technologist is Forged in a Mixed Learning Environment",
+      "subtitle": "Why open-source professional infrastructure needs domain experts learning alongside engineers",
+      "body": "Building the V1 protocol for decentralised professional collaboration, verified credentials, and AI procurement signals at Network School. CREDU is a credential federation protocol — accountants publishing verifiable records on public Git repos, federated through a registry, with CPD and attestations anchored to a public ledger. There is no inference stack or model routing in the protocol itself. The protocol specifies what counts as a verifiable record but stays agnostic about the stack any practitioner builds on top of it. Future inference dependencies belong with the individual, not in the protocol. That distinction was sharpened in conversation with engineers at Network School. The learning environment is the point. A non-technical builder with deep domain expertise, learning from technical builders with deep stack literacy, can articulate trust requirements neither side could articulate alone. That is how an actual professional designation for accounting technologists can emerge — not in a vendor course, not in a university accreditation pathway, but in the kind of mixed learning environment where domain expertise and protocol design meet daily. CREDU Academy at Network School is built on exactly that principle. Open-sourcing only works if the principles are applied where they matter. The protocol is open. The stack stays sovereign. The learning happens alongside people who build differently. That is the standard.",
+      "tags": [
+        "credu",
+        "credu-academy",
+        "network-school",
+        "accounting-technologist",
+        "professional-designation",
+        "protocol-design",
+        "open-source",
+        "credential-federation",
+        "mixed-learning",
+        "domain-expertise"
+      ],
+      "links": []
+    },
+    {
       "id": "network-residency-substack-apr-2026",
       "era": "network-residency",
       "date": "2026-04",
