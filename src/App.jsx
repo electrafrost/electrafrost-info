@@ -155,7 +155,7 @@ function EraFilter({ eras, activeEra, setActiveEra }) {
       >
         All Eras
       </button>
-      {eras.map((era) => (
+      {[...eras].reverse().map((era) => (
         <button
           key={era.id}
           className={`era-chip ${activeEra === era.id ? "active" : ""}`}
@@ -364,17 +364,22 @@ function GraphTab({ nodes, eras, searchQuery }) {
 
   const eraMap = useMemo(() => Object.fromEntries(eras.map((e) => [e.id, e])), [eras]);
 
-  // Group by era for timeline view
+  // Group by era for timeline view, with nodes sorted newest-first within each era
   const byEra = useMemo(() => {
     const groups = {};
     filtered.forEach((n) => {
       if (!groups[n.era]) groups[n.era] = [];
       groups[n.era].push(n);
     });
+    // Sort each era's nodes newest-first
+    Object.values(groups).forEach((nodes) =>
+      nodes.sort((a, b) => (b.date || "").localeCompare(a.date || ""))
+    );
     return groups;
   }, [filtered]);
 
-  const eraOrder = eras.map((e) => e.id);
+  // Era order: newest first, oldest last (reverse of data.json declaration order)
+  const eraOrder = useMemo(() => [...eras].map((e) => e.id).reverse(), [eras]);
 
   return (
     <div className="graph-tab">
