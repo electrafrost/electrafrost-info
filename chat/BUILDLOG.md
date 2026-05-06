@@ -316,7 +316,7 @@ Bot retrieves new FAQ on next similar question
 Mark original question 'addressed' with FAQ id
 ```
 
-Documented in `chat/WEEKLY_REVIEW.md`. Calendar reminder set.
+Documented in `chat/REVIEW.md`. Calendar reminder: every 4 days.
 
 ---
 

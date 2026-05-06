@@ -44,7 +44,7 @@ Default view is **thin retrieval first** — questions where the top similarity 
 
 ### "The bot just gave a bad answer — I want to fix it"
 
-This is the **corpus improvement loop**. See [WEEKLY_REVIEW.md](./WEEKLY_REVIEW.md) for the structured version. Quick form:
+This is the **corpus improvement loop**. See [REVIEW.md](./REVIEW.md) for the structured version. Quick form:
 
 1. Open the admin panel; find the bad question
 2. Decide: is this a one-off, a clarification, or a position?
@@ -79,9 +79,9 @@ For ad-hoc analytics. The admin panel covers most needs.
 
 ## Recurring operations
 
-### Weekly review (30 min, every Sunday or Monday)
+### Weekly review (30 min, every 4 days)
 
-See [WEEKLY_REVIEW.md](./WEEKLY_REVIEW.md). Set a recurring calendar reminder.
+See [REVIEW.md](./REVIEW.md). Set a recurring calendar reminder.
 
 ### Monthly: rotate API keys (5 min)
 
