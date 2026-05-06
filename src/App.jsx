@@ -257,13 +257,12 @@ function NodeModal({ node, era, onClose }) {
 function FeaturedCarousel({ nodes, eras, onNodeClick }) {
   const [idx, setIdx] = useState(0);
   
-  // Top thought leadership: include the strongest node types, sorted newest first.
-  // Cap at 24 (= 12 pages of 2) so the carousel stays scannable but covers more depth.
+  // Top thought leadership: include the strongest node types, in the order
+  // they appear in data.json (Electra controls ordering by where she inserts them).
   const featured = useMemo(() => 
     nodes.filter((n) => 
       ["thesis", "position", "publication", "insight", "project", "milestone", "spark", "credential"].includes(n.type)
     )
-    .sort((a, b) => (b.date || "").localeCompare(a.date || ""))
     .slice(0, 24), [nodes]
   );
 
