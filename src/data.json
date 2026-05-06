@@ -4,7 +4,7 @@
     "tagline": "The open, machine-readable intellectual provenance of Electra Frost",
     "description": "A specialist public accountant who has been reinventing professional practice at the digital frontier for 25 years - before it was called that. This is her aggregated, sovereign and discoverable record of ideas, contributions and predictions: how the thinking developed, where it came from, and where it is going.",
     "version": "0.1.0",
-    "updated": "2026-04-29",
+    "updated": "2026-05-06",
     "llms": "/llms.txt"
   },
   "eras": [
@@ -13,28 +13,28 @@
       "label": "Creative Industries",
       "range": "2000–2019",
       "color": "#c4a882",
-      "description": "Came into accounting from the music industry in 1998 to help musicians not fear tax. Built Electra Frost Advisory around creative industries — film, music, arts. CTA Fellow 2007, CTA 2011. The philosophical root: accountants as trusted intermediaries who make complex systems navigable for people who'd otherwise be excluded."
+      "description": "Came into accounting from the music industry in 1998 to help musicians not fear tax. Built Electra Frost Advisory around creative industries — film, music, arts. CTA Fellow 2007, CTA 2011. The philosophical root: accountants as trusted intermediaries who make complex systems navigable for people who'd otherwise be excluded or fearful."
     },
     {
       "id": "bitcoin-conviction",
       "label": "Bitcoin Conviction",
       "range": "2013–2021",
       "color": "#e8a838",
-      "description": "Discovered Bitcoin in 2013 as a film-maker's accountant. First public posts 2019 on automation and professional value. The seed question: what does the accountant's role look like when money itself becomes programmable?"
+      "description": "Discovered Bitcoin in 2013 as the accountant for a film company paying contractors with it. First public posts 2018 on social credit systems and blockchain, from 2019 on automation and professional value. The seed question: what does the accountant's role look like when everything becomes programmable and on open architectures?"
     },
     {
       "id": "accountants-onchain",
       "label": "Accountants OnChain",
       "range": "2022",
       "color": "#e8621a",
-      "description": "RMIT blockchain study (started 2018), Blockchain Collective Advanced Diploma (2022). Founded Accountants OnChain with Digital Playhouse Foundation — Australia's first community of crypto-curious accountants. The conviction: crypto-literate small business accountants are the missing layer in mass adoption."
+      "description": "RMIT blockchain study (started 2018), Advanced Diploma of Applied Blockchain (2022). Launched Accountants OnChain research with Digital Playhouse Foundation — Australia's first community of crypto-curious accountants. The conviction: our industry guided businesses to cloud, now crypto-literate small business accountants can lead crypto adoption on the internet of value."
     },
     {
       "id": "electrafi",
       "label": "ElectraFi Practice",
       "range": "2022–2024",
       "color": "#e8621a",
-      "description": "Pivoted 15-year-old Electra Frost Advisory into ElectraFi — specialist crypto accounting. Built crypto chart of accounts, subledger software stacks, monthly reconciliation workflows for crypto-native businesses. Proof by doing: built the model before it existed."
+      "description": "Pivoted 15-year-old Electra Frost Advisory into ElectraFi — to focus on specialist crypto accounting and advisory for businesses and their accountants. Built crypto chart of accounts, subledger software stacks, monthly reconciliation workflows for crypto-native businesses. Proof by doing."
     },
     {
       "id": "bitcoin-esg",
@@ -48,21 +48,21 @@
       "label": "CREDU & Credentials",
       "range": "2023–2024",
       "color": "#e8621a",
-      "description": "POAP as proof of CPD attendance — demoed at AB Expo. CREDU as a decentralised professional association. Members own and monetise their knowledge, blockchain-verified credentials. The accounting body monopoly on credentialling is the next thing to break."
+      "description": "POAP as proof of CPD attendance — demoed at AB Expo. CREDU introduces decentralised professional association. Members own and monetise their knowledge, blockchain-verified credentials. The accounting body and vendor monopoly on credentialling giving way to peer to peer verification on open networks."
     },
     {
       "id": "bitcoin-standard",
       "label": "Bitcoin Standard",
       "range": "2023–2025",
       "color": "#e8a838",
-      "description": "Bitcoin as unit of account — not payment, not store of value alone — but the base measurement standard for a new economy. Composite Fractionalized Money, sBTC on Stacks, dynamic payment design for subscription states. Lessons from Próspera as first startup society on Bitcoin UoA."
+      "description": "Bitcoin primary monetary function as unit of account — not payment, not store of value alone — but the base measurement standard for a new economy. Composite Fractionalized Money, sBTC on Stacks as example, dynamic payment design for subscription states. Lessons from Próspera as first startup society on Bitcoin UoA."
     },
     {
       "id": "network-state",
       "label": "Network State & d/acc",
       "range": "2024–2025",
       "color": "#8b5cf6",
-      "description": "Token2049 Singapore → Network School Cohort 1 (90 days). Living the thesis: departed Australian home, building at Forest City island SEZ near Singapore. Writing web3 accounting and digital nomad tax classes for Network Schoolers. 'I'm the only accountant here and I want to change that.'"
+      "description": "Network State Conference Singapore → Network School Cohort 1 (90 days). Living the thesis: departed Australian home, building at Forest City island SEZ near Singapore. Developing Bitcoin Accountants thesis. Crypto accounting and foreigner tax guidance for Network School members. 'I'm the only accountant here and I want to change that.'"
     },
     {
       "id": "tax-profession",
@@ -76,14 +76,14 @@
       "label": "CPD PeerLab",
       "range": "2025",
       "color": "#e8621a",
-      "description": "Presented to IPA WA August 2025 — a member-led CPD marketplace without blockchain, using IPA's existing infrastructure. Members as creators not consumers. The pre-blockchain MVP of CREDU, stress-tested inside a legacy institution. 'In the age of Gen-AI, credible learning is live, peer-led, and demonstrated.'"
+      "description": "Presented to IPA WA August 2025 — a member-led CPD marketplace without blockchain, using IPA's existing infrastructure. Members as creators and contributors to CPD, not consumers. Proposed pre-blockchain MVP of CREDU, for stress-testing inside an institution. 'In the age of Gen-AI, credible learning is live, peer-led, and demonstrated.'"
     },
     {
       "id": "ai-governance",
       "label": "AI Governance",
       "range": "2025",
       "color": "#3b82f6",
-      "description": "BlueDot Impact: AGI Strategy (30hr), then Frontier AI Governance (first cohort). Kill chain analysis, threat models, defence-in-depth. Core thesis: the public accounting profession, obligated to the public interest through IFAC standards across 130 jurisdictions, is structurally suited to provide independent AI governance over AI labs and governments alike."
+      "description": "BlueDot Impact: AGI Strategy (30hr), then Frontier AI Governance (first cohort). Kill chain analysis, threat models, defence-in-depth. Core thesis: the public accounting profession, obligated to the public interest through IFAC standards across over 100 jurisdictions, is structurally suited to provide independent AI governance over AI labs and governments alike."
     },
     {
       "id": "ai-accounting",
@@ -115,7 +115,7 @@
       "type": "publication",
       "title": "From Tax Residency to Network Residency",
       "subtitle": "The tax problem the network state movement can solve with profession-led representation",
-      "body": "Published to Substack April 2026. Balaji’s network state framework is crypto-native with blockchain infrastructure for citizen records and keys — but does not address who makes the network state recognised by the jurisdictions that give its members passports. That is the gap. His concept of geodesic over geographic distance shows why existing tax systems cannot handle cloud communities: residence tests, source rules, and permanent establishment thresholds assume a geographical base. A staged pathway from V1 (individual filing) to V5 (network society negotiating collectively with host sovereigns through a credentialed professional network) and beyond, to a recognised non-geographic resident class whose tax affairs are mediated collectively by status agreement. Does not require new international law — a domestic administrative arrangement, reporting safe harbour, or delegated withholding framework with a willing host sovereign can carry it. The profession cannot be contracted in downstream. Network banks acting as host sovereigns’ consolidated tax collection agents compromise fiscal independence — Bitcoin is the unit of account this model depends on at advanced stages, with credentialed public accountants operating as decentralised oversight nodes calibrated to distance from Bitcoin settlement.",
+      "body": "Published to Substack April 2026. Balaji Srinivasan's network state framework is crypto-native with blockchain infrastructure for citizen records and keys — but does not address who makes the network state recognised by the jurisdictions that give its members passports. That is the gap. His concept of geodesic over geographic distance shows why existing tax systems cannot handle cloud communities: residence tests, source rules, and permanent establishment thresholds assume a geographical base. A staged pathway from V1 (individual filing) to V5 (network society negotiating collectively with host sovereigns through a credentialed professional network) and beyond, to a recognised non-geographic resident class whose tax affairs are mediated collectively by status agreement. Does not require new international law — a domestic administrative arrangement, reporting safe harbour, or delegated withholding framework with a willing host sovereign can carry it. The profession cannot be contracted in downstream. Network banks acting as host sovereigns' consolidated tax collection agents compromise fiscal independence — Bitcoin is the unit of account this model depends on at advanced stages, with credentialed public accountants operating as decentralised oversight nodes calibrated to distance from Bitcoin settlement.",
       "tags": [
         "network-residency",
         "tax",
@@ -279,7 +279,7 @@
       "type": "project",
       "title": "CREDU Academy at Network School",
       "subtitle": "The accountants' hackerhouse — building the new profession",
-      "body": "Establishing CREDU Academy at Network School — an accounting technologist hackerspace where practitioners learn to build their own tools, verify credentials on-chain, and design compliance systems for agentic economies. Give an accountant a SaaS subscription and you transform their practice for a year. Teach an accountant to code with AI and you transform their practice for life.",
+      "body": "After 18 months here, establishing CREDU Academy at Network School — an accounting technologist hackerspace where practitioners learn to build their own tools, verify credentials on-chain, and design compliance systems for agentic economies. Give an accountant a SaaS subscription and you transform their practice for a year. Teach an accountant to code with AI and you transform their practice for life.",
       "tags": [
         "CREDU",
         "network-school",
@@ -314,7 +314,7 @@
       "type": "project",
       "title": "Freo Neuhaus",
       "subtitle": "Seeding a startup society node in Fremantle, Western Australia",
-      "body": "Freo Neuhaus: seeding a node of the Network School global network in Fremantle, WA. A port city with a history of radicalism, creative industries, and openness to experiment. A network society without professional services infrastructure is a society that cannot account for itself. The accounting and professional services component is foundational, not administrative.",
+      "body": "Freo Neuhaus: proposed seeding a node of the Network School global network in Fremantle, WA. A port city with a history of radicalism, creative industries, and openness to experiment. A network society without professional services infrastructure is a society that cannot account for itself. The accounting and professional services component is foundational, not administrative.",
       "tags": [
         "network-state",
         "Fremantle",
@@ -1751,18 +1751,62 @@
   ],
   "faqs": [
     {
-      "id": "faq-example-template",
+      "id": "faq-bitcoin-and-accounting",
       "type": "faq",
-      "date_added": "2026-04-29",
-      "category": "template",
-      "question": "What goes in this FAQ section?",
-      "answer": "This section holds canonical clarifications and corrections — short, authoritative answers to questions where the broader corpus might be thin or ambiguous. Each FAQ is a chunk the chatbot can retrieve and ground its answer in, so it represents Electra's verified position on a specific question.\n\nDelete this template entry once real FAQs are added.",
+      "date_added": "2026-05-06",
+      "category": "position",
+      "question": "Why does Bitcoin matter to the accounting profession?",
+      "answer": "Bitcoin doesn't need regulation. There's no CEO, no board, no foundation that controls the protocol. The ledger is audited every block by every node, every 10 mins. The UTXO model means every coin's history is traceable to issuance, deterministically, by anyone. There's no counterparty and no trust assumption to enforce. For accountants, this is pure systemic integrity — the ultimate source of truth for anything monetary.\n\nBut Bitcoin sits at the centre of a spectrum. Move outward into the broader open-blockchain economy and trust assumptions reintroduce themselves — foundations, signers, bridges, oracles, governance tokens, wrapped assets. That's where a network society of global accountants fill the assurance gap, as a public good infrastructure complimeting Bitcoin itself.\n\nBitcoin is Accountants. Accountants are Bitcoin.",
       "tags": [
-        "template",
-        "documentation"
+        "bitcoin",
+        "regulation",
+        "trustless",
+        "utxo",
+        "accounting",
+        "assurance",
+        "spectrum",
+        "core-thesis"
       ],
       "supersedes": null,
-      "context": "Added when the FAQ structure was first introduced (April 2026)."
+      "context": "Canonical short answer to the central Bitcoin-and-accounting question. Drafted from Era 6 (Bitcoin Standard) positions and the 'Bitcoin Cannot Be Regulated' node."
+    },
+    {
+      "id": "faq-accountants-ai-governance-missing-layer",
+      "type": "faq",
+      "date_added": "2026-05-06",
+      "category": "position",
+      "question": "Why are accountants the missing layer in AI governance?",
+      "answer": "Every serious AI governance proposal assumes trusted, non-conflicted intermediaries exist somewhere in the system. None explain where those intermediaries come from or what enforceable obligation binds them.\n\nThe public accounting profession is exactly what the system needs. The IFAC Code of Conduct binds three million practitioners across 143 jurisdictions to act in the public interest, with real professional consequences for failure. The human accountability infrastructure exists. It hasn't been programmed to be pointed at AI yet.\n\nCode is also not law. Code is execution. Legislative and judicial functions are different tasks, and any agentic system exercising authority over people needs all three powers separated. That's the structural fit.\n\n→ The Public Interest Intermediary AI Governance is Missing (Substack, March 2026)\n→ Code Is Not Law (Substack, April 2026)",
+      "tags": [
+        "ai-governance",
+        "ai-safety",
+        "ifac",
+        "public-interest",
+        "intermediary",
+        "code-is-not-law",
+        "core-thesis"
+      ],
+      "supersedes": null,
+      "context": "Canonical short answer to the central AI governance thesis question. Links to the two Substack publications where the full argument is published."
+    },
+    {
+      "id": "faq-network-residency",
+      "type": "faq",
+      "date_added": "2026-05-06",
+      "category": "position",
+      "question": "What is network residency?",
+      "answer": "Network residency recognises that a transnational class of people now exists who don't fit any country's residence framework for tax or migration purposes. They are geodesically coordinated, earn across borders, hold credentials and economic rights recognised by communities rather than nations, and live where they are most productive. Current tax architecture — residence tests, source rules, permanent establishment thresholds — assumes a geographical base. It cannot handle a cloud community.\n\nA network state framework is foundational but doesn't address who makes the network state recognised by the jurisdictions that issue its members' passports. My contribution is a staged pathway from V1 to V5, where V5 is a network society negotiating collectively with host sovereigns through a credentialed professional network that advocates for network members both individually and collectively. Status, not zone.\n\n→ From Tax Residency to Network Residency (Substack, April 2026)",
+      "tags": [
+        "network-residency",
+        "network-state",
+        "tax",
+        "balaji",
+        "v1-v5",
+        "status-not-zone",
+        "core-thesis"
+      ],
+      "supersedes": null,
+      "context": "Canonical short answer distinguishing Electra's status-based network residency formulation from other early projects such as Balaji Srinivasan's territory-first network state model. Links to the Substack publication."
     }
   ]
 }

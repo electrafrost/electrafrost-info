@@ -26,10 +26,15 @@ const ERA_COLORS = {
   "ai-esg": "#ff6b35",
 };
 
-// Topic chips — empty until Electra provides her actual frequently-asked questions.
-// The previous chip set was AI-generated guesses that triggered cross-era retrieval
-// and pushed the bot toward conflation. Removed pending real ones.
-const CHIPS = [];
+// Topic chips — Electra's three canonical FAQ entry points (May 2026).
+// Each chip's question text matches a faq-* entry in src/data.json so retrieval
+// hits the canonical FAQ chunk with high confidence rather than pulling broadly
+// across eras.
+const CHIPS = [
+  { label: "bitcoin-and-accounting", q: "Why does Bitcoin matter to the accounting profession?" },
+  { label: "ai-governance",           q: "Why are accountants the missing layer in AI governance?" },
+  { label: "network-residency",       q: "What is network residency?" },
+];
 
 // ─── SHARED CHAT LOGIC ────────────────────────────────────────────────────────
 
@@ -160,9 +165,9 @@ export function AskTab() {
   return (
     <div className="ask-tab">
       <div className="ask-intro">
-        Ask the corpus directly. <strong>658 posts, 55 thesis nodes, 88 CPD records, 14 eras spanning 2000–2026.</strong>
-        Answers are grounded in what I have actually written — citations link to the source.
-        If the corpus is thin on something, the bot says so rather than inventing.
+        Ask Electra's corpus directly. <strong>658 posts, 55 thesis nodes, 88 CPD records, 14 eras spanning 2000–2026.</strong>
+        Answers are grounded in what she has written, with citations linking to the source.
+        If the corpus is thin on something, the bot should say so rather than inventing (but it is still being trained).
       </div>
 
       {messages.length === 0 && CHIPS.length > 0 && (
@@ -265,8 +270,8 @@ export function FloatingAskWidget() {
         {messages.length === 0 && (
           <>
             <div className="ask-widget-intro">
-              Ask the corpus. 658 posts, 55 thesis nodes, every era from 2000–2026.
-              Answers grounded in what I've actually written.
+              Ask Electra's corpus. 658 posts, 55 thesis nodes, every era from 2000–2026.
+              Answers grounded in what she has written.
             </div>
             {CHIPS.length > 0 && (
               <div className="ask-chips ask-chips-compact">
