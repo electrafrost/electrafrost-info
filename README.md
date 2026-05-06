@@ -2,7 +2,7 @@
 
 **🌐 Live Site:** [graph.electrafrost.com](https://graph.electrafrost.com)
 
-A comprehensive, machine-readable intellectual provenance graph spanning 25 years (2000-2026) of ideas, publications, contributions, and professional development. Designed to be queryable by humans, AI agents, and LLMs alike.
+A comprehensive, machine-readable intellectual provenance graph spanning over 15 years of ideas, publications, contributions, and professional development. Designed to be queryable by humans, AI agents, and LLMs alike.
 
 ## 🎯 Overview
 
