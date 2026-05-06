@@ -257,11 +257,18 @@ function NodeModal({ node, era, onClose }) {
 function FeaturedCarousel({ nodes, eras, onNodeClick }) {
   const [idx, setIdx] = useState(0);
   
+  // Top thought leadership: include the strongest node types, sorted newest first.
+  // Cap at 24 (= 12 pages of 2) so the carousel stays scannable but covers more depth.
   const featured = useMemo(() => 
     nodes.filter((n) => 
       ["thesis", "position", "publication", "insight", "project", "milestone", "spark", "credential"].includes(n.type)
-    ).slice(0, 16), [nodes]
+    )
+    .sort((a, b) => (b.date || "").localeCompare(a.date || ""))
+    .slice(0, 24), [nodes]
   );
+
+  // Each page shows 2 cards. Page count = ceil(featured.length / 2).
+  const pageCount = Math.ceil(featured.length / 2);
 
   if (!featured.length) return null;
 
@@ -274,24 +281,24 @@ function FeaturedCarousel({ nodes, eras, onNodeClick }) {
       <div className="carousel-nav">
         <button 
           className="carousel-arrow carousel-prev" 
-          onClick={() => setIdx(i => (i - 1 + Math.ceil(featured.length / 2)) % Math.ceil(featured.length / 2))}
+          onClick={() => setIdx(i => (i - 1 + pageCount) % pageCount)}
           aria-label="Previous"
         >
           ←
         </button>
         <div className="carousel-dots">
-          {featured.map((_, i) => (
+          {Array.from({ length: pageCount }).map((_, i) => (
             <button
               key={i}
               className={`carousel-dot ${i === idx ? "active" : ""}`}
               onClick={() => setIdx(i)}
-              aria-label={`Slide ${i + 1}`}
+              aria-label={`Page ${i + 1} of ${pageCount}`}
             />
           ))}
         </div>
         <button 
           className="carousel-arrow carousel-next" 
-          onClick={() => setIdx(i => (i + 1) % Math.ceil(featured.length / 2))}
+          onClick={() => setIdx(i => (i + 1) % pageCount)}
           aria-label="Next"
         >
           →

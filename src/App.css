@@ -883,24 +883,31 @@
   margin-bottom: 1.25rem;
 }
 .carousel-arrow {
-  background: none;
-  border: 1.5px solid var(--border);
-  color: var(--text-secondary);
-  width: 2rem;
-  height: 2rem;
+  background: var(--bg);
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  width: 2.6rem;
+  height: 2.6rem;
   border-radius: 50%;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 1.3rem;
+  font-weight: 600;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.15s ease;
+  transition: all 0.18s ease;
   flex-shrink: 0;
+  box-shadow: 0 1px 3px rgba(232, 98, 26, 0.12);
 }
 .carousel-arrow:hover {
+  background: var(--accent);
+  color: white;
   border-color: var(--accent);
-  color: var(--accent);
-  background: var(--surface);
+  transform: scale(1.08);
+  box-shadow: 0 2px 8px rgba(232, 98, 26, 0.28);
+}
+.carousel-arrow:active {
+  transform: scale(0.96);
 }
 .carousel-dots {
   display: flex;
