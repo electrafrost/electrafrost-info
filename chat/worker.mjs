@@ -215,8 +215,8 @@ async function logQuestion(env, { question, answer, chunks, request }) {
     await env.DB.prepare(
       `INSERT INTO questions
        (timestamp, question, answer, top_score, chunk_ids, chunk_summary,
-        thin_retrieval, user_agent, origin)
-       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`
+        thin_retrieval, user_agent, origin, is_showcase)
+       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, 0)`
     ).bind(
       new Date().toISOString(),
       question,
@@ -246,14 +246,27 @@ function adminAuthOK(request, url, env) {
 async function adminListQuestions(env, { view, limit = 100 }) {
   if (!env.DB) return { error: 'D1 not bound' };
 
+  // The "showcase" view returns ONLY canonical FAQ-anchored chip questions.
+  // All other views (thin, unaddressed, addressed, all) return ONLY visitor
+  // questions and exclude showcase rows so stats and triage stay focused on
+  // real visitor traffic.
   let where = '';
-  if (view === 'thin') where = 'WHERE thin_retrieval = 1 AND addressed = 0';
-  else if (view === 'unaddressed') where = 'WHERE addressed = 0';
-  else if (view === 'addressed') where = 'WHERE addressed = 1';
+  if (view === 'showcase') {
+    where = 'WHERE is_showcase = 1';
+  } else if (view === 'thin') {
+    where = 'WHERE is_showcase = 0 AND thin_retrieval = 1 AND addressed = 0';
+  } else if (view === 'unaddressed') {
+    where = 'WHERE is_showcase = 0 AND addressed = 0';
+  } else if (view === 'addressed') {
+    where = 'WHERE is_showcase = 0 AND addressed = 1';
+  } else {
+    // default: all visitor questions, chronological
+    where = 'WHERE is_showcase = 0';
+  }
 
   const sql = `
     SELECT id, timestamp, question, answer, top_score, chunk_summary,
-           thin_retrieval, addressed, addressed_at, addressed_note
+           thin_retrieval, addressed, addressed_at, addressed_note, is_showcase
     FROM questions
     ${where}
     ORDER BY timestamp DESC
@@ -281,15 +294,19 @@ async function adminUnmarkAddressed(env, { id }) {
 
 async function adminCountSummary(env) {
   if (!env.DB) return { error: 'D1 not bound' };
-  const total = await env.DB.prepare(`SELECT COUNT(*) as c FROM questions`).first();
-  const thin = await env.DB.prepare(`SELECT COUNT(*) as c FROM questions WHERE thin_retrieval = 1 AND addressed = 0`).first();
-  const addressed = await env.DB.prepare(`SELECT COUNT(*) as c FROM questions WHERE addressed = 1`).first();
-  const unaddressed = await env.DB.prepare(`SELECT COUNT(*) as c FROM questions WHERE addressed = 0`).first();
+  // Stats reflect only visitor questions (is_showcase = 0), so the
+  // "Showcase" demo questions don't pollute thin/unaddressed/addressed counts.
+  const total = await env.DB.prepare(`SELECT COUNT(*) as c FROM questions WHERE is_showcase = 0`).first();
+  const thin = await env.DB.prepare(`SELECT COUNT(*) as c FROM questions WHERE is_showcase = 0 AND thin_retrieval = 1 AND addressed = 0`).first();
+  const addressed = await env.DB.prepare(`SELECT COUNT(*) as c FROM questions WHERE is_showcase = 0 AND addressed = 1`).first();
+  const unaddressed = await env.DB.prepare(`SELECT COUNT(*) as c FROM questions WHERE is_showcase = 0 AND addressed = 0`).first();
+  const showcase = await env.DB.prepare(`SELECT COUNT(*) as c FROM questions WHERE is_showcase = 1`).first();
   return {
     total: total?.c || 0,
     thin: thin?.c || 0,
     addressed: addressed?.c || 0,
     unaddressed: unaddressed?.c || 0,
+    showcase: showcase?.c || 0,
   };
 }
 
@@ -338,6 +355,17 @@ const ADMIN_HTML = `<!DOCTYPE html>
   input[type=text] { padding: 0.4rem 0.7rem; border: 1px solid var(--border); border-radius: 3px; font-family: inherit; font-size: 0.85rem; flex: 1; max-width: 400px; }
   .empty { color: var(--muted); padding: 3rem; text-align: center; background: var(--bg-card); border: 1px dashed var(--border); border-radius: 4px; }
   .auth-fail { color: var(--thin); padding: 2rem; }
+  .showcase-section { margin-bottom: 2rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; }
+  .showcase-section summary { padding: 0.9rem 1.1rem; cursor: pointer; font-size: 0.95rem; color: var(--muted); user-select: none; }
+  .showcase-section summary:hover { color: var(--accent); }
+  .showcase-section[open] summary { border-bottom: 1px solid var(--border); }
+  .showcase-section .row { margin: 0.7rem 1.1rem; }
+  .showcase-section .row:first-of-type { margin-top: 1rem; }
+  .showcase-section .row:last-of-type { margin-bottom: 1rem; }
+  .row.showcase { border-left: 3px solid var(--accent); }
+  .badge.showcase-badge { background: var(--accent); color: white; border-color: var(--accent); }
+  .stat.showcase-stat { border-left: 3px solid var(--accent); }
+  .section-title { font-family: 'DM Serif Display', Georgia, serif; font-weight: 400; font-size: 1.3rem; margin: 1rem 0 0.5rem; }
 </style>
 </head>
 <body>
@@ -373,23 +401,81 @@ const ADMIN_HTML = `<!DOCTYPE html>
   async function load() {
     try {
       const stats = await api('summary');
-      const list = await api('list?view=' + currentView);
-      render(stats, list.rows);
+      const visitorList = await api('list?view=' + currentView);
+      const showcaseList = await api('list?view=showcase');
+      render(stats, visitorList.rows, showcaseList.rows);
     } catch (e) {
       document.getElementById('content').innerHTML =
         '<div class="auth-fail">Auth failed or D1 not bound. Check key and DB binding.</div>';
     }
   }
 
-  function render(stats, rows) {
+  function renderRow(r) {
+    const html = [];
+    const cls = ['row'];
+    if (r.thin_retrieval && !r.addressed) cls.push('thin');
+    if (r.addressed) cls.push('addressed');
+    if (r.is_showcase) cls.push('showcase');
+    html.push('<div class="' + cls.join(' ') + '">');
+    html.push('<div class="row-meta">');
+    html.push('<span>#' + r.id + '</span>');
+    html.push('<span>' + escapeHtml(r.timestamp) + '</span>');
+    if (r.top_score !== null) html.push('<span class="badge score">top score: ' + Number(r.top_score).toFixed(3) + '</span>');
+    if (r.is_showcase) html.push('<span class="badge showcase-badge">showcase</span>');
+    if (r.thin_retrieval && !r.is_showcase) html.push('<span class="badge thin">thin retrieval</span>');
+    if (r.addressed) html.push('<span class="badge addressed">addressed' + (r.addressed_note ? ': ' + escapeHtml(r.addressed_note) : '') + '</span>');
+    html.push('</div>');
+    html.push('<div class="question">' + escapeHtml(r.question) + '</div>');
+    html.push('<div class="answer">' + escapeHtml(r.answer) + '</div>');
+    try {
+      const chunks = JSON.parse(r.chunk_summary || '[]');
+      if (chunks.length) {
+        html.push('<div class="chunks">');
+        for (let j = 0; j < chunks.length; j++) {
+          const c = chunks[j];
+          html.push('<span class="chunk">' + escapeHtml(c.type) + ': ' + escapeHtml(c.title || c.id) + '<span class="chunk-score">' + c.score + '</span></span>');
+        }
+        html.push('</div>');
+      }
+    } catch (e) {}
+    if (!r.is_showcase) {
+      html.push('<div class="actions">');
+      if (!r.addressed) {
+        html.push('<input type="text" id="note-' + r.id + '" placeholder="commit SHA or note (optional)" />');
+        html.push('<button class="primary" onclick="markAddressed(' + r.id + ')">Mark addressed</button>');
+      } else {
+        html.push('<button onclick="unmarkAddressed(' + r.id + ')">Unmark</button>');
+      }
+      html.push('</div>');
+    }
+    html.push('</div>');
+    return html.join('');
+  }
+
+  function render(stats, rows, showcaseRows) {
     const html = [];
     html.push('<div class="stats">');
-    html.push('<div class="stat"><div class="stat-num">' + stats.total + '</div><div class="stat-label">total questions</div></div>');
+    html.push('<div class="stat"><div class="stat-num">' + stats.total + '</div><div class="stat-label">visitor questions</div></div>');
     html.push('<div class="stat"><div class="stat-num">' + stats.thin + '</div><div class="stat-label">thin · unaddressed</div></div>');
     html.push('<div class="stat"><div class="stat-num">' + stats.unaddressed + '</div><div class="stat-label">unaddressed</div></div>');
     html.push('<div class="stat"><div class="stat-num">' + stats.addressed + '</div><div class="stat-label">addressed</div></div>');
+    html.push('<div class="stat showcase-stat"><div class="stat-num">' + (stats.showcase || 0) + '</div><div class="stat-label">showcase (anchor questions)</div></div>');
     html.push('</div>');
 
+    // Showcase section — collapsible, opens with summary text
+    html.push('<details class="showcase-section">');
+    html.push('<summary><strong>Showcase questions</strong> · the FAQ-anchored chip questions used as demo entry points (' + (showcaseRows ? showcaseRows.length : 0) + ')</summary>');
+    if (showcaseRows && showcaseRows.length) {
+      for (let i = 0; i < showcaseRows.length; i++) {
+        html.push(renderRow(showcaseRows[i]));
+      }
+    } else {
+      html.push('<div class="empty">No showcase questions seeded.</div>');
+    }
+    html.push('</details>');
+
+    // Visitor questions section
+    html.push('<h2 class="section-title">Visitor questions</h2>');
     html.push('<div class="views">');
     const views = [['thin','Thin retrieval first'],['unaddressed','All unaddressed'],['all','All chronological'],['addressed','Addressed']];
     for (let i = 0; i < views.length; i++) {
@@ -399,43 +485,10 @@ const ADMIN_HTML = `<!DOCTYPE html>
     html.push('</div>');
 
     if (!rows.length) {
-      html.push('<div class="empty">Nothing to show in this view.</div>');
+      html.push('<div class="empty">No visitor questions in this view yet.</div>');
     } else {
       for (let i = 0; i < rows.length; i++) {
-        const r = rows[i];
-        const cls = ['row'];
-        if (r.thin_retrieval && !r.addressed) cls.push('thin');
-        if (r.addressed) cls.push('addressed');
-        html.push('<div class="' + cls.join(' ') + '">');
-        html.push('<div class="row-meta">');
-        html.push('<span>#' + r.id + '</span>');
-        html.push('<span>' + escapeHtml(r.timestamp) + '</span>');
-        if (r.top_score !== null) html.push('<span class="badge score">top score: ' + Number(r.top_score).toFixed(3) + '</span>');
-        if (r.thin_retrieval) html.push('<span class="badge thin">thin retrieval</span>');
-        if (r.addressed) html.push('<span class="badge addressed">addressed' + (r.addressed_note ? ': ' + escapeHtml(r.addressed_note) : '') + '</span>');
-        html.push('</div>');
-        html.push('<div class="question">' + escapeHtml(r.question) + '</div>');
-        html.push('<div class="answer">' + escapeHtml(r.answer) + '</div>');
-        try {
-          const chunks = JSON.parse(r.chunk_summary || '[]');
-          if (chunks.length) {
-            html.push('<div class="chunks">');
-            for (let j = 0; j < chunks.length; j++) {
-              const c = chunks[j];
-              html.push('<span class="chunk">' + escapeHtml(c.type) + ': ' + escapeHtml(c.title || c.id) + '<span class="chunk-score">' + c.score + '</span></span>');
-            }
-            html.push('</div>');
-          }
-        } catch (e) {}
-        html.push('<div class="actions">');
-        if (!r.addressed) {
-          html.push('<input type="text" id="note-' + r.id + '" placeholder="commit SHA or note (optional)" />');
-          html.push('<button class="primary" onclick="markAddressed(' + r.id + ')">Mark addressed</button>');
-        } else {
-          html.push('<button onclick="unmarkAddressed(' + r.id + ')">Unmark</button>');
-        }
-        html.push('</div>');
-        html.push('</div>');
+        html.push(renderRow(rows[i]));
       }
     }
     document.getElementById('content').innerHTML = html.join('');

@@ -15,9 +15,11 @@ CREATE TABLE IF NOT EXISTS questions (
   addressed_at    TEXT,                             -- ISO 8601 UTC, when marked
   addressed_note  TEXT,                             -- optional: commit SHA or note
   user_agent      TEXT,                             -- truncated to 200 chars
-  origin          TEXT                              -- request origin
+  origin          TEXT,                             -- request origin
+  is_showcase     INTEGER NOT NULL DEFAULT 0        -- 1 = canonical FAQ-anchored chip question; 0 = real visitor question
 );
 
 CREATE INDEX IF NOT EXISTS idx_questions_timestamp ON questions(timestamp DESC);
 CREATE INDEX IF NOT EXISTS idx_questions_thin ON questions(thin_retrieval, addressed, timestamp DESC);
 CREATE INDEX IF NOT EXISTS idx_questions_addressed ON questions(addressed, timestamp DESC);
+CREATE INDEX IF NOT EXISTS idx_questions_showcase ON questions(is_showcase, timestamp DESC);
