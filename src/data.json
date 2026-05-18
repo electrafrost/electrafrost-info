@@ -109,6 +109,20 @@
   ],
   "nodes": [
     {
+      "id": "graph-launch-substack-may-2026",
+      "era": "agentic-economy",
+      "date": "2026-05-07",
+      "type": "publication",
+      "title": "How I learned to code with AI and built graph.electrafrost.com",
+      "subtitle": "Making my professional and intellectual provenance open source and interactive on the semantic web, as a discoverable knowledge asset for humans and AI to find.",
+      "body": "The story of building graph.electrafrost.com end to end in PowerShell with Claude as a pair-programmer, on Cloudflare's free tier. Covers the technical journey, the engineering problems I overcame, the admin loop that turns visitor questions into corpus improvements, and what comes next: CREDU, the fork-and-deploy template every accountant can run.",
+      "tags": ["ai-governance", "credu", "rag", "provenance", "semantic-web", "agentic-procurement", "accounting-technologist", "claude", "cloudflare"],
+      "links": [
+        { "url": "https://blog.electrafrost.com/p/how-i-learned-to-code-with-ai-and", "label": "Read on Substack" },
+        { "url": "https://github.com/electrafrost/electrafrost-info", "label": "GitHub repo" }
+      ]
+    },
+    {
       "id": "tpb-d62-ai-submission-apr-2026",
       "era": "ai-governance",
       "date": "2026-04-23",
