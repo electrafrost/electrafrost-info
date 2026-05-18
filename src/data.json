@@ -105,6 +105,13 @@
       "range": "2026",
       "color": "#6ab04c",
       "description": "AI safety as a social and governance (S+G) imperative. Public accountants as the missing AI governance intermediary. Making AI-intensive  reporting safe, contestable and investment-grade. Robodebt as the crystallising case: what happens when no one is minding the automated system."
+    },
+    {
+      "id": "agentic-economy",
+      "label": "Agentic Economy",
+      "range": "2026–",
+      "color": "#06b6d4",
+      "description": "Public knowledge graphs and machine-readable provenance as infrastructure for an economy where AI agents discover, vet and procure credible human professionals. graph.electrafrost.com as a working proof: open-source, fork-and-deploy, semantic-web native. CREDU as the template every accountant can run."
     }
   ],
   "nodes": [
@@ -113,9 +120,9 @@
       "era": "agentic-economy",
       "date": "2026-05-07",
       "type": "publication",
-      "title": "How I learned to code with AI and built graph.electrafrost.com",
+      "title": "How I'm learning to code with AI and built graph.electrafrost.com",
       "subtitle": "Making my professional and intellectual provenance open source and interactive on the semantic web, as a discoverable knowledge asset for humans and AI to find.",
-      "body": "The story of building graph.electrafrost.com end to end in PowerShell with Claude as a pair-programmer, on Cloudflare's free tier. Covers the technical journey, the engineering problems I overcame, the admin loop that turns visitor questions into corpus improvements, and what comes next: CREDU, the fork-and-deploy template every accountant can run.",
+      "body": "The story of building graph.electrafrost.com end to end in terminal with Claude as a pair-programmer, on Cloudflare's free tier. Covers the technical journey, the newbie engineering problems I overcame, the admin loop that turns visitor questions into corpus improvements, and what comes next: CREDU, the fork-and-deploy template every accountant can run.",
       "tags": ["ai-governance", "credu", "rag", "provenance", "semantic-web", "agentic-procurement", "accounting-technologist", "claude", "cloudflare"],
       "links": [
         { "url": "https://blog.electrafrost.com/p/how-i-learned-to-code-with-ai-and", "label": "Read on Substack" },
