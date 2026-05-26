@@ -80,10 +80,10 @@
     },
     {
       "id": "ai-governance",
-      "label": "AI Governance",
-      "range": "2025",
+      "label": "AI Safety & Governance",
+      "range": "2025–2026",
       "color": "#3b82f6",
-      "description": "BlueDot Impact: AGI Strategy (30hr), then Frontier AI Governance (first cohort). Kill chain analysis, threat models, defence-in-depth. Core thesis: the public accounting profession, obligated to the public interest through IFAC standards across over 100 jurisdictions, is structurally suited to provide independent AI governance over AI labs and governments alike."
+      "description": "The public accounting profession, obligated to the public interest through IFAC standards across over 100 jurisdictions, is structurally suited to provide independent governance over AI labs and governments alike. BlueDot Impact: AGI Strategy and Frontier AI Governance — kill chain analysis, threat models, defence-in-depth. AI safety as a social and governance (S+G) imperative: making AI-intensive reporting safe, contestable and investment-grade, with Robodebt as the crystallising case of what happens when no one is minding the automated system."
     },
     {
       "id": "ai-accounting",
@@ -98,13 +98,6 @@
       "range": "2025–2026",
       "color": "#8b5cf6",
       "description": "Position paper: network societies will force the emergence of a non-geographic transnational resident class whose tax treatment is negotiated collectively through the network-state entity. Status, not zone. V1→V5→Beyond taxonomy. Goes beyond both Balaji's territory-first thesis and Próspera's zone-bound model."
-    },
-    {
-      "id": "ai-esg",
-      "label": "AI Safety",
-      "range": "2026",
-      "color": "#6ab04c",
-      "description": "AI safety as a social and governance (S+G) imperative. Public accountants as the missing AI governance intermediary. Making AI-intensive  reporting safe, contestable and investment-grade. Robodebt as the crystallising case: what happens when no one is minding the automated system."
     },
     {
       "id": "agentic-economy",
@@ -1166,7 +1159,7 @@
     },
     {
       "id": "ai-safety-sg-imperative",
-      "era": "ai-esg",
+      "era": "ai-governance",
       "date": "2026-03",
       "type": "position",
       "title": "AI Safety as S+G Imperative",
