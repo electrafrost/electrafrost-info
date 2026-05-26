@@ -109,16 +109,6 @@
   ],
   "nodes": [
     {
-      "id": "rent-a-human-feb-2026",
-      "era": "agentic-economy",
-      "date": "2026-02-05",
-      "type": "position",
-      "title": "Rent-A-Human: Signing Up to Be Rented by AI for Tax Validation",
-      "subtitle": "Placing myself in the agentic economy as a verifiable human expert AI agents can procure.",
-      "body": "If AI does tax, it has to work for me. I signed up to be rented by AI bots for tax position validation. Rent-A-Human shows us the supply-side counterpart to agentic procurement: AI agents that need a credible human to validate or sign off on their work must be able to find, vet and engage one. This is the human role in an agentic economy, and it is the public use case for CREDU's verifiable credentials.",
-      "tags": ["agentic-procurement", "credu", "rent-a-human", "tax-validation", "verifiable-credentials", "network-school", "agentic-economy"]
-    },
-    {
       "id": "graph-launch-substack-may-2026",
       "era": "agentic-economy",
       "date": "2026-05-07",
@@ -363,6 +353,16 @@
         "open-protocols"
       ],
       "links": []
+    },
+    {
+      "id": "rent-a-human-feb-2026",
+      "era": "agentic-economy",
+      "date": "2026-02-05",
+      "type": "position",
+      "title": "Rent-A-Human: Signing Up to Be Rented by AI for Tax Validation",
+      "subtitle": "Placing myself in the agentic economy as a verifiable human expert AI agents can procure.",
+      "body": "If AI does tax, it has to work for me. I signed up to be rented by AI bots for tax position validation. Rent-A-Human shows us the supply-side counterpart to agentic procurement: AI agents that need a credible human to validate or sign off on their work must be able to find, vet and engage one. This is the human role in an agentic economy, and it is the public use case for CREDU's verifiable credentials.",
+      "tags": ["agentic-procurement", "credu", "rent-a-human", "tax-validation", "verifiable-credentials", "network-school", "agentic-economy"]
     },
     {
       "id": "credu-academy-network-school",
