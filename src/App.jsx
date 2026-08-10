@@ -772,7 +772,7 @@ function CVTab() {
             <li><strong>Founder / Researcher — CREDU</strong> (Feb 2024–present). Researching and developing CREDU as a peer-verified credentialing, audit and marketplace platform for accountants' CPE/CPD using open source technologies. Professional bodies and autonomous agents can publicly inspect CPE/CPD compliance with proof on open blockchain.</li>
             <li><strong>Founding Cohort Member — Network School</strong> (Sep 2024–present; Kazakhstan, ex Johor–Singapore SEZ). Selected into the V1 first cohort of 'dark talent' from over 5,000 applications. One of the earliest long-term NS residents (Forest City, Malaysia). Contributing to peer mentoring and informal learner-programming of the international founder community; base for independently building professional accounting ecosystems and startup-society services for an AI-driven decentralised digital economy.</li>
             <li><strong>Deputy President — IPA Malaysia Member Advisory Committee (MMAC)</strong> (Sep 2025–present).</li>
-            <li><strong>AML/CTF Project Manager — Consulta Mirabilis</strong> (Jun 2026–present, Fremantle, Western Australia). Building and maintaining the AML/CTF framework — AUSTRAC enrolment, the AML/CTF program, customer due diligence, and reporting — for a legal and corporate advisory practice.</li>
+            <li><strong>AML/CTF Compliance Manager — Consulta Mirabilis</strong> (Jun 2026–present, Fremantle, Western Australia). Building and maintaining the AML/CTF framework — AUSTRAC enrolment, the AML/CTF program, customer due diligence, and reporting — for a legal and corporate advisory practice.</li>
           </ul>
         </div>
         
