@@ -755,33 +755,33 @@ function CVTab() {
       <div className="cv-header">
         <div className="cv-contact">
           <h2 className="cv-title">Curriculum Vitae — Electra Frost</h2>
-          <p>Network School, Forest City, Gelang Patah, Johor 81500, Malaysia</p>
-          <p>+60 10 666 0556 | mail@electrafrost.com</p>
+          <p>Network School · Kazakhstan / Australia</p>
+          <p>mail@electrafrost.com</p>
         </div>
       </div>
       <div className="cv-sections">
         <div className="cv-summary">
-          <p>Public accounting practitioner and technologist with Australian international tax expertise, self-employed for nearly twenty of the last twenty-five years. Started in the arts and entertainment industries, drawn to accounting to help people of high potential run legitimate, successful businesses. Introduced to Bitcoin through clients' cross border business activities in 2013, and has been problem-solving at the intersection of frontier technologies, social enterprise and professional practice ever since.</p>
+          <p>Public accounting practitioner and technologist with Australian international tax expertise, self-employed for nearly twenty of the last twenty-five years. Started in the arts and entertainment industries, drawn to accounting to help people of high potential run legitimate, successful businesses. Introduced to Bitcoin through clients' cross border business activities in 2013, and has been problem-solving at the intersection of frontier technologies, social enterprise and professional practice ever since. In 2026 she left public accounting practice to focus full-time on building open, profession-owned infrastructure for a decentralised digital economy.</p>
         </div>
         
         <div className="cv-section">
           <h3>Current</h3>
           <ul>
-            <li><strong>Founding Cohort Member — Network School</strong> (Sep 2024–present, Forest City, Malaysia/Singapore). Selected into V1 first cohort of 128 'dark talent' from over 5,000 applications. One of the earlier long-term NS residents. Contributing to peer mentoring and informal learner-programming of the international digital nomad, entrepreneur and founder community. Base for independently building professional accounting ecosystems for an AI-driven decentralised digital economy, and startup-society transnational tax coordination solutions.</li>
-            <li><strong>Founder and Lead Architect — Kigumi Solutions</strong> (October 2025–present). Developing a platform-based business model and architecture to facilitate AI-assisted client-serving collaboration between public accountants and legal firms for legal, documentation, customer due diligence and corporate secretarial services.</li>
-            <li><strong>Operations and Platform Partnerships — Consulta Mirabilis Law</strong> (October 2025–present). Leading operations and strategic partnerships, building the practice's operational infrastructure for integration with Kigumi platform. Engaging SME accounting practices to identify market gaps, developing service models that define human and AI roles at each workflow touchpoint.</li>
-            <li><strong>Founder / Researcher — CREDU</strong> (Feb 2024–present). Researching and developing CREDU as a global verified credentialing, audit and procurement platform for accountants' CPE/CPD using open source technologies. Professional bodies and autonomous agents can publicly inspect CPE/CPD compliance with proof on open blockchain.</li>
+            <li><strong>Technical Program Manager &amp; Protocol Architect — Digital Playhouse Foundation (DPF NS Labs)</strong> (Aug 2026–present, Network School; Kazakhstan / Australia). Establishing and leading DPF NS Labs, the Foundation's sponsored Australian participation program at Network School — education, digital-capability and employment pathways, taking the Open Learning Protocol and CREDU credentialling to working beta and scaled ecosystems. Author the technical specification for both open-source protocols (data schemas, identity and verification rules, trust model, edge-case behaviour and change control) and coordinate the builder-learner cohorts and engineers who build them. Also governance and incentive design, domain translation between professional regulation, charity governance and financial compliance and the engineering team, program development, and partnerships and growth.</li>
+            <li><strong>Co-Founder and Director — Digital Playhouse Foundation</strong> (Apr 2021–present). ACNC-registered Public Benevolent Institution (PBI) advancing digital inclusion and financial literacy. Current projects: Coding 4 Kids, GameChangers, Open Learning Protocol, Bitcoin Builders, Stacks Australia, CREDU credentials, OPSEC Operational Security.</li>
+            <li><strong>Founder / Researcher — CREDU</strong> (Feb 2024–present). Researching and developing CREDU as a peer-verified credentialing, audit and marketplace platform for accountants' CPE/CPD using open source technologies. Professional bodies and autonomous agents can publicly inspect CPE/CPD compliance with proof on open blockchain.</li>
+            <li><strong>Founding Cohort Member — Network School</strong> (Sep 2024–present; Kazakhstan, ex Johor–Singapore SEZ). Selected into the V1 first cohort of 'dark talent' from over 5,000 applications. One of the earliest long-term NS residents (Forest City, Malaysia). Contributing to peer mentoring and informal learner-programming of the international founder community; base for independently building professional accounting ecosystems and startup-society services for an AI-driven decentralised digital economy.</li>
             <li><strong>Deputy President — IPA Malaysia Member Advisory Committee (MMAC)</strong> (Sep 2025–present).</li>
-            <li><strong>Co-Founder and Director — Digital Playhouse Foundation</strong> (Apr 2021–present, Agnes Water, Queensland). Public Benevolent Institution (PBI). Projects: The School of Bitcoin, Stacks Australia, Accountants On-Chain, Coding 4 Kids, GameChangers.</li>
-            <li><strong>Enterprise Engagement — Stacks Australia</strong> (Feb 2024–present). Raising awareness of Stacks as a high-integrity Bitcoin Layer 2 in the Australian blockchain industry.</li>
+            <li><strong>AML/CTF Project Manager — Consulta Mirabilis</strong> (Jun 2026–present, Fremantle, Western Australia). Building and maintaining the AML/CTF framework — AUSTRAC enrolment, the AML/CTF program, customer due diligence, and reporting — for a legal and corporate advisory practice.</li>
           </ul>
         </div>
         
         <div className="cv-section">
           <h3>Previous Roles</h3>
           <ul>
-            <li><strong>Crypto Accounting Systems and Advisory — ElectraFi</strong> (Jul 2023–April 2026, Australia/Online). Advisory led public accounting practice specialising in bitcoin treasury, crypto operations, international tax and structuring. Led implementations of crypto accounting systems with Xero/QB integration. Developed advisory resources and CPD for the accounting industry.</li>
-            <li><strong>Public Accounting Practitioner, Business Advisor — Electra Frost Advisory</strong> (May 2008–2022, Sydney–Brisbane). Long term specialist accounting, tax and business advisory for artistic and creative industries, international tax for Australians abroad.</li>
+            <li><strong>Crypto Accounting Systems and Advisory — ElectraFi</strong> (Jul 2023–Aug 2026, Australia/Online). Advisory led public accounting practice specialising in bitcoin treasury, crypto operations, international tax and structuring. Led implementations of crypto accounting systems with Xero/QB integration. Developed advisory resources and CPD for the accounting industry.</li>
+            <li><strong>Public Accounting Practitioner, Business Advisor — Electra Frost Advisory</strong> (May 2008–May 2026, closed; Sydney–Brisbane–Online). Long term specialist accounting, tax and business advisory for artistic and creative industries, international tax for Australians abroad.</li>
+            <li><strong>Enterprise Engagement — Stacks Australia</strong> (Feb 2024–Aug 2025). Raised awareness of Stacks as a high-integrity Bitcoin Layer 2 in the Australian blockchain industry through content, engagement and public speaking.</li>
             <li><strong>Accounting Workflow and App Implementation Consultant — Sorrento Strategic Accounting</strong> (Feb–Apr 2025, Perth).</li>
             <li><strong>Project Lead — Accountants On-Chain</strong> (2021–2024). Webinars, training, consulting and speaking for crypto-curious accountants, bookkeepers and advisers.</li>
             <li><strong>Blockchain Education Manager — Blockchain Academy International</strong> (Feb–Jun 2023, Brisbane). Conducted competency mapping across Applied Blockchain and Accounting Diploma qualifications to develop an integrated pathway positioning blockchain and AI within accounting practice.</li>
@@ -1076,7 +1076,7 @@ export default function App() {
         <div className="footer-inner">
           <a href="https://electrafrost.com" target="_blank" rel="noopener">electrafrost.com</a>
           <span className="footer-sep">·</span>
-          <span>Updated April 2026</span>
+          <span>Updated August 2026</span>
           <span className="footer-sep">·</span>
           <a href="/llms.txt">llms.txt</a>
           <span className="footer-sep">·</span>
