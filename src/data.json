@@ -3,8 +3,8 @@
     "name": "Electra Frost",
     "tagline": "The open, machine-readable intellectual provenance of Electra Frost",
     "description": "A specialist public accountant who has been reinventing professional practice at the digital frontier for 25 years - before it was called that. This is her aggregated, sovereign and discoverable record of ideas, contributions and predictions: how the thinking developed, where it came from, and where it is going.",
-    "version": "0.1.0",
-    "updated": "2026-05-06",
+    "version": "0.2.0",
+    "updated": "2026-08-10",
     "llms": "/llms.txt"
   },
   "eras": [
@@ -116,10 +116,26 @@
       "title": "How I'm learning to code with AI and built graph.electrafrost.com",
       "subtitle": "Making my professional and intellectual provenance open source and interactive on the semantic web, as a discoverable knowledge asset for humans and AI to find.",
       "body": "The story of building graph.electrafrost.com end to end in terminal with Claude as a pair-programmer, on Cloudflare's free tier. Covers the technical journey, the newbie engineering problems I overcame, the admin loop that turns visitor questions into corpus improvements, and what comes next: CREDU, the fork-and-deploy template every accountant can run.",
-      "tags": ["ai-governance", "credu", "rag", "provenance", "semantic-web", "agentic-procurement", "accounting-technologist", "claude", "cloudflare"],
+      "tags": [
+        "ai-governance",
+        "credu",
+        "rag",
+        "provenance",
+        "semantic-web",
+        "agentic-procurement",
+        "accounting-technologist",
+        "claude",
+        "cloudflare"
+      ],
       "links": [
-        { "url": "https://blog.electrafrost.com/p/how-i-learned-to-code-with-ai-and", "label": "Read on Substack" },
-        { "url": "https://github.com/electrafrost/electrafrost-info", "label": "GitHub repo" }
+        {
+          "url": "https://blog.electrafrost.com/p/how-i-learned-to-code-with-ai-and",
+          "label": "Read on Substack"
+        },
+        {
+          "url": "https://github.com/electrafrost/electrafrost-info",
+          "label": "GitHub repo"
+        }
       ]
     },
     {
@@ -362,7 +378,15 @@
       "title": "Rent-A-Human: Signing Up to Be Rented by AI for Tax Validation",
       "subtitle": "Placing myself in the agentic economy as a verifiable human expert AI agents can procure.",
       "body": "If AI does tax, it has to work for me. I signed up to be rented by AI bots for tax position validation. Rent-A-Human shows us the supply-side counterpart to agentic procurement: AI agents that need a credible human to validate or sign off on their work must be able to find, vet and engage one. This is the human role in an agentic economy, and it is the public use case for CREDU's verifiable credentials.",
-      "tags": ["agentic-procurement", "credu", "rent-a-human", "tax-validation", "verifiable-credentials", "network-school", "agentic-economy"]
+      "tags": [
+        "agentic-procurement",
+        "credu",
+        "rent-a-human",
+        "tax-validation",
+        "verifiable-credentials",
+        "network-school",
+        "agentic-economy"
+      ]
     },
     {
       "id": "credu-academy-network-school",
@@ -1179,6 +1203,230 @@
           "url": "https://blog.electrafrost.com/p/the-public-interest-intermediary"
         }
       ]
+    },
+    {
+      "id": "mia-ipa-kl-2026",
+      "era": "tax-profession",
+      "date": "2026-06",
+      "type": "milestone",
+      "title": "MIA International Conference — representing IPA in Kuala Lumpur",
+      "subtitle": "~4,000 attendees; a 100-year-old body in Southeast Asia",
+      "body": "Attended the Malaysian Institute of Accountants International Conference in Kuala Lumpur with the Institute of Public Accountants, supporting IPA's Southeast Asian members and regional growth. As a 15-year IPA member now settling in Malaysia, worked every exhibition stand to understand how practices operate and the Malaysian regulatory environment. CPD sessions covered how AI, sustainability, AML/CTF, digital trust and global mobility are reshaping accounting, audit and advisory. Interviewed by the conference organisers. Reinforced the fit between a progressive, entrepreneur-focused body and advisers working with SMEs at the frontier.",
+      "tags": [
+        "IPA",
+        "MIA",
+        "Malaysia",
+        "professional-body",
+        "CPD",
+        "networking"
+      ],
+      "links": []
+    },
+    {
+      "id": "debanked-selfcustody-2026",
+      "era": "bitcoin-standard",
+      "date": "2026-06-30",
+      "type": "spark",
+      "title": "Debanked at year-end — self-custody as continuity",
+      "subtitle": "Locked out of Australian and Malaysian banks simultaneously",
+      "body": "Finishing Australian financial year-end tasks over the Malacca Strait, locked out of both an Australian and a Malaysian bank account at once — an Australian foreign-tax team froze everything over a Malaysian tax-ID request; Maybank's fraud team flagged VPN use. Self-custodied BTC and USDC kept payments moving through a weekend with no bank access. Framed against Australia's Crypto Travel Rule commencing 1 July: keep nothing on exchanges. A lived demonstration of why trust-minimised, self-custodied money matters for the borderless professional, and why the accounting layer around it has to be robust to institutional friction.",
+      "tags": [
+        "bitcoin",
+        "self-custody",
+        "USDC",
+        "debanking",
+        "crypto-travel-rule",
+        "borderless"
+      ],
+      "links": []
+    },
+    {
+      "id": "leaving-public-practice-2026",
+      "era": "tax-profession",
+      "date": "2026-07-27",
+      "type": "milestone",
+      "title": "Leaving public practice — handover to Lisa Wilson Accounting",
+      "subtitle": "From CULT 45 in 1998 to the frontier; 25 years in practice",
+      "body": "After 25 years, handed the practice to Lisa Wilson (now Lisa Wilson Accounting) and stepped out of public practice for the first tax season in a quarter century. The origin: in 1998 took her punk band CULT 45 to a Sydney CPA who made them 'fully legit, no fear' — the day she fell for the profession. TAFE bookkeeping, accounting at Sydney Institute of Technology, tax law at UNSW, a Newtown practice for creatives, tech entrepreneurs and early Bitcoiners, then a remote Queensland base. Remains an Australian registered tax agent, CTA (Tax Institute) and FIPA. Now free to focus fully on open learning, peer-to-peer credential design, and the accountant's role as the trusted human layer in an automated, on-chain economy.",
+      "tags": [
+        "public-practice",
+        "milestone",
+        "origin",
+        "Lisa-Wilson",
+        "succession",
+        "CTA",
+        "FIPA"
+      ],
+      "links": []
+    },
+    {
+      "id": "ns-malaysia-disruption-2026",
+      "era": "network-state",
+      "date": "2026-07",
+      "type": "milestone",
+      "title": "Network School Malaysia disruption and the false-report saga",
+      "subtitle": "A false allegation, an investigation, and the question of the next node",
+      "body": "On 10 July, the day before the Johor elections, a political account published a false allegation that Network School was harbouring 'illegal aliens'. On 14 July Malaysian authorities visited the Forest City campus; officers were professional and the allegation was found false. Amid a broader disruption to the Malaysian node, Electra affirmed Malaysia as a safe, tolerant and affordable base for technologists from 40+ countries while respecting whatever NS and Malaysia decide next. The episode sharpened the case for network-native institutions that are not hostage to a single jurisdiction's permission.",
+      "tags": [
+        "network-school",
+        "Malaysia",
+        "Forest-City",
+        "network-state",
+        "jurisdiction"
+      ],
+      "links": []
+    },
+    {
+      "id": "central-asia-node-2026",
+      "era": "network-residency",
+      "date": "2026-08",
+      "type": "milestone",
+      "title": "From Forest City to Central Asia — building the next node",
+      "subtitle": "'The second coldest capital in the world; the Switzerland of Central Asia'",
+      "body": "Relocating from Malaysia to a crypto-friendly Central Asian base (Kazakhstan) to build 'a new geodesic profession'. Prompted by Balaji Srinivasan describing Network School's value to Kazakhstan at the Almaty Hub, and by two years' lived experience of NS as self-directed, peer-driven continuous professional education — CME/CPE for the network age. As NS evolves into a campus of many nodes, credentialing and competency-verification must be built where innovation can run ahead of any single land-jurisdiction's permission, in crypto-innovation-friendly, easier-tax jurisdictions where the cryptography that makes AI trust-machines and agentic commerce work is welcome.",
+      "tags": [
+        "network-residency",
+        "Kazakhstan",
+        "Central-Asia",
+        "network-school",
+        "geodesic",
+        "relocation"
+      ],
+      "links": []
+    },
+    {
+      "id": "dpf-ns-labs-role-2026",
+      "era": "agentic-economy",
+      "date": "2026-08-07",
+      "type": "milestone",
+      "title": "New role: Technical Program Manager & Protocol Architect, DPF-NS-LABS",
+      "subtitle": "Digital Playhouse Foundation's Network School initiative",
+      "body": "Announced a new role as Technical Program Manager and Protocol Architect for Digital Playhouse Foundation's Open Learning Protocol and CREDU credentials, coordinating the Australian builder-learner pathway at Network School through DPF-NS-LABS. The mandate: architect a decentralised profession that takes standards that already work into a network environment where learning, credentials, authority, trust and procurement run on decentralised ID, verifiable open records, protocol rules, peer recognition, proof-of-control and AI-agent discoverability. Software engineers gain credible pathways into professional accounting standards; accountants gain pathways into software, AI governance and open protocols. 'Like what we were doing in Queensland, but taking the local to global rather than the other way around.'",
+      "tags": [
+        "role",
+        "DPF-NS-LABS",
+        "protocol-architect",
+        "open-learning-protocol",
+        "CREDU",
+        "Digital-Playhouse-Foundation"
+      ],
+      "links": []
+    },
+    {
+      "id": "open-learning-protocol-2026",
+      "era": "credu-credentials",
+      "date": "2026-08",
+      "type": "project",
+      "title": "DPF Open Learning Protocol",
+      "subtitle": "The protocol layer beneath CREDU credentials",
+      "body": "The Open Learning Protocol is Digital Playhouse Foundation's network-native layer for how learning and credentials are recognised: profession-led, peer-verified, machine-readable, and anchored on open records rather than a single institution's imprimatur. It carries the standards that work in the existing profession into a decentralised environment, and is the substrate CREDU credentials are issued and discovered on. Held in DPF (not in any single body or campus), so it can federate with — rather than be captured by — established institutions.",
+      "tags": [
+        "open-learning-protocol",
+        "CREDU",
+        "credentials",
+        "protocol",
+        "Digital-Playhouse-Foundation",
+        "federation"
+      ],
+      "links": []
+    },
+    {
+      "id": "bitcoin-asia-2026",
+      "era": "bitcoin-standard",
+      "date": "2026-08",
+      "type": "milestone",
+      "title": "Speaking — Bitcoin Asia 2026, Hong Kong (27–28 August)",
+      "subtitle": "The accountant's perspective on a Bitcoin Standard",
+      "body": "Speaking at Bitcoin Asia 2026 in Hong Kong on where Bitcoin meets network states, and how the accounting profession becomes the trusted backup for everything that is not Bitcoin-native. Bitcoin separates money from the state; anything Bitcoin-adjacent is trust-minimised at best, not trustless, and its trust points can be captured by concentrated authority — so separation of powers is still required, in nation states and network states alike. A network of accounting professionals modelled on Bitcoin can operationalise that doctrine across borders. Framed via Saifedean Ammous (Bitcoin as the lifeboat when fiat sinks) and Balaji Srinivasan (network states as the ships it docks on); expanded from a conversation on the podcast 'The Future Was Yesterday' with Cezars Torres-Rueda.",
+      "tags": [
+        "bitcoin",
+        "bitcoin-standard",
+        "network-state",
+        "speaking",
+        "Hong-Kong",
+        "separation-of-powers"
+      ],
+      "links": []
+    },
+    {
+      "id": "asean-accounting-educators-2026",
+      "era": "ai-accounting",
+      "date": "2026-07-17",
+      "type": "milestone",
+      "title": "Keynote — ASEAN Accounting Educators Summit, Kuala Lumpur",
+      "subtitle": "Execution governance, taught from first-year university",
+      "body": "Presented at the ASEAN Accounting Educators Summit at Tunku Abdul Rahman University of Management and Technology, Kuala Lumpur, with IPA Malaysia Member Advisory Committee colleagues. The argument to curriculum-builders: there is no technology credential that recognises accountants' competence to govern AI, and no accounting qualification for the technologists building AI in regulated domains. Execution governance puts qualified human authority in the workflow at the moment the AI acts — cryptographic proof-of-control is stronger evidence than an after-the-fact system log. Design pathways that bring engineers already building in accounting's domains into the profession, recognising what they do as core competencies. Referenced Leung and Runnalls, 'The AI Credential Nobody Is Issuing'.",
+      "tags": [
+        "AI-governance",
+        "education",
+        "proof-of-control",
+        "execution-governance",
+        "IPA-Malaysia",
+        "speaking",
+        "credentials"
+      ],
+      "links": []
+    },
+    {
+      "id": "fork-the-profession-2026",
+      "era": "tax-profession",
+      "date": "2026-07",
+      "type": "thesis",
+      "title": "Fork the Profession",
+      "subtitle": "A DAO-like network model to compete with the Big 4",
+      "body": "In tech you fork the blockchain; in accounting we need to fork the profession — a new profession built on open systems for genuine public interest that leaves the Big 4 on their own. A DAO-like network model is the way to scale: a merger of members, not their bodies or firms, able to collectively compete for government engagements and to systemically prevent the corruption that reflects on all accountants. Illustrated by the revolving door: a very recently departed KPMG partner appointed deputy chair of APRA to regulate super funds — the firms under scrutiny supplying the people who regulate them.",
+      "tags": [
+        "thesis",
+        "DAO",
+        "accounting-profession",
+        "Big-4",
+        "public-interest",
+        "regulatory-capture"
+      ],
+      "links": []
+    },
+    {
+      "id": "australian-tax-exit-planning-2026",
+      "era": "network-residency",
+      "date": "2026-07",
+      "type": "project",
+      "title": "Australian Tax Exit Planning — productising residency cessation",
+      "subtitle": "The expertise behind the forthcoming 'Leave Australia'",
+      "body": "Offering Australian Tax Exit Planning consultations to Australians joining her at Network School, and productising deep, documented exit-tax work into a forthcoming service ('Leave Australia'). The substance: residency cessation done properly under TR 2023/1's four-limb test; CGT event I1 on exit (crypto is not taxable Australian property, so deemed-disposal timing matters); a sole-director Pty Ltd and an SMSF surviving a physical departure; and the proposed-but-unenacted 45-day bright-line rule people keep asking about. The frame: qualified, public-interest-bound accountants as the trusted navigators helping people, businesses and capital move from nation states to network states, and from a fiat to a Bitcoin standard.",
+      "tags": [
+        "tax",
+        "residency-cessation",
+        "exit-tax",
+        "network-residency",
+        "leave-australia",
+        "CGT-I1",
+        "SMSF"
+      ],
+      "links": []
+    },
+    {
+      "id": "cv-reinvented-graph-2026",
+      "era": "agentic-economy",
+      "date": "2026-05-07",
+      "type": "project",
+      "title": "Reinventing the CV as a queryable provenance graph",
+      "subtitle": "graph.electrafrost.com — ask it what you'd ask over coffee",
+      "body": "Asked for a CV — an unfair format for 20 years of experimental self-employment and transdisciplinary development — she built graph.electrafrost.com instead: her near-complete professional and intellectual provenance, formatted to be queried by humans and AI agents, with an ASK feature that answers from the corpus and reports how faithful the answer is. Built deliberately in Claude chat as pair-programmer (not Claude Code or Cowork) so she read and entered every command herself — the point was learning to govern what AI does with her information and to detect when it gets things wrong, a skill she must demonstrate as a professional. The admin loop turns unanswered questions into a writing to-do list; a fork-and-deploy version is planned so any accountant can own their reputation for AI discoverability.",
+      "tags": [
+        "provenance",
+        "graph",
+        "agentic-economy",
+        "CREDU",
+        "AI-discoverability",
+        "learning-to-code",
+        "claude"
+      ],
+      "links": [
+        {
+          "label": "How I'm learning to code with AI and built graph.electrafrost.com",
+          "url": "https://blog.electrafrost.com/p/how-i-learned-to-code-with-ai-and"
+        }
+      ]
     }
   ],
   "themes": [
@@ -1839,6 +2087,27 @@
       "event": "Professional Practice Program (PPP)",
       "hours": 16,
       "verified": true
+    },
+    {
+      "date": "2026-06-02",
+      "provider": "The Firm",
+      "event": "AI in Practice Summit (presenter) — Accountants at the Frontier: AI, Trust and the New Role of the Profession",
+      "hours": 1.5,
+      "verified": false
+    },
+    {
+      "date": "2026-07-17",
+      "provider": "IPA Malaysia MAC / TAR UMT",
+      "event": "ASEAN Accounting Educators Summit, Kuala Lumpur (keynote presenter)",
+      "hours": 2,
+      "verified": false
+    },
+    {
+      "date": "2026-08-27",
+      "provider": "Bitcoin Asia",
+      "event": "Bitcoin Asia 2026, Hong Kong (speaker) — the accountant's perspective on a Bitcoin Standard",
+      "hours": 2,
+      "verified": false
     }
   ],
   "faqs": [
