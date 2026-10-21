@@ -109,6 +109,254 @@
   ],
   "nodes": [
     {
+      "id": "leave-australia-launch-2026",
+      "era": "agentic-economy",
+      "date": "2026-10",
+      "type": "milestone",
+      "title": "Leave Australia — a premature launch, found by AI first",
+      "subtitle": "Referred by ChatGPT before any formal advertising",
+      "body": "The Australian Tax Exit Planning service, productised as Leave Australia, reached clients before its planned launch after prospects reported being referred to her by ChatGPT when asking how to manage Australian tax on moving overseas. The site, written with Claude, answers a prospective client's actual question: who she helps, the problems she advises on, her qualifications and experience, what clients receive, and the next step. Treats generative-engine optimisation as insufficient on its own, since visibility alone does not establish expertise and AI can amplify false claims. Frames peer-attested, independently verifiable credentials on open systems, the CREDU work at Network School, as the mechanism for proving expertise to clients and their AI agents, and for creating a legal and social imperative to verify it.",
+      "tags": [
+        "leave-australia",
+        "AI-discoverability",
+        "GEO",
+        "CREDU",
+        "network-residency",
+        "exit-tax"
+      ],
+      "links": [
+        {
+          "label": "Leave Australia",
+          "url": "https://leaveaustralia.com.au"
+        }
+      ]
+    },
+    {
+      "id": "kazakhstan-residency-2026",
+      "era": "network-residency",
+      "date": "2026-10",
+      "type": "milestone",
+      "title": "Kazakhstan B9-1 digital nomad visa and the residency pathway",
+      "subtitle": "Network residency made personal, now based in Astana",
+      "body": "Granted Kazakhstan's B9-1 digital nomad visa through Astana Hub under the country's 2026 Digital Nomad Residency pilot, with the process administered by Network School. The B9-1 targets foreign IT specialists and opens a route into long-term permanent residency, with no minimum-income or capital-investment threshold: qualification rests on skills and a documented track record, assessed in part through an AI oral examination. Positions the V1-to-V5 network-residency thesis as lived practice, alongside the AIFC's common-law framework, Astana Hub's tax incentives for qualifying IT companies and founders, and a developing digital-asset regime. Presented as a serious alternative base for globally distributed, digital-asset and emerging-tech work.",
+      "tags": [
+        "kazakhstan",
+        "network-residency",
+        "digital-nomad-visa",
+        "permanent-residency",
+        "astana-hub",
+        "AIFC"
+      ],
+      "links": []
+    },
+    {
+      "id": "astana-finance-days-2026",
+      "era": "network-residency",
+      "date": "2026-09-16",
+      "type": "publication",
+      "title": "The Land of the Cloud — reporting from Astana Finance Days 2026",
+      "subtitle": "A first-hand account of Kazakhstan's bid for digital nationhood",
+      "body": "Attended Astana Finance Days 2026 at the Astana International Financial Centre and published a first-hand account. The AIFC is an English-common-law jurisdiction with its own court, regulator and exchange, positioned as a laboratory for reforming Kazakhstan's own legal and regulatory systems rather than only a booking centre for foreign capital. Key observations: a programmable CBDC repurposed from retail to public-spending accountability, releasing digital tenge only as projects perform; compute recast as an asset class priced in GPU-hours, with long-term contracted demand and US GPU export licences as the real constraints; stablecoins treated as a settlement asset; and Srinivasan's argument that AI makes everything fake while cryptographic verification makes it real again, pushing diplomas, passports and title deeds on-chain. Came as a Network School member and international tax professional to understand redomiciliation and digital-asset investor-residency pathways under the AIFC regime.",
+      "tags": [
+        "kazakhstan",
+        "AIFC",
+        "network-residency",
+        "CBDC",
+        "compute",
+        "stablecoins",
+        "on-chain-credentials",
+        "substack"
+      ],
+      "links": [
+        {
+          "label": "The Land of the Cloud: Inside Kazakhstan's Bid for Digital Nationhood",
+          "url": "https://blog.electrafrost.com/p/the-land-of-the-cloud-inside-kazakhstans"
+        }
+      ]
+    },
+    {
+      "id": "bitcoin-asia-2026",
+      "era": "bitcoin-standard",
+      "date": "2026-08",
+      "type": "milestone",
+      "title": "Speaking — Bitcoin Asia 2026, Hong Kong (27–28 August)",
+      "subtitle": "The accountant's perspective on a Bitcoin Standard",
+      "body": "Speaking at Bitcoin Asia 2026 in Hong Kong on where Bitcoin meets network states, and how the accounting profession becomes the trusted backup for everything that is not Bitcoin-native. Bitcoin separates money from the state; anything Bitcoin-adjacent is trust-minimised at best, not trustless, and its trust points can be captured by concentrated authority — so separation of powers is still required, in nation states and network states alike. A network of accounting professionals modelled on Bitcoin can operationalise that doctrine across borders. Framed via Saifedean Ammous (Bitcoin as the lifeboat when fiat sinks) and Balaji Srinivasan (network states as the ships it docks on); expanded from a conversation on the podcast 'The Future Was Yesterday' with Cezars Torres-Rueda.",
+      "tags": [
+        "bitcoin",
+        "bitcoin-standard",
+        "network-state",
+        "speaking",
+        "Hong-Kong",
+        "separation-of-powers"
+      ],
+      "links": []
+    },
+    {
+      "id": "central-asia-node-2026",
+      "era": "network-residency",
+      "date": "2026-08",
+      "type": "milestone",
+      "title": "From Forest City to Central Asia — building the next node",
+      "subtitle": "'The second coldest capital in the world; the Switzerland of Central Asia'",
+      "body": "Relocating from Malaysia to a crypto-friendly Central Asian base (Kazakhstan) to build 'a new geodesic profession'. Prompted by Balaji Srinivasan describing Network School's value to Kazakhstan at the Almaty Hub, and by two years' lived experience of NS as self-directed, peer-driven continuous professional education — CME/CPE for the network age. As NS evolves into a campus of many nodes, credentialing and competency-verification must be built where innovation can run ahead of any single land-jurisdiction's permission, in crypto-innovation-friendly, easier-tax jurisdictions where the cryptography that makes AI trust-machines and agentic commerce work is welcome.",
+      "tags": [
+        "network-residency",
+        "Kazakhstan",
+        "Central-Asia",
+        "network-school",
+        "geodesic",
+        "relocation"
+      ],
+      "links": []
+    },
+    {
+      "id": "open-learning-protocol-2026",
+      "era": "credu-credentials",
+      "date": "2026-08",
+      "type": "project",
+      "title": "DPF Open Learning Protocol",
+      "subtitle": "The protocol layer beneath CREDU credentials",
+      "body": "The Open Learning Protocol is Digital Playhouse Foundation's network-native layer for how learning and credentials are recognised: profession-led, peer-verified, machine-readable, and anchored on open records rather than a single institution's imprimatur. It carries the standards that work in the existing profession into a decentralised environment, and is the substrate CREDU credentials are issued and discovered on. Held in DPF (not in any single body or campus), so it can federate with — rather than be captured by — established institutions.",
+      "tags": [
+        "open-learning-protocol",
+        "CREDU",
+        "credentials",
+        "protocol",
+        "Digital-Playhouse-Foundation",
+        "federation"
+      ],
+      "links": []
+    },
+    {
+      "id": "dpf-ns-labs-role-2026",
+      "era": "agentic-economy",
+      "date": "2026-08-07",
+      "type": "milestone",
+      "title": "New role: Technical Program Manager & Protocol Architect, DPF-NS-LABS",
+      "subtitle": "Digital Playhouse Foundation's Network School initiative",
+      "body": "Announced a new role as Technical Program Manager and Protocol Architect for Digital Playhouse Foundation's Open Learning Protocol and CREDU credentials, coordinating the Australian builder-learner pathway at Network School through DPF-NS-LABS. The mandate: architect a decentralised profession that takes standards that already work into a network environment where learning, credentials, authority, trust and procurement run on decentralised ID, verifiable open records, protocol rules, peer recognition, proof-of-control and AI-agent discoverability. Software engineers gain credible pathways into professional accounting standards; accountants gain pathways into software, AI governance and open protocols. 'Like what we were doing in Queensland, but taking the local to global rather than the other way around.'",
+      "tags": [
+        "role",
+        "DPF-NS-LABS",
+        "protocol-architect",
+        "open-learning-protocol",
+        "CREDU",
+        "Digital-Playhouse-Foundation"
+      ],
+      "links": []
+    },
+    {
+      "id": "leaving-public-practice-2026",
+      "era": "tax-profession",
+      "date": "2026-07-27",
+      "type": "milestone",
+      "title": "Leaving public practice — handover to Lisa Wilson Accounting",
+      "subtitle": "From CULT 45 in 1998 to the frontier; 25 years in practice",
+      "body": "After 25 years, handed the practice to Lisa Wilson (now Lisa Wilson Accounting) and stepped out of public practice for the first tax season in a quarter century. The origin: in 1998 took her punk band CULT 45 to a Sydney CPA who made them 'fully legit, no fear' — the day she fell for the profession. TAFE bookkeeping, accounting at Sydney Institute of Technology, tax law at UNSW, a Newtown practice for creatives, tech entrepreneurs and early Bitcoiners, then a remote Queensland base. Remains an Australian registered tax agent, CTA (Tax Institute) and FIPA. Now free to focus fully on open learning, peer-to-peer credential design, and the accountant's role as the trusted human layer in an automated, on-chain economy.",
+      "tags": [
+        "public-practice",
+        "milestone",
+        "origin",
+        "Lisa-Wilson",
+        "succession",
+        "CTA",
+        "FIPA"
+      ],
+      "links": []
+    },
+    {
+      "id": "asean-accounting-educators-2026",
+      "era": "ai-accounting",
+      "date": "2026-07-17",
+      "type": "milestone",
+      "title": "Keynote — ASEAN Accounting Educators Summit, Kuala Lumpur",
+      "subtitle": "Execution governance, taught from first-year university",
+      "body": "Presented at the ASEAN Accounting Educators Summit at Tunku Abdul Rahman University of Management and Technology, Kuala Lumpur, with IPA Malaysia Member Advisory Committee colleagues. The argument to curriculum-builders: there is no technology credential that recognises accountants' competence to govern AI, and no accounting qualification for the technologists building AI in regulated domains. Execution governance puts qualified human authority in the workflow at the moment the AI acts — cryptographic proof-of-control is stronger evidence than an after-the-fact system log. Design pathways that bring engineers already building in accounting's domains into the profession, recognising what they do as core competencies. Referenced Leung and Runnalls, 'The AI Credential Nobody Is Issuing'.",
+      "tags": [
+        "AI-governance",
+        "education",
+        "proof-of-control",
+        "execution-governance",
+        "IPA-Malaysia",
+        "speaking",
+        "credentials"
+      ],
+      "links": []
+    },
+    {
+      "id": "fork-the-profession-2026",
+      "era": "tax-profession",
+      "date": "2026-07",
+      "type": "thesis",
+      "title": "Fork the Profession",
+      "subtitle": "A DAO-like network model to compete with the Big 4",
+      "body": "In tech you fork the blockchain; in accounting we need to fork the profession — a new profession built on open systems for genuine public interest that leaves the Big 4 on their own. A DAO-like network model is the way to scale: a merger of members, not their bodies or firms, able to collectively compete for government engagements and to systemically prevent the corruption that reflects on all accountants. Illustrated by the revolving door: a very recently departed KPMG partner appointed deputy chair of APRA to regulate super funds — the firms under scrutiny supplying the people who regulate them.",
+      "tags": [
+        "thesis",
+        "DAO",
+        "accounting-profession",
+        "Big-4",
+        "public-interest",
+        "regulatory-capture"
+      ],
+      "links": []
+    },
+    {
+      "id": "australian-tax-exit-planning-2026",
+      "era": "network-residency",
+      "date": "2026-07",
+      "type": "project",
+      "title": "Australian Tax Exit Planning — productising residency cessation",
+      "subtitle": "The expertise behind the forthcoming 'Leave Australia'",
+      "body": "Offering Australian Tax Exit Planning consultations to Australians joining her at Network School, and productising deep, documented exit-tax work into a forthcoming service ('Leave Australia'). The substance: residency cessation done properly under TR 2023/1's four-limb test; CGT event I1 on exit (crypto is not taxable Australian property, so deemed-disposal timing matters); a sole-director Pty Ltd and an SMSF surviving a physical departure; and the proposed-but-unenacted 45-day bright-line rule people keep asking about. The frame: qualified, public-interest-bound accountants as the trusted navigators helping people, businesses and capital move from nation states to network states, and from a fiat to a Bitcoin standard.",
+      "tags": [
+        "tax",
+        "residency-cessation",
+        "exit-tax",
+        "network-residency",
+        "leave-australia",
+        "CGT-I1",
+        "SMSF"
+      ],
+      "links": []
+    },
+    {
+      "id": "ns-malaysia-disruption-2026",
+      "era": "network-state",
+      "date": "2026-07",
+      "type": "milestone",
+      "title": "Network School Malaysia disruption and the false-report saga",
+      "subtitle": "A false allegation, an investigation, and the question of the next node",
+      "body": "On 10 July, the day before the Johor elections, a political account published a false allegation that Network School was harbouring 'illegal aliens'. On 14 July Malaysian authorities visited the Forest City campus; officers were professional and the allegation was found false. Amid a broader disruption to the Malaysian node, Electra affirmed Malaysia as a safe, tolerant and affordable base for technologists from 40+ countries while respecting whatever NS and Malaysia decide next. The episode sharpened the case for network-native institutions that are not hostage to a single jurisdiction's permission.",
+      "tags": [
+        "network-school",
+        "Malaysia",
+        "Forest-City",
+        "network-state",
+        "jurisdiction"
+      ],
+      "links": []
+    },
+    {
+      "id": "debanked-selfcustody-2026",
+      "era": "bitcoin-standard",
+      "date": "2026-06-30",
+      "type": "spark",
+      "title": "Debanked at year-end — self-custody as continuity",
+      "subtitle": "Locked out of Australian and Malaysian banks simultaneously",
+      "body": "Finishing Australian financial year-end tasks over the Malacca Strait, locked out of both an Australian and a Malaysian bank account at once — an Australian foreign-tax team froze everything over a Malaysian tax-ID request; Maybank's fraud team flagged VPN use. Self-custodied BTC and USDC kept payments moving through a weekend with no bank access. Framed against Australia's Crypto Travel Rule commencing 1 July: keep nothing on exchanges. A lived demonstration of why trust-minimised, self-custodied money matters for the borderless professional, and why the accounting layer around it has to be robust to institutional friction.",
+      "tags": [
+        "bitcoin",
+        "self-custody",
+        "USDC",
+        "debanking",
+        "crypto-travel-rule",
+        "borderless"
+      ],
+      "links": []
+    },
+    {
       "id": "graph-launch-substack-may-2026",
       "era": "agentic-economy",
       "date": "2026-05-07",
@@ -1223,188 +1471,6 @@
       "links": []
     },
     {
-      "id": "debanked-selfcustody-2026",
-      "era": "bitcoin-standard",
-      "date": "2026-06-30",
-      "type": "spark",
-      "title": "Debanked at year-end — self-custody as continuity",
-      "subtitle": "Locked out of Australian and Malaysian banks simultaneously",
-      "body": "Finishing Australian financial year-end tasks over the Malacca Strait, locked out of both an Australian and a Malaysian bank account at once — an Australian foreign-tax team froze everything over a Malaysian tax-ID request; Maybank's fraud team flagged VPN use. Self-custodied BTC and USDC kept payments moving through a weekend with no bank access. Framed against Australia's Crypto Travel Rule commencing 1 July: keep nothing on exchanges. A lived demonstration of why trust-minimised, self-custodied money matters for the borderless professional, and why the accounting layer around it has to be robust to institutional friction.",
-      "tags": [
-        "bitcoin",
-        "self-custody",
-        "USDC",
-        "debanking",
-        "crypto-travel-rule",
-        "borderless"
-      ],
-      "links": []
-    },
-    {
-      "id": "leaving-public-practice-2026",
-      "era": "tax-profession",
-      "date": "2026-07-27",
-      "type": "milestone",
-      "title": "Leaving public practice — handover to Lisa Wilson Accounting",
-      "subtitle": "From CULT 45 in 1998 to the frontier; 25 years in practice",
-      "body": "After 25 years, handed the practice to Lisa Wilson (now Lisa Wilson Accounting) and stepped out of public practice for the first tax season in a quarter century. The origin: in 1998 took her punk band CULT 45 to a Sydney CPA who made them 'fully legit, no fear' — the day she fell for the profession. TAFE bookkeeping, accounting at Sydney Institute of Technology, tax law at UNSW, a Newtown practice for creatives, tech entrepreneurs and early Bitcoiners, then a remote Queensland base. Remains an Australian registered tax agent, CTA (Tax Institute) and FIPA. Now free to focus fully on open learning, peer-to-peer credential design, and the accountant's role as the trusted human layer in an automated, on-chain economy.",
-      "tags": [
-        "public-practice",
-        "milestone",
-        "origin",
-        "Lisa-Wilson",
-        "succession",
-        "CTA",
-        "FIPA"
-      ],
-      "links": []
-    },
-    {
-      "id": "ns-malaysia-disruption-2026",
-      "era": "network-state",
-      "date": "2026-07",
-      "type": "milestone",
-      "title": "Network School Malaysia disruption and the false-report saga",
-      "subtitle": "A false allegation, an investigation, and the question of the next node",
-      "body": "On 10 July, the day before the Johor elections, a political account published a false allegation that Network School was harbouring 'illegal aliens'. On 14 July Malaysian authorities visited the Forest City campus; officers were professional and the allegation was found false. Amid a broader disruption to the Malaysian node, Electra affirmed Malaysia as a safe, tolerant and affordable base for technologists from 40+ countries while respecting whatever NS and Malaysia decide next. The episode sharpened the case for network-native institutions that are not hostage to a single jurisdiction's permission.",
-      "tags": [
-        "network-school",
-        "Malaysia",
-        "Forest-City",
-        "network-state",
-        "jurisdiction"
-      ],
-      "links": []
-    },
-    {
-      "id": "central-asia-node-2026",
-      "era": "network-residency",
-      "date": "2026-08",
-      "type": "milestone",
-      "title": "From Forest City to Central Asia — building the next node",
-      "subtitle": "'The second coldest capital in the world; the Switzerland of Central Asia'",
-      "body": "Relocating from Malaysia to a crypto-friendly Central Asian base (Kazakhstan) to build 'a new geodesic profession'. Prompted by Balaji Srinivasan describing Network School's value to Kazakhstan at the Almaty Hub, and by two years' lived experience of NS as self-directed, peer-driven continuous professional education — CME/CPE for the network age. As NS evolves into a campus of many nodes, credentialing and competency-verification must be built where innovation can run ahead of any single land-jurisdiction's permission, in crypto-innovation-friendly, easier-tax jurisdictions where the cryptography that makes AI trust-machines and agentic commerce work is welcome.",
-      "tags": [
-        "network-residency",
-        "Kazakhstan",
-        "Central-Asia",
-        "network-school",
-        "geodesic",
-        "relocation"
-      ],
-      "links": []
-    },
-    {
-      "id": "dpf-ns-labs-role-2026",
-      "era": "agentic-economy",
-      "date": "2026-08-07",
-      "type": "milestone",
-      "title": "New role: Technical Program Manager & Protocol Architect, DPF-NS-LABS",
-      "subtitle": "Digital Playhouse Foundation's Network School initiative",
-      "body": "Announced a new role as Technical Program Manager and Protocol Architect for Digital Playhouse Foundation's Open Learning Protocol and CREDU credentials, coordinating the Australian builder-learner pathway at Network School through DPF-NS-LABS. The mandate: architect a decentralised profession that takes standards that already work into a network environment where learning, credentials, authority, trust and procurement run on decentralised ID, verifiable open records, protocol rules, peer recognition, proof-of-control and AI-agent discoverability. Software engineers gain credible pathways into professional accounting standards; accountants gain pathways into software, AI governance and open protocols. 'Like what we were doing in Queensland, but taking the local to global rather than the other way around.'",
-      "tags": [
-        "role",
-        "DPF-NS-LABS",
-        "protocol-architect",
-        "open-learning-protocol",
-        "CREDU",
-        "Digital-Playhouse-Foundation"
-      ],
-      "links": []
-    },
-    {
-      "id": "open-learning-protocol-2026",
-      "era": "credu-credentials",
-      "date": "2026-08",
-      "type": "project",
-      "title": "DPF Open Learning Protocol",
-      "subtitle": "The protocol layer beneath CREDU credentials",
-      "body": "The Open Learning Protocol is Digital Playhouse Foundation's network-native layer for how learning and credentials are recognised: profession-led, peer-verified, machine-readable, and anchored on open records rather than a single institution's imprimatur. It carries the standards that work in the existing profession into a decentralised environment, and is the substrate CREDU credentials are issued and discovered on. Held in DPF (not in any single body or campus), so it can federate with — rather than be captured by — established institutions.",
-      "tags": [
-        "open-learning-protocol",
-        "CREDU",
-        "credentials",
-        "protocol",
-        "Digital-Playhouse-Foundation",
-        "federation"
-      ],
-      "links": []
-    },
-    {
-      "id": "bitcoin-asia-2026",
-      "era": "bitcoin-standard",
-      "date": "2026-08",
-      "type": "milestone",
-      "title": "Speaking — Bitcoin Asia 2026, Hong Kong (27–28 August)",
-      "subtitle": "The accountant's perspective on a Bitcoin Standard",
-      "body": "Speaking at Bitcoin Asia 2026 in Hong Kong on where Bitcoin meets network states, and how the accounting profession becomes the trusted backup for everything that is not Bitcoin-native. Bitcoin separates money from the state; anything Bitcoin-adjacent is trust-minimised at best, not trustless, and its trust points can be captured by concentrated authority — so separation of powers is still required, in nation states and network states alike. A network of accounting professionals modelled on Bitcoin can operationalise that doctrine across borders. Framed via Saifedean Ammous (Bitcoin as the lifeboat when fiat sinks) and Balaji Srinivasan (network states as the ships it docks on); expanded from a conversation on the podcast 'The Future Was Yesterday' with Cezars Torres-Rueda.",
-      "tags": [
-        "bitcoin",
-        "bitcoin-standard",
-        "network-state",
-        "speaking",
-        "Hong-Kong",
-        "separation-of-powers"
-      ],
-      "links": []
-    },
-    {
-      "id": "asean-accounting-educators-2026",
-      "era": "ai-accounting",
-      "date": "2026-07-17",
-      "type": "milestone",
-      "title": "Keynote — ASEAN Accounting Educators Summit, Kuala Lumpur",
-      "subtitle": "Execution governance, taught from first-year university",
-      "body": "Presented at the ASEAN Accounting Educators Summit at Tunku Abdul Rahman University of Management and Technology, Kuala Lumpur, with IPA Malaysia Member Advisory Committee colleagues. The argument to curriculum-builders: there is no technology credential that recognises accountants' competence to govern AI, and no accounting qualification for the technologists building AI in regulated domains. Execution governance puts qualified human authority in the workflow at the moment the AI acts — cryptographic proof-of-control is stronger evidence than an after-the-fact system log. Design pathways that bring engineers already building in accounting's domains into the profession, recognising what they do as core competencies. Referenced Leung and Runnalls, 'The AI Credential Nobody Is Issuing'.",
-      "tags": [
-        "AI-governance",
-        "education",
-        "proof-of-control",
-        "execution-governance",
-        "IPA-Malaysia",
-        "speaking",
-        "credentials"
-      ],
-      "links": []
-    },
-    {
-      "id": "fork-the-profession-2026",
-      "era": "tax-profession",
-      "date": "2026-07",
-      "type": "thesis",
-      "title": "Fork the Profession",
-      "subtitle": "A DAO-like network model to compete with the Big 4",
-      "body": "In tech you fork the blockchain; in accounting we need to fork the profession — a new profession built on open systems for genuine public interest that leaves the Big 4 on their own. A DAO-like network model is the way to scale: a merger of members, not their bodies or firms, able to collectively compete for government engagements and to systemically prevent the corruption that reflects on all accountants. Illustrated by the revolving door: a very recently departed KPMG partner appointed deputy chair of APRA to regulate super funds — the firms under scrutiny supplying the people who regulate them.",
-      "tags": [
-        "thesis",
-        "DAO",
-        "accounting-profession",
-        "Big-4",
-        "public-interest",
-        "regulatory-capture"
-      ],
-      "links": []
-    },
-    {
-      "id": "australian-tax-exit-planning-2026",
-      "era": "network-residency",
-      "date": "2026-07",
-      "type": "project",
-      "title": "Australian Tax Exit Planning — productising residency cessation",
-      "subtitle": "The expertise behind the forthcoming 'Leave Australia'",
-      "body": "Offering Australian Tax Exit Planning consultations to Australians joining her at Network School, and productising deep, documented exit-tax work into a forthcoming service ('Leave Australia'). The substance: residency cessation done properly under TR 2023/1's four-limb test; CGT event I1 on exit (crypto is not taxable Australian property, so deemed-disposal timing matters); a sole-director Pty Ltd and an SMSF surviving a physical departure; and the proposed-but-unenacted 45-day bright-line rule people keep asking about. The frame: qualified, public-interest-bound accountants as the trusted navigators helping people, businesses and capital move from nation states to network states, and from a fiat to a Bitcoin standard.",
-      "tags": [
-        "tax",
-        "residency-cessation",
-        "exit-tax",
-        "network-residency",
-        "leave-australia",
-        "CGT-I1",
-        "SMSF"
-      ],
-      "links": []
-    },
-    {
       "id": "cv-reinvented-graph-2026",
       "era": "agentic-economy",
       "date": "2026-05-07",
@@ -1425,72 +1491,6 @@
         {
           "label": "How I'm learning to code with AI and built graph.electrafrost.com",
           "url": "https://blog.electrafrost.com/p/how-i-learned-to-code-with-ai-and"
-        }
-      ]
-    },
-    {
-      "id": "astana-finance-days-2026",
-      "era": "network-residency",
-      "date": "2026-09-16",
-      "type": "publication",
-      "title": "The Land of the Cloud — reporting from Astana Finance Days 2026",
-      "subtitle": "A first-hand account of Kazakhstan's bid for digital nationhood",
-      "body": "Attended Astana Finance Days 2026 at the Astana International Financial Centre and published a first-hand account. The AIFC is an English-common-law jurisdiction with its own court, regulator and exchange, positioned as a laboratory for reforming Kazakhstan's own legal and regulatory systems rather than only a booking centre for foreign capital. Key observations: a programmable CBDC repurposed from retail to public-spending accountability, releasing digital tenge only as projects perform; compute recast as an asset class priced in GPU-hours, with long-term contracted demand and US GPU export licences as the real constraints; stablecoins treated as a settlement asset; and Srinivasan's argument that AI makes everything fake while cryptographic verification makes it real again, pushing diplomas, passports and title deeds on-chain. Came as a Network School member and international tax professional to understand redomiciliation and digital-asset investor-residency pathways under the AIFC regime.",
-      "tags": [
-        "kazakhstan",
-        "AIFC",
-        "network-residency",
-        "CBDC",
-        "compute",
-        "stablecoins",
-        "on-chain-credentials",
-        "substack"
-      ],
-      "links": [
-        {
-          "label": "The Land of the Cloud: Inside Kazakhstan's Bid for Digital Nationhood",
-          "url": "https://blog.electrafrost.com/p/the-land-of-the-cloud-inside-kazakhstans"
-        }
-      ]
-    },
-    {
-      "id": "kazakhstan-residency-2026",
-      "era": "network-residency",
-      "date": "2026-10",
-      "type": "milestone",
-      "title": "Kazakhstan B9-1 digital nomad visa and the residency pathway",
-      "subtitle": "Network residency made personal, now based in Astana",
-      "body": "Granted Kazakhstan's B9-1 digital nomad visa through Astana Hub under the country's 2026 Digital Nomad Residency pilot, with the process administered by Network School. The B9-1 targets foreign IT specialists and opens a route into long-term permanent residency, with no minimum-income or capital-investment threshold: qualification rests on skills and a documented track record, assessed in part through an AI oral examination. Positions the V1-to-V5 network-residency thesis as lived practice, alongside the AIFC's common-law framework, Astana Hub's tax incentives for qualifying IT companies and founders, and a developing digital-asset regime. Presented as a serious alternative base for globally distributed, digital-asset and emerging-tech work.",
-      "tags": [
-        "kazakhstan",
-        "network-residency",
-        "digital-nomad-visa",
-        "permanent-residency",
-        "astana-hub",
-        "AIFC"
-      ],
-      "links": []
-    },
-    {
-      "id": "leave-australia-launch-2026",
-      "era": "agentic-economy",
-      "date": "2026-10",
-      "type": "milestone",
-      "title": "Leave Australia — a premature launch, found by AI first",
-      "subtitle": "Referred by ChatGPT before any formal advertising",
-      "body": "The Australian Tax Exit Planning service, productised as Leave Australia, reached clients before its planned launch after prospects reported being referred to her by ChatGPT when asking how to manage Australian tax on moving overseas. The site, written with Claude, answers a prospective client's actual question: who she helps, the problems she advises on, her qualifications and experience, what clients receive, and the next step. Treats generative-engine optimisation as insufficient on its own, since visibility alone does not establish expertise and AI can amplify false claims. Frames peer-attested, independently verifiable credentials on open systems, the CREDU work at Network School, as the mechanism for proving expertise to clients and their AI agents, and for creating a legal and social imperative to verify it.",
-      "tags": [
-        "leave-australia",
-        "AI-discoverability",
-        "GEO",
-        "CREDU",
-        "network-residency",
-        "exit-tax"
-      ],
-      "links": [
-        {
-          "label": "Leave Australia",
-          "url": "https://leaveaustralia.com.au"
         }
       ]
     }
